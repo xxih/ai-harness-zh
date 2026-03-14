@@ -24,15 +24,19 @@
 3. 优先补充可执行、可重复的代码评分器；只有必要时才退回规则评分器、模型评分器或人工审查。
 4. 运行 `python3 scripts/validate_assets.py`，确认结构和最小约束通过。
 
-## 当前首个资产
-
-- `skills/eval-harness/`
-  - 一个工具无关的评估驱动开发 skill，用来规范后续 skill 和 command 的产出方式。
-
 ## 当前资产
+
+### 工程研发
 
 - `skills/eval-harness/`
   - 用于先定义评估、再沉淀 prompt 资产
+- `skills/search-first/`
+  - 用于在写新功能、修 bug、加依赖或抽象前，先搜索代码库、测试和外部方案，再决定是 `adopt`、`adapt` 还是 `build`
+- `skills/coding-quality-loop/`
+  - 用于以单 skill 入口覆盖测试先行、改动验证、独立评审三段质量闭环，并支持 `/tdd`、`/verify`、`/review` 路由
+
+### 内容生产
+
 - `skills/xiaohongshu-carousel/`
   - 用于把已有内容快速转换成可直接发布的小红书图文多图
   - 主输入为 `slides.md`，通过 `scripts/build_xiaohongshu_carousel.py` 生成 HTML、manifest 和图片

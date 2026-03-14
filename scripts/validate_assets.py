@@ -78,6 +78,59 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok("skills/" in text and "commands/" in text, f"{label} covers both skills and commands", failures)
         ok("代码评分器" in text, f"{label} prefers code-based graders", failures)
         ok("references/templates.md" in text, f"{label} moves examples into references", failures)
+    if skill_name == "search-first":
+        ok("references/repos/" in text, f"{label} consults references/repos for external coding patterns", failures)
+        ok("测试" in text, f"{label} searches tests before implementation", failures)
+        ok(
+            all(token in text.lower() for token in ("adopt", "adapt", "build")),
+            f"{label} defines adopt/adapt/build decisions",
+            failures,
+        )
+        ok("research-note.md" in text, f"{label} defines a durable research output", failures)
+        ok(
+            "新功能" in text and "bug" in text and "依赖" in text,
+            f"{label} targets coding tasks such as features, bugs, and integrations",
+            failures,
+        )
+        ok(
+            (ROOT / "skills" / "search-first" / "references" / "research-checklist.md").is_file(),
+            "research checklist reference exists for search-first",
+            failures,
+        )
+    if skill_name == "coding-quality-loop":
+        ok(
+            all(token in text for token in ("/tdd", "/verify", "/review")),
+            f"{label} supports explicit stage routing",
+            failures,
+        )
+        ok("默认" in text and "完整质量链路" in text, f"{label} provides a default quality-loop entry", failures)
+        ok(
+            all(token in text for token in ("实现前", "改动后", "交付前")),
+            f"{label} describes the loop through concrete coding phases",
+            failures,
+        )
+        ok(
+            "不想分别记忆" not in text and "自己拼流程" not in text,
+            f"{label} avoids internal packaging rationale in user-facing copy",
+            failures,
+        )
+        ok("quality-check.md" in text, f"{label} defines a durable quality report", failures)
+        ok("ready" in text.lower() and "not-ready" in text.lower(), f"{label} defines ready/not-ready outcomes", failures)
+        ok(
+            (ROOT / "skills" / "coding-quality-loop" / "references" / "tdd.md").is_file(),
+            "tdd reference exists for coding-quality-loop",
+            failures,
+        )
+        ok(
+            (ROOT / "skills" / "coding-quality-loop" / "references" / "verify.md").is_file(),
+            "verify reference exists for coding-quality-loop",
+            failures,
+        )
+        ok(
+            (ROOT / "skills" / "coding-quality-loop" / "references" / "review.md").is_file(),
+            "review reference exists for coding-quality-loop",
+            failures,
+        )
     if skill_name == "xiaohongshu-carousel":
         ok("已有" in text and "内容" in text, f"{label} targets existing content", failures)
         ok("不适用：" in text and "选题" in text and "竞品" in text, f"{label} excludes pre-production work", failures)
