@@ -1,0 +1,10 @@
+.DS_Store
+
+# 本地流程状态
+.nanospec/
+
+# 生成产物
+output/
+
+# 临时放在仓库根目录的外部参考仓库副本
+my-everything-claude-code/
