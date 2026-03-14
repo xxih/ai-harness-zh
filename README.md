@@ -24,6 +24,12 @@
 3. 优先补充可执行、可重复的代码评分器；只有必要时才退回规则评分器、模型评分器或人工审查。
 4. 运行 `python3 scripts/validate_assets.py`，确认结构和最小约束通过。
 
+默认落盘建议：
+
+- 若任务已有自己的记录文件，优先回写到该文件
+- 若没有既定位置，coding 研究默认写入 `output/research/research-note.md`
+- 若没有既定位置，coding 质量结果默认写入 `output/quality/quality-check.md`
+
 ## 当前资产
 
 ### 工程研发
@@ -32,8 +38,19 @@
   - 用于先定义评估、再沉淀 prompt 资产
 - `skills/search-first/`
   - 用于在写新功能、修 bug、加依赖或抽象前，先搜索代码库、测试和外部方案，再决定是 `adopt`、`adapt` 还是 `build`
-- `skills/coding-quality-loop/`
-  - 用于以单 skill 入口覆盖测试先行、改动验证、独立评审三段质量闭环，并支持 `/tdd`、`/verify`、`/review` 路由
+
+### 工程研发 / 质量
+
+- `skills/quality-router/`
+  - 作为 `commands/` 的平替，支持手动触发 `/tdd`、`/verify`、`/review`、`/review-feedback`
+- `skills/quality-tdd/`
+  - 用于在功能开发、bugfix、重构前执行测试先行
+- `skills/quality-verify/`
+  - 用于在完成宣称前执行验证门禁，要求 fresh verification evidence
+- `skills/quality-review/`
+  - 用于在关键节点和合并前请求独立代码评审
+- `skills/quality-review-feedback/`
+  - 用于在收到评审意见后先核实、再实现或反驳
 
 ### 内容生产
 

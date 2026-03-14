@@ -4,7 +4,7 @@
 
 本任务采用“按能力层吸收，而不是按仓库吸收”的策略。原因很直接：三个参考仓库虽然都属于 harness，但解决的问题层次不同。若按仓库整体迁移，最终会把流程、运行时、平台假设、命令体系和资产治理全部绑在一起，直接违背当前仓库“小而可复用”的目标。
 
-因此，本次方案把参考能力拆成五层：任务流转层、研究检索层、质量保障层、资产治理层、运行时基础设施层。进一步地，吸收时不按参考 skill 名称逐个落地，而按“能力内核”压缩吸收。只有前四层中的“单一意图、可 eval、可复用”部分进入近期候选，运行时基础设施层整体延后。
+因此，本次方案把参考能力拆成五层：任务流转层、研究检索层、质量保障层、资产治理层、运行时基础设施层。进一步地，吸收时不按参考 skill 名称逐个落地，而按“能力内核”压缩吸收。只有前四层中的“单一意图、可 eval、可复用”部分进入近期候选，运行时基础设施层整体延后；其中 multiagent 如果只是执行路径，不再单列为延后项。
 
 ## 吸收顺序
 
@@ -23,12 +23,12 @@
 在分类基础上，只选择少量高价值、低耦合、易验证的方向进入第一波。本轮更合理的做法不是逐个复刻 skill，而是先定义能力内核：
 
 1. 研究检索类：以 `search-first`、`iterative-retrieval` 为来源，沉淀“写代码前先搜本地实现、测试和外部方案”的最小 skill，采用名称 `search-first`。
-2. 质量保障类：以 `verification-loop`、`requesting-code-review`、`test-driven-development` 为来源，提炼成一个更精简的质量闭环 skill，采用名称 `coding-quality-loop`。
+2. 质量保障类：以 `superpowers` 的 `test-driven-development`、`verification-before-completion`、`requesting-code-review`、`receiving-code-review` 为主，拆成 `quality-*` skill 家族，并补一个 `quality-router` 作为手动触发入口。
 
 不建议第一波吸收的方向：
 
 - prompt 资产治理类 `skill-stocktake`
-- worktree / subagent / 并行执行流程
+- worktree 前置约束、平台绑定 orchestration runtime
 - hooks 自动学习
 - 平台插件安装与市场分发
 - 多模型路由、MCP 运行时、tmux、Hashline
@@ -41,6 +41,7 @@
 - `test-driven-development` 负责“实现时的过程约束”
 - `verification-loop` 负责“改动后的机械性验证”
 - `requesting-code-review` 负责“独立视角的审查判断”
+- `verification-before-completion` 负责“完成宣称前必须先有 fresh evidence”
 
 它们属于同一领域，但不在同一时点发挥作用：
 
@@ -56,6 +57,10 @@
    - 时点：关键任务后 / 合并前
    - 作用：用第二视角发现方案、边界和代码质量问题
    - 类型：判断性审查
+4. `verification-before-completion`
+   - 时点：完成宣称前
+   - 作用：防止把旧结论、口头说明或主观信心当成完成证据
+   - 类型：完成门禁
 
 三者不是同一个动作，但属于同一条质量链路。
 
@@ -69,7 +74,7 @@
    - 单独保留一个较轻的 `code-review-gate`，吸收 `requesting-code-review`
 2. 单 skill 三阶段式
    - `coding-quality-loop`
-   - 内部分三段：实现前后约束、验证闭环、独立评审
+   - 内部分三段：实现前后约束、验证闭环、独立评审，并附完成宣称门禁
    - 入口保持轻量，只在显式触发时路由到具体阶段
 
 当前采用第二种，因为它更符合“精简吸收、取长补短”的目标。
@@ -86,6 +91,8 @@
 6. 更新 `README.md`
 7. 运行 `python3 scripts/validate_assets.py`
 
+在完成第一波落地之后，还需要补一轮“证据层研究”：把三个参考仓库里真正承载质量约束的 prompt 文件继续拆开，分别看它们属于 skill、command、agent，还是源码中的 hook/template。这样后续再调整 `coding-quality-loop` 时，依据会更具体，不会只停留在抽象口号层面。
+
 ## 最小 skill 的定义
 
 后续要吸收的 skill，需要满足以下实现约束：
@@ -100,7 +107,7 @@ skill 必须说明输入是什么、会生成或更新什么产物。如果只�
 
 ### 依赖可裁剪
 
-如果原始参考能力依赖 hooks、subagent、专属工具、平台插件，吸收时需要先裁掉这些依赖，只保留在当前环境中可成立的核心方法。
+如果原始参考能力依赖 hooks、专属工具、平台插件或仓库绑定的 worktree 规则，吸收时需要先裁掉这些依赖，只保留在当前环境中可成立的核心方法。若只是需要独立 reviewer、并行执行或 multiagent 节奏，则可作为可选路径吸收，但不能写死在单一 harness API 上。
 
 ### 可定义最小 eval
 
@@ -133,3 +140,7 @@ skill 必须说明输入是什么、会生成或更新什么产物。如果只�
 ### 风险 4：把内部设计纠偏写成面向用户的规则
 
 收口方式：共享资产的默认入口只写用户任务、质量动作和交付结果；“为什么压缩成一个 skill”“为什么不拆开记忆”这类内部理由留在 plan、alignment 和 eval 中。
+
+### 风险 5：把“质量 prompt”与“运行时质量机制”混为一谈
+
+收口方式：研究时单独标注文件类型与承载位置。像 `everything-claude-code`、`superpowers` 主要把质量能力写成可读 prompt；`oh-my-opencode` 则更多把质量约束写进 hooks、提醒模板和 orchestration 文档。两者价值不同，吸收方式也不同。

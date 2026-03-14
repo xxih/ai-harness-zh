@@ -87,6 +87,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             failures,
         )
         ok("research-note.md" in text, f"{label} defines a durable research output", failures)
+        ok("output/research/research-note.md" in text, f"{label} uses a project-local default research output path", failures)
         ok(
             "新功能" in text and "bug" in text and "依赖" in text,
             f"{label} targets coding tasks such as features, bugs, and integrations",
@@ -97,40 +98,62 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             "research checklist reference exists for search-first",
             failures,
         )
-    if skill_name == "coding-quality-loop":
+    if skill_name == "quality-router":
         ok(
-            all(token in text for token in ("/tdd", "/verify", "/review")),
-            f"{label} supports explicit stage routing",
-            failures,
-        )
-        ok("默认" in text and "完整质量链路" in text, f"{label} provides a default quality-loop entry", failures)
-        ok(
-            all(token in text for token in ("实现前", "改动后", "交付前")),
-            f"{label} describes the loop through concrete coding phases",
+            all(token in text for token in ("/tdd", "/verify", "/review", "/review-feedback")),
+            f"{label} routes explicit quality triggers",
             failures,
         )
         ok(
-            "不想分别记忆" not in text and "自己拼流程" not in text,
-            f"{label} avoids internal packaging rationale in user-facing copy",
+            all(token in text for token in ("quality-tdd", "quality-verify", "quality-review", "quality-review-feedback")),
+            f"{label} routes to the quality-* skill family",
             failures,
         )
-        ok("quality-check.md" in text, f"{label} defines a durable quality report", failures)
-        ok("ready" in text.lower() and "not-ready" in text.lower(), f"{label} defines ready/not-ready outcomes", failures)
+        ok("commands/" in text, f"{label} acts as a commands replacement", failures)
+        ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
+        ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
+        ok("coding-quality-loop" not in text, f"{label} no longer routes to coding-quality-loop", failures)
+    if skill_name == "quality-tdd":
+        ok("失败测试" in text and "先写实现再补测试" in text, f"{label} enforces test-first discipline", failures)
+        ok("没看到失败" in text or "没看到 fail" in text, f"{label} requires watching the test fail", failures)
+        ok("Red-Green-Refactor" in text or "红-绿-重构" in text, f"{label} describes a red-green-refactor loop", failures)
+        ok("这次先跳过" in text or "合理化" in text, f"{label} carries anti-rationalization guidance", failures)
+        ok("references/testing-anti-patterns.md" in text, f"{label} links to anti-pattern references", failures)
+        ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
+        ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
+    if skill_name == "quality-verify":
+        ok("fresh evidence" in text and "not-ready" in text.lower(), f"{label} enforces fresh evidence before completion claims", failures)
         ok(
-            (ROOT / "skills" / "coding-quality-loop" / "references" / "tdd.md").is_file(),
-            "tdd reference exists for coding-quality-loop",
+            all(token in text for token in ("识别", "执行", "读取", "核对", "宣称")),
+            f"{label} describes a verification gate sequence",
             failures,
         )
+        ok("应该可以" in text or "看起来没问题" in text, f"{label} warns against false completion wording", failures)
+        ok("build" in text.lower() and "tests" in text.lower() and "diff" in text.lower(), f"{label} includes full verification scope", failures)
+        ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
+        ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
+    if skill_name == "quality-review":
+        ok("独立 reviewer" in text or "multiagent" in text, f"{label} prefers an independent reviewer path", failures)
+        ok("Critical" in text and "Important" in text and "Minor" in text, f"{label} acts on tiered review findings", failures)
+        ok("references/reviewer-template.md" in text, f"{label} links to the reusable reviewer template", failures)
+        ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
+        ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
         ok(
-            (ROOT / "skills" / "coding-quality-loop" / "references" / "verify.md").is_file(),
-            "verify reference exists for coding-quality-loop",
+            (ROOT / "skills" / "quality-review" / "references" / "reviewer-template.md").is_file(),
+            "reviewer template reference exists for quality-review",
             failures,
         )
+    if skill_name == "quality-review-feedback":
         ok(
-            (ROOT / "skills" / "coding-quality-loop" / "references" / "review.md").is_file(),
-            "review reference exists for coding-quality-loop",
+            all(token in text for token in ("读取", "理解", "核实", "评估", "回应", "实现")),
+            f"{label} defines a verification-first feedback handling flow",
             failures,
         )
+        ok("表演性认同" in text or "盲从" in text, f"{label} forbids performative agreement", failures)
+        ok("先澄清" in text or "不清楚" in text, f"{label} requires clarification before implementation", failures)
+        ok("YAGNI" in text or "现有行为" in text, f"{label} includes technical pushback conditions", failures)
+        ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
+        ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
     if skill_name == "xiaohongshu-carousel":
         ok("已有" in text and "内容" in text, f"{label} targets existing content", failures)
         ok("不适用：" in text and "选题" in text and "竞品" in text, f"{label} excludes pre-production work", failures)

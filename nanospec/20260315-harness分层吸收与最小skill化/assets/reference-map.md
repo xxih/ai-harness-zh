@@ -5,7 +5,7 @@
 | 仓库 | 主导价值 | 适合吸收的内容 | 暂不直接吸收的内容 |
 | --- | --- | --- | --- |
 | `everything-claude-code` | 大而全的技能、命令、agent、rules 资产库 | 单一意图 skill、评估观念、研究/检索模式、持续验证模式 | 全量 rules、平台安装方式、重命令体系、语言矩阵扩张 |
-| `superpowers` | 强流程约束的工程工作流 | brainstorm / plan / review / debug 这类流程骨架 | worktree 前置、强制 subagent 流程、重度实现阶段约束 |
+| `superpowers` | 强纪律的工程工作流与质量门禁 | brainstorm / plan / review / debug 流程骨架、完成宣称门禁、review cadence、反合理化表达 | worktree 前置、仓库专属脚本、平台绑定执行器 |
 | `oh-my-opencode` | 运行时编排与工具系统总成 | 技能按需加载、能力分层、agent 类别映射等设计思想 | 多模型编排、内建 MCP、Hashline、tmux、hooks、CLI 体系 |
 
 ## 2. 按能力层分组
@@ -26,10 +26,10 @@
 
 ### C. 质量保障层
 
-- 代表来源：`everything-claude-code/skills/verification-loop`，`superpowers/requesting-code-review`、`test-driven-development`
+- 代表来源：`everything-claude-code/skills/verification-loop`，`superpowers/test-driven-development`、`verification-before-completion`、`requesting-code-review`
 - 价值：把代码改动从“自我感觉完成”变成“测试先行 + 机械验证 + 独立评审”的闭环
 - 当前仓库现状：已有 `eval-harness` 适合做资产评估，但缺 coding 改动后的通用验证 skill
-- 吸收建议：不要逐个复刻 `verification-loop`、`requesting-code-review`、`test-driven-development`，而要把三者压缩成一条更小的质量链路
+- 吸收建议：不要逐个复刻 `verification-loop`、`requesting-code-review`、`test-driven-development`，而要把它们连同 `verification-before-completion` 压缩成一条更小的质量链路，并允许独立 reviewer 作为可选执行路径
 
 ### D. 资产治理层
 
@@ -43,14 +43,14 @@
 - 代表来源：`oh-my-opencode` 的 hooks、MCP、agent 分类、安装体系；`everything-claude-code` 的 hooks/rules/agents
 - 价值：让 harness 更自动、更强大
 - 当前仓库现状：与当前“沉淀最小 prompt 资产”的目标不匹配
-- 吸收建议：暂缓，只保留设计启发，不进入第一波落地
+- 吸收建议：暂缓 hooks、MCP、CLI 体系等重运行时能力；multiagent 若只是 reviewer 或并行执行路径，不必归入本层延后
 
 ## 3. 最小 skill 吸收准则
 
 一个候选能力只有同时满足以下条件，才进入当前仓库：
 
 1. 对应单一用户意图，而不是一整套大流程。
-2. 不依赖特定平台运行时特性也能成立，或能优雅降级。
+2. 不依赖特定平台运行时特性也能成立，或能优雅降级；multiagent 可以是可选路径，但不能写死单一 harness API。
 3. 能产出清晰、可落盘的仓库产物，而不是只存在于会话行为里。
 4. 能定义最小 eval，至少能做规则或代码级校验。
 5. 与现有 `nanospec`、`eval-harness` 不重复，而是补位。
@@ -63,11 +63,11 @@
 - 作用：在写新功能、修 bug、引依赖、抽象工具前，先检索本地实现、测试和外部方案
 - 目标：降低重复造轮子和闭门造车成本
 
-### 4.2 `coding-quality-loop`
+### 4.2 `quality-*` 家族
 
-- 来源：`test-driven-development`、`verification-loop`、`requesting-code-review`
-- 作用：覆盖实现时约束、改动后验证、独立审查三个控制点
-- 目标：压缩成单 skill 入口，并通过阶段路由模拟 commands 式易用性
+- 来源：以 `superpowers` 的 `test-driven-development`、`verification-before-completion`、`requesting-code-review`、`receiving-code-review` 为主，补少量 `everything-claude-code` 的命令式触发经验
+- 作用：拆成测试先行、完成宣称门禁、独立审查、评审反馈处理四个控制点
+- 目标：用统一前缀维持同领域可发现性，再用 `quality-router` 作为 `commands/` 平替提供手动触发入口
 
 ### 4.3 `skill-stocktake` 或同类治理 skill
 
@@ -77,9 +77,9 @@
 
 ## 5. 明确延后项
 
-- 多 agent 编排与强依赖 subagent 的执行流程
 - hooks 驱动的自动学习与自动注入
 - 平台专属安装脚本、插件系统、市场分发
 - 多模型路由、tmux、Hashline、内建 MCP 体系
+- 仓库绑定的 worktree 前置规范与 orchestration runtime
 
 这些内容不是没价值，而是与当前仓库阶段不匹配。

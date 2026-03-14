@@ -16,8 +16,9 @@
 ## 观察
 
 - `search-first` 保持了 coding 导向，明确覆盖本地代码、测试、外部方案与 `adopt` / `adapt` / `build` 决策。
-- `coding-quality-loop` 已压缩吸收 `tdd-workflow`、`verification-loop`、`requesting-code-review` 的长处，形成轻入口 + 阶段路由的单 skill。
-- 质量保障相关细节已下沉到 `references/tdd.md`、`references/verify.md`、`references/review.md`，主 `SKILL.md` 保持轻量。
+- 质量保障资产已从单个 `coding-quality-loop` 调整为 `quality-*` 家族，更贴近 `superpowers` 的原始能力边界。
+- `quality-router` 作为 `commands/` 的平替，负责显式路由 `/tdd`、`/verify`、`/review`、`/review-feedback`。
+- `quality-tdd`、`quality-verify`、`quality-review`、`quality-review-feedback` 分别承接测试先行、完成前验证、发起评审、接收评审四个质量动作。
 
 ## 结论
 

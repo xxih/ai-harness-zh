@@ -33,7 +33,7 @@
 验收条件：这些事项保持明确记录，但不进入第一波交付范围。
 
 - [ ] 3.0 暂不吸收 `skill-stocktake` 这类 prompt 资产治理能力，留待下一轮。
-- [ ] 3.1 暂不吸收多 agent 编排、hooks 自动学习、MCP 运行时、tmux、Hashline 等重运行时能力。
+- [ ] 3.1 暂不吸收 worktree 前置流程、hooks 自动学习、MCP 运行时、tmux、Hashline 等重运行时能力。
 - [ ] 3.2 暂不复制完整命令体系、rules 体系或平台安装流程。
 
 ## 4. 本次文案对齐
@@ -43,3 +43,13 @@
 - [x] 4.1 执行 `/align`，纠正 `coding-quality-loop` 默认入口混入内部设计理由的问题。
 - [x] 4.2 先更新 `evals/skills/coding-quality-loop.md` 与 `scripts/validate_assets.py`，约束入口文案应面向场景与质量动作。
 - [x] 4.3 重写 `skills/coding-quality-loop/SKILL.md` 默认入口，去掉“分别记忆多个 skill”之类的内部话术。
+
+## 5. 质量方向补充研究
+
+验收条件：`references/repos/` 中质量相关 prompt 文件被逐仓库盘点，并形成差异、重合点和吸收启发文档。
+
+- [x] 5.1 执行 `/align`，把“需要更细的质量 prompt 研究”记录为本轮新增目标。
+- [x] 5.2 盘点 `everything-claude-code` 中与 TDD、验证、评审、覆盖率、构建修复、安全审查相关的 skill、command、agent。
+- [x] 5.3 盘点 `superpowers` 中与 TDD、完成前验证、请求评审、接收评审、双阶段 review 相关的 skill、agent、prompt 模板。
+- [x] 5.4 盘点 `oh-my-opencode` 中与计划审查、执行后验证、hook 注入提醒、`/refactor` TDD 验证相关的 prompt 文件与源码模板。
+- [x] 5.5 产出 `assets/quality-prompt-landscape.md`，总结三仓库的差异、重合点、共性与对当前仓库的启发。
