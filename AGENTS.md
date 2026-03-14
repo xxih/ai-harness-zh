@@ -20,6 +20,7 @@
 - 对非平凡变更，优先先定义或更新 eval，再修改资产本身
 - 共享资产默认保持工具无关，只有目标平台明确绑定时才写入平台细节
 - 涉及结构性变更后，运行 `python3 scripts/validate_assets.py`
+- 外部参考仓库统一放在 `references/repos/`，该目录供 AI 读取，但不纳入当前仓库 git 管理
 
 ## Commit 规范
 
@@ -41,3 +42,5 @@
 - `summary` 默认使用简洁中文
 - 一个 commit 只做一类相对聚焦的改动
 - 除非是仓库级变更，否则不要把无关资产混在同一个 commit
+
+## README 要按类别组织各个 skill
