@@ -170,6 +170,57 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok("YAGNI" in text or "现有行为" in text, f"{label} includes technical pushback conditions", failures)
         ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
         ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
+    if skill_name == "agent-orchestration":
+        ok(
+            all(token in text for token in ("planner", "orchestrator", "worker", "explore", "reviewer")),
+            f"{label} defines a role-layered orchestration model",
+            failures,
+        )
+        ok(
+            "research -> plan -> execute -> review -> verify" in text,
+            f"{label} defines an explicit staged workflow",
+            failures,
+        )
+        ok(
+            "单任务" in text and "一次只交给一个明确任务" in text,
+            f"{label} enforces single-task delegation",
+            failures,
+        )
+        ok(
+            "并行前必须先做独立性判定" in text or ("并行" in text and "独立性" in text),
+            f"{label} requires independence checks before parallel work",
+            failures,
+        )
+        ok(
+            "反重复规则" in text and "不重复" in text,
+            f"{label} forbids duplicating delegated work",
+            failures,
+        )
+        ok(
+            "不能直接信任" in text or "不要把摘要当证据" in text,
+            f"{label} requires verification instead of trusting delegated summaries",
+            failures,
+        )
+        ok(
+            "targets/" in text,
+            f"{label} pushes platform-specific APIs into target adapters",
+            failures,
+        )
+        ok(
+            "output/research/orchestration-note.md" in text,
+            f"{label} uses a project-local default orchestration output path",
+            failures,
+        )
+        ok(
+            "references/delegation-template.md" in text,
+            f"{label} links to the reusable delegation template",
+            failures,
+        )
+        ok(
+            (SRC_ROOT / "skills" / "agent-orchestration" / "references" / "delegation-template.md").is_file(),
+            "delegation template reference exists for agent-orchestration",
+            failures,
+        )
     if skill_name == "xiaohongshu-carousel":
         ok("已有" in text and "内容" in text, f"{label} targets existing content", failures)
         ok("不适用：" in text and "选题" in text and "竞品" in text, f"{label} excludes pre-production work", failures)

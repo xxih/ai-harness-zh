@@ -40,6 +40,8 @@
 
 - `src/skills/eval-harness/`
   - 用于先定义评估、再沉淀 prompt 资产
+- `src/skills/agent-orchestration/`
+  - 用于复杂 coding 任务中的主 agent 编排职责，包括角色分层、顺序阶段、单任务委派、并行独立性判定、反重复规则、结果回收与验证
 - `src/skills/search-first/`
   - 用于在写新功能、修 bug、加依赖或抽象前，先搜索代码库、测试和外部方案，再决定是 `adopt`、`adapt` 还是 `build`
 
