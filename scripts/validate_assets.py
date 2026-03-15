@@ -38,9 +38,11 @@ def ok(condition: bool, message: str, failures: list[str]) -> None:
 
 def validate_repo_layout(failures: list[str]) -> None:
     for relative in (
+        "agents",
         "skills",
         "commands",
         "evals",
+        "evals/agents",
         "evals/skills",
         "evals/commands",
         "scripts",
@@ -196,6 +198,30 @@ def validate_command(command_path: Path, failures: list[str]) -> None:
     eval_path = ROOT / "evals" / "commands" / f"{command_name}.md"
     ok(eval_path.is_file(), f"paired eval exists: {eval_path.relative_to(ROOT)}", failures)
 
+
+def validate_agent(agent_path: Path, failures: list[str]) -> None:
+    text = read_text(agent_path)
+    frontmatter = parse_frontmatter(text)
+    agent_name = agent_path.stem
+    label = agent_path.relative_to(ROOT)
+
+    ok(frontmatter is not None, f"{label} has YAML frontmatter", failures)
+    if frontmatter is None:
+        return
+
+    ok(frontmatter.get("name") == agent_name, f"{label} frontmatter name matches filename", failures)
+    ok(bool(frontmatter.get("description")), f"{label} has description", failures)
+
+    for heading in ("## 何时使用", "## 输入", "## 输出", "## Prompt"):
+        ok(heading in text, f"{label} contains heading: {heading}", failures)
+
+    eval_path = ROOT / "evals" / "agents" / f"{agent_name}.md"
+    ok(eval_path.is_file(), f"paired eval exists: {eval_path.relative_to(ROOT)}", failures)
+
+    if agent_name == "quality-code-reviewer":
+        ok("Critical" in text and "Important" in text and "Minor" in text, f"{label} uses tiered review severity", failures)
+        ok("ready" in text.lower() and "not-ready" in text.lower(), f"{label} ends with an explicit readiness assessment", failures)
+
 def validate_eval(eval_path: Path, failures: list[str]) -> None:
     text = read_text(eval_path)
     label = eval_path.relative_to(ROOT)
@@ -218,6 +244,10 @@ def main() -> int:
     ok(bool(skill_files), "at least one skill exists", failures)
     for skill_file in skill_files:
         validate_skill(skill_file, failures)
+
+    agent_files = sorted((ROOT / "agents").glob("*.md"))
+    for agent_file in agent_files:
+        validate_agent(agent_file, failures)
 
     command_files = sorted((ROOT / "commands").glob("*.md"))
     for command_file in command_files:

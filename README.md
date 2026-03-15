@@ -11,6 +11,7 @@
 ## 目录约定
 
 - `skills/`：可复用的长流程资产，每个 skill 放在 `skills/<name>/SKILL.md`
+- `agents/`：可复用的独立 agent prompt，适合配合 subagent / multiagent 工作流
 - `commands/`：更轻量的任务型 prompt 资产
 - `evals/`：和资产配套的评估定义与回归用例
 - `scripts/`：确定性的校验脚本与辅助工具
@@ -51,6 +52,11 @@
   - 用于在关键节点和合并前请求独立代码评审
 - `skills/quality-review-feedback/`
   - 用于在收到评审意见后先核实、再实现或反驳
+
+### 工程研发 / 质量 Agents
+
+- `agents/quality-code-reviewer.md`
+  - 用于以独立 subagent 方式做质量评审；这是当前仓库唯一保留的质量 agent，风格对齐 `superpowers`
 
 ### 内容生产
 
