@@ -22,6 +22,10 @@ config_file = "agents/explorer.toml"
 description = "Repository-aware reviewer aligned with src/agents/quality-code-reviewer.md."
 config_file = "agents/reviewer.toml"
 
+[agents.quality_code_reviewer]
+description = "Chinese code review specialist mapped from targets/codex/agents/quality-code-reviewer.md."
+config_file = "agents/quality-code-reviewer.toml"
+
 [agents.docs_researcher]
 description = "Documentation specialist for Codex config, agent roles, and packaging assumptions."
 config_file = "agents/docs-researcher.toml"

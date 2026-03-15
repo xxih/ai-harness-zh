@@ -13,7 +13,7 @@
 - `src/skills/`：核心 skill 源资产，每个 skill 放在 `src/skills/<name>/SKILL.md`
 - `src/agents/`：核心 agent 源资产，保存可复用的独立 agent prompt
 - `src/commands/`：核心 command 源资产，保存更轻量的任务型 prompt
-- `targets/`：不同 AI 工具的分发适配层，只放工具相关的包装、配置和入口说明
+- `targets/`：不同 AI 工具的分发目录，保留和 `src/` 对齐的资产镜像，并叠加工具专属配置
 - `evals/`：和资产配套的评估定义与回归用例
 - `scripts/`：确定性的校验脚本与辅助工具
 - `references/`：仓库内参考资料入口，包含可追踪说明文档与本地外部仓库目录
@@ -24,8 +24,9 @@
 1. 在 `src/skills/`、`src/agents/` 或 `src/commands/` 中新增或修改核心资产。
 2. 需要回归保护时，再为该资产补齐对应评估，放到 `evals/` 下。
 3. 优先补充可执行、可重复的代码评分器；只有必要时才退回规则评分器、模型评分器或人工审查。
-4. 若某个 AI 工具需要专属包装，再把适配文件放到 `targets/<tool>/`。
-5. 运行 `python3 scripts/validate_assets.py`，确认结构和最小约束通过。
+4. 若某个 AI 工具需要专属包装，先保持 `targets/<tool>/` 与 `src/` 的资产分类一致。
+5. 修改 `src/` 后，运行对应同步脚本，例如 `python3 scripts/sync_targets.py codex`。
+6. 运行 `python3 scripts/validate_assets.py`，确认结构和最小约束通过。
 
 默认落盘建议：
 
@@ -70,6 +71,12 @@
 
 ### Codex
 
+- `targets/codex/skills/`
+  - `src/skills/` 的 Codex 分发镜像
+- `targets/codex/agents/`
+  - `src/agents/` 的 Codex 分发镜像
+- `targets/codex/commands/`
+  - `src/commands/` 的 Codex 分发镜像
 - `targets/codex/.codex/config.toml`
   - 定义 Codex 运行基线与 multi-agent 角色注册
 - `targets/codex/.codex/agents/*.toml`

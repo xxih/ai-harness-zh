@@ -1,0 +1,13 @@
+:root {
+  --grad-start: #f7f9fc;
+  --grad-end: #eef3fb;
+  --surface: rgba(255, 255, 255, 0.92);
+  --surface-strong: rgba(255, 255, 255, 0.98);
+  --ink: #162133;
+  --muted: #58647b;
+  --accent: #2f6bff;
+  --accent-soft: #dbe6ff;
+  --accent-strong: #1f4fcb;
+  --outline: rgba(22, 33, 51, 0.1);
+  --shadow: 0 18px 40px rgba(39, 57, 100, 0.12);
+}

@@ -53,6 +53,9 @@ def validate_repo_layout(failures: list[str]) -> None:
         "references/repos",
         "targets",
         "targets/codex",
+        "targets/codex/skills",
+        "targets/codex/agents",
+        "targets/codex/commands",
         "targets/codex/.codex",
         "targets/codex/.codex/agents",
     ):
@@ -247,23 +250,51 @@ def validate_eval(eval_path: Path, failures: list[str]) -> None:
 
 
 def validate_codex_target(failures: list[str]) -> None:
-    codex_root = TARGETS_ROOT / "codex" / ".codex"
-    config_path = codex_root / "config.toml"
-    agents_path = codex_root / "AGENTS.md"
-    reviewer_path = codex_root / "agents" / "reviewer.toml"
+    codex_root = TARGETS_ROOT / "codex"
+    codex_config_root = codex_root / ".codex"
+    config_path = codex_config_root / "config.toml"
+    agents_path = codex_config_root / "AGENTS.md"
+    reviewer_path = codex_config_root / "agents" / "reviewer.toml"
 
     if config_path.is_file():
         config_text = read_text(config_path)
         ok("multi_agent = true" in config_text, "targets/codex enables Codex multi_agent mode", failures)
         ok('[agents.reviewer]' in config_text, "targets/codex registers a reviewer role", failures)
         ok('config_file = "agents/reviewer.toml"' in config_text, "targets/codex reviewer role points to its TOML config", failures)
+        ok('[agents.quality_code_reviewer]' in config_text, "targets/codex registers the quality_code_reviewer role", failures)
+        ok('config_file = "agents/quality-code-reviewer.toml"' in config_text, "targets/codex quality_code_reviewer role points to its TOML config", failures)
     if agents_path.is_file():
         agents_text = read_text(agents_path)
+        ok("skills/" in agents_text and "agents/" in agents_text and "commands/" in agents_text, "targets/codex AGENTS.md uses same-shape distribution assets", failures)
         ok("src/skills/" in agents_text and "src/agents/" in agents_text and "src/commands/" in agents_text, "targets/codex AGENTS.md maps Codex behavior back to src assets", failures)
         ok("config.toml" in agents_text and ".codex/agents/" in agents_text, "targets/codex AGENTS.md explains config-to-agent-role wiring", failures)
+        ok("quality_code_reviewer" in agents_text and "agents/quality-code-reviewer.md" in agents_text, "targets/codex AGENTS.md documents the quality-code-reviewer role mapping", failures)
     if reviewer_path.is_file():
         reviewer_text = read_text(reviewer_path)
-        ok("src/agents/quality-code-reviewer.md" in reviewer_text, "targets/codex reviewer role aligns with the reusable reviewer prompt", failures)
+        ok("agents/quality-code-reviewer.md" in reviewer_text or "src/agents/quality-code-reviewer.md" in reviewer_text, "targets/codex reviewer role aligns with the reusable reviewer prompt", failures)
+    quality_reviewer_path = codex_config_root / "agents" / "quality-code-reviewer.toml"
+    if quality_reviewer_path.is_file():
+        quality_reviewer_text = read_text(quality_reviewer_path)
+        ok("targets/codex/agents/quality-code-reviewer.md" in quality_reviewer_text or "agents/quality-code-reviewer.md" in quality_reviewer_text, "targets/codex quality_code_reviewer TOML points at the distributed agent asset", failures)
+        ok("Requirements alignment" in quality_reviewer_text and "Code quality" in quality_reviewer_text and "Test quality" in quality_reviewer_text and "Risk judgment" in quality_reviewer_text, "targets/codex quality_code_reviewer TOML carries the full review dimensions", failures)
+        ok("Strengths" in quality_reviewer_text and "Issues" in quality_reviewer_text and "Assessment" in quality_reviewer_text, "targets/codex quality_code_reviewer TOML carries the full output contract", failures)
+        for skill_path in (
+            '../../skills/quality-review/SKILL.md',
+            '../../skills/quality-review-feedback/SKILL.md',
+            '../../skills/quality-verify/SKILL.md',
+            '../../skills/quality-tdd/SKILL.md',
+            '../../skills/quality-router/SKILL.md',
+        ):
+            ok(skill_path in quality_reviewer_text, f"targets/codex quality_code_reviewer TOML enables skill: {skill_path}", failures)
+
+    for source_dir, target_dir, label in (
+        (SRC_ROOT / "skills", codex_root / "skills", "skills"),
+        (SRC_ROOT / "agents", codex_root / "agents", "agents"),
+        (SRC_ROOT / "commands", codex_root / "commands", "commands"),
+    ):
+        source_files = sorted(path.relative_to(source_dir) for path in source_dir.rglob("*") if path.is_file())
+        target_files = sorted(path.relative_to(target_dir) for path in target_dir.rglob("*") if path.is_file())
+        ok(source_files == target_files, f"targets/codex {label} mirror matches src/{label}", failures)
 
 
 def main() -> int:

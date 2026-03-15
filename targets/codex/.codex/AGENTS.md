@@ -5,23 +5,38 @@
 ## Source Of Truth
 
 - 核心源资产在 `src/skills/`、`src/agents/`、`src/commands/`
-- `targets/codex/.codex/` 只负责 Codex 的运行配置与角色注册
-- 需要更新资产正文时，回到 `src/` 修改，而不是在 `.codex/` 内复制维护
+- `targets/codex/skills/`、`targets/codex/agents/`、`targets/codex/commands/` 是从 `src/` 同步出的分发快照
+- `targets/codex/.codex/` 负责 Codex 的运行配置与角色注册
+- 需要更新资产正文时，回到 `src/` 修改，再重新同步到 `targets/codex/`
 
 ## How Codex Should Use This Repo
 
-- 需要通用 workflow 时，优先读取 `src/skills/<name>/SKILL.md`
-- 需要独立 reviewer prompt 时，优先对齐 `src/agents/quality-code-reviewer.md`
-- 需要轻量任务入口时，把 `src/commands/` 视为“命名意图”，而不是强依赖 slash commands
+- 在分发目录内部优先读取 `skills/<name>/SKILL.md`
+- 需要追溯源资产时，再回到 `src/skills/<name>/SKILL.md`
+- 需要独立 reviewer prompt 时，优先对齐 `agents/quality-code-reviewer.md`
+- 需要轻量任务入口时，把 `commands/` 视为“命名意图”，而不是强依赖 slash commands
 
 ## Multi-Agent Mapping
 
 - `config.toml` 中的 `[agents.<name>]` 决定 Codex 可调用的角色
 - 每个角色的具体行为定义在 `.codex/agents/*.toml`
-- 若某个角色需要仓库内的可复用 prompt，应显式引用对应的 `src/agents/` 或 `src/skills/`
+- 若某个角色需要仓库内的可复用 prompt，应优先引用同级分发快照；需要回源时再引用 `src/`
+- `targets/codex/agents/*.md` 是分发出去的 agent 正文；只有被注册进 `config.toml` 的那部分，才是 Codex 运行时可直接调用的角色
+- agent 文件名、角色名和 TOML 文件名不必完全同名，但必须在文档中明确映射关系
+- 对 Codex 运行时而言，TOML 不是“补充说明”，而是实际加载的角色定义层
+- 若角色需要绑定 skills，应在对应 TOML 中通过 `[[skills.config]]` 明确列出
 
 ## Current Roles
 
 - `explorer`：只读探索，负责梳理源资产和适配层之间的真实关系
 - `reviewer`：审查实现与分发适配是否偏离 `src/` 的源资产约定
+- `quality_code_reviewer`：`agents/quality-code-reviewer.md` 的 Codex 运行时角色，负责独立代码评审，并显式具备 `quality-*` skills
 - `docs_researcher`：验证 Codex 配置、能力边界和分发假设
+
+## Packaging Rules
+
+- 修改 `src/agents/` 后，先同步到 `targets/codex/agents/`
+- 如果某个 agent 需要在 Codex multi-agent 中直接使用，就必须同时补：
+  - `.codex/config.toml` 中的 `[agents.<role>]`
+  - `.codex/agents/<role>.toml`
+- 如果某个 agent 只是分发归档而非运行时角色，也要在 `targets/codex/README.md` 中写清楚原因

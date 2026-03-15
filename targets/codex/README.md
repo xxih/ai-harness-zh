@@ -1,9 +1,15 @@
 # Codex 适配层
 
-这里存放 Codex CLI 的分发适配文件，而不是核心 prompt 正文。
+这里存放 Codex CLI 的分发目录。
 
 ## 组成
 
+- `skills/`
+  - 从 `src/skills/` 同步出的 Codex 分发镜像
+- `agents/`
+  - 从 `src/agents/` 同步出的 Codex 分发镜像
+- `commands/`
+  - 从 `src/commands/` 同步出的 Codex 分发镜像
 - `.codex/config.toml`
   - 定义 Codex 项目基线，以及可用的 multi-agent 角色
 - `.codex/agents/*.toml`
@@ -13,15 +19,28 @@
 
 ## 与 `src/` 的关系
 
-- `src/skills/` 是通用 skill 源资产
-- `src/agents/` 是通用 agent prompt 源资产
-- `src/commands/` 是通用 command 源资产
-- Codex 不直接消费 `src/commands/` 的 slash 命令形态，因此应通过 `.codex/AGENTS.md` 把它们解释成自然语言触发入口
+- `src/skills/`、`src/agents/`、`src/commands/` 是源资产
+- `targets/codex/skills/`、`targets/codex/agents/`、`targets/codex/commands/` 是面向 Codex 的同构快照
+- Codex 专属差异只放在 `.codex/` 下，不混进通用资产正文
+
+## Codex 角色规则
+
+- `targets/codex/agents/*.md` 表示“要被 Codex 分发出去的 agent 资产”
+- 每个需要在 Codex 中直接调用的 agent，都应在 `.codex/config.toml` 的 `[agents.<role>]` 中显式注册
+- 每个已注册角色，都应有对应的 `.codex/agents/*.toml`
+- 若角色是某个分发 agent 的运行时映射，TOML 中应明确说明它对应哪一个 `agents/*.md`
+- 对 Codex 来说，`.codex/agents/*.toml` 才是运行时真正加载的角色定义层；不要只写一个薄摘要
+- 若某个角色需要具备特定 skills，应在对应 TOML 中通过 `[[skills.config]]` 显式声明
+- 当前已落地的显式映射：
+  - `agents/quality-code-reviewer.md` -> `[agents.quality_code_reviewer]` -> `.codex/agents/quality-code-reviewer.toml`
+  - 该角色额外挂载 `quality-review`、`quality-review-feedback`、`quality-verify`、`quality-tdd`、`quality-router`
 
 ## 分发方式
 
 若要把这一层分发到某个 Codex 项目：
 
-1. 将 `targets/codex/.codex/` 同步到目标项目根目录的 `.codex/`
-2. 按需把 `src/skills/` 暴露给 Codex 的 skill 发现机制
-3. 保持 `src/` 仍然是源资产真相来源，不要在目标项目中手改复制品
+1. 修改 `src/` 后先运行 `python3 scripts/sync_targets.py codex`
+2. 确认新增的 `agents/*.md` 是否都已经在 `.codex/config.toml` 中注册为角色
+3. 确认新增角色是否都有对应的 `.codex/agents/*.toml`
+4. 将整个 `targets/codex/` 作为 Codex 分发目录使用
+5. 保持 `src/` 仍然是源资产真相来源，不要在 `targets/codex/` 内手改复制品
