@@ -69,4 +69,4 @@ description: 面向关键节点与合并前的独立代码评审 skill。优先�
 ## 参考
 
 - 需要统一 reviewer prompt 时，读取 [references/reviewer-template.md](references/reviewer-template.md)
-- 若环境支持 subagent，优先调用 [agents/quality-code-reviewer.md](/Users/xxih/workspace/my-ai-harness/agents/quality-code-reviewer.md) 执行独立评审
+- 若环境支持 subagent，优先调用 [src/agents/quality-code-reviewer.md](/Users/xxih/workspace/my-ai-harness/src/agents/quality-code-reviewer.md) 执行独立评审

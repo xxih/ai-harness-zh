@@ -4,7 +4,7 @@
 
 回答一个很具体的问题：
 
-当前仓库为了配合 `quality-*` skill 家族，一度尝试新建 4 个根目录 `agents/` 资产。这个数量是否合理，还是应该继续精简？
+当前仓库为了配合 `quality-*` skill 家族，一度尝试新建 4 个 `src/agents/` 资产。这个数量是否合理，还是应该继续精简？
 
 为了避免主观判断，这份文档只看几个参考对象里“质量相关 agent”到底定义了几个、怎么分工：
 
@@ -18,7 +18,7 @@
 这里区分三种东西，不混在一起算：
 
 1. 根目录或注册表中的独立 agent
-   - 明确以 `agents/*.md` 或 agent registry 形式存在
+   - 明确以 `src/agents/*.md` 或 agent registry 形式存在
 2. skill 内部附带的 subagent prompt 模板
    - 例如 reviewer template、spec reviewer prompt
    - 它们会影响“实际用了多少 subagent 角色”，但不算独立 agent 资产数量
@@ -169,7 +169,7 @@
 
 当前仓库最终更适合只保留 1 个独立质量 agent：
 
-1. `agents/quality-code-reviewer.md`
+1. `src/agents/quality-code-reviewer.md`
 
 它承担的是：
 
@@ -217,9 +217,9 @@
 
 降级方式：
 
-1. 保留 `skills/quality-tdd/`
-2. 保留 `skills/quality-verify/`
-3. 保留 `skills/quality-review-feedback/`
+1. 保留 `src/skills/quality-tdd/`
+2. 保留 `src/skills/quality-verify/`
+3. 保留 `src/skills/quality-review-feedback/`
 4. 删除对应根目录 agent
 5. 只在 `quality-review` 里保留独立 reviewer 角色
 

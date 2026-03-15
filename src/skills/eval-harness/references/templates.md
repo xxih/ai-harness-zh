@@ -8,7 +8,7 @@
 ## Asset Under Test
 
 - Type: skill | command
-- Path: skills/<name>/SKILL.md | commands/<name>.md
+- Path: src/skills/<name>/SKILL.md | src/commands/<name>.md
 - Goal: one-sentence summary
 
 ## Capability Evals

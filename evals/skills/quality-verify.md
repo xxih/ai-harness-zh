@@ -3,7 +3,7 @@
 ## Asset Under Test
 
 - Type: skill
-- Path: skills/quality-verify/SKILL.md
+- Path: src/skills/quality-verify/SKILL.md
 - Goal: translate and absorb the superpowers completion-verification gate into a Chinese, reusable quality skill.
 
 ## Capability Evals

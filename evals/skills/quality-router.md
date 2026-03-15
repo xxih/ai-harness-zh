@@ -3,8 +3,8 @@
 ## Asset Under Test
 
 - Type: skill
-- Path: skills/quality-router/SKILL.md
-- Goal: provide a manual, command-like routing entry for the quality skill family so users can explicitly trigger quality actions without relying on `commands/`.
+- Path: src/skills/quality-router/SKILL.md
+- Goal: provide a manual, command-like routing entry for the quality skill family so users can explicitly trigger quality actions without relying on `src/commands/`.
 
 ## Capability Evals
 
@@ -25,7 +25,7 @@ Graders:
 
 ### capability-2
 
-Goal: the skill works as a `commands/` replacement rather than a second full methodology.
+Goal: the skill works as a `src/commands/` replacement rather than a second full methodology.
 
 Success Criteria:
 

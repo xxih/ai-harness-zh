@@ -8,6 +8,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
+SRC_ROOT = ROOT / "src"
+TARGETS_ROOT = ROOT / "targets"
 
 
 def read_text(path: Path) -> str:
@@ -38,9 +40,10 @@ def ok(condition: bool, message: str, failures: list[str]) -> None:
 
 def validate_repo_layout(failures: list[str]) -> None:
     for relative in (
-        "agents",
-        "skills",
-        "commands",
+        "src",
+        "src/agents",
+        "src/skills",
+        "src/commands",
         "evals",
         "evals/agents",
         "evals/skills",
@@ -48,11 +51,19 @@ def validate_repo_layout(failures: list[str]) -> None:
         "scripts",
         "references",
         "references/repos",
+        "targets",
+        "targets/codex",
+        "targets/codex/.codex",
+        "targets/codex/.codex/agents",
     ):
         ok((ROOT / relative).is_dir(), f"directory exists: {relative}", failures)
     ok((ROOT / "AGENTS.md").is_file(), "file exists: AGENTS.md", failures)
     ok((ROOT / "references" / "README.md").is_file(), "file exists: references/README.md", failures)
     ok((ROOT / "references" / "repos" / ".gitignore").is_file(), "file exists: references/repos/.gitignore", failures)
+    ok((TARGETS_ROOT / "README.md").is_file(), "file exists: targets/README.md", failures)
+    ok((TARGETS_ROOT / "codex" / "README.md").is_file(), "file exists: targets/codex/README.md", failures)
+    ok((TARGETS_ROOT / "codex" / ".codex" / "AGENTS.md").is_file(), "file exists: targets/codex/.codex/AGENTS.md", failures)
+    ok((TARGETS_ROOT / "codex" / ".codex" / "config.toml").is_file(), "file exists: targets/codex/.codex/config.toml", failures)
 
 
 def validate_skill(skill_path: Path, failures: list[str]) -> None:
@@ -77,7 +88,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
     if skill_name == "eval-harness":
         ok("Claude Code" not in text, f"{label} is tool-neutral about Claude Code", failures)
         ok(".claude/" not in text, f"{label} does not hardcode .claude storage", failures)
-        ok("skills/" in text and "commands/" in text, f"{label} covers both skills and commands", failures)
+        ok("src/skills/" in text and "src/commands/" in text, f"{label} covers both skills and commands", failures)
         ok("代码评分器" in text, f"{label} prefers code-based graders", failures)
         ok("references/templates.md" in text, f"{label} moves examples into references", failures)
     if skill_name == "search-first":
@@ -96,7 +107,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             failures,
         )
         ok(
-            (ROOT / "skills" / "search-first" / "references" / "research-checklist.md").is_file(),
+            (SRC_ROOT / "skills" / "search-first" / "references" / "research-checklist.md").is_file(),
             "research checklist reference exists for search-first",
             failures,
         )
@@ -111,7 +122,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             f"{label} routes to the quality-* skill family",
             failures,
         )
-        ok("commands/" in text, f"{label} acts as a commands replacement", failures)
+        ok("src/commands/" in text, f"{label} acts as a commands replacement", failures)
         ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
         ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
         ok("coding-quality-loop" not in text, f"{label} no longer routes to coding-quality-loop", failures)
@@ -141,7 +152,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
         ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
         ok(
-            (ROOT / "skills" / "quality-review" / "references" / "reviewer-template.md").is_file(),
+            (SRC_ROOT / "skills" / "quality-review" / "references" / "reviewer-template.md").is_file(),
             "reviewer template reference exists for quality-review",
             failures,
         )
@@ -172,11 +183,11 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok("references/visual-styles.md" in text, f"{label} references theme guidance", failures)
         ok("references/markdown-authoring.md" in text, f"{label} references markdown authoring guidance", failures)
         ok((ROOT / "scripts" / "build_xiaohongshu_carousel.py").is_file(), "build script exists: scripts/build_xiaohongshu_carousel.py", failures)
-        ok((ROOT / "skills" / "xiaohongshu-carousel" / "assets" / "base.css").is_file(), "base theme exists for xiaohongshu-carousel", failures)
-        theme_files = sorted((ROOT / "skills" / "xiaohongshu-carousel" / "assets" / "themes").glob("*.css"))
+        ok((SRC_ROOT / "skills" / "xiaohongshu-carousel" / "assets" / "base.css").is_file(), "base theme exists for xiaohongshu-carousel", failures)
+        theme_files = sorted((SRC_ROOT / "skills" / "xiaohongshu-carousel" / "assets" / "themes").glob("*.css"))
         ok(len(theme_files) >= 3, "xiaohongshu-carousel has at least three themes", failures)
-        ok((ROOT / "skills" / "xiaohongshu-carousel" / "references" / "visual-styles.md").is_file(), "visual style reference exists for xiaohongshu-carousel", failures)
-        ok((ROOT / "skills" / "xiaohongshu-carousel" / "references" / "markdown-authoring.md").is_file(), "markdown authoring reference exists for xiaohongshu-carousel", failures)
+        ok((SRC_ROOT / "skills" / "xiaohongshu-carousel" / "references" / "visual-styles.md").is_file(), "visual style reference exists for xiaohongshu-carousel", failures)
+        ok((SRC_ROOT / "skills" / "xiaohongshu-carousel" / "references" / "markdown-authoring.md").is_file(), "markdown authoring reference exists for xiaohongshu-carousel", failures)
 
 
 def validate_command(command_path: Path, failures: list[str]) -> None:
@@ -235,21 +246,41 @@ def validate_eval(eval_path: Path, failures: list[str]) -> None:
         ok(heading in text, f"{label} contains heading: {heading}", failures)
 
 
+def validate_codex_target(failures: list[str]) -> None:
+    codex_root = TARGETS_ROOT / "codex" / ".codex"
+    config_path = codex_root / "config.toml"
+    agents_path = codex_root / "AGENTS.md"
+    reviewer_path = codex_root / "agents" / "reviewer.toml"
+
+    if config_path.is_file():
+        config_text = read_text(config_path)
+        ok("multi_agent = true" in config_text, "targets/codex enables Codex multi_agent mode", failures)
+        ok('[agents.reviewer]' in config_text, "targets/codex registers a reviewer role", failures)
+        ok('config_file = "agents/reviewer.toml"' in config_text, "targets/codex reviewer role points to its TOML config", failures)
+    if agents_path.is_file():
+        agents_text = read_text(agents_path)
+        ok("src/skills/" in agents_text and "src/agents/" in agents_text and "src/commands/" in agents_text, "targets/codex AGENTS.md maps Codex behavior back to src assets", failures)
+        ok("config.toml" in agents_text and ".codex/agents/" in agents_text, "targets/codex AGENTS.md explains config-to-agent-role wiring", failures)
+    if reviewer_path.is_file():
+        reviewer_text = read_text(reviewer_path)
+        ok("src/agents/quality-code-reviewer.md" in reviewer_text, "targets/codex reviewer role aligns with the reusable reviewer prompt", failures)
+
+
 def main() -> int:
     failures: list[str] = []
 
     validate_repo_layout(failures)
 
-    skill_files = sorted((ROOT / "skills").glob("*/SKILL.md"))
+    skill_files = sorted((SRC_ROOT / "skills").glob("*/SKILL.md"))
     ok(bool(skill_files), "at least one skill exists", failures)
     for skill_file in skill_files:
         validate_skill(skill_file, failures)
 
-    agent_files = sorted((ROOT / "agents").glob("*.md"))
+    agent_files = sorted((SRC_ROOT / "agents").glob("*.md"))
     for agent_file in agent_files:
         validate_agent(agent_file, failures)
 
-    command_files = sorted((ROOT / "commands").glob("*.md"))
+    command_files = sorted((SRC_ROOT / "commands").glob("*.md"))
     for command_file in command_files:
         validate_command(command_file, failures)
 
@@ -257,6 +288,8 @@ def main() -> int:
     ok(bool(eval_files), "at least one eval definition exists", failures)
     for eval_file in eval_files:
         validate_eval(eval_file, failures)
+
+    validate_codex_target(failures)
 
     if failures:
         print(f"\nValidation failed with {len(failures)} issue(s).")

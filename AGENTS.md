@@ -4,7 +4,8 @@
 
 这是一个沉淀可复用 AI prompt 资产的工作区。
 
-- 核心资产放在 `skills/` 和 `commands/`
+- 核心资产源码放在 `src/skills/`、`src/agents/` 和 `src/commands/`
+- 面向不同 AI 工具的分发适配放在 `targets/`
 - 每个可复用资产都应在 `evals/` 中具备明确的评估定义
 - 只要能做成确定性校验，就优先放进 `scripts/`
 
@@ -17,7 +18,7 @@
 ## 工作规则
 
 - 把 prompt 资产视为可版本化的项目产物，而不是一次性聊天输出
-- 对非平凡变更，优先先定义或更新 eval，再修改资产本身
+- `eval-harness` 只在用户明确提出时才启用，不作为默认流程
 - 共享资产默认保持工具无关，只有目标平台明确绑定时才写入平台细节
 - 涉及结构性变更后，运行 `python3 scripts/validate_assets.py`
 - 外部参考仓库统一放在 `references/repos/`，该目录供 AI 读取，但不纳入当前仓库 git 管理

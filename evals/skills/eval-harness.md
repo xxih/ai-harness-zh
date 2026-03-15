@@ -3,7 +3,7 @@
 ## Asset Under Test
 
 - Type: skill
-- Path: skills/eval-harness/SKILL.md
+- Path: src/skills/eval-harness/SKILL.md
 - Goal: provide a tool-neutral evaluation workflow for reusable AI prompt assets in this repository.
 
 ## Capability Evals
@@ -23,7 +23,7 @@ Graders:
 
 ### capability-2
 
-Goal: the skill supports both `skills/` and `commands/` as first-class assets.
+Goal: the skill supports both `src/skills/` and `src/commands/` as first-class assets.
 
 Success Criteria:
 

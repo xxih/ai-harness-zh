@@ -3,7 +3,7 @@
 ## Asset Under Test
 
 - Type: skill
-- Path: skills/xiaohongshu-carousel/SKILL.md
+- Path: src/skills/xiaohongshu-carousel/SKILL.md
 - Goal: provide a repeatable workflow for turning existing Chinese content into publishable Xiaohongshu carousel images and renderable source files.
 
 ## Capability Evals

@@ -21,8 +21,8 @@ description: Use when creating or revising reusable AI prompt assets that need e
 每次使用本 skill 时，默认产出以下内容中的最小必要集合：
 
 1. 目标资产本身
-   - `skills/<name>/SKILL.md`
-   - 或 `commands/<name>.md`
+   - `src/skills/<name>/SKILL.md`
+   - 或 `src/commands/<name>.md`
 2. 配套评估定义
    - `evals/skills/<name>.md`
    - 或 `evals/commands/<name>.md`

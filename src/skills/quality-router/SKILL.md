@@ -1,11 +1,11 @@
 ---
 name: quality-router
-description: 质量相关 skill 的手动触发入口，作为 `commands/` 的平替；当用户明确说 `/tdd`、`/verify`、`/review` 或 `/review-feedback` 时，路由到对应的 `quality-*` skill。
+description: 质量相关 skill 的手动触发入口，作为 `src/commands/` 的平替；当用户明确说 `/tdd`、`/verify`、`/review` 或 `/review-feedback` 时，路由到对应的 `quality-*` skill。
 ---
 
 # Quality Router
 
-把质量动作做成显式入口，而不是要求用户记住 `commands/` 目录。这个 skill 只负责手动路由，不重复各阶段的完整方法论。
+把质量动作做成显式入口，而不是要求用户记住 `src/commands/` 目录。这个 skill 只负责手动路由，不重复各阶段的完整方法论。
 
 ## 何时使用
 
@@ -46,7 +46,7 @@ description: 质量相关 skill 的手动触发入口，作为 `commands/` 的�
 
 ## 路由约束
 
-- 这个 skill 是 `commands/` 的平替，不是第二套质量方法论
+- 这个 skill 是 `src/commands/` 的平替，不是第二套质量方法论
 - 所有质量相关 skill 使用统一前缀 `quality-`
 - 若用户未显式触发命令式入口，应直接使用目标 skill，而不是先经过 router
 - 这组 skill 可以适配 `nanospec`，但不依赖 `nanospec`

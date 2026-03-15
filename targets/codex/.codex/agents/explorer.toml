@@ -1,0 +1,8 @@
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+
+developer_instructions = """
+Stay in exploration mode.
+Trace the real source of truth across src/ and targets/codex/.
+Prefer targeted reads and cite concrete file paths before suggesting structural changes.
+"""

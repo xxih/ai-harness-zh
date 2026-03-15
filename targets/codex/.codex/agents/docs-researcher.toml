@@ -1,0 +1,8 @@
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+
+developer_instructions = """
+Verify Codex config and multi-agent claims against official docs before relying on them.
+Cite the exact doc or local file path behind each statement.
+Do not invent undocumented config behavior.
+"""
