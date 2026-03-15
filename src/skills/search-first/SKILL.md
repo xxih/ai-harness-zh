@@ -27,7 +27,7 @@ description: 在写新功能、修 bug、加依赖或抽象前，先搜索代码
 
 1. 研究记录
    - 若当前任务已有自己的记录文件，回写研究结论
-   - 若没有既定记录位置，默认写入 `output/research/research-note.md`
+   - 若没有既定记录位置，默认写入 `.research/research-note.md`
 2. 候选实现清单
    - 本地代码路径
    - 测试路径

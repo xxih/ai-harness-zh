@@ -30,7 +30,8 @@ description: 面向功能开发、bugfix 与重构的测试先行 skill。先写
    - 哪段实现是为让当前测试通过而新增
 3. 质量记录
    - 若当前任务已有自己的记录文件，回写 TDD 阶段摘要
-   - 若没有既定记录位置，默认写入 `output/quality/quality-check.md`
+   - 若当前任务已有 `nanospec` 等任务容器但还没有专门记录文件，默认写入 `nanospec/<task>/assets/quality-check.md`
+   - 若没有既定记录位置，默认写入 `.quality/quality-check.md`
 
 ## 工作流
 

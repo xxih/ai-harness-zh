@@ -103,7 +103,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             failures,
         )
         ok("research-note.md" in text, f"{label} defines a durable research output", failures)
-        ok("output/research/research-note.md" in text, f"{label} uses a project-local default research output path", failures)
+        ok(".research/research-note.md" in text, f"{label} uses a project-local default research output path", failures)
         ok(
             "新功能" in text and "bug" in text and "依赖" in text,
             f"{label} targets coding tasks such as features, bugs, and integrations",
@@ -126,8 +126,13 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             failures,
         )
         ok("src/commands/" in text, f"{label} acts as a commands replacement", failures)
-        ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
-        ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
+        ok(
+            "不依赖 `nanospec`" in text or "不要把 `nanospec` 当成前提" in text or "不以任何单一任务框架为前提" in text,
+            f"{label} does not hard-require nanospec output paths",
+            failures,
+        )
+        ok(".quality/quality-check.md" in text, f"{label} uses a project-local fallback quality output path", failures)
+        ok("nanospec/<task>/assets/quality-check.md" in text, f"{label} prefers task-container quality output when available", failures)
         ok("coding-quality-loop" not in text, f"{label} no longer routes to coding-quality-loop", failures)
     if skill_name == "quality-tdd":
         ok("失败测试" in text and "先写实现再补测试" in text, f"{label} enforces test-first discipline", failures)
@@ -135,8 +140,13 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok("Red-Green-Refactor" in text or "红-绿-重构" in text, f"{label} describes a red-green-refactor loop", failures)
         ok("这次先跳过" in text or "合理化" in text, f"{label} carries anti-rationalization guidance", failures)
         ok("references/testing-anti-patterns.md" in text, f"{label} links to anti-pattern references", failures)
-        ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
-        ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
+        ok(
+            "不依赖 `nanospec`" in text or "不要把 `nanospec` 当成前提" in text or "不以任何单一任务框架为前提" in text,
+            f"{label} does not hard-require nanospec output paths",
+            failures,
+        )
+        ok(".quality/quality-check.md" in text, f"{label} uses a project-local fallback quality output path", failures)
+        ok("nanospec/<task>/assets/quality-check.md" in text, f"{label} prefers task-container quality output when available", failures)
     if skill_name == "quality-verify":
         ok("fresh evidence" in text and "not-ready" in text.lower(), f"{label} enforces fresh evidence before completion claims", failures)
         ok(
@@ -146,14 +156,20 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         )
         ok("应该可以" in text or "看起来没问题" in text, f"{label} warns against false completion wording", failures)
         ok("build" in text.lower() and "tests" in text.lower() and "diff" in text.lower(), f"{label} includes full verification scope", failures)
-        ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
-        ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
+        ok(
+            "不依赖 `nanospec`" in text or "不要把 `nanospec` 当成前提" in text or "不依赖任何特定任务框架" in text,
+            f"{label} does not hard-require nanospec output paths",
+            failures,
+        )
+        ok(".quality/quality-check.md" in text, f"{label} uses a project-local fallback quality output path", failures)
+        ok("nanospec/<task>/assets/quality-check.md" in text, f"{label} prefers task-container quality output when available", failures)
     if skill_name == "quality-review":
         ok("独立 reviewer" in text or "multiagent" in text, f"{label} prefers an independent reviewer path", failures)
         ok("Critical" in text and "Important" in text and "Minor" in text, f"{label} acts on tiered review findings", failures)
         ok("references/reviewer-template.md" in text, f"{label} links to the reusable reviewer template", failures)
-        ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
-        ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
+        ok("不依赖 `nanospec`" in text or "不以任何单一任务框架为前提" in text, f"{label} does not hard-require nanospec output paths", failures)
+        ok(".quality/quality-check.md" in text, f"{label} uses a project-local fallback quality output path", failures)
+        ok("nanospec/<task>/assets/quality-check.md" in text, f"{label} prefers task-container quality output when available", failures)
         ok(
             (SRC_ROOT / "skills" / "quality-review" / "references" / "reviewer-template.md").is_file(),
             "reviewer template reference exists for quality-review",
@@ -168,8 +184,9 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok("表演性认同" in text or "盲从" in text, f"{label} forbids performative agreement", failures)
         ok("先澄清" in text or "不清楚" in text, f"{label} requires clarification before implementation", failures)
         ok("YAGNI" in text or "现有行为" in text, f"{label} includes technical pushback conditions", failures)
-        ok("nanospec/<task>/" not in text, f"{label} does not hard-require nanospec output paths", failures)
-        ok("output/quality/quality-check.md" in text, f"{label} uses a project-local default quality output path", failures)
+        ok("不依赖 `nanospec`" in text or "不能假设调用方一定有该类目录结构" in text, f"{label} does not hard-require nanospec output paths", failures)
+        ok(".quality/quality-check.md" in text, f"{label} uses a project-local fallback quality output path", failures)
+        ok("nanospec/<task>/assets/quality-check.md" in text, f"{label} prefers task-container quality output when available", failures)
     if skill_name == "agent-orchestration":
         ok(
             all(token in text for token in ("planner", "orchestrator", "worker", "explore", "reviewer")),
@@ -207,7 +224,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             failures,
         )
         ok(
-            "output/research/orchestration-note.md" in text,
+            ".research/orchestration-note.md" in text,
             f"{label} uses a project-local default orchestration output path",
             failures,
         )
@@ -219,6 +236,54 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok(
             (SRC_ROOT / "skills" / "agent-orchestration" / "references" / "delegation-template.md").is_file(),
             "delegation template reference exists for agent-orchestration",
+            failures,
+        )
+    if skill_name == "learning-capture":
+        ok(
+            "手工触发" in text or "手动触发" in text,
+            f"{label} is explicitly manual-triggered",
+            failures,
+        )
+        ok(
+            "hooks" in text and "不依赖 hooks" in text,
+            f"{label} explicitly avoids hook-dependent automation",
+            failures,
+        )
+        ok(
+            all(
+                token in text
+                for token in (
+                    ".learning/learnings.md",
+                    ".learning/promote-candidates.md",
+                    ".learning/project-rules.md",
+                )
+            ),
+            f"{label} defines project-local fallback learning output paths",
+            failures,
+        )
+        ok(
+            all(token in text for token in ("keep-local", "promote-later", "propose-agents-update", "drop")),
+            f"{label} defines learning follow-up states",
+            failures,
+        )
+        ok(
+            "references/templates.md" in text,
+            f"{label} links to the reusable learning templates",
+            failures,
+        )
+        ok(
+            "project-rules.md" in text and "AGENTS.md" in text,
+            f"{label} captures project-level rule candidates and AGENTS update proposals",
+            failures,
+        )
+        ok(
+            ".learning/" in text and "不要把 `nanospec` 当成学习记录的默认载体" in text,
+            f"{label} keeps .learning as the default learning sink instead of nanospec",
+            failures,
+        )
+        ok(
+            (SRC_ROOT / "skills" / "learning-capture" / "references" / "templates.md").is_file(),
+            "templates reference exists for learning-capture",
             failures,
         )
     if skill_name == "xiaohongshu-carousel":

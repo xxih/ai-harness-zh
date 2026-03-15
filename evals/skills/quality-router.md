@@ -32,7 +32,8 @@ Success Criteria:
 - [ ] `SKILL.md` states that it is a manual routing entry for quality actions
 - [ ] `SKILL.md` keeps detailed procedures in the routed skills instead of duplicating them
 - [ ] `SKILL.md` defines a shared durable output strategy without requiring `nanospec`
-- [ ] `SKILL.md` uses a project-local default output path such as `output/quality/quality-check.md`
+- [ ] `SKILL.md` uses a project-local fallback output path such as `.quality/quality-check.md`
+- [ ] `SKILL.md` prefers a task container path such as `nanospec/<task>/assets/quality-check.md` when a container exists
 
 Graders:
 

@@ -31,7 +31,8 @@ Success Criteria:
 - [ ] `SKILL.md` links to `references/reviewer-template.md`
 - [ ] the reviewer template includes strengths, issues, and assessment style output
 - [ ] `SKILL.md` defines a durable output strategy without requiring `nanospec`
-- [ ] `SKILL.md` uses a project-local default output path such as `output/quality/quality-check.md`
+- [ ] `SKILL.md` uses a project-local fallback output path such as `.quality/quality-check.md`
+- [ ] `SKILL.md` prefers a task container path such as `nanospec/<task>/assets/quality-check.md` when a container exists
 
 Graders:
 

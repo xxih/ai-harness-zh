@@ -28,7 +28,8 @@ description: 质量相关 skill 的手动触发入口，作为 `src/commands/` �
    - 当前请求应进入哪个 `quality-*` skill
 2. 质量记录
    - 若当前任务已有自己的记录文件，统一回写到该文件
-   - 若没有既定记录位置，默认写入项目内的 `output/quality/quality-check.md`
+   - 若当前任务已有 `nanospec` 等任务容器但还没有专门记录文件，默认写入 `nanospec/<task>/assets/quality-check.md`
+   - 若没有既定记录位置，默认写入项目内的 `.quality/quality-check.md`
 
 ## 工作流
 
@@ -42,7 +43,8 @@ description: 质量相关 skill 的手动触发入口，作为 `src/commands/` �
    - 进入目标 skill 后，再读取对应 references 或模板
 3. 回写统一记录
    - 各阶段结果优先并入当前任务已有记录
-   - 若没有共享记录载体，则写入 `output/quality/quality-check.md`
+   - 若当前任务有容器，则写入容器内的 `quality-check.md`
+   - 若没有共享记录载体，则写入 `.quality/quality-check.md`
 
 ## 路由约束
 

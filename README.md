@@ -16,6 +16,9 @@
 - `targets/`：不同 AI 工具的分发目录，保留和 `src/` 对齐的资产镜像，并叠加工具专属配置
 - `evals/`：和资产配套的评估定义与回归用例
 - `scripts/`：确定性的校验脚本与辅助工具
+- `.learning/`：项目根目录下的学习积累记录目录
+- `.quality/`：项目根目录下的质量记录目录
+- `.research/`：项目根目录下的研究与编排记录目录
 - `references/`：仓库内参考资料入口，包含可追踪说明文档与本地外部仓库目录
 - `references/repos/`：本地参考仓库存放处，供 AI 工具读取，默认不纳入当前 git 版本管理
 
@@ -31,8 +34,9 @@
 默认落盘建议：
 
 - 若任务已有自己的记录文件，优先回写到该文件
-- 若没有既定位置，coding 研究默认写入 `output/research/research-note.md`
-- 若没有既定位置，coding 质量结果默认写入 `output/quality/quality-check.md`
+- 若没有既定位置，coding 研究默认写入 `.research/research-note.md`
+- 若没有既定位置，coding 质量结果默认写入 `.quality/quality-check.md`
+- 若没有既定位置，learning 相关记录默认写入 `.learning/`
 
 ## 当前资产
 
@@ -44,6 +48,8 @@
   - 用于复杂 coding 任务中的主 agent 编排职责，包括角色分层、顺序阶段、单任务委派、并行独立性判定、反重复规则、结果回收与验证
 - `src/skills/search-first/`
   - 用于在写新功能、修 bug、加依赖或抽象前，先搜索代码库、测试和外部方案，再决定是 `adopt`、`adapt` 还是 `build`
+- `src/skills/learning-capture/`
+  - 用于在一个会话或一个任务里手动触发学习积累，把 learnings、候选升级项和项目级规则候选落盘为结构化记录
 
 ### 工程研发 / 质量
 

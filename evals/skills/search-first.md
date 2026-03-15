@@ -45,7 +45,7 @@ Success Criteria:
 - [ ] `SKILL.md` defines a reusable output such as `research-note.md`
 - [ ] `SKILL.md` requires recording evidence paths or source names
 - [ ] `SKILL.md` requires a next-step recommendation for implementation
-- [ ] `SKILL.md` uses a project-local default output path such as `output/research/research-note.md`
+- [ ] `SKILL.md` uses a project-local default output path such as `.research/research-note.md`
 
 Graders:
 

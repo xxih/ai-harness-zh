@@ -32,7 +32,8 @@ description: 面向完成宣称前的验证门禁 skill。先拿到 fresh verifi
    - `not-ready`
 3. 质量记录
    - 若当前任务已有自己的记录文件，回写 Verify 阶段摘要
-   - 若没有既定记录位置，默认写入 `output/quality/quality-check.md`
+   - 若当前任务已有 `nanospec` 等任务容器但还没有专门记录文件，默认写入 `nanospec/<task>/assets/quality-check.md`
+   - 若没有既定记录位置，默认写入 `.quality/quality-check.md`
 
 ## 工作流
 
