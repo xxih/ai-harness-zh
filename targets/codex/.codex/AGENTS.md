@@ -28,10 +28,10 @@
 
 ## Current Roles
 
-- `explorer`：只读探索，负责梳理源资产和适配层之间的真实关系
-- `reviewer`：审查实现与分发适配是否偏离 `src/` 的源资产约定
-- `quality_code_reviewer`：`agents/quality-code-reviewer.md` 的 Codex 运行时角色，负责独立代码评审，并显式具备 `quality-*` skills
-- `docs_researcher`：验证 Codex 配置、能力边界和分发假设
+- `explorer`：只读探索，负责理解仓库结构、资产内容和分发布局
+- `reviewer`：审查结构回归、分发问题和仓库一致性
+- `quality_code_reviewer`：独立代码评审角色，显式具备 `quality-*` skills
+- `docs_researcher`：验证 Codex 配置、角色行为和分发规则
 
 ## Packaging Rules
 
