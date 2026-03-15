@@ -1,11 +1,11 @@
 ---
 name: learning-capture
-description: 在一个会话或一个任务里手动触发学习积累；把本次问题、决策、证据、可复用模式和项目级规则候选落盘为结构化记录，默认写入项目根目录的 `.learning/`。
+description: 在一个会话或一个任务里手动触发学习积累；把本次问题、决策、证据、可复用模式和项目级规则候选落盘为结构化记录，默认写入项目根目录的 `.learned/`。
 ---
 
 # Learning Capture
 
-把“这次值得记住什么”做成显式手动动作。当前阶段只做手工触发，不依赖 hooks、observer 或自动入库。目标是在单个会话或任务内先沉淀学习记录、候选模式和项目级规则候选，为后续 `save / absorb / drop`、stocktake 或 `AGENTS.md` 更新做准备。默认落盘位置放在项目根目录 `.learning/`，而不是 `output/` 或 `nanospec` 默认目录。
+把“这次值得记住什么”做成显式手动动作。当前阶段只做手工触发，不依赖 hooks、observer 或自动入库。目标是在单个会话或任务内先沉淀学习记录、候选模式和项目级规则候选，为后续 `save / absorb / drop`、stocktake 或 `AGENTS.md` 更新做准备。默认落盘位置放在项目根目录 `.learned/`，而不是 `output/` 或 `nanospec` 默认目录。
 
 ## 何时使用
 
@@ -27,13 +27,13 @@ description: 在一个会话或一个任务里手动触发学习积累；把本�
 
 1. 学习记录
    - 若当前任务已有自己的记录文件，优先回写到该文件
-   - 若没有既定记录位置，默认写入 `.learning/learnings.md`
+   - 若没有既定记录位置，默认写入 `.learned/learnings.md`
 2. 候选升级清单
    - 若当前任务已有自己的记录文件，优先回写到该文件
-   - 若没有既定记录位置，默认写入 `.learning/promote-candidates.md`
+   - 若没有既定记录位置，默认写入 `.learned/promote-candidates.md`
 3. 项目级规则候选
    - 若当前任务已有自己的记录文件，优先回写到该文件
-   - 若没有既定记录位置，默认写入 `.learning/project-rules.md`
+   - 若没有既定记录位置，默认写入 `.learned/project-rules.md`
 4. 后续动作状态
    - `keep-local`：先保留在当前任务或项目内
    - `promote-later`：后续进入 `save / absorb / drop` 评审
@@ -87,7 +87,7 @@ description: 在一个会话或一个任务里手动触发学习积累；把本�
 - 这个 skill 是手工触发入口，不依赖 hooks 或后台观察器
 - 当前阶段不自动生成正式 `src/skills/`、`src/commands/`、`evals/` 资产
 - 任务内 learning 和仓库级资产要分层，不要把原始记录直接当成最终 prompt
-- 默认根目录使用 `.learning/`，不要把 `nanospec` 当成学习记录的默认载体
+- 默认根目录使用 `.learned/`，不要把 `nanospec` 当成学习记录的默认载体
 - 若一条经验只适用于当前项目、当前目录或当前任务，应优先 `keep-local`
 - 若一条纠正已经明显是仓库公共规则，应优先进入 `project-rules.md`，不要混进普通 `learnings.md`
 - 若已有相同记录，优先合并，不要制造新的碎片文件

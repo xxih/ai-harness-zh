@@ -11,5 +11,5 @@
 - [变更] 第一阶段交付物调整为新增 `learning-capture` skill，提供会话内 / 任务内手动触发的学习记录与候选升级结构。
 - [变更] 用户补充要求：除任务 learnings 外，还需要捕获对话中出现的项目级 / 公共规则纠正，先提取为候选，避免用户手动维护 `AGENTS.md`。
 - [变更] `learning-capture` 需要增加 `project-rules.md` 这一层结构，用于排队后续 `AGENTS.md`、README 或共享资产规则更新。
-- [变更] 用户否定 `output/xxx` 风格目录，并进一步要求不要统一成单个 `records/`；改为项目根目录下的隐藏目录：`.learning`、`.quality`，以及与研究配套的 `.research`。
-- [变更] 路径策略更新为：learning 默认 `.learning/`；quality 有容器优先写容器，无容器回退到 `.quality/`；research 默认 `.research/`。
+- [变更] 用户否定 `output/xxx` 风格目录，并进一步要求不要统一成单个 `records/`；改为项目根目录下的隐藏目录：`.learned`、`.quality`，以及与研究配套的 `.research`。
+- [变更] 路径策略更新为：learning 默认 `.learned/`；quality 有容器优先写容器，无容器回退到 `.quality/`；research 默认 `.research/`。

@@ -28,7 +28,7 @@ Goal: the skill establishes durable structure before future automation.
 
 Success Criteria:
 
-- [ ] `SKILL.md` defines a project-root default such as `.learning/`
+- [ ] `SKILL.md` defines a project-root default such as `.learned/`
 - [ ] `SKILL.md` separates `learnings.md`, `promote-candidates.md`, and `project-rules.md`
 - [ ] `SKILL.md` defines `keep-local`, `promote-later`, `propose-agents-update`, and `drop`
 

@@ -16,7 +16,7 @@
 - `targets/`：不同 AI 工具的分发目录，保留和 `src/` 对齐的资产镜像，并叠加工具专属配置
 - `evals/`：和资产配套的评估定义与回归用例
 - `scripts/`：确定性的校验脚本与辅助工具
-- `.learning/`：项目根目录下的学习积累记录目录
+- `.learned/`：项目根目录下的学习积累记录目录
 - `.quality/`：项目根目录下的质量记录目录
 - `.research/`：项目根目录下的研究与编排记录目录
 - `references/`：仓库内参考资料入口，包含可追踪说明文档与本地外部仓库目录
@@ -36,7 +36,7 @@
 - 若任务已有自己的记录文件，优先回写到该文件
 - 若没有既定位置，coding 研究默认写入 `.research/research-note.md`
 - 若没有既定位置，coding 质量结果默认写入 `.quality/quality-check.md`
-- 若没有既定位置，learning 相关记录默认写入 `.learning/`
+- 若没有既定位置，learning 相关记录默认写入 `.learned/`
 
 ## 当前资产
 

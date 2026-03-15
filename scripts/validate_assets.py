@@ -253,9 +253,9 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             all(
                 token in text
                 for token in (
-                    ".learning/learnings.md",
-                    ".learning/promote-candidates.md",
-                    ".learning/project-rules.md",
+                    ".learned/learnings.md",
+                    ".learned/promote-candidates.md",
+                    ".learned/project-rules.md",
                 )
             ),
             f"{label} defines project-local fallback learning output paths",
@@ -277,8 +277,8 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             failures,
         )
         ok(
-            ".learning/" in text and "不要把 `nanospec` 当成学习记录的默认载体" in text,
-            f"{label} keeps .learning as the default learning sink instead of nanospec",
+            ".learned/" in text and "不要把 `nanospec` 当成学习记录的默认载体" in text,
+            f"{label} keeps .learned as the default learning sink instead of nanospec",
             failures,
         )
         ok(

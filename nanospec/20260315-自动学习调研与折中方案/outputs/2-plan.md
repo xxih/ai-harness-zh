@@ -107,9 +107,9 @@
 
 - 新增 `learning-capture` skill
 - 定义 `learnings.md`、`promote-candidates.md` 与 `project-rules.md` 的结构
-- 定义项目根目录隐藏记录目录：`.learning`、`.quality`、`.research`
+- 定义项目根目录隐藏记录目录：`.learned`、`.quality`、`.research`
 - 定义 learning 与 quality 的不同回写策略：
-  - learning 默认写 `.learning/`
+  - learning 默认写 `.learned/`
   - quality 有容器优先写容器，无容器回退到 `.quality/`
   - research / orchestration 默认写 `.research/`
 - 先支持手工触发，不做 hooks 或扫描自动化

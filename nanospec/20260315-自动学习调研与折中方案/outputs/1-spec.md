@@ -71,7 +71,7 @@
 - 不直接把学习记录升级为正式共享资产
 - 除普通 learnings 外，还要支持“项目级 / 公共规则候选”的捕获
 - 对话中用户纠正出来的仓库级规则，应能先排队到候选文件，而不是要求立即手改 `AGENTS.md`
-- learning 默认落盘到项目根目录 `.learning/`，不以 `nanospec` 为默认学习载体
+- learning 默认落盘到项目根目录 `.learned/`，不以 `nanospec` 为默认学习载体
 - quality 类 skill 若存在任务容器，则优先回写容器；否则回退到 `.quality/`
 - research / orchestration 类记录默认回退到 `.research/`
 
