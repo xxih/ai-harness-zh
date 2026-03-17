@@ -253,9 +253,8 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             all(
                 token in text
                 for token in (
-                    ".learned/learnings.md",
-                    ".learned/promote-candidates.md",
-                    ".learned/project-rules.md",
+                    ".learned/notes.md",
+                    ".learned/rules.md",
                 )
             ),
             f"{label} defines project-local fallback learning output paths",
@@ -272,7 +271,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             failures,
         )
         ok(
-            "project-rules.md" in text and "AGENTS.md" in text,
+            "rules.md" in text and "AGENTS.md" in text,
             f"{label} captures project-level rule candidates and AGENTS update proposals",
             failures,
         )
