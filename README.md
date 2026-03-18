@@ -54,6 +54,8 @@
 
 - `src/domains/workflow/AGENTS.md`
   - 该领域的公共规则，覆盖研究、拆解和执行前准备
+- `src/domains/workflow/skills/nanospec/`
+  - 用于统一任务中间文档目录规范，并以 `alignment.md` 作为跨阶段纠偏入口
 - `src/domains/workflow/skills/search-first/`
   - 用于在写新功能、修 bug、加依赖或抽象前，先搜索代码库、测试和外部方案，再决定是 `adopt`、`adapt` 还是 `build`
 - `src/domains/workflow/skills/agent-orchestration/`
