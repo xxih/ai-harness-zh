@@ -37,6 +37,8 @@
 
 - `src/README.md`
   - 说明 `src/` 源资产层的总布局
+- `src/domains/<domain>/_AGENTS.md`
+  - 领域根目录下的载体文件；存放某些 `skills/`、`commands/` 需要默认注入的搭配上下文
 - `src/domains/<domain>/skills/<name>/SKILL.md`
   - 领域内的 skill 源资产
 - `src/domains/<domain>/agents/<name>.md`
@@ -56,7 +58,7 @@
 2. 需要翻译时，把中文版本沉淀到 `references/translations/<repo>/`。
 3. 确认某类能力值得长期复用后，再回收进 `src/domains/<domain>/`。
 4. 若某个 AI 工具需要专属包装，由 `targets/<tool>/` 维护对应运行时分发目录。
-5. 修改 `src/` 后，按需手动同步对应 `targets/` 分发副本。
+5. 修改 `src/` 后，按需手动同步对应 `targets/` 分发副本；若某个目标工具需要承载 `AGENTS.md` 类内容，当前阶段在 `targets/` 中保存为 `_AGENTS.md`。
 6. 涉及结构性变化时，同时更新相关说明文档。
 
 默认落盘建议：

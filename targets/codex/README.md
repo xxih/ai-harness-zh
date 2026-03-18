@@ -4,6 +4,8 @@
 
 ## 组成
 
+- `_AGENTS.md`
+  - Codex 分发侧保存的搭配上下文块；块内容使用 XML 注释标签包裹；若未来需要生成运行时 `AGENTS.md`，再交给后续工具化分发处理
 - `skills/`
   - 从 `src/domains/*/skills/` 收集并平铺出的 Codex skills
 - `agents/`
@@ -18,8 +20,11 @@
 ## 与 `src/` 的关系
 
 - `src/domains/<domain>/...` 是源资产
+- `src/domains/<domain>/_AGENTS.md` 是搭配上下文块的真相来源
+- `targets/codex/_AGENTS.md` 是面向 Codex 的分发副本，故意不用 `AGENTS.md` 命名，避免影响当前仓库开发上下文
 - `targets/codex/skills/`、`targets/codex/agents/`、`targets/codex/commands/` 是面向 Codex 的运行时平铺快照
 - Codex 专属差异只放在 `.codex/` 下，不混进通用资产正文
+- 当前阶段不在 `targets/codex/` 内保留 `AGENTS.md`
 
 ## Codex 角色规则
 
@@ -38,7 +43,13 @@
 若要把这一层分发到某个 Codex 项目：
 
 1. 修改 `src/` 后，按需手动同步 `targets/codex/` 中对应的分发副本
-2. 确认新增的 `agents/*.md` 是否都已经在 `.codex/config.toml` 中注册为角色
-3. 确认新增角色是否都有对应的 `.codex/agents/*.toml`
-4. 将整个 `targets/codex/` 作为 Codex 分发目录使用
-5. 保持 `src/` 仍然是源资产真相来源，并尽量减少 `targets/codex/` 内的漂移
+2. 若改动涉及任一领域 `_AGENTS.md`，同步更新 `targets/codex/_AGENTS.md`
+3. 确认新增的 `agents/*.md` 是否都已经在 `.codex/config.toml` 中注册为角色
+4. 确认新增角色是否都有对应的 `.codex/agents/*.toml`
+5. 将整个 `targets/codex/` 作为 Codex 分发目录使用
+6. 保持 `src/` 仍然是源资产真相来源，并尽量减少 `targets/codex/` 内的漂移
+
+补充约定：
+
+- `targets/` 下这类“AGENTS 分发位”统一命名为 `_AGENTS.md`
+- `_AGENTS.md` 内的每个搭配块使用 XML 注释标签包裹，便于后续工具化抽取

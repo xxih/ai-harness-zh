@@ -5,12 +5,17 @@
 ## 领域分层
 
 - 源资产统一放在 `src/domains/<domain>/`
-- 每个领域用自己的 `_AGENTS.md` 承载公共规则、边界和命名口径；只有目录说明和人工导览才写 `README.md`
+- 每个领域用自己的 `_AGENTS.md` 作为载体文件，存放某些 skill / command 需要默认注入的搭配上下文
+- 领域内的目录说明和人工导览继续写在 `README.md`，不要让 `README.md` 和 `_AGENTS.md` 职责混在一起
 - 领域内部按资产类型继续拆分，例如 `skills/`、`agents/`、`commands/`
 - 后续若某个领域需要 `hooks/`、templates 或其他补充层，也应优先挂在对应领域目录下，而不是回到 `src/` 顶层平铺
 
 ## 当前约定
 
+- `_AGENTS.md` 不要求文件标题，也不要求“通用规则”块
+- 每个搭配块用 XML 注释标签包裹，例如 `<!-- skill: <name> -->` ... `<!-- /skill: <name> -->`
+- command 搭配块同理，使用 `<!-- command: <name> -->` ... `<!-- /command: <name> -->`
+- 块体只放该 skill / command 需要默认注入的补充上下文，不重复正文主流程
 - `skills/<name>/SKILL.md` 是 skill 的主入口
 - `agents/<name>.md` 是可复用的独立 agent prompt
 - `commands/` 留给 slash commands 的入口；没有资产时保留空目录即可
@@ -18,6 +23,7 @@
 
 ## 设计原则
 
-- 先按领域聚合公共规则，再在领域内放具体资产
-- 能放进领域 `_AGENTS.md` 的共性约束，就不要在同一领域的每个 skill 里重复解释一遍；结构说明再单独写 `README.md`
+- `_AGENTS.md` 更像“领域根目录下的搭配上下文容器”，不是另一份领域总说明
+- 某段内容只有在搭配某个 skill / command 时才有意义，就放进 `_AGENTS.md` 对应块，不要回写到每个正文里重复
+- 当前仓库自有资产中，仅根目录 `AGENTS.md` 与 `.nanospec/AGENTS.md` 可以保留原名；`targets/` 若要承载这类分发内容，统一使用 `_AGENTS.md`
 - 共享资产仍应默认工具无关；平台差异继续沉淀到 `targets/`
