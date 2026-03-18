@@ -13,7 +13,7 @@
 
 - `skills/<name>/SKILL.md` 是 skill 的主入口
 - `agents/<name>.md` 是可复用的独立 agent prompt
-- `commands/` 留给更轻量的任务入口；没有资产时保留空目录即可
+- `commands/` 留给 slash commands 的入口；没有资产时保留空目录即可
 - `targets/` 中的分发层可以为运行时需要做平铺、映射或打包，但源资产真相仍以 `src/domains/` 为准
 
 ## 设计原则
