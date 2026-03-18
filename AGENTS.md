@@ -4,7 +4,8 @@
 
 这是一个沉淀可复用 AI prompt 资产的工作区。
 
-- 核心资产源码放在 `src/skills/`、`src/agents/` 和 `src/commands/`
+- 核心资产源码放在 `src/domains/<domain>/`
+- 每个领域目录优先包含自己的 `AGENTS.md`，再按 `skills/`、`agents/`、`commands/` 等类型继续拆分
 - 面向不同 AI 工具的分发适配放在 `targets/`
 - 每个可复用资产都应在 `evals/` 中具备明确的评估定义
 - 只要能做成确定性校验，就优先放进 `scripts/`

@@ -5,22 +5,22 @@
 ## 组成
 
 - `skills/`
-  - 从 `src/skills/` 同步出的 Codex 分发镜像
+  - 从 `src/domains/*/skills/` 收集并平铺出的 Codex skills
 - `agents/`
-  - 从 `src/agents/` 同步出的 Codex 分发镜像
+  - 从 `src/domains/*/agents/` 收集并平铺出的 Codex agents
 - `commands/`
-  - 从 `src/commands/` 同步出的 Codex 分发镜像
+  - 从 `src/domains/*/commands/` 收集并平铺出的 Codex commands
 - `.codex/config.toml`
   - 定义 Codex 项目基线，以及可用的 multi-agent 角色
 - `.codex/agents/*.toml`
   - 定义每个 Codex 角色的运行约束与开发者指令
 - `.codex/AGENTS.md`
-  - 把 Codex 的运行约定和 `src/` 下的核心资产连接起来
+  - 把 Codex 的运行约定和 `src/domains/` 下的核心资产连接起来
 
 ## 与 `src/` 的关系
 
-- `src/skills/`、`src/agents/`、`src/commands/` 是源资产
-- `targets/codex/skills/`、`targets/codex/agents/`、`targets/codex/commands/` 是面向 Codex 的同构快照
+- `src/domains/<domain>/...` 是源资产
+- `targets/codex/skills/`、`targets/codex/agents/`、`targets/codex/commands/` 是面向 Codex 的运行时平铺快照
 - Codex 专属差异只放在 `.codex/` 下，不混进通用资产正文
 
 ## Codex 角色规则

@@ -3,7 +3,7 @@
 ## Asset Under Test
 
 - Type: skill
-- Path: src/skills/quality-tdd/SKILL.md
+- Path: src/domains/quality/skills/quality-tdd/SKILL.md
 - Goal: translate and absorb the core superpowers TDD discipline into a Chinese, reusable quality skill.
 
 ## Capability Evals

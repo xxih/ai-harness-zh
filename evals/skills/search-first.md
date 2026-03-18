@@ -3,7 +3,7 @@
 ## Asset Under Test
 
 - Type: skill
-- Path: src/skills/search-first/SKILL.md
+- Path: src/domains/workflow/skills/search-first/SKILL.md
 - Goal: provide a research-before-coding workflow that searches the codebase, tests, and external references before writing net-new implementation.
 
 ## Capability Evals

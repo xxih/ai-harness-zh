@@ -3,7 +3,7 @@
 ## Asset Under Test
 
 - Type: skill
-- Path: src/skills/quality-review-feedback/SKILL.md
+- Path: src/domains/quality/skills/quality-review-feedback/SKILL.md
 - Goal: translate and absorb the superpowers review-reception discipline into a Chinese, reusable quality skill.
 
 ## Capability Evals

@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC_ROOT = ROOT / "src"
+DOMAINS_ROOT = SRC_ROOT / "domains"
 TARGETS_ROOT = ROOT / "targets"
 
 
@@ -38,12 +39,47 @@ def ok(condition: bool, message: str, failures: list[str]) -> None:
         failures.append(message)
 
 
+def collect_domains() -> list[Path]:
+    return sorted(path for path in DOMAINS_ROOT.iterdir() if path.is_dir())
+
+
+def collect_skill_files() -> list[Path]:
+    return sorted(DOMAINS_ROOT.glob("*/skills/*/SKILL.md"))
+
+
+def collect_agent_files() -> list[Path]:
+    return sorted(DOMAINS_ROOT.glob("*/agents/*.md"))
+
+
+def collect_command_files() -> list[Path]:
+    return sorted(DOMAINS_ROOT.glob("*/commands/*.md"))
+
+
+def collect_skill_dirs_by_name() -> dict[str, Path]:
+    skills: dict[str, Path] = {}
+    for skill_file in collect_skill_files():
+        name = skill_file.parent.name
+        if name in skills:
+            raise ValueError(f"Duplicate skill name across domains: {name}")
+        skills[name] = skill_file.parent
+    return skills
+
+
+def collect_asset_files_by_name(kind: str) -> dict[str, Path]:
+    pattern = f"*/{kind}/*.md"
+    assets: dict[str, Path] = {}
+    for path in sorted(DOMAINS_ROOT.glob(pattern)):
+        name = path.stem
+        if name in assets:
+            raise ValueError(f"Duplicate {kind[:-1]} name across domains: {name}")
+        assets[name] = path
+    return assets
+
+
 def validate_repo_layout(failures: list[str]) -> None:
     for relative in (
         "src",
-        "src/agents",
-        "src/skills",
-        "src/commands",
+        "src/domains",
         "evals",
         "evals/agents",
         "evals/skills",
@@ -60,13 +96,26 @@ def validate_repo_layout(failures: list[str]) -> None:
         "targets/codex/.codex/agents",
     ):
         ok((ROOT / relative).is_dir(), f"directory exists: {relative}", failures)
-    ok((ROOT / "AGENTS.md").is_file(), "file exists: AGENTS.md", failures)
-    ok((ROOT / "references" / "README.md").is_file(), "file exists: references/README.md", failures)
-    ok((ROOT / "references" / "repos" / ".gitignore").is_file(), "file exists: references/repos/.gitignore", failures)
-    ok((TARGETS_ROOT / "README.md").is_file(), "file exists: targets/README.md", failures)
-    ok((TARGETS_ROOT / "codex" / "README.md").is_file(), "file exists: targets/codex/README.md", failures)
-    ok((TARGETS_ROOT / "codex" / ".codex" / "AGENTS.md").is_file(), "file exists: targets/codex/.codex/AGENTS.md", failures)
-    ok((TARGETS_ROOT / "codex" / ".codex" / "config.toml").is_file(), "file exists: targets/codex/.codex/config.toml", failures)
+
+    for relative in (
+        "AGENTS.md",
+        "src/AGENTS.md",
+        "references/README.md",
+        "references/repos/.gitignore",
+        "targets/README.md",
+        "targets/codex/README.md",
+        "targets/codex/.codex/AGENTS.md",
+        "targets/codex/.codex/config.toml",
+    ):
+        ok((ROOT / relative).is_file(), f"file exists: {relative}", failures)
+
+
+def validate_domain_layout(domain_dir: Path, failures: list[str]) -> None:
+    label = domain_dir.relative_to(ROOT)
+    ok((domain_dir / "AGENTS.md").is_file(), f"{label} has AGENTS.md", failures)
+    ok((domain_dir / "skills").is_dir(), f"{label} has skills/", failures)
+    ok((domain_dir / "agents").is_dir(), f"{label} has agents/", failures)
+    ok((domain_dir / "commands").is_dir(), f"{label} has commands/", failures)
 
 
 def validate_skill(skill_path: Path, failures: list[str]) -> None:
@@ -91,7 +140,11 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
     if skill_name == "eval-harness":
         ok("Claude Code" not in text, f"{label} is tool-neutral about Claude Code", failures)
         ok(".claude/" not in text, f"{label} does not hardcode .claude storage", failures)
-        ok("src/skills/" in text and "src/commands/" in text, f"{label} covers both skills and commands", failures)
+        ok(
+            "src/domains/<domain>/skills/" in text and "src/domains/<domain>/commands/" in text,
+            f"{label} covers both domain-local skills and commands",
+            failures,
+        )
         ok("代码评分器" in text, f"{label} prefers code-based graders", failures)
         ok("references/templates.md" in text, f"{label} moves examples into references", failures)
     if skill_name == "search-first":
@@ -109,11 +162,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             f"{label} targets coding tasks such as features, bugs, and integrations",
             failures,
         )
-        ok(
-            (SRC_ROOT / "skills" / "search-first" / "references" / "research-checklist.md").is_file(),
-            "research checklist reference exists for search-first",
-            failures,
-        )
+        ok((skill_path.parent / "references" / "research-checklist.md").is_file(), "research checklist reference exists for search-first", failures)
     if skill_name == "quality-router":
         ok(
             all(token in text for token in ("/tdd", "/verify", "/review", "/review-feedback")),
@@ -125,7 +174,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
             f"{label} routes to the quality-* skill family",
             failures,
         )
-        ok("src/commands/" in text, f"{label} acts as a commands replacement", failures)
+        ok("commands/" in text, f"{label} acts as a commands replacement", failures)
         ok(
             "不依赖 `nanospec`" in text or "不要把 `nanospec` 当成前提" in text or "不以任何单一任务框架为前提" in text,
             f"{label} does not hard-require nanospec output paths",
@@ -149,11 +198,7 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok("nanospec/<task>/assets/quality-check.md" in text, f"{label} prefers task-container quality output when available", failures)
     if skill_name == "quality-verify":
         ok("fresh evidence" in text and "not-ready" in text.lower(), f"{label} enforces fresh evidence before completion claims", failures)
-        ok(
-            all(token in text for token in ("识别", "执行", "读取", "核对", "宣称")),
-            f"{label} describes a verification gate sequence",
-            failures,
-        )
+        ok(all(token in text for token in ("识别", "执行", "读取", "核对", "宣称")), f"{label} describes a verification gate sequence", failures)
         ok("应该可以" in text or "看起来没问题" in text, f"{label} warns against false completion wording", failures)
         ok("build" in text.lower() and "tests" in text.lower() and "diff" in text.lower(), f"{label} includes full verification scope", failures)
         ok(
@@ -170,17 +215,9 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok("不依赖 `nanospec`" in text or "不以任何单一任务框架为前提" in text, f"{label} does not hard-require nanospec output paths", failures)
         ok(".quality/quality-check.md" in text, f"{label} uses a project-local fallback quality output path", failures)
         ok("nanospec/<task>/assets/quality-check.md" in text, f"{label} prefers task-container quality output when available", failures)
-        ok(
-            (SRC_ROOT / "skills" / "quality-review" / "references" / "reviewer-template.md").is_file(),
-            "reviewer template reference exists for quality-review",
-            failures,
-        )
+        ok((skill_path.parent / "references" / "reviewer-template.md").is_file(), "reviewer template reference exists for quality-review", failures)
     if skill_name == "quality-review-feedback":
-        ok(
-            all(token in text for token in ("读取", "理解", "核实", "评估", "回应", "实现")),
-            f"{label} defines a verification-first feedback handling flow",
-            failures,
-        )
+        ok(all(token in text for token in ("读取", "理解", "核实", "评估", "回应", "实现")), f"{label} defines a verification-first feedback handling flow", failures)
         ok("表演性认同" in text or "盲从" in text, f"{label} forbids performative agreement", failures)
         ok("先澄清" in text or "不清楚" in text, f"{label} requires clarification before implementation", failures)
         ok("YAGNI" in text or "现有行为" in text, f"{label} includes technical pushback conditions", failures)
@@ -188,124 +225,25 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok(".quality/quality-check.md" in text, f"{label} uses a project-local fallback quality output path", failures)
         ok("nanospec/<task>/assets/quality-check.md" in text, f"{label} prefers task-container quality output when available", failures)
     if skill_name == "agent-orchestration":
-        ok(
-            all(token in text for token in ("planner", "orchestrator", "worker", "explore", "reviewer")),
-            f"{label} defines a role-layered orchestration model",
-            failures,
-        )
-        ok(
-            "research -> plan -> execute -> review -> verify" in text,
-            f"{label} defines an explicit staged workflow",
-            failures,
-        )
-        ok(
-            "单任务" in text and "一次只交给一个明确任务" in text,
-            f"{label} enforces single-task delegation",
-            failures,
-        )
-        ok(
-            "并行前必须先做独立性判定" in text or ("并行" in text and "独立性" in text),
-            f"{label} requires independence checks before parallel work",
-            failures,
-        )
-        ok(
-            "反重复规则" in text and "不重复" in text,
-            f"{label} forbids duplicating delegated work",
-            failures,
-        )
-        ok(
-            "不能直接信任" in text or "不要把摘要当证据" in text,
-            f"{label} requires verification instead of trusting delegated summaries",
-            failures,
-        )
-        ok(
-            "targets/" in text,
-            f"{label} pushes platform-specific APIs into target adapters",
-            failures,
-        )
-        ok(
-            ".research/orchestration-note.md" in text,
-            f"{label} uses a project-local default orchestration output path",
-            failures,
-        )
-        ok(
-            "references/delegation-template.md" in text,
-            f"{label} links to the reusable delegation template",
-            failures,
-        )
-        ok(
-            (SRC_ROOT / "skills" / "agent-orchestration" / "references" / "delegation-template.md").is_file(),
-            "delegation template reference exists for agent-orchestration",
-            failures,
-        )
+        ok(all(token in text for token in ("planner", "orchestrator", "worker", "explore", "reviewer")), f"{label} defines a role-layered orchestration model", failures)
+        ok("research -> plan -> execute -> review -> verify" in text, f"{label} defines an explicit staged workflow", failures)
+        ok("单任务" in text and "一次只交给一个明确任务" in text, f"{label} enforces single-task delegation", failures)
+        ok("并行前必须先做独立性判定" in text or ("并行" in text and "独立性" in text), f"{label} requires independence checks before parallel work", failures)
+        ok("反重复规则" in text and "不重复" in text, f"{label} forbids duplicating delegated work", failures)
+        ok("不能直接信任" in text or "不要把摘要当证据" in text, f"{label} requires verification instead of trusting delegated summaries", failures)
+        ok("targets/" in text, f"{label} pushes platform-specific APIs into target adapters", failures)
+        ok(".research/orchestration-note.md" in text, f"{label} uses a project-local default orchestration output path", failures)
+        ok("references/delegation-template.md" in text, f"{label} links to the reusable delegation template", failures)
+        ok((skill_path.parent / "references" / "delegation-template.md").is_file(), "delegation template reference exists for agent-orchestration", failures)
     if skill_name == "learning-capture":
-        ok(
-            "手工触发" in text or "手动触发" in text,
-            f"{label} is explicitly manual-triggered",
-            failures,
-        )
-        ok(
-            "hooks" in text and "不依赖 hooks" in text,
-            f"{label} explicitly avoids hook-dependent automation",
-            failures,
-        )
-        ok(
-            all(
-                token in text
-                for token in (
-                    ".learned/notes.md",
-                    ".learned/rules.md",
-                )
-            ),
-            f"{label} defines project-local fallback learning output paths",
-            failures,
-        )
-        ok(
-            all(token in text for token in ("keep-local", "promote-later", "propose-agents-update", "drop")),
-            f"{label} defines learning follow-up states",
-            failures,
-        )
-        ok(
-            "references/templates.md" in text,
-            f"{label} links to the reusable learning templates",
-            failures,
-        )
-        ok(
-            "rules.md" in text and "AGENTS.md" in text,
-            f"{label} captures project-level rule candidates and AGENTS update proposals",
-            failures,
-        )
-        ok(
-            ".learned/" in text and "不要把 `nanospec` 当成学习记录的默认载体" in text,
-            f"{label} keeps .learned as the default learning sink instead of nanospec",
-            failures,
-        )
-        ok(
-            (SRC_ROOT / "skills" / "learning-capture" / "references" / "templates.md").is_file(),
-            "templates reference exists for learning-capture",
-            failures,
-        )
-    if skill_name == "xiaohongshu-carousel":
-        ok("已有" in text and "内容" in text, f"{label} targets existing content", failures)
-        ok("不适用：" in text and "选题" in text and "竞品" in text, f"{label} excludes pre-production work", failures)
-        ok("1242x1660" in text and "3:4" in text, f"{label} defines Xiaohongshu-friendly dimensions", failures)
-        ok("slide-01.png" in text and "manifest.md" in text, f"{label} defines concrete deliverables", failures)
-        ok("slides.md" in text, f"{label} defines markdown source input", failures)
-        ok("source.json" in text, f"{label} keeps compiled structured output", failures)
-        ok("HTML" in text or "SVG" in text, f"{label} includes renderable source files", failures)
-        ok("不编造事实" in text, f"{label} forbids inventing unsupported facts", failures)
-        ok("封面" in text and "结尾页" in text, f"{label} defines key page roles", failures)
-        ok("references/page-patterns.md" in text, f"{label} keeps page templates in references", failures)
-        ok("scripts/build_xiaohongshu_carousel.py" in text, f"{label} references reusable build script", failures)
-        ok("默认优先使用 `layout: markdown`" in text or "正文页默认优先使用 `layout: markdown`" in text, f"{label} defaults to markdown-first page authoring", failures)
-        ok("references/visual-styles.md" in text, f"{label} references theme guidance", failures)
-        ok("references/markdown-authoring.md" in text, f"{label} references markdown authoring guidance", failures)
-        ok((ROOT / "scripts" / "build_xiaohongshu_carousel.py").is_file(), "build script exists: scripts/build_xiaohongshu_carousel.py", failures)
-        ok((SRC_ROOT / "skills" / "xiaohongshu-carousel" / "assets" / "base.css").is_file(), "base theme exists for xiaohongshu-carousel", failures)
-        theme_files = sorted((SRC_ROOT / "skills" / "xiaohongshu-carousel" / "assets" / "themes").glob("*.css"))
-        ok(len(theme_files) >= 3, "xiaohongshu-carousel has at least three themes", failures)
-        ok((SRC_ROOT / "skills" / "xiaohongshu-carousel" / "references" / "visual-styles.md").is_file(), "visual style reference exists for xiaohongshu-carousel", failures)
-        ok((SRC_ROOT / "skills" / "xiaohongshu-carousel" / "references" / "markdown-authoring.md").is_file(), "markdown authoring reference exists for xiaohongshu-carousel", failures)
+        ok("手工触发" in text or "手动触发" in text, f"{label} is explicitly manual-triggered", failures)
+        ok("hooks" in text and "不依赖 hooks" in text, f"{label} explicitly avoids hook-dependent automation", failures)
+        ok(all(token in text for token in (".learned/notes.md", ".learned/rules.md")), f"{label} defines project-local fallback learning output paths", failures)
+        ok(all(token in text for token in ("keep-local", "promote-later", "propose-agents-update", "drop")), f"{label} defines learning follow-up states", failures)
+        ok("references/templates.md" in text, f"{label} links to the reusable learning templates", failures)
+        ok("rules.md" in text and "AGENTS.md" in text, f"{label} captures project-level rule candidates and AGENTS update proposals", failures)
+        ok(".learned/" in text and "不要把 `nanospec` 当成学习记录的默认载体" in text, f"{label} keeps .learned as the default learning sink instead of nanospec", failures)
+        ok((skill_path.parent / "references" / "templates.md").is_file(), "templates reference exists for learning-capture", failures)
 
 
 def validate_command(command_path: Path, failures: list[str]) -> None:
@@ -351,17 +289,19 @@ def validate_agent(agent_path: Path, failures: list[str]) -> None:
         ok("Critical" in text and "Important" in text and "Minor" in text, f"{label} uses tiered review severity", failures)
         ok("ready" in text.lower() and "not-ready" in text.lower(), f"{label} ends with an explicit readiness assessment", failures)
 
+
 def validate_eval(eval_path: Path, failures: list[str]) -> None:
     text = read_text(eval_path)
     label = eval_path.relative_to(ROOT)
 
-    for heading in (
-        "## Asset Under Test",
-        "## Capability Evals",
-        "## Regression Evals",
-        "## Exit Criteria",
-    ):
+    for heading in ("## Asset Under Test", "## Capability Evals", "## Regression Evals", "## Exit Criteria"):
         ok(heading in text, f"{label} contains heading: {heading}", failures)
+
+
+def compare_directory_contents(source_dir: Path, target_dir: Path, label: str, failures: list[str]) -> None:
+    source_files = sorted(path.relative_to(source_dir) for path in source_dir.rglob("*") if path.is_file())
+    target_files = sorted(path.relative_to(target_dir) for path in target_dir.rglob("*") if path.is_file()) if target_dir.is_dir() else []
+    ok(source_files == target_files, f"{label} file set matches source", failures)
 
 
 def validate_codex_target(failures: list[str]) -> None:
@@ -380,13 +320,13 @@ def validate_codex_target(failures: list[str]) -> None:
         ok('config_file = "agents/quality-code-reviewer.toml"' in config_text, "targets/codex quality_code_reviewer role points to its TOML config", failures)
     if agents_path.is_file():
         agents_text = read_text(agents_path)
-        ok("skills/" in agents_text and "agents/" in agents_text and "commands/" in agents_text, "targets/codex AGENTS.md uses same-shape distribution assets", failures)
-        ok("src/skills/" in agents_text and "src/agents/" in agents_text and "src/commands/" in agents_text, "targets/codex AGENTS.md maps Codex behavior back to src assets", failures)
+        ok("skills/" in agents_text and "agents/" in agents_text and "commands/" in agents_text, "targets/codex AGENTS.md describes flat distribution assets", failures)
+        ok("src/domains/" in agents_text, "targets/codex AGENTS.md maps Codex behavior back to domain source assets", failures)
         ok("config.toml" in agents_text and ".codex/agents/" in agents_text, "targets/codex AGENTS.md explains config-to-agent-role wiring", failures)
         ok("quality_code_reviewer" in agents_text and "agents/quality-code-reviewer.md" in agents_text, "targets/codex AGENTS.md documents the quality-code-reviewer role mapping", failures)
     if reviewer_path.is_file():
         reviewer_text = read_text(reviewer_path)
-        ok("agents/quality-code-reviewer.md" in reviewer_text or "src/agents/quality-code-reviewer.md" in reviewer_text, "targets/codex reviewer role aligns with the reusable reviewer prompt", failures)
+        ok("agents/quality-code-reviewer.md" in reviewer_text or "src/domains/quality/agents/quality-code-reviewer.md" in reviewer_text, "targets/codex reviewer role aligns with the reusable reviewer prompt", failures)
     quality_reviewer_path = codex_config_root / "agents" / "quality-code-reviewer.toml"
     if quality_reviewer_path.is_file():
         quality_reviewer_text = read_text(quality_reviewer_path)
@@ -402,14 +342,27 @@ def validate_codex_target(failures: list[str]) -> None:
         ):
             ok(skill_path in quality_reviewer_text, f"targets/codex quality_code_reviewer TOML enables skill: {skill_path}", failures)
 
-    for source_dir, target_dir, label in (
-        (SRC_ROOT / "skills", codex_root / "skills", "skills"),
-        (SRC_ROOT / "agents", codex_root / "agents", "agents"),
-        (SRC_ROOT / "commands", codex_root / "commands", "commands"),
-    ):
-        source_files = sorted(path.relative_to(source_dir) for path in source_dir.rglob("*") if path.is_file())
-        target_files = sorted(path.relative_to(target_dir) for path in target_dir.rglob("*") if path.is_file())
-        ok(source_files == target_files, f"targets/codex {label} mirror matches src/{label}", failures)
+    for name, source_dir in collect_skill_dirs_by_name().items():
+        compare_directory_contents(source_dir, codex_root / "skills" / name, f"targets/codex skill mirror matches src domain asset: {name}", failures)
+
+    source_skill_names = sorted(collect_skill_dirs_by_name())
+    target_skill_names = sorted(path.name for path in (codex_root / "skills").iterdir() if path.is_dir()) if (codex_root / "skills").is_dir() else []
+    ok(source_skill_names == target_skill_names, "targets/codex skills contain the same asset names as src domains", failures)
+
+    source_agents = collect_asset_files_by_name("agents")
+    target_agents = sorted(path.stem for path in (codex_root / "agents").glob("*.md"))
+    ok(sorted(source_agents) == target_agents, "targets/codex agents contain the same asset names as src domains", failures)
+    for name, source_path in source_agents.items():
+        target_path = codex_root / "agents" / f"{name}.md"
+        ok(target_path.is_file(), f"targets/codex agent exists: {target_path.relative_to(ROOT)}", failures)
+        if target_path.is_file():
+            ok(read_text(source_path) == read_text(target_path), f"targets/codex agent content matches src domain asset: {name}", failures)
+
+    source_commands = collect_asset_files_by_name("commands")
+    target_commands = sorted(path.stem for path in (codex_root / "commands").glob("*.md"))
+    ok(sorted(source_commands) == target_commands, "targets/codex commands contain the same asset names as src domains", failures)
+    if not source_commands:
+        ok((codex_root / "commands" / ".gitkeep").is_file(), "targets/codex commands keeps .gitkeep when empty", failures)
 
 
 def main() -> int:
@@ -417,16 +370,21 @@ def main() -> int:
 
     validate_repo_layout(failures)
 
-    skill_files = sorted((SRC_ROOT / "skills").glob("*/SKILL.md"))
+    domain_dirs = collect_domains()
+    ok(bool(domain_dirs), "at least one domain exists", failures)
+    for domain_dir in domain_dirs:
+        validate_domain_layout(domain_dir, failures)
+
+    skill_files = collect_skill_files()
     ok(bool(skill_files), "at least one skill exists", failures)
     for skill_file in skill_files:
         validate_skill(skill_file, failures)
 
-    agent_files = sorted((SRC_ROOT / "agents").glob("*.md"))
+    agent_files = collect_agent_files()
     for agent_file in agent_files:
         validate_agent(agent_file, failures)
 
-    command_files = sorted((SRC_ROOT / "commands").glob("*.md"))
+    command_files = collect_command_files()
     for command_file in command_files:
         validate_command(command_file, failures)
 

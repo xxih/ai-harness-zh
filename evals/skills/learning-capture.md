@@ -3,7 +3,7 @@
 ## Asset Under Test
 
 - Type: skill
-- Path: src/skills/learning-capture/SKILL.md
+- Path: src/domains/asset-governance/skills/learning-capture/SKILL.md
 - Goal: provide a manual learning-capture entry that helps users accumulate rule candidates and other reusable notes before introducing automation.
 
 ## Capability Evals
@@ -46,7 +46,7 @@ Success Criteria:
 
 - [ ] the skill body is primarily in Chinese
 - [ ] `SKILL.md` does not require hooks or observer runtime
-- [ ] `SKILL.md` does not claim to auto-create formal `src/skills/`, `src/commands/`, or `evals/` assets
+- [ ] `SKILL.md` does not claim to auto-create formal `src/domains/<domain>/skills/`, `src/domains/<domain>/commands/`, or `evals/` assets
 - [ ] `SKILL.md` links to `references/templates.md`
 - [ ] `SKILL.md` can capture project-level rule corrections in `rules.md` and queue AGENTS/README updates without directly editing them by default
 - [ ] `SKILL.md` does not treat `nanospec` as the default learning sink

@@ -4,5 +4,5 @@ sandbox_mode = "read-only"
 developer_instructions = """
 Review like an owner.
 Prioritize structural regressions, broken path assumptions, and drift between src/ and Codex adapters.
-When a reusable reviewer prompt is needed, align with src/agents/quality-code-reviewer.md.
+When a reusable reviewer prompt is needed, align with src/domains/quality/agents/quality-code-reviewer.md.
 """

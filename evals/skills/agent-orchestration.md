@@ -3,7 +3,7 @@
 ## Asset Under Test
 
 - Type: skill
-- Path: src/skills/agent-orchestration/SKILL.md
+- Path: src/domains/workflow/skills/agent-orchestration/SKILL.md
 - Goal: provide a tool-neutral orchestration workflow for the main agent in complex coding tasks, covering role layering, staged execution, single-task delegation, parallel independence checks, anti-duplication rules, and result verification.
 
 ## Capability Evals
