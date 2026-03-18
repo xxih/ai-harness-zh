@@ -1,11 +1,11 @@
 ---
 name: quality-router
-description: 质量相关 skill 的手动触发入口，作为同领域 `commands/` 的平替；当用户明确说 `/tdd`、`/verify`、`/review` 或 `/review-feedback` 时，路由到对应的 `quality-*` skill。
+description: 质量相关 skill 的手动触发入口；当用户明确说 `/tdd`、`/verify`、`/review` 或 `/review-feedback` 时，路由到对应的 `quality-*` skill。
 ---
 
 # Quality Router
 
-把质量动作做成显式入口，而不是要求用户记住领域内 `commands/` 目录。这个 skill 只负责手动路由，不重复各阶段的完整方法论。
+把质量动作做成显式入口，而不是要求用户记住额外的命名约定。这个 skill 只负责手动路由，不重复各阶段的完整方法论。
 
 ## 何时使用
 
@@ -28,8 +28,7 @@ description: 质量相关 skill 的手动触发入口，作为同领域 `command
    - 当前请求应进入哪个 `quality-*` skill
 2. 质量记录
    - 若当前任务已有自己的记录文件，统一回写到该文件
-   - 若当前任务已有 `nanospec` 等任务容器但还没有专门记录文件，默认写入 `nanospec/<task>/assets/quality-check.md`
-   - 若没有既定记录位置，默认写入项目内的 `.quality/quality-check.md`
+   - 若没有既定记录位置，使用 `quality-check.md`
 
 ## 工作流
 
@@ -43,13 +42,12 @@ description: 质量相关 skill 的手动触发入口，作为同领域 `command
    - 进入目标 skill 后，再读取对应 references 或模板
 3. 回写统一记录
    - 各阶段结果优先并入当前任务已有记录
-   - 若当前任务有容器，则写入容器内的 `quality-check.md`
-   - 若没有共享记录载体，则写入 `.quality/quality-check.md`
+   - 若没有共享记录载体，则写入 `quality-check.md`
 
 ## 路由约束
 
-- 这个 skill 是同领域 `commands/` 的平替，不是第二套质量方法论
+- 这个 skill 是手动入口，不是第二套质量方法论
 - 所有质量相关 skill 使用统一前缀 `quality-`
 - 若用户未显式触发命令式入口，应直接使用目标 skill，而不是先经过 router
-- 这组 skill 可以适配 `nanospec`，但不依赖 `nanospec`
-- 默认落盘位置在项目内，而不是只停留在回复中
+- 若有任务容器或现成记录文件，可以回写，但不依赖任何特定框架
+- 默认把结果落到当前工作面，而不是只停留在回复中

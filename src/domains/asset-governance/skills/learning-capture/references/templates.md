@@ -25,7 +25,7 @@
 
 - 规则：
 - 证据：
-- 落点：`_AGENTS.md` | `README.md` | `<skill-path>` | `<eval-path>`
+- 落点：`project-instructions` | `README.md` | `<skill-path>` | `<eval-path>`
 - 下一步：`propose-rules-doc-update` | `keep-local` | `drop`
 ```
 

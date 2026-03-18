@@ -41,7 +41,22 @@
 - `targets/codex/skills/writing-skills/SKILL.md`
 - `targets/codex/skills/writing-skills/references/*`
 
-### 阶段 4：做最小校验
+### 阶段 4：扩展扫描其他通用 skill
+
+用户进一步要求把仓库里其他已写过强绑定表述的 skill 一并对齐，因此需要继续扫描：
+
+- `learning-capture`
+- `quality-*`
+- `search-first`
+- `agent-orchestration`
+
+处理原则：
+
+- 去掉当前仓库隐藏目录、领域分层、source / target 路径和默认任务容器前提
+- 保留 skill 自身真正定义的抽象动作
+- 只有 `nanospec`、`spec-driven` 这类本身就定义任务容器的 skill，可以保留对应结构
+
+### 阶段 5：做最小校验
 
 不额外引入新脚本，直接做最小确认：
 

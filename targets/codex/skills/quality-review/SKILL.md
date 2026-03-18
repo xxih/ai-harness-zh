@@ -34,8 +34,7 @@ description: 面向关键节点与合并前的独立代码评审 skill。优先�
    - Minor
 3. 质量记录
    - 若当前任务已有自己的记录文件，回写 Review 阶段摘要
-   - 若当前任务已有 `nanospec` 等任务容器但还没有专门记录文件，默认写入 `nanospec/<task>/assets/quality-check.md`
-   - 若没有既定记录位置，默认写入 `.quality/quality-check.md`
+   - 若没有既定记录位置，使用 `quality-check.md`
 
 ## 工作流
 
@@ -64,10 +63,10 @@ description: 面向关键节点与合并前的独立代码评审 skill。优先�
 - 不要因为“这个改动很简单”就跳过评审
 - 不要把实现者自己的说明当成评审结论
 - reviewer 错了可以反驳，但必须拿技术事实反驳
-- 可以接入 `nanospec` 等任务容器，但不以任何单一任务框架为前提
-- 没有任务容器时，也应把评审结果落在项目内文件，而不是只写在回复里
+- 可以接入当前任务容器或记录文件，但不以任何单一任务框架为前提
+- 没有任务容器时，也应把评审结果落在当前工作面，而不是只写在回复里
 
 ## 参考
 
 - 需要统一 reviewer prompt 时，读取 [references/reviewer-template.md](references/reviewer-template.md)
-- 若环境支持 subagent，优先调用 [src/domains/quality/agents/quality-code-reviewer.md](src/domains/quality/agents/quality-code-reviewer.md) 执行独立评审
+- 若环境支持独立 reviewer agent，优先让独立 reviewer 执行评审

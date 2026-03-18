@@ -30,3 +30,11 @@
 
 - [ ] 4.1 视需要再补更通用的 skill authoring eval。
 - [ ] 4.2 若后续出现更多平台差异，再为其他分发目标增加对应副本。
+
+## 5. 其他 skill 对齐
+
+验收条件：除 `nanospec` / `spec-driven` 这类本身定义任务容器的 skill 外，其它通用 skill 不再把当前仓库结构写成默认前提。
+
+- [x] 5.1 扫描 `learning-capture`、`quality-*`、`search-first`、`agent-orchestration` 中的强绑定仓库表述。
+- [x] 5.2 将默认落点改为通用文件名或“当前工作面”，去掉 `.learned/`、`.quality/`、`.research/`、`nanospec`、`src/...`、`targets/...` 等当前仓库前提。
+- [x] 5.3 同步对应 `targets/codex/skills/` 分发副本。
