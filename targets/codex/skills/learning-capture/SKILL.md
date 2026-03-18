@@ -13,7 +13,7 @@ description: 在一个会话或一个任务里手动触发学习积累；把本�
 - 你明确说了“复盘一下”“沉淀一下这次经验”“手动触发学习积累”
 - 同一任务里出现了用户纠正、关键取舍、验证教训或可复用 workaround
 - 你还不确定是否值得升级为正式 skill / command 或其他长期资产，但不想让经验只留在对话里
-- 用户在对话里纠正了几个项目级 / 公共规则点，但你不想立刻手改 `AGENTS.md`
+- 用户在对话里纠正了几个项目级 / 公共规则点，但你不想立刻手改对应目录的 `_AGENTS.md` 或说明型 `README.md`
 
 不适用：
 
@@ -67,10 +67,10 @@ description: 在一个会话或一个任务里手动触发学习积累；把本�
 - 这类内容应单独写入 `rules.md`，至少包含：
   - 规则
   - 证据
-  - 建议落点：`AGENTS.md`、`README.md`、某个 skill 或其他长期文档
-  - 下一步：`propose-agents-update` | `keep-local` | `drop`
-- 当前阶段默认只“提取并排队”，不自动改写 `AGENTS.md`；是否正式写回由后续任务决定。
-- 如果用户明确要求“顺手把 AGENTS.md 也改了”，那是下一步 execute，不属于本 skill 的默认动作。
+  - 建议落点：`_AGENTS.md`、`README.md`、某个 skill 或其他长期文档
+  - 下一步：`propose-rules-doc-update` | `keep-local` | `drop`
+- 当前阶段默认只“提取并排队”，不自动改写 `_AGENTS.md` 或 `README.md`；是否正式写回由后续任务决定。
+- 如果用户明确要求“顺手把规则文档也改了”，那是下一步 execute，不属于本 skill 的默认动作。
 
 ## 记录约束
 

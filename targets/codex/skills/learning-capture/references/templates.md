@@ -25,8 +25,8 @@
 
 - 规则：
 - 证据：
-- 落点：`AGENTS.md` | `README.md` | `<skill-path>` | `<eval-path>`
-- 下一步：`propose-agents-update` | `keep-local` | `drop`
+- 落点：`_AGENTS.md` | `README.md` | `<skill-path>` | `<eval-path>`
+- 下一步：`propose-rules-doc-update` | `keep-local` | `drop`
 ```
 
 ## 3. 写法约束

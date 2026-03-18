@@ -35,16 +35,16 @@
 
 ## 仓库约定
 
-- 仓库级上下文位于 `AGENTS.md`
-- `src/` 内的源资产按领域组织，领域公共规则优先写在各自的 `AGENTS.md`
+- 仓库级上下文当前仍位于 `AGENTS.md`
+- `src/` 内的源资产按领域组织；给 AI Agent 的领域公共规则优先写在各自的 `_AGENTS.md`，目录结构说明再写 `README.md`，不要再新增普通 `AGENTS.md`
 - 默认使用简体中文沉淀文档、skill、command 和 eval；代码、路径、协议关键字保留原文
 - commit 使用简单格式：`<type>: <summary>`
 
 ## 目录约定
 
-- `src/AGENTS.md`
+- `src/README.md`
   - 说明 `src/` 源资产层的总布局
-- `src/domains/<domain>/AGENTS.md`
+- `src/domains/<domain>/_AGENTS.md`
   - 定义该领域的公共规则、边界和命名口径
 - `src/domains/<domain>/skills/<name>/SKILL.md`
   - 领域内的 skill 源资产
@@ -66,7 +66,7 @@
 3. 确认某类能力值得长期复用后，再回收进 `src/domains/<domain>/`。
 4. 若某个 AI 工具需要专属包装，由 `targets/<tool>/` 维护对应运行时分发目录。
 5. 修改 `src/` 后，按需手动同步对应 `targets/` 分发副本。
-6. 涉及结构性变化时，同时更新相关 README、AGENTS 与说明文档。
+6. 涉及结构性变化时，同时更新相关 README、`_AGENTS.md` 与说明文档。
 
 默认落盘建议：
 
@@ -79,7 +79,7 @@
 
 ### 工作流
 
-- `src/domains/workflow/AGENTS.md`
+- `src/domains/workflow/_AGENTS.md`
   - 该领域的公共规则，覆盖研究、拆解和执行前准备
 - `src/domains/workflow/skills/nanospec/`
   - 用于统一任务中间文档目录规范，并以 `alignment.md` 作为跨阶段纠偏入口
@@ -92,7 +92,7 @@
 
 ### 质量
 
-- `src/domains/quality/AGENTS.md`
+- `src/domains/quality/_AGENTS.md`
   - 该领域的公共规则，覆盖质量门禁、分级结论和 reviewer 角色
 - `src/domains/quality/skills/quality-router/`
   - 作为同领域 `commands/` 的平替，支持手动触发 `/tdd`、`/verify`、`/review`、`/review-feedback`
@@ -109,10 +109,12 @@
 
 ### 资产治理
 
-- `src/domains/asset-governance/AGENTS.md`
+- `src/domains/asset-governance/_AGENTS.md`
   - 该领域的公共规则，覆盖资产整理、经验沉淀和长期维护约束
 - `src/domains/asset-governance/skills/learning-capture/`
   - 用于在一个会话或一个任务里手动触发学习积累，把 learnings、候选升级项和项目级规则候选落盘为结构化记录
+- `src/domains/asset-governance/skills/writing-skills/`
+  - 用于创建、重写或更新仓库内 skill 资产，先做调研，再收敛触发词、frontmatter、结构、资源拆分与验证方式
 
 ## 分发适配
 
@@ -128,7 +130,7 @@
   - 定义 Codex 运行基线与 multi-agent 角色注册
 - `targets/codex/.codex/agents/*.toml`
   - 定义 Codex reviewer / explorer / docs-researcher 等角色的工具专属行为
-- `targets/codex/.codex/AGENTS.md`
+- `targets/codex/.codex/_AGENTS.md`
   - 说明 Codex 如何把平铺分发目录映射回 `src/domains/` 下的源资产
 
 ## 当前缺口

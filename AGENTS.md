@@ -5,7 +5,7 @@
 这是一个沉淀可复用 AI prompt 资产的工作区。
 
 - 核心资产源码放在 `src/domains/<domain>/`
-- 每个领域目录优先包含自己的 `AGENTS.md`，再按 `skills/`、`agents/`、`commands/` 等类型继续拆分
+- 每个领域目录优先用 `_AGENTS.md` 承载给 AI Agent 的公共规则；如果只是解释目录结构或人工阅读说明，再写 `README.md`；避免继续扩散普通 `AGENTS.md`
 - 面向不同 AI 工具的分发适配放在 `targets/`
 - 共享资产默认先保持轻量，避免为了预设验证流程额外堆目录
 
@@ -42,5 +42,3 @@
 - `summary` 默认使用简洁中文
 - 一个 commit 只做一类相对聚焦的改动
 - 除非是仓库级变更，否则不要把无关资产混在同一个 commit
-
-## README 要按类别组织各个 skill

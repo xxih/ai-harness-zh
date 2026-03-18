@@ -14,7 +14,7 @@
   - 定义 Codex 项目基线，以及可用的 multi-agent 角色
 - `.codex/agents/*.toml`
   - 定义每个 Codex 角色的运行约束与开发者指令
-- `.codex/AGENTS.md`
+- `.codex/_AGENTS.md`
   - 把 Codex 的运行约定和 `src/domains/` 下的核心资产连接起来
 
 ## 与 `src/` 的关系
