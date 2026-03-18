@@ -14,6 +14,7 @@
 4. 在分发说明中补充“源资产 `_AGENTS.md` 与运行时 `AGENTS.md` 的关系”，但不引入自动合并脚本。
 5. 当前仓库自有资产中，仅保留根目录 `AGENTS.md` 与 `.nanospec/AGENTS.md`。
 6. `targets/` 若需要承载这类内容，统一保存为 `_AGENTS.md`。
+7. `_AGENTS.md` 的块正文必须脱离其他 skill / command 正文也能独立读懂。
 
 ## 3. 非目标
 
@@ -36,6 +37,7 @@
 
 - 某个 skill / command 需要默认注入的补充上下文。
 - 不适合直接写回 skill 正文、但确实要伴随该入口一起被加载的说明。
+- 每个块至少要写清：用途、记录条件、写入位置、写入内容、默认动作。
 
 `_AGENTS.md` 不负责：
 
@@ -48,13 +50,11 @@
 
 本轮统一采用 XML 注释标签包裹：
 
-- `<!-- skill: <name> -->`
-- `<!-- /skill: <name> -->`
-- `<!-- command: <name> -->`
-- `<!-- /command: <name> -->`
+- `<!-- AGENTS: <name> -->`
+- `<!-- /AGENTS: <name> -->`
 
 标签之间直接写正文，不要求文件标题，也不要求 `## 通用规则` 之类的额外层级。
-这样做的目的，是让 agent 或分发层在读取 `_AGENTS.md` 时，直接知道“这段内容要和哪个 skill / command 搭配加载”，同时也便于后续工具化抽取。
+这样做的目的，是让 agent 或分发层在读取 `_AGENTS.md` 时，稳定识别块边界，同时也便于后续工具化抽取。
 
 ## 5. 产物要求
 
@@ -86,6 +86,8 @@
 - 当前仓库自有资产中，仅保留根目录 `AGENTS.md` 与 `.nanospec/AGENTS.md`。
 - `targets/` 若需要承载这类内容，统一保存为 `_AGENTS.md`。
 - `targets/` 下这类“AGENTS 分发位”统一按 `_AGENTS.md` 命名，不再各自发明名字。
+- `_AGENTS.md` 中不要用“排队”这类含混措辞；若表达默认行为，应直接写“记录为候选，不直接改正式文档”。
+- 除 `nanospec` / `spec-driven` 或用户明确要求的场景外，`_AGENTS.md` 的正文默认保持独立，不互相引用其他 prompt。
 
 ## 6. 完成标志
 
@@ -93,7 +95,8 @@
 
 1. 当前任务的 `alignment.md`、`outputs/1-spec.md`、`outputs/2-plan.md`、`outputs/3-tasks.md` 已同步到新范围。
 2. 仓库文档已经把“领域级 `_AGENTS.md` 是搭配上下文载体文件”定义清楚。
-3. `src/domains/asset-governance/_AGENTS.md` 已落地，并只保留 `learning-capture` 搭配块。
+3. `src/domains/asset-governance/_AGENTS.md` 已落地，并只保留独立的示例块。
 4. Codex 分发说明已补上 `_AGENTS.md` 与运行时 `AGENTS.md` 的关系说明。
 5. 当前仓库内除根目录与 `.nanospec/AGENTS.md` 外，不再保留其他 `AGENTS.md`。
 6. `targets/codex/_AGENTS.md` 已作为分发侧副本落地。
+7. 现有 `_AGENTS.md` 示例已经改成独立可读的简洁写法，并改用 `AGENTS:` 注释头。

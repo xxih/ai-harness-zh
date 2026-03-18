@@ -10,3 +10,5 @@
 2. 尽量不改现有 skill 正文，只补全局规则与首个领域示例。
 3. 明确 `_AGENTS.md` 的分隔机制，采用 XML 注释标签包裹，并能直接标明“这块是给哪个 skill / command 搭配使用的”。
 4. 当前仓库自有资产中，仅保留根目录 `AGENTS.md` 与 `.nanospec/AGENTS.md`；`targets/` 若需要承载这类内容，统一存为 `_AGENTS.md`。
+5. `_AGENTS.md` 的块正文要保持独立，简洁写清用途、记录条件、写入位置、写入内容和默认动作。
+6. XML 注释头统一使用 `AGENTS: xxx`，示例正文不提 `learning-capture`、`nanospec` 或 `align`。

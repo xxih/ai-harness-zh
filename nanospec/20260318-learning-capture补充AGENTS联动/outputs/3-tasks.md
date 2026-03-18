@@ -40,5 +40,7 @@
 - [x] 5.3 删除 `targets/codex/AGENTS.md`，改为维护 `targets/codex/_AGENTS.md`。
 - [x] 5.4 执行三次 `/align`，把 `_AGENTS.md` 的分隔方式改成 XML 注释标签包裹。
 - [x] 5.5 将现有 source / target `_AGENTS.md` 示例同步改为 XML 注释标签格式。
-- [ ] 5.6 视需要为 `workflow`、`quality` 等 domain 分别补实际 `_AGENTS.md`。
-- [ ] 5.7 若未来某个分发目标确实需要自动拼装，再单开任务实现工具化分发流程。
+- [x] 5.6 执行四次 `/align`，把 `_AGENTS.md` 示例改成独立可读的简洁写法，明确作用、记录条件、写入位置和默认动作。
+- [x] 5.7 执行五次 `/align`，把 XML 注释头统一改成 `AGENTS: xxx`，并移除示例正文里对 `learning-capture`、`nanospec`、`align` 的依赖。
+- [ ] 5.8 视需要为 `workflow`、`quality` 等 domain 分别补实际 `_AGENTS.md`。
+- [ ] 5.9 若未来某个分发目标确实需要自动拼装，再单开任务实现工具化分发流程。
