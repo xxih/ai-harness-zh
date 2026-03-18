@@ -59,7 +59,7 @@
 补充对齐口径：
 
 - `src/...`、`targets/...`、`nanospec` 这类实现层和任务层结构不应写成通用 skill 前提
-- 但 `.research/`、`.quality/`、`.learned/` 属于当前仓库约定的默认记录目录，相关 skill 应保留这些默认落点
+- 但 `.research/`、`.quality/`、`.learned/` 这类默认记录目录属于对应 skill 的设计本身；当前仓库之所以有这些目录，是因为真实在使用这些 skill
 
 ### 阶段 5：做最小校验
 

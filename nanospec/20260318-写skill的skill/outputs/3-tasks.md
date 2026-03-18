@@ -47,3 +47,11 @@
 - [x] 6.2 恢复 `learning-capture` 的 `.learned/` 默认落点。
 - [x] 6.3 恢复 `quality-*` 的 `.quality/quality-check.md` 默认落点。
 - [x] 6.4 恢复 `search-first` 与 `agent-orchestration` 的 `.research/` 默认落点。
+
+## 7. 默认落点因果纠正
+
+验收条件：任务记录与学习记录明确写清“目录是 skill 设计结果，不是仓库先验约定”。
+
+- [x] 7.1 执行 `/align`，记录默认记录目录的因果关系纠正。
+- [x] 7.2 修正 `outputs/2-plan.md` 中“当前仓库约定”的错误表述。
+- [x] 7.3 修正 `.learned/notes.md` 与 `.learned/rules.md` 的错误表述。

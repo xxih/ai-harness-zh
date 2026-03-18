@@ -13,3 +13,7 @@
 - [变更] 上一轮对齐把默认记录目录去得过头了。用户明确要求：research 类 skill 默认应给出 `.research/`；同理，learning 类用 `.learned/`，quality 类用 `.quality/`。
   - 处理决定：恢复这三类 skill 的默认记录目录，但继续避免把 `src/...`、`targets/...`、`nanospec` 等当前仓库实现细节写成前提。
   - 影响范围：`learning-capture`、`quality-*`、`search-first`、`agent-orchestration` 及对应分发副本。
+
+- [变更] “保留默认记录目录”的理由需要再纠正。用户明确指出：`.research/`、`.quality/`、`.learned/` 不是“因为当前仓库约定了才保留”，而是这些 skill 本来就应这样设计；当前仓库有这些目录，是因为真实在使用这些 skill，目录是结果，不是原因。
+  - 处理决定：把相关任务记录与学习记录统一改成“默认记录目录属于 skill 设计的一部分”，不再表述为“当前仓库约定导致 skill 保留这些目录”。
+  - 影响范围：`.learned/notes.md`、`.learned/rules.md`、`outputs/2-plan.md`、`outputs/3-tasks.md`
