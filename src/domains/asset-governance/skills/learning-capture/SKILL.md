@@ -12,14 +12,14 @@ description: 在一个会话或一个任务里手动触发学习积累；把本�
 - 你刚完成一个非平凡任务，想把这次经验记下来
 - 你明确说了“复盘一下”“沉淀一下这次经验”“手动触发学习积累”
 - 同一任务里出现了用户纠正、关键取舍、验证教训或可复用 workaround
-- 你还不确定是否值得升级为正式 skill / command / eval，但不想让经验只留在对话里
+- 你还不确定是否值得升级为正式 skill / command 或其他长期资产，但不想让经验只留在对话里
 - 用户在对话里纠正了几个项目级 / 公共规则点，但你不想立刻手改 `AGENTS.md`
 
 不适用：
 
 - 只是一次性 typo、机械改名或纯偶发问题
 - 还没有形成任何可复用结论或证据
-- 目标是直接产出正式 skill / command / eval，而不是先做记录
+- 目标是直接产出正式 skill / command 或长期规范，而不是先做记录
 
 ## 产物
 
@@ -67,7 +67,7 @@ description: 在一个会话或一个任务里手动触发学习积累；把本�
 - 这类内容应单独写入 `rules.md`，至少包含：
   - 规则
   - 证据
-  - 建议落点：`AGENTS.md`、`README.md`、某个 skill、某个 eval
+  - 建议落点：`AGENTS.md`、`README.md`、某个 skill 或其他长期文档
   - 下一步：`propose-agents-update` | `keep-local` | `drop`
 - 当前阶段默认只“提取并排队”，不自动改写 `AGENTS.md`；是否正式写回由后续任务决定。
 - 如果用户明确要求“顺手把 AGENTS.md 也改了”，那是下一步 execute，不属于本 skill 的默认动作。
@@ -75,7 +75,7 @@ description: 在一个会话或一个任务里手动触发学习积累；把本�
 ## 记录约束
 
 - 这个 skill 是手工触发入口，不依赖 hooks 或后台观察器
-- 当前阶段不自动生成正式 `src/domains/<domain>/skills/`、`src/domains/<domain>/commands/`、`evals/` 资产
+- 当前阶段不自动生成正式 `src/domains/<domain>/skills/`、`src/domains/<domain>/commands/` 或其他派生资产
 - 任务内记录和仓库级资产要分层，不要把原始记录直接当成最终 prompt
 - 默认根目录使用 `.learned/`，不要把 `nanospec` 当成学习记录的默认载体
 - 若一条经验只适用于当前项目、当前目录或当前任务，可在 `notes.md` 中标记 `keep-local`

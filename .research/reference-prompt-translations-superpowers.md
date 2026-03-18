@@ -10,7 +10,7 @@
 
 - 本地现状
   - `references/repos/` 已作为外部参考仓库固定入口，但没有已版本化的中文翻译目录。
-  - `scripts/validate_assets.py` 已负责结构校验，适合补充最小目录约束。
+  - 当时曾考虑配套脚本化校验；现阶段已改为尽量少目录、以人工维护为主。
 - 外部来源
   - `references/repos/superpowers/skills/*/SKILL.md`
   - `references/repos/superpowers/README.md`
@@ -50,9 +50,9 @@
   - 源 repo 路径、远端、分支
   - 最近一次审阅对应的 upstream commit
   - 当前翻译覆盖范围与源文件哈希
-- 通过 `scripts/reference_translation_sync.py` 提供：
-  - `check <repo> --pull`：先拉最新，再检查是否过期
-  - `snapshot <repo>`：翻译同步完成后回写元数据
+- 通过 `manifest.json` 记录同步状态，并以人工审阅方式维护：
+  - 同步前先确认 upstream commit 与目标文件变化
+  - 翻译同步完成后手动回写元数据
 
 ## 首批范围
 

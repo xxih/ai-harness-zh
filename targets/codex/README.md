@@ -39,8 +39,8 @@
 
 若要把这一层分发到某个 Codex 项目：
 
-1. 修改 `src/` 后先运行 `python3 scripts/sync_targets.py codex`
+1. 修改 `src/` 后，按需手动同步 `targets/codex/` 中对应的分发副本
 2. 确认新增的 `agents/*.md` 是否都已经在 `.codex/config.toml` 中注册为角色
 3. 确认新增角色是否都有对应的 `.codex/agents/*.toml`
 4. 将整个 `targets/codex/` 作为 Codex 分发目录使用
-5. 保持 `src/` 仍然是源资产真相来源，不要在 `targets/codex/` 内手改复制品
+5. 保持 `src/` 仍然是源资产真相来源，并尽量减少 `targets/codex/` 内的漂移

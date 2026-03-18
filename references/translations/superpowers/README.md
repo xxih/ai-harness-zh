@@ -11,18 +11,13 @@
 
 ## 同步规则
 
-维护 `superpowers` 中文翻译前，先运行：
+维护 `superpowers` 中文翻译前：
 
-```bash
-python3 scripts/reference_translation_sync.py check superpowers --pull
-```
-
-如果提示 `STALE`：
-
-1. 查看 upstream commit 是否变化
-2. 查看哪些 `skills/*/SKILL.md` 发生了内容漂移
-3. 同步修改本目录下对应中文文件
-4. 运行 `python3 scripts/reference_translation_sync.py snapshot superpowers`
+1. 先更新 `references/repos/superpowers/` 到准备对照的 upstream 版本
+2. 查看 upstream commit 是否变化
+3. 查看哪些 `skills/*/SKILL.md` 发生了内容漂移
+4. 同步修改本目录下对应中文文件
+5. 手动更新 `references/translations/superpowers/manifest.json`
 
 ## 说明
 

@@ -23,30 +23,17 @@
 
 ## 同步流程
 
-每次准备继续维护某个参考仓库的中文翻译前，先执行：
+每次准备继续维护某个参考仓库的中文翻译前：
 
-```bash
-python3 scripts/reference_translation_sync.py check <repo> --pull
-```
-
-含义：
-
-1. 先把 `references/repos/<repo>/` fast-forward 到远端最新版本
-2. 检查 upstream commit 是否变了
-3. 检查当前翻译覆盖范围内的源文件内容哈希是否变了
-4. 如果任一项变化，提示需要重新审阅并同步中文资产
-
-同步完翻译后，再执行：
-
-```bash
-python3 scripts/reference_translation_sync.py snapshot <repo>
-```
-
-这会把最新 upstream commit 和当前翻译范围内的源文件哈希写回 `manifest.json`。
+1. 先把 `references/repos/<repo>/` 更新到准备对照的 upstream 版本
+2. 记录或确认最新 upstream commit
+3. 检查当前翻译覆盖范围内，哪些源文件发生了变化
+4. 如有变化，手动同步中文资产
+5. 同步完成后，把最新 upstream commit 和当前翻译范围写回 `manifest.json`
 
 ## 维护原则
 
 - 先更新源 repo，再判断翻译是否过期
 - 只翻译当前明确需要长期复用的核心 prompt 资产
 - 若 upstream 变更未影响当前翻译范围，也要先审阅，再更新 `manifest.json`
-- 结构性改动后运行 `python3 scripts/validate_assets.py`
+- 结构性改动后同步更新相关 README、manifest 与说明文档

@@ -20,17 +20,17 @@
 
 ### 2. 定期同步 upstream 更新
 
-- 同步前先运行 `python3 scripts/reference_translation_sync.py check <repo> --pull`
-- 同步完成后运行 `python3 scripts/reference_translation_sync.py snapshot <repo>`
+- 每次同步前先更新 `references/repos/<repo>/` 到准备对照的 upstream 版本
+- 同步后手动更新 `references/translations/<repo>/manifest.json`
 - `manifest.json` 会记录 upstream commit 与当前翻译覆盖范围内的源文件哈希
-- 结构性改动后统一运行 `python3 scripts/validate_assets.py`
+- 当前阶段以人工审阅和最小必要记录为主，不再额外维护仓库级校验脚本
 
 ### 3. 基于翻译沉淀个人 AI harness
 
 - `src/` 保存工具无关的核心源资产
 - `targets/` 保存面向具体工具的分发快照与适配层
-- `evals/` 预留给评估定义与回归用例
-- `scripts/` 保存同步、校验与其他确定性脚本
+- `.research/`、`.quality/`、`.learned/` 分别承接研究、质量与学习记录
+- 先保持根目录整洁，后续再决定 skills 的迭代机制
 
 ## 仓库约定
 
@@ -53,10 +53,6 @@
   - 领域内的轻量任务入口；没有资产时保留空目录即可
 - `targets/`
   - 不同 AI 工具的分发目录；可按运行时需要把领域资产做平铺、映射或额外包装
-- `evals/`
-  - 和资产配套的评估定义与回归用例
-- `scripts/`
-  - 确定性的校验脚本与同步脚本
 - `.learned/`、`.quality/`、`.research/`
   - 默认记录落盘目录
 - `references/`
@@ -67,9 +63,9 @@
 1. 先在 `references/repos/` 观察外部 AI harness 的结构与更新。
 2. 需要翻译时，把中文版本沉淀到 `references/translations/<repo>/`。
 3. 确认某类能力值得长期复用后，再回收进 `src/domains/<domain>/`。
-4. 若某个 AI 工具需要专属包装，由 `targets/<tool>/` 从领域源资产生成运行时分发目录。
-5. 修改 `src/` 后，运行对应同步脚本，例如 `python3 scripts/sync_targets.py codex`。
-6. 运行 `python3 scripts/validate_assets.py`，确认结构和最小约束通过。
+4. 若某个 AI 工具需要专属包装，由 `targets/<tool>/` 维护对应运行时分发目录。
+5. 修改 `src/` 后，按需手动同步对应 `targets/` 分发副本。
+6. 涉及结构性变化时，同时更新相关 README、AGENTS 与说明文档。
 
 默认落盘建议：
 
@@ -113,9 +109,7 @@
 ### 资产治理
 
 - `src/domains/asset-governance/AGENTS.md`
-  - 该领域的公共规则，覆盖资产评估、回归保护和经验沉淀
-- `src/domains/asset-governance/skills/eval-harness/`
-  - 用于先定义评估、再沉淀 prompt 资产
+  - 该领域的公共规则，覆盖资产整理、经验沉淀和长期维护约束
 - `src/domains/asset-governance/skills/learning-capture/`
   - 用于在一个会话或一个任务里手动触发学习积累，把 learnings、候选升级项和项目级规则候选落盘为结构化记录
 
