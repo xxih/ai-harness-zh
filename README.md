@@ -1,6 +1,36 @@
-# my-ai-harness
+# ai-harness-zh
 
-这是一个用于沉淀 AI prompt 资产的工作区。仓库把“核心源资产”和“面向具体 AI 工具的分发适配”分开管理，并为可复用产物保留可验证的评估与脚本化校验能力。
+`ai-harness-zh` 是一个以中文维护的 AI harness 工作区。仓库先汇总、翻译并持续同步外部主流 AI harness 的核心 prompt 资产，再把稳定可复用的方法沉淀为适合个人长期使用的 AI harness 源资产与分发适配。
+
+## 仓库定位
+
+- 优先维护 `references/translations/` 中的外部 AI harness 中文翻译与同步元数据
+- 持续跟踪 `references/repos/` 中的 upstream 仓库，并定期检查是否需要更新翻译
+- 在 `src/` 中提炼真正值得长期复用的个人工作流、质量门禁与资产治理能力
+- 通过 `targets/` 为具体工具生成分发快照，避免直接把平台细节写死在源资产里
+
+## 当前重点
+
+### 1. 汇总各大 AI harness 的中文翻译
+
+- `references/repos/` 用于放外部参考仓库，本地 AI 工具可直接读取
+- `references/translations/` 用于放已版本化的中文翻译资产与同步记录
+- 当前已纳入参考的仓库包括 `oh-my-opencode`、`everything-claude-code`、`superpowers`、`agency-agents`
+- 翻译资产优先覆盖“最核心、最常被直接读取、最适合长期复用”的 prompt/skill
+
+### 2. 定期同步 upstream 更新
+
+- 同步前先运行 `python3 scripts/reference_translation_sync.py check <repo> --pull`
+- 同步完成后运行 `python3 scripts/reference_translation_sync.py snapshot <repo>`
+- `manifest.json` 会记录 upstream commit 与当前翻译覆盖范围内的源文件哈希
+- 结构性改动后统一运行 `python3 scripts/validate_assets.py`
+
+### 3. 基于翻译沉淀个人 AI harness
+
+- `src/` 保存工具无关的核心源资产
+- `targets/` 保存面向具体工具的分发快照与适配层
+- `evals/` 预留给评估定义与回归用例
+- `scripts/` 保存同步、校验与其他确定性脚本
 
 ## 仓库约定
 
@@ -30,14 +60,13 @@
 - `.learned/`、`.quality/`、`.research/`
   - 默认记录落盘目录
 - `references/`
-  - 仓库内参考资料入口，包含可追踪说明文档与本地外部仓库目录
-  - 也包含已版本化的外部核心 prompt 中文翻译目录
+  - 仓库内参考资料入口，包含说明文档、本地外部仓库与中文翻译目录
 
 ## 产出流程
 
-1. 在 `src/domains/<domain>/` 下新增或修改核心资产。
-2. 需要回归保护时，再为该资产补齐对应评估，放到 `evals/` 下。
-3. 优先补充可执行、可重复的代码评分器；只有必要时才退回规则评分器、模型评分器或人工审查。
+1. 先在 `references/repos/` 观察外部 AI harness 的结构与更新。
+2. 需要翻译时，把中文版本沉淀到 `references/translations/<repo>/`。
+3. 确认某类能力值得长期复用后，再回收进 `src/domains/<domain>/`。
 4. 若某个 AI 工具需要专属包装，由 `targets/<tool>/` 从领域源资产生成运行时分发目录。
 5. 修改 `src/` 后，运行对应同步脚本，例如 `python3 scripts/sync_targets.py codex`。
 6. 运行 `python3 scripts/validate_assets.py`，确认结构和最小约束通过。

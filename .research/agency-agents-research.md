@@ -2,7 +2,7 @@
 
 ## 目标
 
-- 要解决的问题：把 `git@github.com:msitarzewski/agency-agents.git` 纳入 `references/repos/` 作为本地参考仓库，并提炼它对当前 `my-ai-harness` 的可复用模式，形成后续资产设计与分发适配的研究结论。
+- 要解决的问题：把 `git@github.com:msitarzewski/agency-agents.git` 纳入 `references/repos/` 作为本地参考仓库，并提炼它对当前 `ai-harness-zh` 的可复用模式，形成后续资产设计与分发适配的研究结论。
 - 语言/框架：Markdown prompt 资产、YAML frontmatter、shell 转换/安装脚本。
 - 约束：
   - 当前仓库默认中文沉淀，且核心资产以 `src/skills/`、`src/agents/`、`targets/` 为中心。
