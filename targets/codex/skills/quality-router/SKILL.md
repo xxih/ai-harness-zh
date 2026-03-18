@@ -28,7 +28,7 @@ description: 质量相关 skill 的手动触发入口；当用户明确说 `/tdd
    - 当前请求应进入哪个 `quality-*` skill
 2. 质量记录
    - 若当前任务已有自己的记录文件，统一回写到该文件
-   - 若没有既定记录位置，使用 `quality-check.md`
+   - 若没有既定记录位置，默认写入 `.quality/quality-check.md`
 
 ## 工作流
 
@@ -42,7 +42,7 @@ description: 质量相关 skill 的手动触发入口；当用户明确说 `/tdd
    - 进入目标 skill 后，再读取对应 references 或模板
 3. 回写统一记录
    - 各阶段结果优先并入当前任务已有记录
-   - 若没有共享记录载体，则写入 `quality-check.md`
+   - 若没有共享记录载体，则写入 `.quality/quality-check.md`
 
 ## 路由约束
 
@@ -50,4 +50,4 @@ description: 质量相关 skill 的手动触发入口；当用户明确说 `/tdd
 - 所有质量相关 skill 使用统一前缀 `quality-`
 - 若用户未显式触发命令式入口，应直接使用目标 skill，而不是先经过 router
 - 若有任务容器或现成记录文件，可以回写，但不依赖任何特定框架
-- 默认把结果落到当前工作面，而不是只停留在回复中
+- 默认把结果落到 `.quality/quality-check.md` 或当前工作面，而不是只停留在回复中

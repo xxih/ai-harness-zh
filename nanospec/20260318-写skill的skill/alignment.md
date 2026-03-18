@@ -9,3 +9,7 @@
 - [变更] 用户进一步要求继续扫描仓库内其他 skill，把已写过的强绑定仓库表述一并对齐。
   - 处理决定：对通用 skill 去掉 `.learned/`、`.quality/`、`.research/`、`nanospec`、`src/...`、`targets/...`、`commands/` 等当前仓库前提，改为“回写当前工作面”或“使用通用文件名”的表述；`nanospec` 与 `spec-driven` 这类本身就定义任务容器的 skill 保持原样。
   - 影响范围：`learning-capture`、`quality-*`、`search-first`、`agent-orchestration` 及对应分发副本。
+
+- [变更] 上一轮对齐把默认记录目录去得过头了。用户明确要求：research 类 skill 默认应给出 `.research/`；同理，learning 类用 `.learned/`，quality 类用 `.quality/`。
+  - 处理决定：恢复这三类 skill 的默认记录目录，但继续避免把 `src/...`、`targets/...`、`nanospec` 等当前仓库实现细节写成前提。
+  - 影响范围：`learning-capture`、`quality-*`、`search-first`、`agent-orchestration` 及对应分发副本。

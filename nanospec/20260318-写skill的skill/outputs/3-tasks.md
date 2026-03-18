@@ -38,3 +38,12 @@
 - [x] 5.1 扫描 `learning-capture`、`quality-*`、`search-first`、`agent-orchestration` 中的强绑定仓库表述。
 - [x] 5.2 将默认落点改为通用文件名或“当前工作面”，去掉 `.learned/`、`.quality/`、`.research/`、`nanospec`、`src/...`、`targets/...` 等当前仓库前提。
 - [x] 5.3 同步对应 `targets/codex/skills/` 分发副本。
+
+## 6. 默认记录目录回调
+
+验收条件：保留 `.research/`、`.quality/`、`.learned/` 作为分类默认落点，但不重新引入 `src/...`、`targets/...`、`nanospec` 等强绑定实现细节。
+
+- [x] 6.1 执行 `/align`，记录“默认记录目录不该一并去掉”的修正。
+- [x] 6.2 恢复 `learning-capture` 的 `.learned/` 默认落点。
+- [x] 6.3 恢复 `quality-*` 的 `.quality/quality-check.md` 默认落点。
+- [x] 6.4 恢复 `search-first` 与 `agent-orchestration` 的 `.research/` 默认落点。

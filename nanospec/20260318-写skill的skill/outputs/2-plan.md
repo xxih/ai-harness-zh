@@ -56,6 +56,11 @@
 - 保留 skill 自身真正定义的抽象动作
 - 只有 `nanospec`、`spec-driven` 这类本身就定义任务容器的 skill，可以保留对应结构
 
+补充对齐口径：
+
+- `src/...`、`targets/...`、`nanospec` 这类实现层和任务层结构不应写成通用 skill 前提
+- 但 `.research/`、`.quality/`、`.learned/` 属于当前仓库约定的默认记录目录，相关 skill 应保留这些默认落点
+
 ### 阶段 5：做最小校验
 
 不额外引入新脚本，直接做最小确认：

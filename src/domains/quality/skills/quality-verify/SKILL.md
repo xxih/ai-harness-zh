@@ -32,7 +32,7 @@ description: 面向完成宣称前的验证门禁 skill。先拿到 fresh verifi
    - `not-ready`
 3. 质量记录
    - 若当前任务已有自己的记录文件，回写 Verify 阶段摘要
-   - 若没有既定记录位置，使用 `quality-check.md`
+   - 若没有既定记录位置，默认写入 `.quality/quality-check.md`
 
 ## 工作流
 
@@ -54,7 +54,7 @@ description: 面向完成宣称前的验证门禁 skill。先拿到 fresh verifi
 - partial verification 不是完成证据
 - 旧日志、旧截图、旧印象都不能代替本轮 fresh evidence
 - 可以写入当前任务记录，但验证结论本身不依赖任何特定任务框架
-- 没有任务容器时，也应把验证结果落在当前工作面，而不是只写在回复里
+- 没有任务容器时，也应把验证结果落在 `.quality/quality-check.md`，而不是只写在回复里
 
 ## 最小验证范围
 
