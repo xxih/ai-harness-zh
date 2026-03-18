@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -11,6 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC_ROOT = ROOT / "src"
 DOMAINS_ROOT = SRC_ROOT / "domains"
 TARGETS_ROOT = ROOT / "targets"
+TRANSLATIONS_ROOT = ROOT / "references" / "translations"
 
 
 def read_text(path: Path) -> str:
@@ -87,6 +89,7 @@ def validate_repo_layout(failures: list[str]) -> None:
         "scripts",
         "references",
         "references/repos",
+        "references/translations",
         "targets",
         "targets/codex",
         "targets/codex/skills",
@@ -102,6 +105,7 @@ def validate_repo_layout(failures: list[str]) -> None:
         "src/AGENTS.md",
         "references/README.md",
         "references/repos/.gitignore",
+        "references/translations/README.md",
         "targets/README.md",
         "targets/codex/README.md",
         "targets/codex/.codex/AGENTS.md",
@@ -296,6 +300,37 @@ def validate_agent(agent_path: Path, failures: list[str]) -> None:
         ok("ready" in text.lower() and "not-ready" in text.lower(), f"{label} ends with an explicit readiness assessment", failures)
 
 
+def validate_reference_translations(failures: list[str]) -> None:
+    manifests = sorted(TRANSLATIONS_ROOT.glob("*/manifest.json"))
+    ok(bool(manifests), "at least one reference translation manifest exists", failures)
+    for manifest_path in manifests:
+        label = manifest_path.relative_to(ROOT)
+        ok((manifest_path.parent / "README.md").is_file(), f"{manifest_path.parent.relative_to(ROOT)} has README.md", failures)
+        try:
+            manifest = json.loads(read_text(manifest_path))
+        except json.JSONDecodeError:
+            ok(False, f"{label} is valid JSON", failures)
+            continue
+
+        ok(bool(manifest.get("repo")), f"{label} records repo name", failures)
+        source = manifest.get("source", {})
+        ok(bool(source.get("path")), f"{label} records source.path", failures)
+        ok(bool(source.get("branch")), f"{label} records source.branch", failures)
+        ok("include" in manifest.get("scope", {}), f"{label} records translation scope", failures)
+
+        for entry in manifest.get("translations", []):
+            source_rel = entry.get("source")
+            translation_rel = entry.get("translation")
+            ok(bool(source_rel), f"{label} translation entry records source path", failures)
+            ok(bool(translation_rel), f"{label} translation entry records translation path", failures)
+            if translation_rel:
+                ok(
+                    (manifest_path.parent / translation_rel).is_file(),
+                    f"{label} translation file exists: {translation_rel}",
+                    failures,
+                )
+
+
 def validate_eval(eval_path: Path, failures: list[str]) -> None:
     text = read_text(eval_path)
     label = eval_path.relative_to(ROOT)
@@ -399,6 +434,7 @@ def main() -> int:
     for eval_file in eval_files:
         validate_eval(eval_file, failures)
 
+    validate_reference_translations(failures)
     validate_codex_target(failures)
 
     if failures:

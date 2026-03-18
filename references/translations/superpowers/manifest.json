@@ -1,0 +1,87 @@
+{
+  "repo": "superpowers",
+  "source": {
+    "path": "references/repos/superpowers",
+    "remote": "https://github.com/obra/superpowers.git",
+    "branch": "main",
+    "head_commit": "7e516434f2a30114300efc9247db32fb37daa5f9"
+  },
+  "scope": {
+    "include": [
+      "skills/*/SKILL.md"
+    ],
+    "notes": "首批只同步 superpowers 的 skills/*/SKILL.md 中文翻译。"
+  },
+  "translations": [
+    {
+      "source": "skills/brainstorming/SKILL.md",
+      "translation": "skills/brainstorming/SKILL.md",
+      "source_sha256": "58353e42ac33396a4b3cc62e69df35f3d3f1d18e60877bf39d492c77dc6a928d"
+    },
+    {
+      "source": "skills/dispatching-parallel-agents/SKILL.md",
+      "translation": "skills/dispatching-parallel-agents/SKILL.md",
+      "source_sha256": "76806091c7f923ba2596546b19cccd98a08e57a68745df77c3a7b998fe838e2b"
+    },
+    {
+      "source": "skills/executing-plans/SKILL.md",
+      "translation": "skills/executing-plans/SKILL.md",
+      "source_sha256": "a711f83fb762e2ea0fa151f598893da9911a408895c91cc7a7e0770dd59a27b3"
+    },
+    {
+      "source": "skills/finishing-a-development-branch/SKILL.md",
+      "translation": "skills/finishing-a-development-branch/SKILL.md",
+      "source_sha256": "dd2f82c6dc8582b621f9eb57fcb65f557f88eadf872727ac81d0840ae12c504e"
+    },
+    {
+      "source": "skills/receiving-code-review/SKILL.md",
+      "translation": "skills/receiving-code-review/SKILL.md",
+      "source_sha256": "c9382e92b8f32363566068ecfed19d3b2651eaf40d3942b24840f839dedfc406"
+    },
+    {
+      "source": "skills/requesting-code-review/SKILL.md",
+      "translation": "skills/requesting-code-review/SKILL.md",
+      "source_sha256": "a5ff68586ccf62d1803cedeb71d60fd96ec05591d29c8d123196117eefd34cd0"
+    },
+    {
+      "source": "skills/subagent-driven-development/SKILL.md",
+      "translation": "skills/subagent-driven-development/SKILL.md",
+      "source_sha256": "081ad3869e55c80bf8f890b4768a90c0e8057daf94b1b6fadebfc85ea5b8304a"
+    },
+    {
+      "source": "skills/systematic-debugging/SKILL.md",
+      "translation": "skills/systematic-debugging/SKILL.md",
+      "source_sha256": "4999cb851360485eca5074e727bbdd62ef20549c5d5b01216fcbf5831badb473"
+    },
+    {
+      "source": "skills/test-driven-development/SKILL.md",
+      "translation": "skills/test-driven-development/SKILL.md",
+      "source_sha256": "7dee67b4af6bdccc7a914ca34533184d64592d0f5b23aeae631538168db14994"
+    },
+    {
+      "source": "skills/using-git-worktrees/SKILL.md",
+      "translation": "skills/using-git-worktrees/SKILL.md",
+      "source_sha256": "de9dcde34840eee074047ec327d4ea6ca4954c5a73a6d874dc48f25fe46c9e7c"
+    },
+    {
+      "source": "skills/using-superpowers/SKILL.md",
+      "translation": "skills/using-superpowers/SKILL.md",
+      "source_sha256": "5fa548a85ce639dc6a2ea53607f9d405363c9b935004d0d95dc16e9629752d00"
+    },
+    {
+      "source": "skills/verification-before-completion/SKILL.md",
+      "translation": "skills/verification-before-completion/SKILL.md",
+      "source_sha256": "ea52d15aabaf72bc6b558efe2c126f161b53961090ddcd712000273bfe8c7b6c"
+    },
+    {
+      "source": "skills/writing-plans/SKILL.md",
+      "translation": "skills/writing-plans/SKILL.md",
+      "source_sha256": "d936159ad11f2e79ba8ae8b8653f87bb924ddaf78ae11dc3a424b4032ad1bd23"
+    },
+    {
+      "source": "skills/writing-skills/SKILL.md",
+      "translation": "skills/writing-skills/SKILL.md",
+      "source_sha256": "d83a09d6a1c6976f6cc2f40addeae653a4a6eb5903097ebc365d90242e00e379"
+    }
+  ]
+}

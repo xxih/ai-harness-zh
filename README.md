@@ -31,6 +31,7 @@
   - 默认记录落盘目录
 - `references/`
   - 仓库内参考资料入口，包含可追踪说明文档与本地外部仓库目录
+  - 也包含已版本化的外部核心 prompt 中文翻译目录
 
 ## 产出流程
 
@@ -118,4 +119,5 @@
 - 这里适合存放外部仓库的 clone 或软链接，例如 `oh-my-opencode`、`everything-claude-code`、`superpowers`
 - 该目录位于当前工作区内，本地 AI 工具可以直接读取
 - 该目录自带忽略规则，外部仓库内容不会进入当前仓库的 git 追踪
-- 具体使用约定见 `references/README.md`
+- 外部核心 prompt 的中文翻译与同步元数据放到 `references/translations/`
+- 具体使用约定见 `references/README.md` 和 `references/translations/README.md`
