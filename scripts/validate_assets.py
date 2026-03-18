@@ -244,6 +244,12 @@ def validate_skill(skill_path: Path, failures: list[str]) -> None:
         ok("rules.md" in text and "AGENTS.md" in text, f"{label} captures project-level rule candidates and AGENTS update proposals", failures)
         ok(".learned/" in text and "不要把 `nanospec` 当成学习记录的默认载体" in text, f"{label} keeps .learned as the default learning sink instead of nanospec", failures)
         ok((skill_path.parent / "references" / "templates.md").is_file(), "templates reference exists for learning-capture", failures)
+    if skill_name == "spec-driven":
+        ok("alignment.md" in text and "outputs/3-tasks.md" in text, f"{label} centers alignment propagation and shared task tracking", failures)
+        ok("只提供“目录规范 + align”" in text or "只提供“目录规范 + align" in text, f"{label} stays focused on directory structure and align only", failures)
+        ok("不负责内置流程阶段" in text and "不提供 `init`" in text, f"{label} explicitly avoids built-in phase routing", failures)
+        ok("其他 skill" in text and "共享工作面" in text, f"{label} positions other skills as the phase executors", failures)
+        ok("`/init`" not in text and "`/run`" not in text, f"{label} does not document slash-command routing", failures)
 
 
 def validate_command(command_path: Path, failures: list[str]) -> None:
