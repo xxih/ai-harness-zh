@@ -1,0 +1,1249 @@
+{
+  "repo": "everything-claude-code",
+  "source": {
+    "path": "/Users/xxih/workspace/my-everything-claude-code",
+    "remote": "https://github.com/affaan-m/everything-claude-code.git",
+    "branch": "main",
+    "head_commit": "c5ccf8857bd9a1cef4ff52a745c45948f622d565"
+  },
+  "canonical_reference": {
+    "path": "references/repos/everything-claude-code",
+    "head_commit": "fdea3085a76c842edea49a72ea695ccc7ff537ed",
+    "notes": "后续日常对照仍优先看当前仓库内的 references/repos 副本。"
+  },
+  "scope": {
+    "include": [
+      "README.zh-CN.md",
+      "docs/zh-CN/**"
+    ],
+    "notes": "本次直接汇总本机已有的 ECC 中文译稿；优先保留现成可复用结果。"
+  },
+  "translations": [
+    {
+      "source": "README.md",
+      "translation": "README.zh-CN.md",
+      "source_sha256": "3bf563a68ec4b3fd134205c35b0a189e90b16abc895f3a0a8e4dc7c0914829b1"
+    },
+    {
+      "translation": "docs/zh-CN/AGENTS.md",
+      "source": "AGENTS.md",
+      "source_sha256": "c9d2719b58dddff01810215c5de55634dbcd99d3b1e8867b60a6617143b103a7"
+    },
+    {
+      "translation": "docs/zh-CN/CHANGELOG.md",
+      "source": "CHANGELOG.md",
+      "source_sha256": "e37badabc53abc70ef00f423fcc749195ed1ee0651deaceda92f4e24a3afa744"
+    },
+    {
+      "translation": "docs/zh-CN/CLAUDE.md",
+      "source": "CLAUDE.md",
+      "source_sha256": "30106929c6ad2fe9729fbc0fbe4c4e4c62a33cae12e02cda5fd98a76ca6c793d"
+    },
+    {
+      "translation": "docs/zh-CN/CODE_OF_CONDUCT.md",
+      "source": "CODE_OF_CONDUCT.md",
+      "source_sha256": "fd6627320ddc0581d756ee3bda4e85916a229bdb39cc93b202df1cd771cfa485"
+    },
+    {
+      "translation": "docs/zh-CN/CONTRIBUTING.md",
+      "source": "CONTRIBUTING.md",
+      "source_sha256": "345d61a1b9ad67188b9df8793a8204ffb13b057da09b9eec9f1a11702102a410"
+    },
+    {
+      "translation": "docs/zh-CN/README.md",
+      "source": "README.md",
+      "source_sha256": "3bf563a68ec4b3fd134205c35b0a189e90b16abc895f3a0a8e4dc7c0914829b1"
+    },
+    {
+      "translation": "docs/zh-CN/SPONSORING.md",
+      "source": "SPONSORING.md",
+      "source_sha256": "c6472611950ba42767ee0fa03ca0cc9e75dcff6bda606f8349d082be0a817b41"
+    },
+    {
+      "translation": "docs/zh-CN/SPONSORS.md",
+      "source": "SPONSORS.md",
+      "source_sha256": "293816d7715eb2c8e62d0b3ede5fbfede781b45f813ae315b514ac0efa840df7"
+    },
+    {
+      "translation": "docs/zh-CN/TROUBLESHOOTING.md",
+      "source": "TROUBLESHOOTING.md",
+      "source_sha256": "3fb114bc9556d61c2994a7d849ceb829c4c0056907697834e74bdf9bddb63555"
+    },
+    {
+      "translation": "docs/zh-CN/agents/architect.md",
+      "source": "agents/architect.md",
+      "source_sha256": "e4c02d466d90f1b70d77a0ad9c23b048d852a1d4e040d33e55ba1a859801a1f0"
+    },
+    {
+      "translation": "docs/zh-CN/agents/build-error-resolver.md",
+      "source": "agents/build-error-resolver.md",
+      "source_sha256": "28597d1e97a68701999704b789a97a20a28b121b7c27ee6a6e80ab43bcd514b8"
+    },
+    {
+      "translation": "docs/zh-CN/agents/chief-of-staff.md",
+      "source": "agents/chief-of-staff.md",
+      "source_sha256": "1a1f971e158824a89b7986f6688fe16d7708b88b0a00631b28bd53956c68e9d2"
+    },
+    {
+      "translation": "docs/zh-CN/agents/code-reviewer.md",
+      "source": "agents/code-reviewer.md",
+      "source_sha256": "e112e5e0bbc501788e8a3bfd2771d34e31a8564bbd87391bff7401af1509782c"
+    },
+    {
+      "translation": "docs/zh-CN/agents/database-reviewer.md",
+      "source": "agents/database-reviewer.md",
+      "source_sha256": "2dcb2e2dc99f8425cf260ee3630920bc80da18959dde7ad95350ccf70c0931a4"
+    },
+    {
+      "translation": "docs/zh-CN/agents/doc-updater.md",
+      "source": "agents/doc-updater.md",
+      "source_sha256": "a0b96a358534fc9cefc33355b73d8b232132754283c3f335907468cb98ee021d"
+    },
+    {
+      "translation": "docs/zh-CN/agents/e2e-runner.md",
+      "source": "agents/e2e-runner.md",
+      "source_sha256": "89813024c93cb28948656b066609eb42b4d024e96a8aeb5cbc320913c1e75123"
+    },
+    {
+      "translation": "docs/zh-CN/agents/go-build-resolver.md",
+      "source": "agents/go-build-resolver.md",
+      "source_sha256": "f331c2a89232b8d24712b4ceb6a63f4180eab6e81cbe75dc13390947ac3fd4a9"
+    },
+    {
+      "translation": "docs/zh-CN/agents/go-reviewer.md",
+      "source": "agents/go-reviewer.md",
+      "source_sha256": "83e6fd9f80c05e4dc1cdfd325e611ab4d3543226c68e91425b876a920514a520"
+    },
+    {
+      "translation": "docs/zh-CN/agents/harness-optimizer.md",
+      "source": "agents/harness-optimizer.md",
+      "source_sha256": "a0f42e525781a1fc4a2305ef4b5d055f296a04b9814ff81b7d1d99be93c48b58"
+    },
+    {
+      "translation": "docs/zh-CN/agents/kotlin-build-resolver.md",
+      "source": "agents/kotlin-build-resolver.md",
+      "source_sha256": "7637a3fc10b67534474f787acfcb13354d9dee3f61a75ad96a6efc4dca061a0c"
+    },
+    {
+      "translation": "docs/zh-CN/agents/kotlin-reviewer.md",
+      "source": "agents/kotlin-reviewer.md",
+      "source_sha256": "f3e5e28d7400bf0d3ab1e7d14abf4d3b6b3d6c25416da0677d83ca83cb958494"
+    },
+    {
+      "translation": "docs/zh-CN/agents/loop-operator.md",
+      "source": "agents/loop-operator.md",
+      "source_sha256": "1a2b9c6cd104f76b071ac14eb35aea16d09d631b583fd2e8152b2ccb1ccb6f1b"
+    },
+    {
+      "translation": "docs/zh-CN/agents/planner.md",
+      "source": "agents/planner.md",
+      "source_sha256": "b4ab1263bcd0257cfd7f99075f1cae6ea17cb32f37235fbb76fdf71bc3b21c4e"
+    },
+    {
+      "translation": "docs/zh-CN/agents/python-reviewer.md",
+      "source": "agents/python-reviewer.md",
+      "source_sha256": "e2cf129892998841b01817e03736a9b5f9598681a096e28afbc12577d3ed9adf"
+    },
+    {
+      "translation": "docs/zh-CN/agents/refactor-cleaner.md",
+      "source": "agents/refactor-cleaner.md",
+      "source_sha256": "30ed8fae5a0bf75ded440a3cce716ece4e5ab3d8e4912415211a20bb76409e75"
+    },
+    {
+      "translation": "docs/zh-CN/agents/security-reviewer.md",
+      "source": "agents/security-reviewer.md",
+      "source_sha256": "eacaa50c2b2fdee398ba2e3c896c018ea8887d34701e5b841278ea2c1472cc19"
+    },
+    {
+      "translation": "docs/zh-CN/agents/tdd-guide.md",
+      "source": "agents/tdd-guide.md",
+      "source_sha256": "de339a6158d7708000ef796f8bd5e6d7ed45fe744f443d2d84739470ba4c5f2c"
+    },
+    {
+      "translation": "docs/zh-CN/codex-mcp-servers-guide.md",
+      "source": null,
+      "source_sha256": null,
+      "notes": "仅在本机已翻译仓库中存在的中文补充文档。"
+    },
+    {
+      "translation": "docs/zh-CN/commands/aside.md",
+      "source": "commands/aside.md",
+      "source_sha256": "62a658fce3504fd560657bd1912c246ebf6ad58691011d30afbe7a0f4d31d8bd"
+    },
+    {
+      "translation": "docs/zh-CN/commands/build-fix.md",
+      "source": "commands/build-fix.md",
+      "source_sha256": "5088ccbffd1fdea77681916a92832a5c19a71333f04a5f066e1a36670521caa1"
+    },
+    {
+      "translation": "docs/zh-CN/commands/checkpoint.md",
+      "source": "commands/checkpoint.md",
+      "source_sha256": "688a05474a64fb9543841d8e428a3a27dfb999bb88c0e648df09961b2247ddad"
+    },
+    {
+      "translation": "docs/zh-CN/commands/claw.md",
+      "source": "commands/claw.md",
+      "source_sha256": "2ecf2219ff15469acb63d250eb5e0119fde4e85557e8a5e965c18280a25ab7ce"
+    },
+    {
+      "translation": "docs/zh-CN/commands/code-review.md",
+      "source": "commands/code-review.md",
+      "source_sha256": "690b878d1b9ba6ecf6c1ce180ec5de0d79db5575d367e52f91031f103a2ff9df"
+    },
+    {
+      "translation": "docs/zh-CN/commands/e2e.md",
+      "source": "commands/e2e.md",
+      "source_sha256": "b1196cfc5ffc33160b774bec037bc29ea80848777efa08c8f1a7f28bed103665"
+    },
+    {
+      "translation": "docs/zh-CN/commands/eval.md",
+      "source": "commands/eval.md",
+      "source_sha256": "7c8e20c659952ce33b248d83517ad988abefe0bff31580a937896b3531a8798f"
+    },
+    {
+      "translation": "docs/zh-CN/commands/evolve.md",
+      "source": "commands/evolve.md",
+      "source_sha256": "c8f94e2d2517539fd3e3cf05edb5a7187a887d76f2c936798e93e546f8b30ebb"
+    },
+    {
+      "translation": "docs/zh-CN/commands/go-build.md",
+      "source": "commands/go-build.md",
+      "source_sha256": "ebb9375b0c441f0be31d47992709cc1ef878acb2e531edfad6daec563eb9ac62"
+    },
+    {
+      "translation": "docs/zh-CN/commands/go-review.md",
+      "source": "commands/go-review.md",
+      "source_sha256": "4cbaf58d3f2d8bf82cb37d1e3985ad48d994d162e96bb470af05e194e978e43a"
+    },
+    {
+      "translation": "docs/zh-CN/commands/go-test.md",
+      "source": "commands/go-test.md",
+      "source_sha256": "803cec4d92a361e2623fdf027eb67eea56843ad563814d693382ab7fe6163708"
+    },
+    {
+      "translation": "docs/zh-CN/commands/gradle-build.md",
+      "source": "commands/gradle-build.md",
+      "source_sha256": "c2aa086148316326ae10ee97229d040a0b7a9b743c016bfad4032ce96bb097a9"
+    },
+    {
+      "translation": "docs/zh-CN/commands/harness-audit.md",
+      "source": "commands/harness-audit.md",
+      "source_sha256": "8051ebfe1ac1efd74d9cf6f1dc526a06bc35fdfab88ac40c6700dbfa51504542"
+    },
+    {
+      "translation": "docs/zh-CN/commands/instinct-export.md",
+      "source": "commands/instinct-export.md",
+      "source_sha256": "cd2052ae1b9c49f75ad81aae6e236be959cc6656d32e3b8f3e6e13d2d3bd2d3c"
+    },
+    {
+      "translation": "docs/zh-CN/commands/instinct-import.md",
+      "source": "commands/instinct-import.md",
+      "source_sha256": "6c4cba6af60c8f11926578d8c74d62b295209c1567a72bb3f688ac82662f17f5"
+    },
+    {
+      "translation": "docs/zh-CN/commands/instinct-status.md",
+      "source": "commands/instinct-status.md",
+      "source_sha256": "514b31b312e7d093edc7da373de25898490f363d9cf34ae5e6508e769b78d384"
+    },
+    {
+      "translation": "docs/zh-CN/commands/kotlin-build.md",
+      "source": "commands/kotlin-build.md",
+      "source_sha256": "40dd40c6db3b65db4a63fef973f30ef7b89e2b380a1e7be8f6eeda59a34f8e33"
+    },
+    {
+      "translation": "docs/zh-CN/commands/kotlin-review.md",
+      "source": "commands/kotlin-review.md",
+      "source_sha256": "8f8f8813a7d341e801221d6cdf2aeba107699921c175c843d5c8be9da1bd8893"
+    },
+    {
+      "translation": "docs/zh-CN/commands/kotlin-test.md",
+      "source": "commands/kotlin-test.md",
+      "source_sha256": "f32e850de1f29031e16cbb869071eca800d3d1632968ba4c4e23d1cda9da155d"
+    },
+    {
+      "translation": "docs/zh-CN/commands/learn-eval.md",
+      "source": "commands/learn-eval.md",
+      "source_sha256": "6907c2ba7b1b794974a63dcd4df2ce0f098a1aca79228b081ebb862ca9527469"
+    },
+    {
+      "translation": "docs/zh-CN/commands/learn.md",
+      "source": "commands/learn.md",
+      "source_sha256": "696c0a0aa3d5053ff3b383f167225fcc8dc8b91f1bc54fea2bf3826e830a70e8"
+    },
+    {
+      "translation": "docs/zh-CN/commands/loop-start.md",
+      "source": "commands/loop-start.md",
+      "source_sha256": "3ad109a9f69cfd2ae041d3fe09aff963e00ba0a63408a1fa5fb2ff408085d69b"
+    },
+    {
+      "translation": "docs/zh-CN/commands/loop-status.md",
+      "source": "commands/loop-status.md",
+      "source_sha256": "24181d1392154e6b7a3aedd1691e021a43de2a9c0969074accfff7ccb800967e"
+    },
+    {
+      "translation": "docs/zh-CN/commands/model-route.md",
+      "source": "commands/model-route.md",
+      "source_sha256": "9ad52439f152dd7c94c935f827bb8ef366f87c1848aefa4f054e34bd9365c500"
+    },
+    {
+      "translation": "docs/zh-CN/commands/multi-backend.md",
+      "source": "commands/multi-backend.md",
+      "source_sha256": "6f8d4989c25f0963ec30869c3fdf747f07ac5a993de27b1e5d9b0fc874f828b1"
+    },
+    {
+      "translation": "docs/zh-CN/commands/multi-execute.md",
+      "source": "commands/multi-execute.md",
+      "source_sha256": "d848b570000f80588ac2d3f1125280a47ad4b21a5302c3d740e0c269cd57f92f"
+    },
+    {
+      "translation": "docs/zh-CN/commands/multi-frontend.md",
+      "source": "commands/multi-frontend.md",
+      "source_sha256": "9e85eb5eb5478b45ccc4e5f1f86978eb29aae1971cbf9774900c9d27faa89e0b"
+    },
+    {
+      "translation": "docs/zh-CN/commands/multi-plan.md",
+      "source": "commands/multi-plan.md",
+      "source_sha256": "ec3f524c6ff7d5f7f0aea3536eff0bc7032bb1c779bbd5f5cbd8e7cd84c3d6e5"
+    },
+    {
+      "translation": "docs/zh-CN/commands/multi-workflow.md",
+      "source": "commands/multi-workflow.md",
+      "source_sha256": "aa29af2c5fc8155227ed91e8cc3ef67242e0cfb817520b0dd15fe23d7ac97210"
+    },
+    {
+      "translation": "docs/zh-CN/commands/orchestrate.md",
+      "source": "commands/orchestrate.md",
+      "source_sha256": "b0c6bf58e8b681adbc29514c0d5f56bbba6f3649474285a53d4395c7e6620c96"
+    },
+    {
+      "translation": "docs/zh-CN/commands/plan.md",
+      "source": "commands/plan.md",
+      "source_sha256": "b3c2e2eac500c7c7642f12feecad77a72a526477bd03c3aae1903600bd63de9b"
+    },
+    {
+      "translation": "docs/zh-CN/commands/pm2.md",
+      "source": "commands/pm2.md",
+      "source_sha256": "638ff26f4ede729d6639f32e4077aa423f72d92725b34936afffe57ba2076cb3"
+    },
+    {
+      "translation": "docs/zh-CN/commands/projects.md",
+      "source": "commands/projects.md",
+      "source_sha256": "dc939242028d24119b985e6ad4fee3d6c8185f6bd19c716535384149bc9876f3"
+    },
+    {
+      "translation": "docs/zh-CN/commands/promote.md",
+      "source": "commands/promote.md",
+      "source_sha256": "8d2faf47b1322c24a1dfa221b2f5e85b9e766fcd1d460c157c472246a3b86846"
+    },
+    {
+      "translation": "docs/zh-CN/commands/prompt-optimize.md",
+      "source": "commands/prompt-optimize.md",
+      "source_sha256": "6ba929312e14a3e183c02c2cb12220a29ea6a73827f7539eb2d0e9c163092b84"
+    },
+    {
+      "translation": "docs/zh-CN/commands/python-review.md",
+      "source": "commands/python-review.md",
+      "source_sha256": "3f1791ba569f79098bb337dad1bca989e13dc0ac03dba7483183ce4937bb9662"
+    },
+    {
+      "translation": "docs/zh-CN/commands/quality-gate.md",
+      "source": "commands/quality-gate.md",
+      "source_sha256": "826bbb000043b1401fb8c73cff9cace55cfd38d7f6c7b006efbd43c8ce9cb754"
+    },
+    {
+      "translation": "docs/zh-CN/commands/refactor-clean.md",
+      "source": "commands/refactor-clean.md",
+      "source_sha256": "f78cb91996bcb5cd816b28b617fa3cbf7ce814c559ba18f6fa48e1f7ca16af0a"
+    },
+    {
+      "translation": "docs/zh-CN/commands/resume-session.md",
+      "source": "commands/resume-session.md",
+      "source_sha256": "f92fc2998cb16a4331938ca4437b3a4c936e7b3672f896d02f21bc198611fe6c"
+    },
+    {
+      "translation": "docs/zh-CN/commands/save-session.md",
+      "source": "commands/save-session.md",
+      "source_sha256": "f4a5799907d588588279adef8f0879a2532c0489c02ea83b64fe7bf1b62a0085"
+    },
+    {
+      "translation": "docs/zh-CN/commands/sessions.md",
+      "source": "commands/sessions.md",
+      "source_sha256": "ee453dbcd9d6763f05af238e3d86481b453424d5eb590f20793e86d927efa126"
+    },
+    {
+      "translation": "docs/zh-CN/commands/setup-pm.md",
+      "source": "commands/setup-pm.md",
+      "source_sha256": "163b3cd106028d21dbd2a91b47f1cf99957e40a78ed9e5e5dc8507e225f73a2d"
+    },
+    {
+      "translation": "docs/zh-CN/commands/skill-create.md",
+      "source": "commands/skill-create.md",
+      "source_sha256": "3acec769ffb32348d5865d3ba24fa3e62feb1096fefdbce8e0ac52779b5659cd"
+    },
+    {
+      "translation": "docs/zh-CN/commands/tdd.md",
+      "source": "commands/tdd.md",
+      "source_sha256": "9f054ac6db111f2a742c9ca561f3fa1d7ab691f133151a2856261dea0cff2fea"
+    },
+    {
+      "translation": "docs/zh-CN/commands/test-coverage.md",
+      "source": "commands/test-coverage.md",
+      "source_sha256": "3b6899e41753d91ba7e376f107269694e814c7d5523a18fa7785516390bb4dbd"
+    },
+    {
+      "translation": "docs/zh-CN/commands/update-codemaps.md",
+      "source": "commands/update-codemaps.md",
+      "source_sha256": "3514e183daeda86331687ed3f863b3ad8e4e2b91a0430b72cd1d28316c0b585b"
+    },
+    {
+      "translation": "docs/zh-CN/commands/update-docs.md",
+      "source": "commands/update-docs.md",
+      "source_sha256": "09d8332a9e11a94b84462f7918471e1db5264312619d687496ad3ff8e8226631"
+    },
+    {
+      "translation": "docs/zh-CN/commands/verify.md",
+      "source": "commands/verify.md",
+      "source_sha256": "22ad1cca29aa497327d466836e16604a9b4561c2fd6a293ec7ab5780f9966708"
+    },
+    {
+      "translation": "docs/zh-CN/contexts/dev.md",
+      "source": "contexts/dev.md",
+      "source_sha256": "340ea6af2e75f71f38d53975ed51d94f2062bc4aaf3ce8f2157d2e961ed0c4d4"
+    },
+    {
+      "translation": "docs/zh-CN/contexts/research.md",
+      "source": "contexts/research.md",
+      "source_sha256": "8af3ae79e470c6051d2f03e3c900484d224ecbb3da76056f88bdc3bde95fc265"
+    },
+    {
+      "translation": "docs/zh-CN/contexts/review.md",
+      "source": "contexts/review.md",
+      "source_sha256": "95ad8fc5851f61bd169377ce94df22bc996b69ff72f09aa51e7f16ed92930411"
+    },
+    {
+      "translation": "docs/zh-CN/examples/CLAUDE.md",
+      "source": "examples/CLAUDE.md",
+      "source_sha256": "d4737049df03cadbadd6ffc2825f9fa8ed0e5ef0c6e03e0702d38baed70eb464"
+    },
+    {
+      "translation": "docs/zh-CN/examples/django-api-CLAUDE.md",
+      "source": "examples/django-api-CLAUDE.md",
+      "source_sha256": "2402194c3588b819a103a7a830f30a57ca755ac993b1df4dca37811fcbb03bd3"
+    },
+    {
+      "translation": "docs/zh-CN/examples/go-microservice-CLAUDE.md",
+      "source": "examples/go-microservice-CLAUDE.md",
+      "source_sha256": "387bb2672aff21839c6a2358453937c3759a7ad623c6a32145517276ac3b137a"
+    },
+    {
+      "translation": "docs/zh-CN/examples/rust-api-CLAUDE.md",
+      "source": "examples/rust-api-CLAUDE.md",
+      "source_sha256": "b8f63e040221680f91f9e04205e0454d1fc6c4ba9b6aaa755cc12de050283c55"
+    },
+    {
+      "translation": "docs/zh-CN/examples/saas-nextjs-CLAUDE.md",
+      "source": "examples/saas-nextjs-CLAUDE.md",
+      "source_sha256": "4ee3079d752baf72e6c395bbd644ad2f603697248df755d1bcb9a8b2a825146a"
+    },
+    {
+      "translation": "docs/zh-CN/examples/user-CLAUDE.md",
+      "source": "examples/user-CLAUDE.md",
+      "source_sha256": "aadfabffaebd70a5eac3132f4d46cadeffa2894723afaa1a6cf74e618f81bbb5"
+    },
+    {
+      "translation": "docs/zh-CN/hooks/README.md",
+      "source": "hooks/README.md",
+      "source_sha256": "7db009c8fffa3f4c07c5a6401c6ef7549ab6da84d507bc3561e47c8da3df06ad"
+    },
+    {
+      "translation": "docs/zh-CN/plugins/README.md",
+      "source": "plugins/README.md",
+      "source_sha256": "06fb66aa01b0874e05e1c7c77456213e6d003801318b0d23cf50f6e206544ca9"
+    },
+    {
+      "translation": "docs/zh-CN/rules/README.md",
+      "source": "rules/README.md",
+      "source_sha256": "207a7716438375cec5b058ca2898ef344c8f4f4d8aaa805486bc8065074e4144"
+    },
+    {
+      "translation": "docs/zh-CN/rules/common/agents.md",
+      "source": "rules/common/agents.md",
+      "source_sha256": "84acffb05e73de7264c89e6b302e653140a3a5b98897601c14edaf0b11065e93"
+    },
+    {
+      "translation": "docs/zh-CN/rules/common/coding-style.md",
+      "source": "rules/common/coding-style.md",
+      "source_sha256": "52d1da9e124bfbef9f65f0401ec76b48f8e6293c8971969303efd4d7292a6a90"
+    },
+    {
+      "translation": "docs/zh-CN/rules/common/development-workflow.md",
+      "source": "rules/common/development-workflow.md",
+      "source_sha256": "717c24653ae22f55b3e1e17304bdd650672a033c524ac4741871338d23d6e213"
+    },
+    {
+      "translation": "docs/zh-CN/rules/common/git-workflow.md",
+      "source": "rules/common/git-workflow.md",
+      "source_sha256": "c8a1fac8bb9563406a1d04c6fd87737b4790d6699dfdde8a868248c8e261c18c"
+    },
+    {
+      "translation": "docs/zh-CN/rules/common/hooks.md",
+      "source": "rules/common/hooks.md",
+      "source_sha256": "b3bfb0ed86bfa71d29c076de5363656265218aa5fb8abd26edf285e652a2b234"
+    },
+    {
+      "translation": "docs/zh-CN/rules/common/patterns.md",
+      "source": "rules/common/patterns.md",
+      "source_sha256": "8a32c0552c8b309e961ef3f68a56ae84b0b1d411c17f23675ec26b685dea5e9a"
+    },
+    {
+      "translation": "docs/zh-CN/rules/common/performance.md",
+      "source": "rules/common/performance.md",
+      "source_sha256": "227f8aa0fb711335e0f341bfa0ad46e81271434f03c467acce9aef5fec13fa97"
+    },
+    {
+      "translation": "docs/zh-CN/rules/common/security.md",
+      "source": "rules/common/security.md",
+      "source_sha256": "58f0acc56331b8d554dd036b8a1d5b2305a908e3960ff1e2d7e55223d5918bc3"
+    },
+    {
+      "translation": "docs/zh-CN/rules/common/testing.md",
+      "source": "rules/common/testing.md",
+      "source_sha256": "1fe96e1188217bcf35acca3459d9afe00dcfb84bc938bba5abf2c4d8e0d9b4a9"
+    },
+    {
+      "translation": "docs/zh-CN/rules/golang/coding-style.md",
+      "source": "rules/golang/coding-style.md",
+      "source_sha256": "c32f6a2715297a1637b35567bb2e65054b4b28064b4d91fad26ad688f758243d"
+    },
+    {
+      "translation": "docs/zh-CN/rules/golang/hooks.md",
+      "source": "rules/golang/hooks.md",
+      "source_sha256": "518fe31d4baa4a10e2f5ae341ececb7063bbc794ef44c4cdefd7dcf75ab50cc3"
+    },
+    {
+      "translation": "docs/zh-CN/rules/golang/patterns.md",
+      "source": "rules/golang/patterns.md",
+      "source_sha256": "aca279088c39a43e8b1371d61abbb5da15206c5f52cce52443252d47ad5c5ddb"
+    },
+    {
+      "translation": "docs/zh-CN/rules/golang/security.md",
+      "source": "rules/golang/security.md",
+      "source_sha256": "72ff9516083e017b718f76e7a6f6838611fa3c02b810b3572fef7d605b38d033"
+    },
+    {
+      "translation": "docs/zh-CN/rules/golang/testing.md",
+      "source": "rules/golang/testing.md",
+      "source_sha256": "b0fcde8be4ce98e34fe872cc2ecca63cab8c8cd87d5faa1e1667ee82f3707d74"
+    },
+    {
+      "translation": "docs/zh-CN/rules/kotlin/coding-style.md",
+      "source": "rules/kotlin/coding-style.md",
+      "source_sha256": "63c86f8bb5366901f3233f2b71880c4e9c0bde794bf2276745f2d2f6706d99c2"
+    },
+    {
+      "translation": "docs/zh-CN/rules/kotlin/hooks.md",
+      "source": "rules/kotlin/hooks.md",
+      "source_sha256": "f5f703d6395984d4bbbdef4df9ee7875879a77551d3cc75acdf8b1054d09142c"
+    },
+    {
+      "translation": "docs/zh-CN/rules/kotlin/patterns.md",
+      "source": "rules/kotlin/patterns.md",
+      "source_sha256": "1c043217f0a9b7a5f013ce6dbfe0ef065d56ee6afcb30010f99ccdaf22349805"
+    },
+    {
+      "translation": "docs/zh-CN/rules/kotlin/security.md",
+      "source": "rules/kotlin/security.md",
+      "source_sha256": "f2cb2185afce33a401fc815fc28581eae21f5f75382cad2082b27557d9cd18ac"
+    },
+    {
+      "translation": "docs/zh-CN/rules/kotlin/testing.md",
+      "source": "rules/kotlin/testing.md",
+      "source_sha256": "441d35861a1297cabd698b7f3886c5f0bdc59727cb99fde135f8ecb06025f6e7"
+    },
+    {
+      "translation": "docs/zh-CN/rules/perl/coding-style.md",
+      "source": "rules/perl/coding-style.md",
+      "source_sha256": "4f134e0da0e332280e6c6803c5dec6edb38088c42f4bb6270c27e81f579a853a"
+    },
+    {
+      "translation": "docs/zh-CN/rules/perl/hooks.md",
+      "source": "rules/perl/hooks.md",
+      "source_sha256": "a71f48f8b6068436a5b47c4f32291208ebd5d6b311b2ad1d393c1a0ad96c764d"
+    },
+    {
+      "translation": "docs/zh-CN/rules/perl/patterns.md",
+      "source": "rules/perl/patterns.md",
+      "source_sha256": "55a86b5bca376dc511bd9b4fa2d0b29985f4d7576aae715d68b760afe0628169"
+    },
+    {
+      "translation": "docs/zh-CN/rules/perl/security.md",
+      "source": "rules/perl/security.md",
+      "source_sha256": "c3d0311c2bd9b0fbe94d079e410561fa6a918180925f86c29dfadd06d32a00b5"
+    },
+    {
+      "translation": "docs/zh-CN/rules/perl/testing.md",
+      "source": "rules/perl/testing.md",
+      "source_sha256": "4e8377928b5da585aebeaa278e3f293365d84df7819cb44d8efb1b5dc4631e68"
+    },
+    {
+      "translation": "docs/zh-CN/rules/php/coding-style.md",
+      "source": "rules/php/coding-style.md",
+      "source_sha256": "1f2740a185711c2199f19f46d9be54f3f1205bf49f40f9f36924d3c41ea20fd1"
+    },
+    {
+      "translation": "docs/zh-CN/rules/php/hooks.md",
+      "source": "rules/php/hooks.md",
+      "source_sha256": "624c6126b5c245aaf9af301f71f46a2b059baf94ef3de5c6bdb5dbf859ec0090"
+    },
+    {
+      "translation": "docs/zh-CN/rules/php/patterns.md",
+      "source": "rules/php/patterns.md",
+      "source_sha256": "c987916a7bd785d7a4cb90ef984640b9d0b0ee3b500da6c3aa174c48fd3250d4"
+    },
+    {
+      "translation": "docs/zh-CN/rules/php/security.md",
+      "source": "rules/php/security.md",
+      "source_sha256": "bf8ca6b0931da5f39b3194d68528e47d0311c835145df4b2cf9bf7a0802d69ad"
+    },
+    {
+      "translation": "docs/zh-CN/rules/php/testing.md",
+      "source": "rules/php/testing.md",
+      "source_sha256": "bda6f0d18a7db94b6ab78d26cd70ca9c24a717d4cf9069185f13c5797127421f"
+    },
+    {
+      "translation": "docs/zh-CN/rules/python/coding-style.md",
+      "source": "rules/python/coding-style.md",
+      "source_sha256": "f9d6d7a39c5f5ea809579fecac591f390fa9264c088c7e209d464d5244747003"
+    },
+    {
+      "translation": "docs/zh-CN/rules/python/hooks.md",
+      "source": "rules/python/hooks.md",
+      "source_sha256": "7ebd12233f6917905d5653a63afe2361450ed732fd965de55055ed5ffd3c14a7"
+    },
+    {
+      "translation": "docs/zh-CN/rules/python/patterns.md",
+      "source": "rules/python/patterns.md",
+      "source_sha256": "d9cab9b536321ea7efc6180668fd48820deaf571400db732f0ca17bdda92b7d0"
+    },
+    {
+      "translation": "docs/zh-CN/rules/python/security.md",
+      "source": "rules/python/security.md",
+      "source_sha256": "6bbbb6c800cdfef23c3f9a5055ce31096a7724b51f0d528935f6c32970639453"
+    },
+    {
+      "translation": "docs/zh-CN/rules/python/testing.md",
+      "source": "rules/python/testing.md",
+      "source_sha256": "92655aa5047ee456501ad6605c428680bac6433965f89ce531fe79627004e8c6"
+    },
+    {
+      "translation": "docs/zh-CN/rules/swift/coding-style.md",
+      "source": "rules/swift/coding-style.md",
+      "source_sha256": "187d44050ed492076640f504a3fe7eb132ddabad262099d698a5b703b89d2659"
+    },
+    {
+      "translation": "docs/zh-CN/rules/swift/hooks.md",
+      "source": "rules/swift/hooks.md",
+      "source_sha256": "654da388192df405927c5e4cea2f588d01cd349ba7ba30a813a4aa7c3d3a4661"
+    },
+    {
+      "translation": "docs/zh-CN/rules/swift/patterns.md",
+      "source": "rules/swift/patterns.md",
+      "source_sha256": "4381cb9fa1c1ec01a600a96d80e320385148728748fb702822f9ac1c3c079860"
+    },
+    {
+      "translation": "docs/zh-CN/rules/swift/security.md",
+      "source": "rules/swift/security.md",
+      "source_sha256": "345a471220b7f448d991b9d28a0a047165aa7480a1ed758703d0c74041239b3a"
+    },
+    {
+      "translation": "docs/zh-CN/rules/swift/testing.md",
+      "source": "rules/swift/testing.md",
+      "source_sha256": "9a44133b6a8afd496a79bd4e8211985f44cb4a24f83c45b64160d26411e434e9"
+    },
+    {
+      "translation": "docs/zh-CN/rules/typescript/coding-style.md",
+      "source": "rules/typescript/coding-style.md",
+      "source_sha256": "cb6fbe555d700a65d466fc27377fbb66d6da0e2bcf4411656918f6a45402af1a"
+    },
+    {
+      "translation": "docs/zh-CN/rules/typescript/hooks.md",
+      "source": "rules/typescript/hooks.md",
+      "source_sha256": "930bbe5d5a66e0022a55c87d5a17765d1633669620f9a3be6815f3ab4ddcd6b4"
+    },
+    {
+      "translation": "docs/zh-CN/rules/typescript/patterns.md",
+      "source": "rules/typescript/patterns.md",
+      "source_sha256": "20870f78aa32429fe13f35b415e9f6f8f7809e39c460cf8146d181b7306159fd"
+    },
+    {
+      "translation": "docs/zh-CN/rules/typescript/security.md",
+      "source": "rules/typescript/security.md",
+      "source_sha256": "7a74c95dfebca6923ab602edfe49688c9e4212defed40579de6fc0bb809f909a"
+    },
+    {
+      "translation": "docs/zh-CN/rules/typescript/testing.md",
+      "source": "rules/typescript/testing.md",
+      "source_sha256": "92e3d02b4fff30899bc1a2af043d74941adbf3b2c0e972d2fcd2c68c9c2ea70b"
+    },
+    {
+      "translation": "docs/zh-CN/skills/agent-harness-construction/SKILL.md",
+      "source": "skills/agent-harness-construction/SKILL.md",
+      "source_sha256": "8da8d0cd5ab9bcdfc3885818de04fbb7de18446b282138bb1b39b6863f335020"
+    },
+    {
+      "translation": "docs/zh-CN/skills/agentic-engineering/SKILL.md",
+      "source": "skills/agentic-engineering/SKILL.md",
+      "source_sha256": "c202c6bfe6c98a6842b2e2c99c0bf030d82200fccf1f9fdb0143d7b51f0a3d13"
+    },
+    {
+      "translation": "docs/zh-CN/skills/ai-first-engineering/SKILL.md",
+      "source": "skills/ai-first-engineering/SKILL.md",
+      "source_sha256": "41239a1d15ef590efe9836f686a07697586acf8b6a2f3248b8cb55322484c6a9"
+    },
+    {
+      "translation": "docs/zh-CN/skills/android-clean-architecture/SKILL.md",
+      "source": "skills/android-clean-architecture/SKILL.md",
+      "source_sha256": "b3f84e98979fb517a4ba6e2ee44d5dd6045133285a51bbc2c892f165fb492563"
+    },
+    {
+      "translation": "docs/zh-CN/skills/api-design/SKILL.md",
+      "source": "skills/api-design/SKILL.md",
+      "source_sha256": "d2b090c4319e030fddb576950400724ff12ccb285083a540b6afb62431185d25"
+    },
+    {
+      "translation": "docs/zh-CN/skills/article-writing/SKILL.md",
+      "source": "skills/article-writing/SKILL.md",
+      "source_sha256": "6ab082c7850e8e46e471026ea388024b1b9a574d84eb210fcb7391c15aa6b51a"
+    },
+    {
+      "translation": "docs/zh-CN/skills/autonomous-loops/SKILL.md",
+      "source": "skills/autonomous-loops/SKILL.md",
+      "source_sha256": "3a3d9a1bc8f1d7e0574d2733e56d1de03ca25091a407a96404bf9b74e6ae0aac"
+    },
+    {
+      "translation": "docs/zh-CN/skills/backend-patterns/SKILL.md",
+      "source": "skills/backend-patterns/SKILL.md",
+      "source_sha256": "681c33b4e125860295ca2639083cba524c77261e81efd67a3ce30b75593e7512"
+    },
+    {
+      "translation": "docs/zh-CN/skills/blueprint/SKILL.md",
+      "source": "skills/blueprint/SKILL.md",
+      "source_sha256": "f74f4f312e2cca732e3764f618caebcc43aea3e62b0a59cccca041941d7302d9"
+    },
+    {
+      "translation": "docs/zh-CN/skills/carrier-relationship-management/SKILL.md",
+      "source": "skills/carrier-relationship-management/SKILL.md",
+      "source_sha256": "9999c1066965db0ad0458de7b35f2d3af327096254a09b46161dbe7e372b2ee0"
+    },
+    {
+      "translation": "docs/zh-CN/skills/claude-api/SKILL.md",
+      "source": "skills/claude-api/SKILL.md",
+      "source_sha256": "b708d716177edb76a986c20215c20b64d91f5d57a078ae0d879459a44499e202"
+    },
+    {
+      "translation": "docs/zh-CN/skills/clickhouse-io/SKILL.md",
+      "source": "skills/clickhouse-io/SKILL.md",
+      "source_sha256": "bc0d9351ae909eaa725b57ee5c4928274ed94e0b55e0fef4076cbe2844ae8a7b"
+    },
+    {
+      "translation": "docs/zh-CN/skills/coding-standards/SKILL.md",
+      "source": "skills/coding-standards/SKILL.md",
+      "source_sha256": "be0b5f2063e9b4b1c6514889b0dc408316f7b0c7892832d10b69ec28e1389b7c"
+    },
+    {
+      "translation": "docs/zh-CN/skills/compose-multiplatform-patterns/SKILL.md",
+      "source": "skills/compose-multiplatform-patterns/SKILL.md",
+      "source_sha256": "c81cbd0422f70719f8a9da87c653b0b484d02747d1c54d3467d332ccbedcecc9"
+    },
+    {
+      "translation": "docs/zh-CN/skills/configure-ecc/SKILL.md",
+      "source": "skills/configure-ecc/SKILL.md",
+      "source_sha256": "dd2a1f902eb1ada0ed3cc0879304bfc3a52863c059e920d21c3d8ac9a921d0ea"
+    },
+    {
+      "translation": "docs/zh-CN/skills/content-engine/SKILL.md",
+      "source": "skills/content-engine/SKILL.md",
+      "source_sha256": "057a610eab12e16bf447a46dd91de867ea450ce541fddc956d1abd55be5ec2cc"
+    },
+    {
+      "translation": "docs/zh-CN/skills/content-hash-cache-pattern/SKILL.md",
+      "source": "skills/content-hash-cache-pattern/SKILL.md",
+      "source_sha256": "cdef26f0fc59be4320d3b8acc75a1084c06d7f8b58d635de51cd98e1d4343dbc"
+    },
+    {
+      "translation": "docs/zh-CN/skills/continuous-agent-loop/SKILL.md",
+      "source": "skills/continuous-agent-loop/SKILL.md",
+      "source_sha256": "9a014a9cf31cbc43dc2e48e4323438de562fa28de017a9c3b9bad8863d16eb6d"
+    },
+    {
+      "translation": "docs/zh-CN/skills/continuous-learning/SKILL.md",
+      "source": "skills/continuous-learning/SKILL.md",
+      "source_sha256": "93924eec09b0cae312cfeda0441764602f313d1914fe899981497697fe13822d"
+    },
+    {
+      "translation": "docs/zh-CN/skills/continuous-learning-v2/SKILL.md",
+      "source": "skills/continuous-learning-v2/SKILL.md",
+      "source_sha256": "dbef608cea4b7b4c1911a7d6d5fb28ae0390bfa7100a1aa1138dc466de7030b7"
+    },
+    {
+      "translation": "docs/zh-CN/skills/continuous-learning-v2/agents/observer.md",
+      "source": "skills/continuous-learning-v2/agents/observer.md",
+      "source_sha256": "654f2f0fc9d9ee1ee6e16e56c24cdb7aced277cddf0dd7961e91443291a79187"
+    },
+    {
+      "translation": "docs/zh-CN/skills/cost-aware-llm-pipeline/SKILL.md",
+      "source": "skills/cost-aware-llm-pipeline/SKILL.md",
+      "source_sha256": "09eb41fdfa081cd09d3843449275d80ae1c56938a459061d4d3faac3b13012cd"
+    },
+    {
+      "translation": "docs/zh-CN/skills/cpp-coding-standards/SKILL.md",
+      "source": "skills/cpp-coding-standards/SKILL.md",
+      "source_sha256": "70919980c635f66db649b7eb1e426fb2098754ed6c9db22f1a7eee0935227d35"
+    },
+    {
+      "translation": "docs/zh-CN/skills/cpp-testing/SKILL.md",
+      "source": "skills/cpp-testing/SKILL.md",
+      "source_sha256": "84e58979240d0387d55dd5bf0d4ba9976733098e2f839f10b17251797eae7e50"
+    },
+    {
+      "translation": "docs/zh-CN/skills/crosspost/SKILL.md",
+      "source": "skills/crosspost/SKILL.md",
+      "source_sha256": "18196627f48f597275c36eacc518070a8aa898d08e817d536a296a369956fc45"
+    },
+    {
+      "translation": "docs/zh-CN/skills/customs-trade-compliance/SKILL.md",
+      "source": "skills/customs-trade-compliance/SKILL.md",
+      "source_sha256": "be0030f456b7d26e608230a81f49dc2ca7ec725110d22c31f8a354bceb3ce0d1"
+    },
+    {
+      "translation": "docs/zh-CN/skills/database-migrations/SKILL.md",
+      "source": "skills/database-migrations/SKILL.md",
+      "source_sha256": "01d862480a071015cd9a7efedb4e0ec63568a1e90bbe82d4d135cad03f795309"
+    },
+    {
+      "translation": "docs/zh-CN/skills/deep-research/SKILL.md",
+      "source": "skills/deep-research/SKILL.md",
+      "source_sha256": "2d631427fc9aba27a318735f930bdb49f5c6ce416506340025eac01648f1df09"
+    },
+    {
+      "translation": "docs/zh-CN/skills/deployment-patterns/SKILL.md",
+      "source": "skills/deployment-patterns/SKILL.md",
+      "source_sha256": "b2d18f90ea5f5b7e6c357c3ded7353fa2d23b04464eed4b81745b0c8340e31ba"
+    },
+    {
+      "translation": "docs/zh-CN/skills/django-patterns/SKILL.md",
+      "source": "skills/django-patterns/SKILL.md",
+      "source_sha256": "267eb89f537a6626937d60fc732675f685b11209fa9025599c80e0f322e9a503"
+    },
+    {
+      "translation": "docs/zh-CN/skills/django-security/SKILL.md",
+      "source": "skills/django-security/SKILL.md",
+      "source_sha256": "d5d174690a16dca99798693f47b5df17478bfc5ff0f91684caf56dc1e9bef8b5"
+    },
+    {
+      "translation": "docs/zh-CN/skills/django-tdd/SKILL.md",
+      "source": "skills/django-tdd/SKILL.md",
+      "source_sha256": "99ef0936053afecf9f1ebbca687cd4232f4baa5f491878d5157c70344f237cd6"
+    },
+    {
+      "translation": "docs/zh-CN/skills/django-verification/SKILL.md",
+      "source": "skills/django-verification/SKILL.md",
+      "source_sha256": "b330cd018e559d568990f485f6ba90795e22e4b38dd68911167af88f54388674"
+    },
+    {
+      "translation": "docs/zh-CN/skills/dmux-workflows/SKILL.md",
+      "source": "skills/dmux-workflows/SKILL.md",
+      "source_sha256": "2ded928fadc25b343fb8aa1f077e88889b8a6aa3b8f8c45085c180bb5faee948"
+    },
+    {
+      "translation": "docs/zh-CN/skills/docker-patterns/SKILL.md",
+      "source": "skills/docker-patterns/SKILL.md",
+      "source_sha256": "6deb8e45b322481036cbf21c0ea61fb1427b0f47a01e675068ccdba93a1a2164"
+    },
+    {
+      "translation": "docs/zh-CN/skills/e2e-testing/SKILL.md",
+      "source": "skills/e2e-testing/SKILL.md",
+      "source_sha256": "f84ae93c159bf6ecef5a60c9735dc82d96bc5f977ef52eb71678b66722acf684"
+    },
+    {
+      "translation": "docs/zh-CN/skills/energy-procurement/SKILL.md",
+      "source": "skills/energy-procurement/SKILL.md",
+      "source_sha256": "5de19b7c80092f5f118f8b59d688556faca02a7cbdb8fef69df75feda50d916e"
+    },
+    {
+      "translation": "docs/zh-CN/skills/enterprise-agent-ops/SKILL.md",
+      "source": "skills/enterprise-agent-ops/SKILL.md",
+      "source_sha256": "27edc796df2bf30b611b05ca443434bf65bfc6fde18c94cd16ec41357f4c8ac5"
+    },
+    {
+      "translation": "docs/zh-CN/skills/eval-harness/SKILL.md",
+      "source": "skills/eval-harness/SKILL.md",
+      "source_sha256": "0b1933f5532df4bcc750d8799b7b33037e66c5d41f87d2953065868d08981926"
+    },
+    {
+      "translation": "docs/zh-CN/skills/exa-search/SKILL.md",
+      "source": "skills/exa-search/SKILL.md",
+      "source_sha256": "9ff6b56abed8dd6f01704827802274579de9d62017c1c1d164c5b7ae93a601d8"
+    },
+    {
+      "translation": "docs/zh-CN/skills/fal-ai-media/SKILL.md",
+      "source": "skills/fal-ai-media/SKILL.md",
+      "source_sha256": "5aa3ff04a2f7ef2fcdb5735cf8597abaa2b0c6ad3060c0cee45c665a9af5b2f1"
+    },
+    {
+      "translation": "docs/zh-CN/skills/foundation-models-on-device/SKILL.md",
+      "source": "skills/foundation-models-on-device/SKILL.md",
+      "source_sha256": "8efee7e392b39990e4ed58d85ac0783c1cbaac8e1cd87e7a4ef502f15987963e"
+    },
+    {
+      "translation": "docs/zh-CN/skills/frontend-patterns/SKILL.md",
+      "source": "skills/frontend-patterns/SKILL.md",
+      "source_sha256": "d32a3f430d658a8a8adb3d05da56fa1b49ef39cf2d1a6be8f27e5164f2d510df"
+    },
+    {
+      "translation": "docs/zh-CN/skills/frontend-slides/SKILL.md",
+      "source": "skills/frontend-slides/SKILL.md",
+      "source_sha256": "bc890c0deeb766e78991d6de150fd981a70b3dac5507a4d20b43c1a210b1819d"
+    },
+    {
+      "translation": "docs/zh-CN/skills/frontend-slides/STYLE_PRESETS.md",
+      "source": "skills/frontend-slides/STYLE_PRESETS.md",
+      "source_sha256": "f3448493022f8fa3f858319b14c0c48a35d441864dc78a2411f7938c28e7a265"
+    },
+    {
+      "translation": "docs/zh-CN/skills/golang-patterns/SKILL.md",
+      "source": "skills/golang-patterns/SKILL.md",
+      "source_sha256": "f36a89926fab1e895e7e2e2522e4104e1d7b07452244f31ff09ef1eeb069495c"
+    },
+    {
+      "translation": "docs/zh-CN/skills/golang-testing/SKILL.md",
+      "source": "skills/golang-testing/SKILL.md",
+      "source_sha256": "2da1afcd9df6529392653cd450edc40eb8bbc0b073f3eda17a510f4b89411c1b"
+    },
+    {
+      "translation": "docs/zh-CN/skills/inventory-demand-planning/SKILL.md",
+      "source": "skills/inventory-demand-planning/SKILL.md",
+      "source_sha256": "e8ccbdc15eb335dd6f7e3d45ab6bc822c3e530ded2fee229e9b00d37221829bf"
+    },
+    {
+      "translation": "docs/zh-CN/skills/investor-materials/SKILL.md",
+      "source": "skills/investor-materials/SKILL.md",
+      "source_sha256": "0541ac8ede8d39c59a646834481d0de86312e598331b86dc7027ece0def3c193"
+    },
+    {
+      "translation": "docs/zh-CN/skills/investor-outreach/SKILL.md",
+      "source": "skills/investor-outreach/SKILL.md",
+      "source_sha256": "e1f6e1ac6d85381cdc7f8ae29ff60647f9de46b4c17ef452f7e343ae50749c55"
+    },
+    {
+      "translation": "docs/zh-CN/skills/iterative-retrieval/SKILL.md",
+      "source": "skills/iterative-retrieval/SKILL.md",
+      "source_sha256": "a2648eff0f88bd9b7d2f4ffdf272052caf82d8f7d9bf48260bfd42d83b723713"
+    },
+    {
+      "translation": "docs/zh-CN/skills/java-coding-standards/SKILL.md",
+      "source": "skills/java-coding-standards/SKILL.md",
+      "source_sha256": "253c3ef143330a2901c2b75fd8def3a3f9ec66e6cb1f8fd1e323b803004dd22b"
+    },
+    {
+      "translation": "docs/zh-CN/skills/jpa-patterns/SKILL.md",
+      "source": "skills/jpa-patterns/SKILL.md",
+      "source_sha256": "5302c813a58deb5420e10c6dec4c5f0d036c278f2c494c8243a23326a994063e"
+    },
+    {
+      "translation": "docs/zh-CN/skills/kotlin-coroutines-flows/SKILL.md",
+      "source": "skills/kotlin-coroutines-flows/SKILL.md",
+      "source_sha256": "aaac6a9031e4a7c72cf6c958c21f80941132527ed280af245b593ec3efa115c5"
+    },
+    {
+      "translation": "docs/zh-CN/skills/kotlin-exposed-patterns/SKILL.md",
+      "source": "skills/kotlin-exposed-patterns/SKILL.md",
+      "source_sha256": "e5c29d23513adba9f047ca31422be0c814678751e4501466de6f30a044cd163f"
+    },
+    {
+      "translation": "docs/zh-CN/skills/kotlin-ktor-patterns/SKILL.md",
+      "source": "skills/kotlin-ktor-patterns/SKILL.md",
+      "source_sha256": "71982b984b919891b2a33513feb69f3f3f69d47fde16d8e7e5373cba49e6289a"
+    },
+    {
+      "translation": "docs/zh-CN/skills/kotlin-patterns/SKILL.md",
+      "source": "skills/kotlin-patterns/SKILL.md",
+      "source_sha256": "b98d254f9f0c1af600fa9b096c015981ffa2b3ebe651893ad09c56c8fb8aa5e9"
+    },
+    {
+      "translation": "docs/zh-CN/skills/kotlin-testing/SKILL.md",
+      "source": "skills/kotlin-testing/SKILL.md",
+      "source_sha256": "46f9f7da6a6391038c11ea0c3d8ca8275077d83a3e651963c25a1f73b381e4f4"
+    },
+    {
+      "translation": "docs/zh-CN/skills/liquid-glass-design/SKILL.md",
+      "source": "skills/liquid-glass-design/SKILL.md",
+      "source_sha256": "024aa207eb3d4d31d868954a7352a40b78c61f2fd007ab8b452afb6217070f84"
+    },
+    {
+      "translation": "docs/zh-CN/skills/logistics-exception-management/SKILL.md",
+      "source": "skills/logistics-exception-management/SKILL.md",
+      "source_sha256": "f19fc1cfb212dabb780ac645e0ee427357519a3490a7df1ffdbeabe4c458afb3"
+    },
+    {
+      "translation": "docs/zh-CN/skills/market-research/SKILL.md",
+      "source": "skills/market-research/SKILL.md",
+      "source_sha256": "7ef3fa13d6272fd295eeb2aca9f6a2f09f6a8270cf33b0675fc5a0018cf6e406"
+    },
+    {
+      "translation": "docs/zh-CN/skills/nanoclaw-repl/SKILL.md",
+      "source": "skills/nanoclaw-repl/SKILL.md",
+      "source_sha256": "a917d56baef854638fd6a33c9d9ce4f819d3dd128286514ed28807d911935d27"
+    },
+    {
+      "translation": "docs/zh-CN/skills/nutrient-document-processing/SKILL.md",
+      "source": "skills/nutrient-document-processing/SKILL.md",
+      "source_sha256": "0a3c491ccad41aeabea783e3b42a53d1b790e5b68fcacfb62d954f81cc0c1467"
+    },
+    {
+      "translation": "docs/zh-CN/skills/perl-patterns/SKILL.md",
+      "source": "skills/perl-patterns/SKILL.md",
+      "source_sha256": "7051a5b3b005f90faa6dac264510b42b54d6c0b69f2149c34ac57883489af3cd"
+    },
+    {
+      "translation": "docs/zh-CN/skills/perl-security/SKILL.md",
+      "source": "skills/perl-security/SKILL.md",
+      "source_sha256": "99cffd27aff013ab071716c7eb40f7c595dbf2165ad1825a7458122a4281bfdd"
+    },
+    {
+      "translation": "docs/zh-CN/skills/perl-testing/SKILL.md",
+      "source": "skills/perl-testing/SKILL.md",
+      "source_sha256": "b9ea58b1e80df6332254e84d274b52eddd0eba28ea096eaf18149025ff2115f4"
+    },
+    {
+      "translation": "docs/zh-CN/skills/plankton-code-quality/SKILL.md",
+      "source": "skills/plankton-code-quality/SKILL.md",
+      "source_sha256": "e75be8a685f21a10c12e137a6500e349c242791c24d98dd118d5c1845f2070c2"
+    },
+    {
+      "translation": "docs/zh-CN/skills/postgres-patterns/SKILL.md",
+      "source": "skills/postgres-patterns/SKILL.md",
+      "source_sha256": "2b07d5f7de1b68a93c8b25d093be2f0e9bfde11b8f488bd5433f0bac15415074"
+    },
+    {
+      "translation": "docs/zh-CN/skills/production-scheduling/SKILL.md",
+      "source": "skills/production-scheduling/SKILL.md",
+      "source_sha256": "e88b683d8ec6c5ec173af63e8065d200dd00b1ae31fe4aa9425e1b8e3274fab4"
+    },
+    {
+      "translation": "docs/zh-CN/skills/project-guidelines-example/SKILL.md",
+      "source": "skills/project-guidelines-example/SKILL.md",
+      "source_sha256": "68a3764074ab8b9448049010b368c2be75295b9d1e1de8bec6ccacf35fd52c08"
+    },
+    {
+      "translation": "docs/zh-CN/skills/prompt-optimizer/SKILL.md",
+      "source": "skills/prompt-optimizer/SKILL.md",
+      "source_sha256": "645df8819e848ddc131b7c61e87a99bdab15f2098a83a6dcabf44e155846e293"
+    },
+    {
+      "translation": "docs/zh-CN/skills/python-patterns/SKILL.md",
+      "source": "skills/python-patterns/SKILL.md",
+      "source_sha256": "df0c0abbbd0e6a01811d1b1d10d8fa7a8a19ce73afdc9432d24843f62649cdd2"
+    },
+    {
+      "translation": "docs/zh-CN/skills/python-testing/SKILL.md",
+      "source": "skills/python-testing/SKILL.md",
+      "source_sha256": "b304a8c503af32644f97a889c5545ee4f90e91980462ad4ce33fee3dea6f414f"
+    },
+    {
+      "translation": "docs/zh-CN/skills/quality-nonconformance/SKILL.md",
+      "source": "skills/quality-nonconformance/SKILL.md",
+      "source_sha256": "c2cfc8c7f53ea2710d2ea8c2410dfc52c3cc80fd92b2fd49ccd3cec557113623"
+    },
+    {
+      "translation": "docs/zh-CN/skills/ralphinho-rfc-pipeline/SKILL.md",
+      "source": "skills/ralphinho-rfc-pipeline/SKILL.md",
+      "source_sha256": "3564f14e56b1af6019bbf59a7162136f4971f9884243fcb67d1229d039e3f19f"
+    },
+    {
+      "translation": "docs/zh-CN/skills/regex-vs-llm-structured-text/SKILL.md",
+      "source": "skills/regex-vs-llm-structured-text/SKILL.md",
+      "source_sha256": "1f4338a9d8eee84bf9236e1377aae2d44fc067e10d7eb923bebe06d6c006d26f"
+    },
+    {
+      "translation": "docs/zh-CN/skills/returns-reverse-logistics/SKILL.md",
+      "source": "skills/returns-reverse-logistics/SKILL.md",
+      "source_sha256": "0662462b5fc12f35ed2adf0c27ee3bc4b7f96ba78a9aeeb131f57bf148972ffc"
+    },
+    {
+      "translation": "docs/zh-CN/skills/search-first/SKILL.md",
+      "source": "skills/search-first/SKILL.md",
+      "source_sha256": "752b24a8a06b3df1ce35598a789af92a72b61ecbb3c73e69d9af38708015d903"
+    },
+    {
+      "translation": "docs/zh-CN/skills/security-review/SKILL.md",
+      "source": "skills/security-review/SKILL.md",
+      "source_sha256": "f7530a63c7561bd1036cf4cd4d5939b04ac7a9e919ceefeb4c1a3586eb907d82"
+    },
+    {
+      "translation": "docs/zh-CN/skills/security-review/cloud-infrastructure-security.md",
+      "source": "skills/security-review/cloud-infrastructure-security.md",
+      "source_sha256": "98419e575de23d9ea9eef052556fcf8502cf19f307af0a0597997fd1ddd0d6dd"
+    },
+    {
+      "translation": "docs/zh-CN/skills/security-scan/SKILL.md",
+      "source": "skills/security-scan/SKILL.md",
+      "source_sha256": "6facddfa83c1c53eb02d21e0fc4cfe70d785b9fd5159ed91e918c47466bf12d8"
+    },
+    {
+      "translation": "docs/zh-CN/skills/skill-stocktake/SKILL.md",
+      "source": "skills/skill-stocktake/SKILL.md",
+      "source_sha256": "c03bfae29e91ada17e818a058a6489e19e64dcc52179d65885c40e7afc25d1cc"
+    },
+    {
+      "translation": "docs/zh-CN/skills/springboot-patterns/SKILL.md",
+      "source": "skills/springboot-patterns/SKILL.md",
+      "source_sha256": "7ecbb9ce50282c9c1cf71e3e9245d077036c3f72bd589418d8dd573118faa0e5"
+    },
+    {
+      "translation": "docs/zh-CN/skills/springboot-security/SKILL.md",
+      "source": "skills/springboot-security/SKILL.md",
+      "source_sha256": "7bfabd0a87dd3abda4af572e913a84bd2470a876490799d3bf024e22a6870885"
+    },
+    {
+      "translation": "docs/zh-CN/skills/springboot-tdd/SKILL.md",
+      "source": "skills/springboot-tdd/SKILL.md",
+      "source_sha256": "67d3d67c8f9d18109979944c028d8c0e1a219c0366ef96c95befd6fb3a0856d4"
+    },
+    {
+      "translation": "docs/zh-CN/skills/springboot-verification/SKILL.md",
+      "source": "skills/springboot-verification/SKILL.md",
+      "source_sha256": "4895b880d86d5703f167f88ca376a55195b40c3b459ec228f5ec8f27bd1a704a"
+    },
+    {
+      "translation": "docs/zh-CN/skills/strategic-compact/SKILL.md",
+      "source": "skills/strategic-compact/SKILL.md",
+      "source_sha256": "c8e861a39fb84968aefa82783c1b25e61d1b625c29c0f5b2bb301f4652c93e9d"
+    },
+    {
+      "translation": "docs/zh-CN/skills/swift-actor-persistence/SKILL.md",
+      "source": "skills/swift-actor-persistence/SKILL.md",
+      "source_sha256": "dddfd2f5da0c3fa674dfdd9c54abecb004be1259cb2a892b38dd703f02fbb6aa"
+    },
+    {
+      "translation": "docs/zh-CN/skills/swift-concurrency-6-2/SKILL.md",
+      "source": "skills/swift-concurrency-6-2/SKILL.md",
+      "source_sha256": "f12ca9feeed25834fc06f59a70c679629962a4653c8354ecd833b68403da652c"
+    },
+    {
+      "translation": "docs/zh-CN/skills/swift-protocol-di-testing/SKILL.md",
+      "source": "skills/swift-protocol-di-testing/SKILL.md",
+      "source_sha256": "780bf7d46242c38b74af0a4d56ea368f288e8dd5132e1b64850614ed2cf20a61"
+    },
+    {
+      "translation": "docs/zh-CN/skills/swiftui-patterns/SKILL.md",
+      "source": "skills/swiftui-patterns/SKILL.md",
+      "source_sha256": "c27f90145101dd77d64e9f9b70297c4167af26abb8a924f2a91326289bc3ec2c"
+    },
+    {
+      "translation": "docs/zh-CN/skills/tdd-workflow/SKILL.md",
+      "source": "skills/tdd-workflow/SKILL.md",
+      "source_sha256": "0c0d287804b33a98bbba2df8169da80403b29fcae4a45aca96522e6c8d022d17"
+    },
+    {
+      "translation": "docs/zh-CN/skills/verification-loop/SKILL.md",
+      "source": "skills/verification-loop/SKILL.md",
+      "source_sha256": "01a9ae310ad4426bb05660dda6cefdeaac9513417585c09c8bb1b94738649a78"
+    },
+    {
+      "translation": "docs/zh-CN/skills/video-editing/SKILL.md",
+      "source": "skills/video-editing/SKILL.md",
+      "source_sha256": "ce3ab2e576e0863086453b78ca171e4a998f4d56d2b4c59fc530f920d88f5bf1"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/SKILL.md",
+      "source": "skills/videodb/SKILL.md",
+      "source_sha256": "5ef039ce34632de4faaba3029bcb122909d5b10ef0aee077c4dd8318277799e9"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/reference/api-reference.md",
+      "source": "skills/videodb/reference/api-reference.md",
+      "source_sha256": "fa15b0239185cc807ee77f201818c49cdaf74a50142a04ab8acfa0d90eef43b9"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/reference/capture-reference.md",
+      "source": "skills/videodb/reference/capture-reference.md",
+      "source_sha256": "c84989ef482bbb5504d6952ee5733b2a5f1e70c5bc0478dd475041b647351c6b"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/reference/capture.md",
+      "source": "skills/videodb/reference/capture.md",
+      "source_sha256": "e0021243fda7da46f4d080af9a2fc9b3e067a0554cdc64bba5313b269e05f948"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/reference/editor.md",
+      "source": "skills/videodb/reference/editor.md",
+      "source_sha256": "5f0d0ac43c9534f4eed8e1459a17a3879ee5e4e4d36aed5d6b58561f379a668e"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/reference/generative.md",
+      "source": "skills/videodb/reference/generative.md",
+      "source_sha256": "2004debb4e62aa904f7163c1d5252bbd21e7400c5495caaaf91fdb752371ff9f"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/reference/rtstream-reference.md",
+      "source": "skills/videodb/reference/rtstream-reference.md",
+      "source_sha256": "1ad450d9f6dd6c2e0b2e5edc9a9f0a993c936ad1dc4df93f667a53baac737766"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/reference/rtstream.md",
+      "source": "skills/videodb/reference/rtstream.md",
+      "source_sha256": "bd929e5583ff6377b7b5d72fb8c3416f97c8548450dc6d570fb75586753fea73"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/reference/search.md",
+      "source": "skills/videodb/reference/search.md",
+      "source_sha256": "c26a1eab8b4adde439f1bdf252ef4dc1dd17275ebc65c3524ed8c6061b836797"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/reference/streaming.md",
+      "source": "skills/videodb/reference/streaming.md",
+      "source_sha256": "8963e4a52985dd2b274a259d815dd2ef23bdc2b75930d7f42cb2b8d6a6e0f935"
+    },
+    {
+      "translation": "docs/zh-CN/skills/videodb/reference/use-cases.md",
+      "source": "skills/videodb/reference/use-cases.md",
+      "source_sha256": "b64966f872d036191747050c5c8121601f54ce8099716665cf09bc0a66c69905"
+    },
+    {
+      "translation": "docs/zh-CN/skills/visa-doc-translate/README.md",
+      "source": "skills/visa-doc-translate/README.md",
+      "source_sha256": "d17f5db284f703ee0d432a4b73886780b9c9c0f7dfe1d9c46c21d6b352bca642"
+    },
+    {
+      "translation": "docs/zh-CN/skills/visa-doc-translate/SKILL.md",
+      "source": "skills/visa-doc-translate/SKILL.md",
+      "source_sha256": "9c429c2c57789cc6631c9a9d244c40026d96b65f8a6c927e44abc152c463320a"
+    },
+    {
+      "translation": "docs/zh-CN/skills/x-api/SKILL.md",
+      "source": "skills/x-api/SKILL.md",
+      "source_sha256": "422f2450c510c4c845c9669b5870558e03027815be9e4f11d59ff5f391e92ba5"
+    },
+    {
+      "translation": "docs/zh-CN/the-longform-guide.md",
+      "source": "the-longform-guide.md",
+      "source_sha256": "da2e0c5b308b26f70e8ea3eced8cbe075fe9b1f0390168907e6c8f0559850757"
+    },
+    {
+      "translation": "docs/zh-CN/the-openclaw-guide.md",
+      "source": "the-openclaw-guide.md",
+      "source_sha256": "52d776829d0760db8c41abcd21eb2da27d41c16eaa0ce94696e296978292f79e"
+    },
+    {
+      "translation": "docs/zh-CN/the-security-guide.md",
+      "source": "the-security-guide.md",
+      "source_sha256": "ec76f66f8faaf0709e5a5ba60e39d22dc7d07a7b8a4ce9b563706fbdea43a7e1"
+    },
+    {
+      "translation": "docs/zh-CN/the-shortform-guide.md",
+      "source": "the-shortform-guide.md",
+      "source_sha256": "780261fb326500c94c2a33eb2639f4bad8251d571916dd8df87a5562604ebef4"
+    }
+  ]
+}

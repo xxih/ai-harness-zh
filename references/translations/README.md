@@ -18,8 +18,11 @@
 
 - 翻译资产默认放在当前仓库内，纳入版本管理
 - 源仓库继续放在 `references/repos/<repo>/`，不直接提交外部仓库内容
-- 首批先覆盖各仓库最核心、最常被 AI 直接读取的 prompt 资产
-- `superpowers` 当前按 `skills/*/SKILL.md` 作为首批范围
+- 优先先回收你本机已经存在的中文译稿，再补缺口
+- 当前已汇总：
+  - `superpowers`：`skills/*/SKILL.md`
+  - `everything-claude-code`：`README.zh-CN.md` 与 `docs/zh-CN/**`
+  - `oh-my-opencode`：`README.zh-cn.md` 与一份中文能力拆解稿
 
 ## 同步流程
 
@@ -30,6 +33,8 @@
 3. 检查当前翻译覆盖范围内，哪些源文件发生了变化
 4. 如有变化，手动同步中文资产
 5. 同步完成后，把最新 upstream commit 和当前翻译范围写回 `manifest.json`
+
+如果某批中文内容来自你本机其他工作副本，也在 repo 级 `README.md` 或 `manifest.json` 里标明导入来源，避免后续误判它是当前 `references/repos/` 副本直接产出的。
 
 ## 维护原则
 

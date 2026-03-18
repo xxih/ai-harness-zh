@@ -16,6 +16,7 @@
 - `references/repos/` 用于放外部参考仓库，本地 AI 工具可直接读取
 - `references/translations/` 用于放已版本化的中文翻译资产与同步记录
 - 当前已纳入参考的仓库包括 `oh-my-opencode`、`everything-claude-code`、`superpowers`、`agency-agents`
+- 当前已汇总进仓库的现成中文资产包括 `superpowers`、`everything-claude-code`、`oh-my-opencode`
 - 翻译资产优先覆盖“最核心、最常被直接读取、最适合长期复用”的 prompt/skill
 
 ### 2. 定期同步 upstream 更新
