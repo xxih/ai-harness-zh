@@ -1,6 +1,6 @@
-# Codex 适配层
+# Codex Target 包
 
-这里存放 Codex CLI 的分发目录。
+这里存放 Codex CLI 的分发目录。当前定位是 **Codex target 包快照**：用于把共享源资产映射成可供 Codex 使用的运行时目录，而不是长期无限膨胀的独立产品仓。
 
 ## 组成
 
@@ -25,6 +25,24 @@
 - `targets/codex/skills/`、`targets/codex/agents/`、`targets/codex/commands/` 是面向 Codex 的运行时平铺快照
 - Codex 专属差异只放在 `.codex/` 下，不混进通用资产正文
 - 当前阶段不在 `targets/codex/` 内保留 `AGENTS.md`
+
+## 当前使用边界
+
+当前适合留在这里的内容：
+
+- 角色注册
+- 平铺快照
+- Codex 专属配置
+- 与共享资产的映射关系
+
+当前不建议继续无限叠加在这里的内容：
+
+- 大量安装脚本
+- 完整 target 级发布流程
+- 独立用户文档站
+- 长期累积的 Codex-only e2e 验证与运维脚本
+
+如果后续 Codex 适配层开始承载这些内容，应优先升格成独立 repo；当前仓库只保留 `src/` 真相、映射说明和最小快照。
 
 ## Codex 角色规则
 

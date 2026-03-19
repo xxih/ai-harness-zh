@@ -9,9 +9,9 @@
 
 ## 设计目标
 
-- 参考仓库和当前工作区放在同一个根目录下，方便 AI 工具直接读取
+- 把外部参考 repo 和当前工作区放在同一个根目录下，方便 AI 工具直接读取
 - 外部仓库不纳入当前仓库的 git 版本管理，避免污染 `git status`
-- 约定一个固定位置，减少每次任务都要重新说明参考路径
+- 为“已经独立存在的单主题 repo / target 包”提供固定索引位置
 - 把需要长期复用的中文翻译沉淀为当前仓库自己的版本化资产
 
 ## 使用方式
@@ -31,6 +31,7 @@ ln -s /absolute/path/to/everything-claude-code references/repos/everything-claud
 ## 约定
 
 - `references/repos/` 下的内容默认不提交到当前仓库
+- 如果某个能力已经拆成独立 repo，优先把它放在这里作为参考或对照，而不是把完整实现重新塞回当前仓库
 - 如果需要沉淀可版本化的笔记或提炼结果，请放回当前仓库的正式目录，而不是直接改外部参考仓库
 - 如果需要沉淀外部 prompt 的中文翻译，请放到 `references/translations/<repo>/`
 - 引用时尽量给 AI 工具明确路径，例如 `references/repos/oh-my-opencode/README.md`
