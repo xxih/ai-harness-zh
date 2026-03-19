@@ -39,7 +39,7 @@
 ### 资产治理与沉淀
 
 - `packages/writing-skills/`：skill 资产编写与重构能力
-- `packages/learning-capture/`：手工触发学习沉淀，以及配套的默认注入上下文
+- `packages/learning-evolution/`：学习信号识别、资产演化与配套的默认注入上下文
 
 ### 内容生产
 
@@ -78,7 +78,7 @@
 
 ```bash
 python3 scripts/sync_codex_targets.py
-python3 scripts/sync_codex_targets.py nanospec learning-capture
+python3 scripts/sync_codex_targets.py nanospec learning-evolution
 ```
 
 脚本会把 package source 侧的 `skills/`、`agents/`、`commands/`、`_AGENTS.md` 镜像到对应的 `packages/<package>/targets/codex/`，但不会覆盖 target 侧手写的运行时文件，例如 `README.md`、`.codex/`。

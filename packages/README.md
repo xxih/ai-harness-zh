@@ -32,7 +32,7 @@
 ### 资产治理与沉淀
 
 - `packages/writing-skills/`
-- `packages/learning-capture/`
+- `packages/learning-evolution/`
 
 ### 内容生产
 
