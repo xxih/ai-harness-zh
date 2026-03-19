@@ -1,10 +1,12 @@
 # 资产治理领域
 
-这个领域承载 prompt 资产本身的治理动作，重点是资产整理、经验沉淀和长期维护约束。
+这个领域当前只保留仍适合放在总仓里的资产治理能力。
 
-## 范围
+## 当前范围
 
-- 领域级 `_AGENTS.md`
-  - 作为载体文件，存放 `learning-capture`、`writing-skills` 等入口需要默认注入的搭配上下文
-- `skills/`
-  - 承载具体的手工触发入口与正文资产
+- `skills/writing-skills/`
+  - 用于创建、重写或更新 skill 资产
+
+## 已拆出
+
+- `learning-capture` 与其配套上下文已拆到 `references/repos/learning-capture`
