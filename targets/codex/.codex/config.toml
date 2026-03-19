@@ -1,7 +1,7 @@
 #:schema https://developers.openai.com/codex/config-schema.json
 
 # 项目级 Codex 适配基线。
-# 核心 prompt 资产仍位于 `src/`，这里仅注册当前总仓保留的角色与配置。
+# 核心 prompt 资产仍位于 `src/`，这里仅注册 Codex 运行时需要的角色与配置。
 
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
@@ -21,6 +21,10 @@ config_file = "agents/explorer.toml"
 [agents.reviewer]
 description = "Repository reviewer focused on structural regressions, packaging issues, and consistency."
 config_file = "agents/reviewer.toml"
+
+[agents.quality_code_reviewer]
+description = "独立代码评审，关注需求对齐、回归风险、测试缺口和交付判断。"
+config_file = "agents/quality-code-reviewer.toml"
 
 [agents.docs_researcher]
 description = "Documentation specialist for Codex configuration, role behavior, and packaging rules."
