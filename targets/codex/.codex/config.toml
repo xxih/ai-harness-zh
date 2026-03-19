@@ -22,9 +22,6 @@ config_file = "agents/explorer.toml"
 description = "Repository reviewer focused on structural regressions, packaging issues, and consistency."
 config_file = "agents/reviewer.toml"
 
-[agents.quality_code_reviewer]
-description = "独立代码评审，关注需求对齐、回归风险、测试缺口和交付判断。"
-config_file = "agents/quality-code-reviewer.toml"
 
 [agents.docs_researcher]
 description = "Documentation specialist for Codex configuration, role behavior, and packaging rules."

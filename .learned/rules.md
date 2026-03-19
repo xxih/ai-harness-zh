@@ -38,3 +38,12 @@
 - 证据：用户在 `20260318-learning-capture补充AGENTS联动` 任务中的明确纠正；`nanospec/20260318-learning-capture补充AGENTS联动/alignment.md`
 - 落点：`AGENTS.md`、`src/README.md`、`targets/codex/README.md`
 - 下一步：`keep-local`
+
+## 2026-03-19 references 与内部资产边界
+
+### Rule: `references/repos/` 只放外部参考仓库，当前仓库自己的资产重组必须留在仓库内部
+
+- 规则：`references/repos/` 只是参考仓库目录，不能承载当前仓库自己的真实资产。若当前仓库里的某个能力要做成更独立的主题单元，应在当前仓库内部重组，例如放进内部资产包，而不是挪到 `references/repos/`。
+- 证据：用户在 2026-03-19 明确纠正“repos 只是参考的仓库……我要改的肯定是这个仓库里的资产”。
+- 落点：`README.md`、`references/README.md`、`packages/README.md`
+- 下一步：`applied-in-docs`

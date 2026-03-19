@@ -1,0 +1,16 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+web_search = "live"
+
+[features]
+multi_agent = true
+
+[agents]
+max_threads = 2
+max_depth = 1
+
+[agents.quality_code_reviewer]
+description = "独立代码评审，关注需求对齐、回归风险、测试缺口和交付判断。"
+config_file = "agents/quality-code-reviewer.toml"

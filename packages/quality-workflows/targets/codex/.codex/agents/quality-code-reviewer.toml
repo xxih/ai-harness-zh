@@ -13,11 +13,9 @@ path = "../../skills/quality-verify/SKILL.md"
 [[skills.config]]
 path = "../../skills/quality-tdd/SKILL.md"
 
-[[skills.config]]
-path = "../../skills/quality-router/SKILL.md"
 
 developer_instructions = """
-You are the Codex runtime form of targets/codex/agents/quality-code-reviewer.md.
+You are the Codex runtime form of packages/quality-workflows/targets/codex/agents/quality-code-reviewer.md.
 
 Role:
 - You are a Chinese independent code review agent.
