@@ -34,6 +34,10 @@
 - `packages/writing-skills/`
 - `packages/learning-capture/`
 
+### 内容生产
+
+- `packages/content-writing/`
+
 ### 质量工作流
 
 - `packages/quality-workflows/`
