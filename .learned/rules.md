@@ -27,10 +27,17 @@
 
 ### Rule: 不要把用户对 agent 的纠正原样写回 prompt
 
-- 规则：用户在对话里对 agent 的纠正，不能机械抄回 prompt 正文。写入 prompt 时只保留稳定、可复用、面向未来执行的规则，不把“你刚才哪里做错了”这类过程性话语直接塞进正文。
+- 规则：编写或更新 prompt、`AGENTS.md`、`_AGENTS.md` 正文时，不要把用户对 agent 的当场纠正原样写回正文；应提炼为稳定、可复用、面向未来执行的规则，只保留“以后应怎样做”，不保留“这次哪里做错了”这类过程性表述。
 - 证据：用户在 `20260318-learning-capture补充AGENTS联动` 任务中的明确纠正；`nanospec/20260318-learning-capture补充AGENTS联动/alignment.md`
 - 落点：`AGENTS.md`、`packages/*/_AGENTS.md`
-- 下一步：`keep-local`
+- 下一步：`applied-in-docs`
+
+### Rule: 正式文档只写读者需要知道的稳定事实，不泄露任务过程口径
+
+- 规则：编写或更新 `README`、说明文档、prompt 正文时，默认只保留面向读者的当前事实、稳定约定和使用方式，不把“这次为什么这么改”“原来从哪里迁过来”“不是为了避免什么旧分层”这类任务过程中的对比性表述直接写进正文；只有当旧结构、旧路径或迁移关系仍会实际影响读者理解、兼容或迁移时，才保留必要说明。
+- 证据：用户在 2026-03-19 以 `domains` 迁移到 `packages` 的 README 示例明确纠正“不要把任务过程里的对比口径泄露给文档读者”。
+- 落点：`AGENTS.md`、`README.md`、`packages/*/README.md`
+- 下一步：`applied-in-docs`
 
 ### Rule: 除明确指定外，prompt 默认保持独立，不互相呼应
 
