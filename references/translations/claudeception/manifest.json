@@ -1,0 +1,62 @@
+{
+  "repo": "claudeception",
+  "source": {
+    "path": "references/repos/claudeception",
+    "remote": "https://github.com/blader/Claudeception.git",
+    "branch": "main",
+    "head_commit": "62dbb91d1183a866b5cf40079265c825b2695843"
+  },
+  "scope": {
+    "include": [
+      "README.zh-CN.md",
+      "SKILL.md",
+      "WARP.md",
+      "resources/skill-template.md",
+      "resources/research-references.md",
+      "examples/*/SKILL.md"
+    ],
+    "notes": "当前覆盖 Claudeception 的主 README、主 SKILL、WARP 说明、研究说明、skill 模板与 3 个示例 skills。"
+  },
+  "translations": [
+    {
+      "source": "README.md",
+      "translation": "README.zh-CN.md",
+      "source_sha256": "86ddb80dd9dcc544099f259bc29d44b153f4947722642de3503d015fe02010b4"
+    },
+    {
+      "source": "SKILL.md",
+      "translation": "SKILL.md",
+      "source_sha256": "a2b636da2fc3464bf1cc7078a8753416188d6d5c798f540e81620a6e634b0067"
+    },
+    {
+      "source": "resources/skill-template.md",
+      "translation": "resources/skill-template.md",
+      "source_sha256": "be8464e55086f7939efdf5a8950eaf5faad0a752bc296fffb39e63f07522f41b"
+    },
+    {
+      "source": "examples/nextjs-server-side-error-debugging/SKILL.md",
+      "translation": "examples/nextjs-server-side-error-debugging/SKILL.md",
+      "source_sha256": "3e317bc7eb1c701a0187cbbeeaaad939ce758afb7447bd1502a8e33e228c4ff4"
+    },
+    {
+      "source": "examples/prisma-connection-pool-exhaustion/SKILL.md",
+      "translation": "examples/prisma-connection-pool-exhaustion/SKILL.md",
+      "source_sha256": "5d9610dfbbf1867832806f82431e7085661e98163168b93039463337dddae889"
+    },
+    {
+      "source": "examples/typescript-circular-dependency/SKILL.md",
+      "translation": "examples/typescript-circular-dependency/SKILL.md",
+      "source_sha256": "b05ad87becdc37c0d0d862770cd2fb038ec8ed4dc6e6506b1f663fcba762d53c"
+    },
+    {
+      "source": "WARP.md",
+      "translation": "WARP.md",
+      "source_sha256": "a14ed216001ec7a8713668841b4e7f18666cb1cb70b372d1c88afb2e3a0f154a"
+    },
+    {
+      "source": "resources/research-references.md",
+      "translation": "resources/research-references.md",
+      "source_sha256": "7d0852b34008f7d60e48516f133cd0a1f00b865f0e4098569576351079e1311a"
+    }
+  ]
+}

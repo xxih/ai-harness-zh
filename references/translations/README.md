@@ -23,6 +23,7 @@
   - `superpowers`：`skills/*/SKILL.md`
   - `everything-claude-code`：`README.zh-CN.md` 与 `docs/zh-CN/**`
   - `oh-my-opencode`：`README.zh-cn.md` 与一份中文能力拆解稿
+- `claudeception`：`README.zh-CN.md`、`SKILL.md`、`WARP.md`、`resources/research-references.md`、`resources/skill-template.md` 与 `examples/*/SKILL.md`
 
 ## 同步流程
 
