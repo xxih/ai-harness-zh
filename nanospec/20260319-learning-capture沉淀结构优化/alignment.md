@@ -54,3 +54,45 @@
 ### 对 `outputs/3-tasks.md` 的影响
 
 - 新增“撤回越界改动”“更新 learning-evolution 两阶段文案”“同步 target 镜像”的动作。
+
+## 2026-03-19（可读性对齐）
+
+- [变更] 用户本轮再次指出：当前 learning skill 正文“乱七八糟、不清不楚”，AI 难以快速看明白触发条件、决策顺序和正确用法。
+- [变更] 本轮交付重点收口为“把正式 skill 改写成更容易被 AI 正确执行的结构”，优先解决可读性与可执行性，而不是继续扩展方法论名词。
+- [变更] 用户口中的 `learning-capture`，在当前仓库正式资产中对应 `packages/learning-evolution/skills/learning-evolution/SKILL.md`。
+- [变更] 用户进一步确认：`_AGENTS.md` 也应同步优化，避免默认注入上下文与新版 skill 正文在出口判断和 Evolution 门槛上脱节。
+
+## 影响传播（可读性对齐后）
+
+### 对 `outputs/1-spec.md` 的影响
+
+- 增加“skill 正文必须让 AI 一眼读懂输入、出口和执行步骤”的约束。
+
+### 对 `outputs/2-plan.md` 的影响
+
+- 方案从“继续补概念说明”收口为“压缩结构、显式出口、减少歧义”。
+
+### 对 `outputs/3-tasks.md` 的影响
+
+- 新增“重写 skill 主结构”“同步模板”“同步 Codex target”的动作。
+- 新增“同步优化 `_AGENTS.md` 与根 `AGENTS.md` 对应反馈块”的动作。
+
+## 2026-03-19（独立性纠偏）
+
+- [偏差] `learning-evolution` 正文直接引用了 `NanoSpec`、`alignment.md`、任务容器和 `align`，违反仓库规则：除 `nanospec` / `spec-driven` 这类协作面资产，或用户明确要求配合的场景外，prompt 正文默认保持独立。
+- [变更] `learning-evolution` 的正式 prompt 正文需要改回工具无关、协作面无关的写法：不主动点名其他 skill、command、任务容器或对齐机制。
+- [变更] 若当前环境确实已有工作面、任务记录或协作约束，只能用泛化表述说明“按现有约定回写”，不能把某个具体协作体系写成默认前提。
+
+## 影响传播（独立性纠偏后）
+
+### 对 `outputs/1-spec.md` 的影响
+
+- 增加“learning-evolution 正文默认独立，不直接依赖 NanoSpec / align / 任务容器”的约束。
+
+### 对 `outputs/2-plan.md` 的影响
+
+- 方案增加“把协作型引用改写为泛化工作面表述”的动作。
+
+### 对 `outputs/3-tasks.md` 的影响
+
+- 新增“移除正文中的 NanoSpec / align / 任务容器引用”“同步 `_AGENTS` 与模板表述”“重新同步 target”的动作。

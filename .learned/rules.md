@@ -44,7 +44,7 @@
 - 规则：除 `nanospec` / `spec-driven` 这类本身定义协作面的资产，或用户明确要求配合的场景外，prompt 正文默认保持独立，不主动引用其他 skill、command、任务容器或对齐机制。像 `_AGENTS.md` 这类载体块，应单独写清用途、记录条件、写入位置、写入内容和默认动作。
 - 证据：用户在 `20260318-learning-capture补充AGENTS联动` 任务中的明确纠正；`nanospec/20260318-learning-capture补充AGENTS联动/alignment.md`
 - 落点：`AGENTS.md`、`README.md`、`packages/*/targets/*/README.md`
-- 下一步：`keep-local`
+- 下一步：`applied-in-docs`
 
 ## 2026-03-19 references 与内部资产边界
 

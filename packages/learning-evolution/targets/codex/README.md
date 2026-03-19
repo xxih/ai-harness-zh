@@ -5,6 +5,7 @@
 ## 组成
 
 - `_AGENTS.md`
+  - 载体块正文默认独立成立，直接写清出口判断、写入位置、写入内容和默认动作
 - `skills/learning-evolution/`
 
 ## 维护

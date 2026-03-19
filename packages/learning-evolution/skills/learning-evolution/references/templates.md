@@ -1,6 +1,15 @@
 # 学习演化模板
 
-## 1. `.learned/support.md` 模板
+## 1. 先选出口
+
+每条信号先收口到以下之一，再决定怎么写：
+
+- `drop`
+- `keep-task-local`
+- `queue-support`
+- `codify-now`
+
+## 2. `.learned/support.md` 模板
 
 ```md
 # Support
@@ -19,7 +28,9 @@
 - 建议动作：`update-existing` | `new-skill` | `new-command` | `new-eval` | `doc-update` | `queue-support` | `drop`
 ```
 
-## 2. `.learned/rules.md` 模板
+写之前先自问：这条内容是否明确在支持某个正式资产？如果回答不出来，就不要写进 `support.md`。
+
+## 3. `.learned/rules.md` 模板
 
 ```md
 # Rules
@@ -34,15 +45,15 @@
 - 下一步：`propose-rules-doc-update` | `codify-now` | `keep-local` | `drop`
 ```
 
-## 3. task-local learnings 写法
+## 4. task-local learnings 写法
 
-若内容只服务当前任务，不进入 `.learned/`，应直接回写任务容器已有文件；至少写清：
+若内容只服务当前工作，不进入 `.learned/`，应直接回写当前上下文已有记录位置；至少写清：
 
 - 当前 learnings 是什么
-- 它影响当前任务的哪个后续动作
+- 它影响当前工作的哪个后续动作
 - 下一步如何消费它
 
-## 4. 写法约束
+## 5. 写法约束
 
 - 一条记录只写一个明确模式。
 - `support.md` 只承接长期候选的支撑卡，不承接普通杂记。

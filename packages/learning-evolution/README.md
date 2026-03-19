@@ -6,6 +6,7 @@
 
 - `_AGENTS.md`
   - 用户反馈与长期候选捕获上下文块
+  - 块内说明默认独立成立，直接写清出口判断、写入位置、写入内容和默认动作
 - `skills/learning-evolution/`
   - `learning-evolution` skill
 - `targets/codex/`

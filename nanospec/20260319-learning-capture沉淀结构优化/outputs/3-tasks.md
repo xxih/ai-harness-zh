@@ -37,3 +37,27 @@
 - [x] 5.3 更新 `packages/learning-evolution/skills/learning-evolution/SKILL.md`，把动作改成两阶段：默认先 `Observation / Selection / Representation`，明确指令后才 `Evolution`。
 - [x] 5.4 运行 `python3 scripts/sync_codex_targets.py learning-evolution`，同步 Codex target 镜像。
 - [x] 5.5 检查 source / target 的 learning-evolution 文案是否一致。
+
+## 6. 可读性重写
+
+- [x] 6.1 读取当前 `packages/learning-evolution/skills/learning-evolution/SKILL.md` 与模板，确认“概念过多、出口不够显式”是当前主要问题。
+- [x] 6.2 按“触发条件 -> 四个出口 -> 默认输入 -> 输出位置 -> 两阶段动作 -> 执行步骤”重写 skill 正文。
+- [x] 6.3 同步 `references/templates.md`，让模板字段与正文出口保持一致。
+- [x] 6.4 运行 `python3 scripts/sync_codex_targets.py learning-evolution`，同步 Codex target 镜像。
+- [x] 6.5 快速比对 source / target，并确认正文可直接读出默认动作与 Evolution 门槛。
+
+## 7. `_AGENTS` 对齐
+
+- [x] 7.1 检查 `packages/learning-evolution/_AGENTS.md` 与根 `AGENTS.md` 的反馈信号块，确认其口径仍停留在旧版“只说写到哪”。
+- [x] 7.2 将反馈信号块补齐为“先判断出口 -> 再决定写入位置”，并补入 `support` 边界。
+- [x] 7.3 补入“没有明确演化 / codify 指令时，不自动升级正式资产”的默认门槛。
+- [x] 7.4 运行 `python3 scripts/sync_codex_targets.py learning-evolution`，同步 `_AGENTS.md` 到 Codex target。
+- [x] 7.5 快速比对 source / target 的 `_AGENTS.md` 是否一致。
+
+## 8. 独立性纠偏
+
+- [x] 8.1 根据用户新纠正执行 `/align`，记录 `learning-evolution` 正文误把 `NanoSpec` / `align` / 任务容器写成默认前提。
+- [x] 8.2 移除 `SKILL.md` 中对 `NanoSpec`、`alignment.md`、任务容器和 `align` 的直接引用，改为独立表述。
+- [x] 8.3 同步调整 `_AGENTS.md` 与模板中的相关表述，避免继续把任务容器写成默认入口。
+- [x] 8.4 运行 `python3 scripts/sync_codex_targets.py learning-evolution`，同步最新 source 到 Codex target。
+- [x] 8.5 搜索确认 `packages/learning-evolution/` 中不再主动引用 `NanoSpec`、`alignment.md`、任务容器或 `align` 作为默认前提。

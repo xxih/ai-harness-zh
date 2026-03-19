@@ -15,6 +15,7 @@
 - Codex target 镜像默认通过 `scripts/sync_codex_targets.py` 同步，不手工逐个复制 source / target
 - 当前仓库自有资产中，仅允许保留根目录 `AGENTS.md` 与 `.nanospec/AGENTS.md`；其他位置禁止新增或保留 `AGENTS.md`
 - `packages/*/targets/` 中若需要表达这类分发内容，一律存为 `_AGENTS.md`；实际如何落成运行时 `AGENTS.md` 留待后续工具化分发再处理
+- 除 `nanospec` / `spec-driven` 这类本身定义协作面的资产，或用户明确要求配合的场景外，prompt 正文默认保持独立，不主动引用其他 skill、command、任务容器或对齐机制
 - 编写或更新 prompt、`AGENTS.md`、`_AGENTS.md` 正文时，不要把用户对 agent 的当场纠正原样写回正文；应提炼为稳定、可复用、面向未来执行的规则，只保留“以后应怎样做”，不保留“这次哪里做错了”这类过程性表述
 - 编写或更新 `README`、说明文档、prompt 正文时，默认只保留面向读者的当前事实、稳定约定和使用方式，不把“这次为什么这么改”“原来从哪里迁过来”“不是为了避免什么旧分层”这类任务过程中的对比性表述直接写进正文；只有当旧结构、旧路径或迁移关系仍会实际影响读者理解、兼容或迁移时，才保留必要说明
 
@@ -24,11 +25,14 @@
 
 - 记录用户明确给出的长期规则、接受 / 拒绝标准和稳定偏好。
 - 只记录用户明确表达的内容；不根据语气、情绪或一次性抱怨自行推断。
+- 先判断出口，再决定写入位置：`keep-task-local` | `rules` | `support` | `codify-now`。
 - 写入位置：
   - 项目级 / 团队级 / 分发级规则 -> `.learned/rules.md`
   - 支持后续 skill / command / eval / doc 的长期候选 -> `.learned/support.md`
   - 只服务当前任务的 learnings -> 当前任务容器已有文件
+- `support.md` 只承接明确在支持某个正式资产的长期候选；回答不了“它支持什么资产”的内容，不要写进 `support.md`。
 - 写入内容：至少包含内容本身、证据来源、建议落点、下一步动作。
+- 没有明确演化或 codify 指令时，默认只做 observation / selection / representation，不自动把候选升级为正式资产。
 - 若证据与目标资产已经足够明确，不要只留候选，应继续 codify 到对应正式资产。
 <!-- /AGENTS: user-feedback-capture -->
 

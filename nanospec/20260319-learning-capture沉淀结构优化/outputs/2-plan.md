@@ -41,6 +41,21 @@
 - 根文档与包文档同步更新
 - `learning-evolution` 的两阶段动作：默认先 `Observation / Selection / Representation`，明确指令后才 `Evolution`
 
+### 第三步：按“AI 可执行性”重写 skill 正文
+
+这一步不再继续堆方法论说明，而是直接把正式正文重排为：
+
+- 触发条件
+- 四个出口
+- 默认输入
+- 输出位置
+- 两阶段动作
+- 执行步骤
+- 自动化边界
+- 纪律约束
+
+目标是让模型读取时先抓到“怎么用”，再理解“为什么这样设计”。
+
 ## 范围纠正
 
 用户已明确：本轮只覆盖 `learning-evolution`。因此方案收口为：
@@ -121,6 +136,14 @@
 - 在 `SKILL.md` 明确第一阶段 `Observation -> Selection -> Representation`
 - 把 `Evolution` 改为显式指令触发，而不是默认后续动作
 - 自动化路径只强调 observation / reminder，不自动触发 evolution
+
+### 第二步补充：压缩概念密度并显式化出口
+
+- 把“何时使用 / 不适用 / 核心判断 / 默认输入 / 输出位置 / 执行步骤”拆开写
+- 避免同一条规则在多个段落重复出现
+- 模板与正文使用同一套出口命名，减少歧义
+- `_AGENTS.md` 与根 `AGENTS.md` 的反馈信号块同步使用同一套出口与 Evolution 门槛，避免默认注入上下文滞后
+- 把 `NanoSpec`、任务容器、`alignment.md`、`align` 等协作型引用改成泛化工作面表述，恢复 prompt 正文独立性
 
 ### 第三步：同步 target 镜像
 

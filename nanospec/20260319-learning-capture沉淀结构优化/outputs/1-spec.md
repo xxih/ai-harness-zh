@@ -152,6 +152,24 @@
 
 本轮只更新 `learning-evolution` 相关正式资产与其 target 镜像，不覆盖 `spec-driven`、`nanospec` 等邻近 skill。
 
+### 4.7 正文可执行性
+
+`learning-evolution` 的正式 skill 正文必须让 AI 快速读懂以下问题，不能继续停留在概念堆叠状态：
+
+- 什么时候应该调用这个 skill
+- 每条信号最后会落到哪个出口
+- 哪些属于默认动作，哪些只有明确指令下才执行
+- 应该读哪些输入、写到哪些位置
+- 遇到任务范围变化时如何回写对齐
+
+### 4.8 正文独立性
+
+`learning-evolution` 作为普通 learning skill，其 prompt 正文默认必须保持独立：
+
+- 不主动引用 `nanospec`、`spec-driven` 之外的其他 skill 或 command
+- 不把任务容器、`alignment.md`、`align` 或某个协作机制写成默认前提
+- 如果当前环境确实已有既定工作面，只能写成泛化表述，例如“回写到现有记录位置”或“同步受影响工作文件”
+
 ## 5. 备选方向
 
 ### 方向 A：保留 `notes.md`，但重命名 / 重定义
