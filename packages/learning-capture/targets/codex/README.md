@@ -12,4 +12,4 @@
 ## 维护方式
 
 - 源资产变更后，先更新 `packages/learning-capture/skills/` 与 `_AGENTS.md`
-- 再同步到 `packages/learning-capture/targets/codex/`
+- 再运行 `python3 scripts/sync_codex_targets.py learning-capture`

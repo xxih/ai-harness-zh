@@ -1,0 +1,27 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+# 项目级 Codex 适配基线。
+# 仓库资产默认位于 `packages/`，这里仅注册 Codex 运行时需要的角色与配置。
+
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+web_search = "live"
+
+[features]
+multi_agent = true
+
+[agents]
+max_threads = 4
+max_depth = 1
+
+[agents.explorer]
+description = "Read-only explorer for understanding repository structure, assets, and packaging layout."
+config_file = "agents/explorer.toml"
+
+[agents.reviewer]
+description = "Repository reviewer focused on structural regressions, packaging issues, and consistency."
+config_file = "agents/reviewer.toml"
+
+[agents.docs_researcher]
+description = "Documentation specialist for Codex configuration, role behavior, and packaging rules."
+config_file = "agents/docs-researcher.toml"

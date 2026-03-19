@@ -11,32 +11,32 @@
 
 ## 2026-03-19 _AGENTS 载体与命名
 
-### Rule: 领域 `_AGENTS.md` 只是搭配上下文载体文件，不是领域总说明
+### Rule: `_AGENTS.md` 只是搭配上下文载体文件，不是总说明
 
-- 规则：`src/domains/<domain>/_AGENTS.md` 只用来存放某些 skill / command 需要默认注入的搭配上下文，不能写成领域通用上下文总说明，也不要加标题壳子、`## 通用规则` 之类的额外层级。块边界统一用 XML 注释标签包裹：`<!-- skill: <name> --> ... <!-- /skill: <name> -->`，command 同理。
+- 规则：在当前 package-first 结构下，`_AGENTS.md` 只用来存放某些 skill / command 需要默认注入的搭配上下文，不能写成包或领域的通用总说明，也不要加标题壳子、`## 通用规则` 之类的额外层级。块边界统一用 XML 注释标签包裹：`<!-- skill: <name> --> ... <!-- /skill: <name> -->`，command 同理。
 - 证据：用户在 `20260318-learning-capture补充AGENTS联动` 任务中的连续纠偏；`nanospec/20260318-learning-capture补充AGENTS联动/alignment.md`
-- 落点：`AGENTS.md`、`src/README.md`
+- 落点：`AGENTS.md`、`README.md`、`packages/*/README.md`
 - 下一步：`keep-local`
 
-### Rule: 当前仓库仅根目录与 `.nanospec/` 保留 `AGENTS.md` 原名，targets 统一使用 `_AGENTS.md`
+### Rule: 当前仓库仅根目录与 `.nanospec/` 保留 `AGENTS.md` 原名，package target 统一使用 `_AGENTS.md`
 
-- 规则：当前仓库自有资产中，仅允许保留根目录 `AGENTS.md` 与 `.nanospec/AGENTS.md`；其他位置禁止新增或保留 `AGENTS.md`，避免污染开发时上下文。`targets/` 下如果需要承载这类分发内容，统一命名为 `_AGENTS.md`，后续若要真正生成运行时 `AGENTS.md`，再交给工具化分发处理。
+- 规则：当前仓库自有资产中，仅允许保留根目录 `AGENTS.md` 与 `.nanospec/AGENTS.md`；其他位置禁止新增或保留 `AGENTS.md`，避免污染开发时上下文。`packages/*/targets/` 下如果需要承载这类分发内容，统一命名为 `_AGENTS.md`，后续若要真正生成运行时 `AGENTS.md`，再交给工具化分发处理。
 - 证据：用户在 `20260318-learning-capture补充AGENTS联动` 任务中的明确规则修正；`nanospec/20260318-learning-capture补充AGENTS联动/alignment.md`
-- 落点：`AGENTS.md`、`README.md`、`targets/codex/README.md`
+- 落点：`AGENTS.md`、`README.md`、`packages/*/targets/*/README.md`
 - 下一步：`keep-local`
 
 ### Rule: 不要把用户对 agent 的纠正原样写回 prompt
 
 - 规则：用户在对话里对 agent 的纠正，不能机械抄回 prompt 正文。写入 prompt 时只保留稳定、可复用、面向未来执行的规则，不把“你刚才哪里做错了”这类过程性话语直接塞进正文。
 - 证据：用户在 `20260318-learning-capture补充AGENTS联动` 任务中的明确纠正；`nanospec/20260318-learning-capture补充AGENTS联动/alignment.md`
-- 落点：`AGENTS.md`、`src/domains/*/_AGENTS.md`
+- 落点：`AGENTS.md`、`packages/*/_AGENTS.md`
 - 下一步：`keep-local`
 
 ### Rule: 除明确指定外，prompt 默认保持独立，不互相呼应
 
 - 规则：除 `nanospec` / `spec-driven` 这类本身定义协作面的资产，或用户明确要求配合的场景外，prompt 正文默认保持独立，不主动引用其他 skill、command、任务容器或对齐机制。像 `_AGENTS.md` 这类载体块，应单独写清用途、记录条件、写入位置、写入内容和默认动作。
 - 证据：用户在 `20260318-learning-capture补充AGENTS联动` 任务中的明确纠正；`nanospec/20260318-learning-capture补充AGENTS联动/alignment.md`
-- 落点：`AGENTS.md`、`src/README.md`、`targets/codex/README.md`
+- 落点：`AGENTS.md`、`README.md`、`packages/*/targets/*/README.md`
 - 下一步：`keep-local`
 
 ## 2026-03-19 references 与内部资产边界
@@ -46,4 +46,20 @@
 - 规则：`references/repos/` 只是参考仓库目录，不能承载当前仓库自己的真实资产。若当前仓库里的某个能力要做成更独立的主题单元，应在当前仓库内部重组，例如放进内部资产包，而不是挪到 `references/repos/`。
 - 证据：用户在 2026-03-19 明确纠正“repos 只是参考的仓库……我要改的肯定是这个仓库里的资产”。
 - 落点：`README.md`、`references/README.md`、`packages/README.md`
+- 下一步：`applied-in-docs`
+
+## 2026-03-19 package-first 重组方向
+
+### Rule: 单独可运行 / 可分发的能力优先直接做成 package，分类交给 README
+
+- 规则：当前仓库自有资产默认采用 package-first 组织。只要某个能力已经能单独理解、单独运行或单独分发，就优先直接放进 `packages/<package>/`，没必要再塞进 `domains` 分层；仓库级分类关系交给 `README.md` 与 `packages/README.md` 组织。例外是翻译、参考资料这类不准备分发的内容，应保留在 `references/` 或其他根级显眼入口。
+- 证据：用户在“仓库重组为 packages 主组织”任务中的明确要求；`nanospec/20260319-仓库重组为packages主组织/alignment.md`
+- 落点：`AGENTS.md`、`README.md`、`packages/README.md`、`references/README.md`
+- 下一步：`applied-in-docs`
+
+### Rule: Codex target 镜像默认脚本同步，不手工逐个复制
+
+- 规则：面向 Codex 的 target 分发默认通过仓库脚本自动同步 package source 与 `packages/<package>/targets/codex/` 的镜像内容，避免每次手工复制消耗 token。脚本应只同步 source 资产，不覆盖 target 侧手写的 runtime 文件，例如 `README.md`、`.codex/`。
+- 证据：用户在“仓库重组为 packages 主组织”任务中的明确要求；`nanospec/20260319-仓库重组为packages主组织/alignment.md`
+- 落点：`AGENTS.md`、`README.md`、`scripts/sync_codex_targets.py`
 - 下一步：`applied-in-docs`

@@ -16,3 +16,4 @@
 - 这仍然是当前仓库的资产，不是外部参考 repo
 - skill 正文默认把记录写到仓库根目录 `.learned/`
 - 若后续需要别的目标平台，可继续在当前包内增加 `targets/<tool>/`
+- Codex target 镜像通过 `python3 scripts/sync_codex_targets.py learning-capture` 同步

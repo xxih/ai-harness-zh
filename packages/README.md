@@ -1,16 +1,43 @@
 # 内部资产包
 
-`packages/` 用来放**仍属于当前仓库、但已经具备独立主题边界**的资产包。
+`packages/` 是当前仓库自有资产的主组织入口。
 
-和 `src/` 的区别：
+默认原则：
 
-- `src/` 放跨主题、跨 target 共享的核心源资产
-- `packages/` 放已经能独立理解、独立分发、独立维护的主题包
-- 这些包仍然属于当前仓库，不属于 `references/repos/`
+- 能单独理解、单独分发、单独运行的能力，优先直接做成 package
+- 分类关系交给 README 组织，不再依赖 `domains` 目录分层
+- package 可以同时包含 source 资产、target 包、包内参考资料与搭配上下文
 
-## 当前包
+## 包结构
 
+常见目录：
+
+- `README.md`
+- `skills/`、`agents/`、`commands/`
+- `_AGENTS.md`
+- `targets/<tool>/`
+- `references/`
+
+不是每个包都必须拥有全部目录；只保留完成该主题所需的最小结构。
+
+## 当前包清单
+
+### 工作流
+
+- `packages/nanospec/`
+- `packages/spec-driven/`
+- `packages/search-first/`
+- `packages/agent-orchestration/`
+
+### 资产治理与沉淀
+
+- `packages/writing-skills/`
 - `packages/learning-capture/`
-  - `learning-capture` skill 与其配套 `_AGENTS.md` 搭配上下文
+
+### 质量工作流
+
 - `packages/quality-workflows/`
-  - `quality-tdd`、`quality-verify`、`quality-review`、`quality-review-feedback` 与 `quality-code-reviewer`
+
+### 平台适配
+
+- `packages/codex-base/`
