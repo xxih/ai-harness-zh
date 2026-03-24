@@ -1,16 +1,34 @@
 # ai-harness-zh
 
-`ai-harness-zh` 是一个以中文维护的 AI harness 工作区。
+`ai-harness-zh` 是一个以中文维护的 AI Harness 研究与沉淀工作区。
 
-这里首先在 `references/translations/` 中汇总、翻译和整理社区里专业、热门且具有代表性的核心 prompt 资产，作为持续研究和吸收的参考基础。
+可以先用一句很粗暴但有效的话理解 `AI Harness`：它就是除了 LLM 外的一切。凡是把模型变成可稳定工作的 coding agent 所需的外壳和运行机制，例如 prompt、角色分工、skills、commands、hooks、rules、工具接入、上下文注入、记忆、计划与执行流程、验证机制、权限与运行约束，基本都属于 harness。
 
-在此基础上，仓库会把适合长期维护的 workflow、prompt、skill、command、agent 和 target 进一步提炼、重组并沉淀为自有资产，统一整理在 `packages/<package>/`，形成可复用、可分发、可持续演进的 package。
+但并不是整套 harness 都由我们控制。对大多数 coding agent 来说，真正能被用户放进仓库、长期定制和分发的，通常是 agent 暴露出来的那些扩展口子，例如 `AGENTS.md`、`SKILL.md`、commands、hooks / plugins、rules、MCP 配置、target 包和配套文档。
+
+这个仓库关心的正是这部分“可定制的 Harness”。这里会先在 `references/translations/` 中汇总、翻译和整理社区里成熟且有代表性的 harness 资产，再把适合长期维护的 workflow、prompt、skill、command、agent 和 target 提炼、重组并沉淀为自有 package，统一整理在 `packages/<package>/`。
 
 ## 这个仓库的价值
 
-- 汇总并翻译社区中专业、热门且被反复验证的核心 prompt 资产，降低获取门槛
-- 把外部实践进一步提炼成可直接使用的自有 package，而不是停留在参考资料层
-- 在中文语境下完成筛选、重写与结构化整理，让资产更适合长期维护与团队复用
+- 把外部成熟 harness 拆成可理解、可比较、可复用的能力层，而不是只收集零散 prompt
+- 聚焦 coding agent 已经暴露出的定制入口，沉淀成可直接分发的 package
+- 在中文语境下完成筛选、重写与结构化整理，让这些 Harness 资产更适合长期维护与团队复用
+
+## 推荐先参考的 harness
+
+如果你想理解“一个成熟的 AI coding harness 长什么样”，建议优先看下面三个对象：
+
+| 参考对象 | 推荐原因 |
+| --- | --- |
+| `references/repos/everything-claude-code` | 这是一个覆盖面很完整的全栈 harness 参考，包含 agents、skills、commands、hooks、rules、MCP 与多平台适配，还明确覆盖了 Codex、OpenCode、Cursor 等平台。适合先建立“完整 harness 系统”视角。 |
+| `references/repos/superpowers` | 这是一个很清晰的 skill-first workflow 参考，把 brainstorming、写 spec、写 plan、TDD、code review、subagent execution 串成一条强约束工程流程。适合理解怎样把方法论做成可触发、可复用的 skill 体系。 |
+| `references/repos/oh-my-opencode` | 这类参考更值得从运行时内核角度阅读：委派协议、后台 agent、上下文注入、恢复型 hooks、LSP / AST 工具链都比较完整。适合理解 prompt 之外的编排、治理和工具层设计。 |
+
+如果只想先看一类：
+
+- 想看完整系统，先看 `everything-claude-code`
+- 想看最小工作流怎么落成 skill，先看 `superpowers`
+- 想看运行时编排和治理设计，先看 `oh-my-opencode`
 
 ## 仓库里有什么
 
