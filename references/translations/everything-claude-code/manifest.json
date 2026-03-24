@@ -8,21 +8,21 @@
   },
   "canonical_reference": {
     "path": "references/repos/everything-claude-code",
-    "head_commit": "fdea3085a76c842edea49a72ea695ccc7ff537ed",
-    "notes": "后续日常对照仍优先看当前仓库内的 references/repos 副本。"
+    "head_commit": "bacc585b877b4426627d1cc478e1f1e5eb0c4f94",
+    "notes": "后续日常对照仍优先看当前仓库内的 references/repos 副本。2026-03-23 已基于最新 canonical 做 README 与 commands/orchestrate 的增量补同步。"
   },
   "scope": {
     "include": [
       "README.zh-CN.md",
       "docs/zh-CN/**"
     ],
-    "notes": "本次直接汇总本机已有的 ECC 中文译稿；优先保留现成可复用结果。"
+    "notes": "当前范围仍以本机既有 ECC 中文译稿为主；2026-03-23 已按最新 canonical 对部分高频入口文件做增量补同步。"
   },
   "translations": [
     {
       "source": "README.md",
       "translation": "README.zh-CN.md",
-      "source_sha256": "3bf563a68ec4b3fd134205c35b0a189e90b16abc895f3a0a8e4dc7c0914829b1"
+      "source_sha256": "1fa4c6eb004633b8c4ada77d44eddcddb0ad5e6a833c93bed90fa484c08a92a4"
     },
     {
       "translation": "docs/zh-CN/AGENTS.md",
@@ -52,7 +52,7 @@
     {
       "translation": "docs/zh-CN/README.md",
       "source": "README.md",
-      "source_sha256": "3bf563a68ec4b3fd134205c35b0a189e90b16abc895f3a0a8e4dc7c0914829b1"
+      "source_sha256": "1fa4c6eb004633b8c4ada77d44eddcddb0ad5e6a833c93bed90fa484c08a92a4"
     },
     {
       "translation": "docs/zh-CN/SPONSORING.md",
@@ -313,7 +313,7 @@
     {
       "translation": "docs/zh-CN/commands/orchestrate.md",
       "source": "commands/orchestrate.md",
-      "source_sha256": "b0c6bf58e8b681adbc29514c0d5f56bbba6f3649474285a53d4395c7e6620c96"
+      "source_sha256": "e7af24ef2c694dd4e17fd7d77d24779ba4ecfc250e683cfdce6200838f866fba"
     },
     {
       "translation": "docs/zh-CN/commands/plan.md",
