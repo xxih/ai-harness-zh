@@ -28,6 +28,7 @@
 - `packages/spec-driven/`
 - `packages/search-first/`
 - `packages/agent-orchestration/`
+- `packages/git-workflows/`
 
 ### 资产治理与沉淀
 
