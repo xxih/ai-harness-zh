@@ -61,3 +61,11 @@
 - [x] 8.3 同步调整 `_AGENTS.md` 与模板中的相关表述，避免继续把任务容器写成默认入口。
 - [x] 8.4 运行 `python3 scripts/sync_codex_targets.py learning-evolution`，同步最新 source 到 Codex target。
 - [x] 8.5 搜索确认 `packages/learning-evolution/` 中不再主动引用 `NanoSpec`、`alignment.md`、任务容器或 `align` 作为默认前提。
+
+## 9. Pressure Scenario 验证
+
+- [x] 9.1 读取 `writing-skills` 验证循环与 `quality-verify` 门禁要求，确定使用 baseline / rerun 的降级验证方式。
+- [x] 9.2 定义一个“复盘翻译 / 改写流程但不允许直接改正式资产”的 pressure scenario，列出没有该 skill 时最可能出现的失败。
+- [x] 9.3 按当前 `learning-evolution` 正文逐条检查：触发条件、四个出口、Evolution 门槛、task-local / long-term 分流。
+- [x] 9.4 用近邻场景复验 `keep-task-local`、`rules + codify-now`、`Evolution` 三类路径。
+- [x] 9.5 新增 `assets/quality-check.md`，记录 fresh verification evidence 与 `ready` 结论。
