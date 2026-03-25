@@ -70,3 +70,12 @@
 - 证据：用户在“仓库重组为 packages 主组织”任务中的明确要求；`nanospec/20260319-仓库重组为packages主组织/alignment.md`
 - 落点：`AGENTS.md`、`README.md`、`scripts/sync_codex_targets.py`
 - 下一步：`applied-in-docs`
+
+## 2026-03-24 README 读者视角
+
+### Rule: 在 README 中写“我们还没补齐的 harness 能力”时，默认指普通开发者而不是仓库维护者
+
+- 规则：当仓库 README 或总览文档需要对比“成熟 harness 已做到什么”和“我们通常还没系统化补齐什么”时，默认把“我们”解释为日常开发者、普通 AI Coding 使用者，尤其是裸用 Claude Code 一类工具的人，而不是当前仓库维护者团队。若读者对象不是普通开发者，应在正文里显式改写，不要让“我们”产生歧义。
+- 证据：用户在 `20260324-readme重写AIHarness定位` 任务中的明确纠正：“我刚才说的我们,是日常开发者.普通的 ai Coding 的人.往往是裸用 claude code”；`nanospec/20260324-readme重写AIHarness定位/alignment.md`
+- 落点：`README.md`、仓库级说明文档
+- 下一步：`applied-in-docs`

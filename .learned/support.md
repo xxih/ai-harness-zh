@@ -25,3 +25,16 @@
 - 原料：可直接复用的分层判断是“`article-writing` 适合长文写作内核，`content-engine` 适合多平台改写内核；公众号、小红书更适合作为平台适配层；发布自动化不要混进通用写作 skill”
 - 建议落点：`packages/content-writing/README.md`
 - 建议动作：`queue-support`
+
+## 2026-03-24 AI Harness 总览文案
+
+### Support: AI Harness 总览文档应先给能力分类对照，再给仓库定位
+
+- 类型：`doc`
+- 作用域：`project`
+- 触发：重写仓库根 `README.md` 或其他 AI Harness 总览文档，需要解释成熟 harness 做到什么、当前仓库做到什么、普通开发者通常缺什么时
+- 重复信号：用户连续两次纠正同一段 README 结构，先要求“前面就写出各种 harness 做了哪些一般开发者还没做的能力，并分类清晰地写”，后又要求在每类里适当引用具体例子，例如 `superpowers` 的 `brainstorming`、`writing-plans`
+- 证据：`nanospec/20260324-readme重写AIHarness定位/alignment.md`；当前对话中的连续纠正
+- 原料：可直接复用的结构是“按 `需求澄清与方案化`、`执行编排与隔离`、`质量门禁与验收`、`搜索 / 上下文治理`、`学习沉淀与上下文压缩`、`平台适配 / 规则 / 运行时治理` 分类；每类同时写成熟 harness 例子、当前仓库已有 package、普通开发者通常尚未系统化补齐的部分”
+- 建议落点：`README.md`
+- 建议动作：`update-existing`

@@ -29,6 +29,7 @@
 - `packages/search-first/`
 - `packages/agent-orchestration/`
 - `packages/git-workflows/`
+- `packages/github-workflows/`
 
 ### 资产治理与沉淀
 
