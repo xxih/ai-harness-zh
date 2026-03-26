@@ -68,6 +68,7 @@
 - `packages/spec-driven/`：spec-driven 工作流能力
 - `packages/search-first/`：先搜索、再实现的工作流能力
 - `packages/session-workflows/`：显式 session 收尾、handoff 与换窗口续跑
+- `packages/local-development-workflows/`：本地开发默认主线与 local review 触发规则
 - `packages/agent-orchestration/`：多 agent 协作与委派编排
 - `packages/git-workflows/`：git worktree 建立、分支收尾与清理流程
 - `packages/github-workflows/`：GitHub PR、review comments、checks、merge 与冲突处理流程

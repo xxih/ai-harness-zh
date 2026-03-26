@@ -28,6 +28,7 @@
 - `packages/spec-driven/`
 - `packages/search-first/`
 - `packages/session-workflows/`
+- `packages/local-development-workflows/`
 - `packages/agent-orchestration/`
 - `packages/git-workflows/`
 - `packages/github-workflows/`
