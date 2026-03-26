@@ -27,6 +27,7 @@
 - `packages/nanospec/`
 - `packages/spec-driven/`
 - `packages/search-first/`
+- `packages/session-workflows/`
 - `packages/agent-orchestration/`
 - `packages/git-workflows/`
 - `packages/github-workflows/`

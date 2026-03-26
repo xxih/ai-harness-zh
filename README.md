@@ -18,7 +18,7 @@
 | 执行编排与隔离             | `superpowers` 的 `subagent-driven-development`、`using-git-worktrees` 已经把子 agent 执行和隔离工作区做成常规流程；`oh-my-opencode` 进一步把 `delegate_task`、`background-agent` 做成运行时原语。                                                      | `packages/agent-orchestration/` 已沉淀多 agent 协作与委派编排方法；`packages/git-workflows/` 已覆盖 worktree 建立、分支收尾与清理流程。 | 结构化委派协议、后台任务状态机、会话续跑和真正的平台运行时还没有在仓库里落成。                                          |
 | 质量门禁与验收             | `superpowers` 的 `test-driven-development`、`requesting-code-review`、`verification-before-completion` 把 TDD、评审、完成前验证串成闭环；`everything-claude-code` 还有 `/quality-gate`、`/security-scan`、`plankton-code-quality` 这类更强的质量入口。 | `packages/quality-workflows/` 已有 `quality-tdd`、`quality-verify`、`quality-review`、`quality-review-feedback`；`packages/github-workflows/` 开始承接远端 PR / comments / checks / merge 生命周期。 | 自动触发的质量 hooks、阻塞式 gate、安全扫描接入、写码后即时修复链路，还没有做成平台约束。                              |
 | 搜索、代码理解与上下文治理 | `everything-claude-code` 有 `search-first`；`oh-my-opencode` 不只做 grep，还把 `lsp`、`ast-grep`、`directory-readme-injector`、`context-injector` 做进工具链和注入链路。                                                                               | `packages/search-first/` 已覆盖“先搜索再实现”的工作流，`packages/codex-base/` 提供基础 target 侧配置。            | 语义级代码工具接入、目录级上下文自动注入、压缩后的状态恢复、运行时上下文治理目前还没有完整实现。                       |
-| 学习沉淀与上下文压缩       | `everything-claude-code` 已经把 `continuous-learning-v2`、`strategic-compact` 做成长期学习和上下文压缩能力。                                                                                                                                           | `packages/learning-evolution/` 已经覆盖学习信号识别、分流与沉淀；`packages/nanospec/` 提供任务过程落盘。          | 自动提取、置信度评分、压缩时机治理、压缩后恢复策略，还没有形成一套运行时闭环。                                         |
+| 学习沉淀与上下文压缩       | `everything-claude-code` 已经把 `continuous-learning-v2`、`strategic-compact` 做成长期学习和上下文压缩能力。                                                                                                                                           | `packages/learning-evolution/` 已经覆盖学习信号识别、分流与沉淀；`packages/session-workflows/` 提供显式 session handoff；`packages/nanospec/` 提供任务过程落盘。 | 自动提取、置信度评分、压缩时机治理、压缩后恢复策略，还没有形成一套运行时闭环。                                         |
 | 平台适配、规则与运行时治理 | `everything-claude-code` 同时维护 Codex、OpenCode、Cursor、Claude Code 侧的 hooks、rules、commands、MCP 和测试；`oh-my-opencode` 还有大量治理型 hooks，例如 `todo-continuation-enforcer`、`tool-output-truncator`、`edit-error-recovery`。             | `packages/codex-base/` 是当前仓库的 Codex 基线 target，其他 package 也已有 `targets/codex/` 分发副本。            | 跨平台 target、真正可运行的 hooks / plugins、安装与 doctor、回归测试、失败恢复和自愈治理，还基本停留在参考与拆解阶段。 |
 
 ## 这个仓库的价值
@@ -55,6 +55,8 @@
   - 仓库级自动化脚本，例如 target 同步脚本
 - `.learned/`、`.quality/`、`.research/`
   - 默认记录目录
+- `.session/`
+  - 本地 session handoff 文档目录；默认不纳入 git 管理
 - `.nanospec/`、`nanospec/`
   - NanoSpec 任务容器与当前任务指针
 
@@ -65,6 +67,7 @@
 - `packages/nanospec/`：NanoSpec 任务容器规范与中间文档流程
 - `packages/spec-driven/`：spec-driven 工作流能力
 - `packages/search-first/`：先搜索、再实现的工作流能力
+- `packages/session-workflows/`：显式 session 收尾、handoff 与换窗口续跑
 - `packages/agent-orchestration/`：多 agent 协作与委派编排
 - `packages/git-workflows/`：git worktree 建立、分支收尾与清理流程
 - `packages/github-workflows/`：GitHub PR、review comments、checks、merge 与冲突处理流程

@@ -2,6 +2,7 @@
 
 # 本地流程状态
 .nanospec/
+.session/
 
 # 生成产物
 output/
