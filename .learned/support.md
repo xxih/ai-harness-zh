@@ -38,3 +38,16 @@
 - 原料：可直接复用的结构是“按 `需求澄清与方案化`、`执行编排与隔离`、`质量门禁与验收`、`搜索 / 上下文治理`、`学习沉淀与上下文压缩`、`平台适配 / 规则 / 运行时治理` 分类；每类同时写成熟 harness 例子、当前仓库已有 package、普通开发者通常尚未系统化补齐的部分”
 - 建议落点：`README.md`
 - 建议动作：`update-existing`
+
+## 2026-03-25 staged wave 反推任务边界
+
+### Support: NanoSpec 可增加“从 staged 改动反推任务边界”的补洞指引
+
+- 类型：`doc`
+- 作用域：`project`
+- 触发：用户要求“先把这一波 staged 改动补齐 nanospec 文档再 commit”，但 `.nanospec/.current` 已经过期或未切到对应任务时
+- 重复信号：本轮执行中，当前指针仍停在 `20260324-readme重写AIHarness定位`，实际待提交内容却是一整波 `github-workflows`、研究文档和包边界更新，必须先按 staged 集合重新识别任务主题
+- 证据：`nanospec/20260325-github-workflows与PR生命周期补齐/brief.md`；当前对话中的明确提交要求
+- 原料：可直接复用的流程是“先看 staged 文件集合 -> 判断是否是一波独立交付 -> 若没有对应任务容器则新建 nanospec 目录并补齐最小文档 -> 再 commit”，而不是机械依赖 `.nanospec/.current`
+- 建议落点：`packages/nanospec/README.md`
+- 建议动作：`queue-support`

@@ -79,3 +79,12 @@
 - 证据：用户在 `20260324-readme重写AIHarness定位` 任务中的明确纠正：“我刚才说的我们,是日常开发者.普通的 ai Coding 的人.往往是裸用 claude code”；`nanospec/20260324-readme重写AIHarness定位/alignment.md`
 - 落点：`README.md`、仓库级说明文档
 - 下一步：`applied-in-docs`
+
+## 2026-03-25 staged wave 与 nanospec 对齐
+
+### Rule: 提交一整波 staged 改动前，若还没有对应 nanospec 任务容器，先补齐再 commit
+
+- 规则：当用户要求提交“这一波 staged 改动”时，不要只看当前 `.nanospec/.current` 指针；应先按 staged 文件集合判断这是不是一波独立交付。如果这波改动还没有对应的 nanospec 任务容器，就先补 `brief.md`、`outputs/1-spec.md`、`outputs/2-plan.md`、`outputs/3-tasks.md`，再执行 commit。
+- 证据：用户在 2026-03-25 的明确要求：“把暂存区的改动,这一波改动,没有落 nanospec 文档的落一下. 然后 commit”；执行时发现 `.nanospec/.current` 仍指向 `20260324-readme重写AIHarness定位`，而实际 staged wave 对应的是 `20260325-github-workflows与PR生命周期补齐`。
+- 落点：`AGENTS.md`、`packages/nanospec/README.md`、相关工作流说明
+- 下一步：`keep-local`
