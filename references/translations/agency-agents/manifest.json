@@ -1,0 +1,148 @@
+{
+  "repo": "agency-agents",
+  "source": {
+    "path": "references/repos/agency-agents",
+    "remote": "https://github.com/msitarzewski/agency-agents.git",
+    "branch": "main",
+    "head_commit": "6254154899f510eb4a4de10561fecfc1f32ff17f"
+  },
+  "scope": {
+    "include": [
+      "strategy/EXECUTIVE-BRIEF.md",
+      "strategy/QUICKSTART.md",
+      "strategy/nexus-strategy.md",
+      "strategy/coordination/agent-activation-prompts.md",
+      "strategy/coordination/handoff-templates.md",
+      "strategy/playbooks/phase-0-discovery.md",
+      "strategy/playbooks/phase-1-strategy.md",
+      "strategy/playbooks/phase-2-foundation.md",
+      "strategy/playbooks/phase-3-build.md",
+      "strategy/playbooks/phase-4-hardening.md",
+      "strategy/playbooks/phase-5-launch.md",
+      "strategy/playbooks/phase-6-operate.md",
+      "strategy/runbooks/scenario-startup-mvp.md",
+      "strategy/runbooks/scenario-enterprise-feature.md",
+      "strategy/runbooks/scenario-marketing-campaign.md",
+      "strategy/runbooks/scenario-incident-response.md",
+      "integrations/aider/README.md",
+      "integrations/claude-code/README.md",
+      "integrations/cursor/README.md",
+      "integrations/github-copilot/README.md",
+      "integrations/mcp-memory/README.md",
+      "integrations/openclaw/README.md"
+    ],
+    "notes": "当前覆盖 agency-agents 的战略导读、完整 NEXUS 战略文档、coordination 模板、7 份 playbooks、4 份 runbooks 与短集成说明，暂不覆盖整份 README 与各 division 的 agent prompt。"
+  },
+  "translations": [
+    {
+      "source": "strategy/EXECUTIVE-BRIEF.md",
+      "translation": "strategy/EXECUTIVE-BRIEF.md",
+      "source_sha256": "628907121b4fa6306ddb12efc1259a679309cea90c8c97383909a81c60b94952"
+    },
+    {
+      "source": "strategy/QUICKSTART.md",
+      "translation": "strategy/QUICKSTART.md",
+      "source_sha256": "16933e6221370dc3bbf1b8662621e9f93887c14017a9e27af27753625b689640"
+    },
+    {
+      "source": "strategy/nexus-strategy.md",
+      "translation": "strategy/nexus-strategy.md",
+      "source_sha256": "13560cc23c541795f2d9e1b3fec8540183e6645e1e25123af6dc2de5e2e04daa"
+    },
+    {
+      "source": "strategy/coordination/agent-activation-prompts.md",
+      "translation": "strategy/coordination/agent-activation-prompts.md",
+      "source_sha256": "9db4323a005d28d27ae16771892c2d4b2062fa151ce499f059bb262b82c9c1c3"
+    },
+    {
+      "source": "strategy/coordination/handoff-templates.md",
+      "translation": "strategy/coordination/handoff-templates.md",
+      "source_sha256": "297dff8ea47b35e02b5d53cefb31aa05e1d880a1440c4c90ef9dec6156b68931"
+    },
+    {
+      "source": "strategy/playbooks/phase-0-discovery.md",
+      "translation": "strategy/playbooks/phase-0-discovery.md",
+      "source_sha256": "0ae7d5cfc479e0d2818bf5a8559d59f90ee446b03d754b355594a1c0c62b294e"
+    },
+    {
+      "source": "strategy/playbooks/phase-1-strategy.md",
+      "translation": "strategy/playbooks/phase-1-strategy.md",
+      "source_sha256": "8509ef04a669ec01752ebf8da5048ec538fd0c3c1e85029f83a2ea90d8888bdd"
+    },
+    {
+      "source": "strategy/playbooks/phase-2-foundation.md",
+      "translation": "strategy/playbooks/phase-2-foundation.md",
+      "source_sha256": "16c02d3c0debc95732ac4b9a7187d02e832ba55683d9bd605395a958be0f5e94"
+    },
+    {
+      "source": "strategy/playbooks/phase-3-build.md",
+      "translation": "strategy/playbooks/phase-3-build.md",
+      "source_sha256": "1426c3e0d0408fca02143617b8e96b7b4f9f1fac4b5604d8bb54f08e44d65c2c"
+    },
+    {
+      "source": "strategy/playbooks/phase-4-hardening.md",
+      "translation": "strategy/playbooks/phase-4-hardening.md",
+      "source_sha256": "0db1b7dc62dccc30579f06e8f2b480f7b04fcd153fca7df43aa2470f46907386"
+    },
+    {
+      "source": "strategy/playbooks/phase-5-launch.md",
+      "translation": "strategy/playbooks/phase-5-launch.md",
+      "source_sha256": "afae11996e699041f9c094e9a07452c866ce12d959bb93a89526307617e7205b"
+    },
+    {
+      "source": "strategy/playbooks/phase-6-operate.md",
+      "translation": "strategy/playbooks/phase-6-operate.md",
+      "source_sha256": "114ec9979c187e7852ca2228c1951f0ef78263b58147421c4e9dbbef10c903e2"
+    },
+    {
+      "source": "strategy/runbooks/scenario-startup-mvp.md",
+      "translation": "strategy/runbooks/scenario-startup-mvp.md",
+      "source_sha256": "90eb81f4338453ce3064d33434967cf028f6a3a668fccb436c64424d1e00ff26"
+    },
+    {
+      "source": "strategy/runbooks/scenario-enterprise-feature.md",
+      "translation": "strategy/runbooks/scenario-enterprise-feature.md",
+      "source_sha256": "40e20eac5c6eb54f4a5017b1f8d9f56bba44ae9afc82bfb2c678f971c7d5fb2b"
+    },
+    {
+      "source": "strategy/runbooks/scenario-marketing-campaign.md",
+      "translation": "strategy/runbooks/scenario-marketing-campaign.md",
+      "source_sha256": "979c985e5cbb6a42aae2bfbd02494712fac75f8fceac5d7f9ca704b071ef7f57"
+    },
+    {
+      "source": "strategy/runbooks/scenario-incident-response.md",
+      "translation": "strategy/runbooks/scenario-incident-response.md",
+      "source_sha256": "b08fe23eddcc6f5038a4a8e33930f7d40d67b6916144076667eb6d50ce604fff"
+    },
+    {
+      "source": "integrations/aider/README.md",
+      "translation": "integrations/aider/README.md",
+      "source_sha256": "3e3f31ba521db394d350453bb6765f562c375db66d92220e77b13c92e72ac06f"
+    },
+    {
+      "source": "integrations/claude-code/README.md",
+      "translation": "integrations/claude-code/README.md",
+      "source_sha256": "ba0d40b544f661a88cc74eb2a5e6f9d03142b37da24f5dd83e8324f3404577b1"
+    },
+    {
+      "source": "integrations/cursor/README.md",
+      "translation": "integrations/cursor/README.md",
+      "source_sha256": "8eeab520b7d7da3f78a84fcb24cf15eaecfb18b4aff41ee755b0bee46efacef9"
+    },
+    {
+      "source": "integrations/github-copilot/README.md",
+      "translation": "integrations/github-copilot/README.md",
+      "source_sha256": "81c59088b32258ba22ae553997f7b9e9c2d33268871ab914747ce5d1015ec7f4"
+    },
+    {
+      "source": "integrations/mcp-memory/README.md",
+      "translation": "integrations/mcp-memory/README.md",
+      "source_sha256": "e3252682132b4aa6f95f17fb4888cf8722b8bd9c747af403e3d6651b1dd57cf4"
+    },
+    {
+      "source": "integrations/openclaw/README.md",
+      "translation": "integrations/openclaw/README.md",
+      "source_sha256": "4a2a0d6fb6d2ec7a360d3e023ab5e333c3508e4a6d4312120e28eba1aef6d00a"
+    }
+  ]
+}

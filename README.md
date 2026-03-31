@@ -29,19 +29,21 @@
 
 ## 推荐先参考的 harness
 
-如果你想理解“一个成熟的 AI coding harness 长什么样”，建议优先看下面三个对象：
+如果你想理解“一个成熟的 AI coding harness 长什么样”，建议优先看下面四个对象：
 
 | 参考对象                                  | 推荐原因                                                                                                                                                                                                                                                                         |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `references/repos/everything-claude-code` | 这是一个覆盖面很完整的全栈 harness 参考，包含 agents、skills、commands、hooks、rules、MCP 与多平台适配，还明确覆盖了 Codex、OpenCode、Cursor 等平台。像 `/harness-audit`、`/quality-gate`、`continuous-learning-v2`、`search-first` 都很适合拿来对照我们当前还缺哪些系统层能力。 |
 | `references/repos/superpowers`            | 这是一个很清晰的 skill-first workflow 参考，把 `brainstorming`、`writing-plans`、`test-driven-development`、`requesting-code-review`、`subagent-driven-development` 串成一条强约束工程流程。适合理解怎样把方法论做成可触发、可复用的 skill 体系。                                |
 | `references/repos/oh-my-opencode`         | 这类参考更值得从运行时内核角度阅读：`delegate_task`、`background-agent`、`directory-readme-injector`、`context-injector`、LSP / AST 工具链和治理型 hooks 都比较完整。适合理解 prompt 之外的编排、治理和工具层设计。                                                              |
+| `references/repos/gstack`                 | 这是一个很强的 founder / sprint workflow 参考，把 `office-hours`、`plan-*`、`review`、`qa`、`ship`、`codex`、`cso` 串成“虚拟工程团队”式主线，也明确兼容 Claude Code、Codex、Gemini CLI、Cursor 与 Factory Droid。适合理解怎样把单人 AI coding workflow 做成端到端软件工厂。 |
 
 如果只想先看一类：
 
 - 想看完整系统，先看 `everything-claude-code`
 - 想看最小工作流怎么落成 skill，先看 `superpowers`
 - 想看运行时编排和治理设计，先看 `oh-my-opencode`
+- 想看 founder 驱动、强 sprint 主线的软件工厂，先看 `gstack`
 
 ## 仓库里有什么
 
@@ -123,6 +125,6 @@ python3 scripts/sync_codex_targets.py nanospec learning-evolution
 
 ## 外部参考资料
 
-需要引入外部仓库时，统一放在 `references/repos/` 下；例如 `oh-my-opencode`、`everything-claude-code`、`superpowers`。
+需要引入外部仓库时，统一放在 `references/repos/` 下；例如 `oh-my-opencode`、`everything-claude-code`、`superpowers`、`gstack`。
 
 如果是外部 prompt 的中文翻译或整理材料，则放在 `references/translations/`，不要混进当前仓库自有 package。

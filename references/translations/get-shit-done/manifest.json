@@ -1,0 +1,112 @@
+{
+  "repo": "get-shit-done",
+  "source": {
+    "path": "references/repos/get-shit-done",
+    "remote": "https://github.com/gsd-build/get-shit-done.git",
+    "branch": "main",
+    "head_commit": "1421dc07bc1033f1b69e49d85cb6d625fd696b4f"
+  },
+  "scope": {
+    "include": [
+      "README.zh-CN.md",
+      "docs/zh-CN/README.md",
+      "docs/zh-CN/USER-GUIDE.md",
+      "docs/zh-CN/COMMANDS.md",
+      "docs/zh-CN/AGENTS.md",
+      "docs/zh-CN/references/*.md"
+    ],
+    "notes": "首批优先回收 upstream 已有的 README.zh-CN 与 docs/zh-CN 资料，并补翻 docs/COMMANDS.md 与 docs/AGENTS.md。暂不覆盖 commands/gsd/*.md 与 agents/*.md。"
+  },
+  "translations": [
+    {
+      "source": "README.md",
+      "translation": "README.zh-CN.md",
+      "source_sha256": "22341194fb7c0dac9773b5d5074576a69b15de9979471a9e666459103179c789"
+    },
+    {
+      "source": "docs/README.md",
+      "translation": "docs/zh-CN/README.md",
+      "source_sha256": "355582d5dc34f762cd8fce8dd4db23ec9ffedd7eb9848f284bc78f96697e015b"
+    },
+    {
+      "source": "docs/USER-GUIDE.md",
+      "translation": "docs/zh-CN/USER-GUIDE.md",
+      "source_sha256": "a05158cb7dc0c84cd13ef6610aaa2f583eab94c44a3c6d9798324b7f4dcb4d1a"
+    },
+    {
+      "source": "docs/COMMANDS.md",
+      "translation": "docs/zh-CN/COMMANDS.md",
+      "source_sha256": "280a74f2bcb08f1719e574a3959259e7a9a834804e792cc8cd7051e6bf2ac26e"
+    },
+    {
+      "source": "docs/AGENTS.md",
+      "translation": "docs/zh-CN/AGENTS.md",
+      "source_sha256": "f97764a2b504a7625d67e78ee2efea322e954ea745239bdb91ba4f536519194b"
+    },
+    {
+      "source": "get-shit-done/references/checkpoints.md",
+      "translation": "docs/zh-CN/references/checkpoints.md",
+      "source_sha256": "0c7dd9ecbc5526a1964f58ca558f0464b07fb0437c8a480b75c39a3d8b0c650a"
+    },
+    {
+      "source": "get-shit-done/references/continuation-format.md",
+      "translation": "docs/zh-CN/references/continuation-format.md",
+      "source_sha256": "27a6c21ac06e80baad4d99a3fa31d514d26178a377ae2c8426b131c1bad3b928"
+    },
+    {
+      "source": "get-shit-done/references/decimal-phase-calculation.md",
+      "translation": "docs/zh-CN/references/decimal-phase-calculation.md",
+      "source_sha256": "3ef6736b6e09ea0e413fad9b791fae2a7dfe9e7238baf6a6a58bc5456442daea"
+    },
+    {
+      "source": "get-shit-done/references/git-integration.md",
+      "translation": "docs/zh-CN/references/git-integration.md",
+      "source_sha256": "529d21d0a140e4b4e3eef9fbb1db9dfa99bd244a7992de864d02f8f25b9f5736"
+    },
+    {
+      "source": "get-shit-done/references/git-planning-commit.md",
+      "translation": "docs/zh-CN/references/git-planning-commit.md",
+      "source_sha256": "d669dadecb07eec6d7905507a0f308047d512779bcff392d1dd49f56944f69f7"
+    },
+    {
+      "source": "get-shit-done/references/model-profile-resolution.md",
+      "translation": "docs/zh-CN/references/model-profile-resolution.md",
+      "source_sha256": "a88ab958167f2def9d6000338b0a19c74acb846a23d5b2c4a34556184ae2c342"
+    },
+    {
+      "source": "get-shit-done/references/model-profiles.md",
+      "translation": "docs/zh-CN/references/model-profiles.md",
+      "source_sha256": "ad9d04bdbe03d5911cb01a9cda17376b84ece2c4dc5e198451fdccac52b9bd97"
+    },
+    {
+      "source": "get-shit-done/references/phase-argument-parsing.md",
+      "translation": "docs/zh-CN/references/phase-argument-parsing.md",
+      "source_sha256": "c96242af71ab5478593fe0e39ea1946dd112c12a0e73cd64f9754f0156624b39"
+    },
+    {
+      "source": "get-shit-done/references/planning-config.md",
+      "translation": "docs/zh-CN/references/planning-config.md",
+      "source_sha256": "90ba1c15a1fe8b1cde007f86e4b5b32ae94fd8fb7f3d8e043ecd6e5442da2de5"
+    },
+    {
+      "source": "get-shit-done/references/questioning.md",
+      "translation": "docs/zh-CN/references/questioning.md",
+      "source_sha256": "a8c988cab05f4651f9b88b7e6217fc8569ba4748a795a47711ee8cf64b2c70b0"
+    },
+    {
+      "source": "get-shit-done/references/tdd.md",
+      "translation": "docs/zh-CN/references/tdd.md",
+      "source_sha256": "edc637151a18d2521c538d91b2208ff478549ca2f2f2d4d6e64a7f2144589ed9"
+    },
+    {
+      "source": "get-shit-done/references/ui-brand.md",
+      "translation": "docs/zh-CN/references/ui-brand.md",
+      "source_sha256": "b8cd57dc29a2071a6865a8f07a76260946ea4c13628e3cbc96cfb4ade970ae8b"
+    },
+    {
+      "source": "get-shit-done/references/verification-patterns.md",
+      "translation": "docs/zh-CN/references/verification-patterns.md",
+      "source_sha256": "c0a1b4d9cfdf4471499f6c8ec26c9b20058276a6f6b86ed2fe6d5f902278f04b"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "repo": "alirezarezvani-claude-skills",
+  "source": {
+    "path": "references/repos/alirezarezvani-claude-skills",
+    "remote": "https://github.com/alirezarezvani/claude-skills.git",
+    "branch": "main",
+    "head_commit": "5adbfdce47c913d2bcffa8936b431e19d6ea177a"
+  },
+  "scope": {
+    "include": [
+      "README.md",
+      "CLAUDE.md",
+      "GEMINI.md",
+      "agents/CLAUDE.md",
+      "standards/CLAUDE.md",
+      "templates/CLAUDE.md",
+      "orchestration/ORCHESTRATION.md",
+      "business-growth/SKILL.md",
+      "business-growth/CLAUDE.md",
+      "c-level-advisor/SKILL.md",
+      "c-level-advisor/CLAUDE.md",
+      "engineering-team/CLAUDE.md",
+      "engineering/SKILL.md",
+      "finance/SKILL.md",
+      "finance/CLAUDE.md",
+      "marketing-skill/SKILL.md",
+      "marketing-skill/CLAUDE.md",
+      "product-team/SKILL.md",
+      "product-team/CLAUDE.md",
+      "project-management/SKILL.md",
+      "project-management/CLAUDE.md",
+      "ra-qm-team/SKILL.md",
+      "ra-qm-team/CLAUDE.md",
+      "custom-gpt/README.md"
+    ],
+    "notes": "当前覆盖仓库级入口、orchestration 协议、agents/standards/templates 的 CLAUDE 导航文件、8 个顶层 domain 的 SKILL.md 与对应二级 CLAUDE.md，以及 custom-gpt README。"
+  },
+  "translations": [
+    {
+      "source": "README.md",
+      "translation": "README.zh-CN.md",
+      "source_sha256": "1f921a7a040cc539583c36739795c5e215b9894809fb2373e925c05584454294"
+    },
+    {
+      "source": "CLAUDE.md",
+      "translation": "CLAUDE.md",
+      "source_sha256": "db5e0824fbf8c23ee04120fa809da0587002ab7c6f755e800146547d702b9a33"
+    },
+    {
+      "source": "GEMINI.md",
+      "translation": "GEMINI.md",
+      "source_sha256": "248d724c5bbcb54a4b7ee38689cbb7dac3c0fbf37d517cb0fd6bcd074da5d795"
+    },
+    {
+      "source": "agents/CLAUDE.md",
+      "translation": "agents/CLAUDE.md",
+      "source_sha256": "2fbc54db6662d672515448c97b3a07dabb7f478abd6714bd76d20bb0dfb840ae"
+    },
+    {
+      "source": "standards/CLAUDE.md",
+      "translation": "standards/CLAUDE.md",
+      "source_sha256": "e78fe9d9a0867b213c844bbf1d065153550b3b928d21ae219442393d9a1a5e72"
+    },
+    {
+      "source": "templates/CLAUDE.md",
+      "translation": "templates/CLAUDE.md",
+      "source_sha256": "12c5851b9583b8608aaf16bb0513e21afb21a6c7a71b7d6245b0a952e85cfac0"
+    },
+    {
+      "source": "orchestration/ORCHESTRATION.md",
+      "translation": "orchestration/ORCHESTRATION.md",
+      "source_sha256": "fdddf5c95fb0178cac20376f54a012867ab52dbcb689c981abea910e74435219"
+    },
+    {
+      "source": "business-growth/SKILL.md",
+      "translation": "business-growth/SKILL.md",
+      "source_sha256": "6170ccaecbcf2d00116f82a166fb73f7c9e5daaace2cebd87ea87eff66d7de94"
+    },
+    {
+      "source": "business-growth/CLAUDE.md",
+      "translation": "business-growth/CLAUDE.md",
+      "source_sha256": "46f58eba3537fe3781dd17c7afc3a1a7b239c21387995a4b4a232a4b2f007e65"
+    },
+    {
+      "source": "c-level-advisor/SKILL.md",
+      "translation": "c-level-advisor/SKILL.md",
+      "source_sha256": "3d7f7ec6c8f2970d81886fe1bdf4f3efaa9fad8728a698fba7df7cb69657b5a7"
+    },
+    {
+      "source": "c-level-advisor/CLAUDE.md",
+      "translation": "c-level-advisor/CLAUDE.md",
+      "source_sha256": "92a42e01a3b56dd2b3246144f7f782200d255a0b4be42a64d5138a96870af385"
+    },
+    {
+      "source": "engineering-team/CLAUDE.md",
+      "translation": "engineering-team/CLAUDE.md",
+      "source_sha256": "6658304804ba51ed18364dfc08a524179dca5f483bf09aaa50841e0673c44b60"
+    },
+    {
+      "source": "engineering/SKILL.md",
+      "translation": "engineering/SKILL.md",
+      "source_sha256": "3f5727b3f476140a20e63c8d382c16fd8de63ce5b20f402bdcfbed34d7d73e4a"
+    },
+    {
+      "source": "finance/SKILL.md",
+      "translation": "finance/SKILL.md",
+      "source_sha256": "6c0ddb6aab7428baafe9507979ab9beca942263b8d0949f01c7e25ee92db613d"
+    },
+    {
+      "source": "finance/CLAUDE.md",
+      "translation": "finance/CLAUDE.md",
+      "source_sha256": "20015e99f016644d777021b3492e4a70cf867ce0b3861820f95140ea7ca15b91"
+    },
+    {
+      "source": "marketing-skill/SKILL.md",
+      "translation": "marketing-skill/SKILL.md",
+      "source_sha256": "68a46343787220ed041f14a2f133a3f08cf93ba12d52a37f3d44e172a24e3fe2"
+    },
+    {
+      "source": "marketing-skill/CLAUDE.md",
+      "translation": "marketing-skill/CLAUDE.md",
+      "source_sha256": "53ed43da185ed39e7e85222a7c206120b71ac755e8cdbf8c0c0106a17455cc1f"
+    },
+    {
+      "source": "product-team/SKILL.md",
+      "translation": "product-team/SKILL.md",
+      "source_sha256": "b55da6c9c2374bb3f8b56bec7b7e6b9ec340002e237f5d72cd4386d33b65aadc"
+    },
+    {
+      "source": "product-team/CLAUDE.md",
+      "translation": "product-team/CLAUDE.md",
+      "source_sha256": "5ebcc3ca89c96e680c6e2917945d47c63826c6801748b1e4e2f4626f873102d7"
+    },
+    {
+      "source": "project-management/SKILL.md",
+      "translation": "project-management/SKILL.md",
+      "source_sha256": "b5cf2e4369885b70700cd4b5d87ee49f8f75e53a407d5fcfaaec5d50afe16a6f"
+    },
+    {
+      "source": "project-management/CLAUDE.md",
+      "translation": "project-management/CLAUDE.md",
+      "source_sha256": "3e3e8943044e9e508b7d88ad10ebfbd52c09c3a5d5a0f1de1e6a8ff56f9287ae"
+    },
+    {
+      "source": "ra-qm-team/SKILL.md",
+      "translation": "ra-qm-team/SKILL.md",
+      "source_sha256": "49aaffd35d271117061e402a7656df01108e11663cb172603bc4f9000311a955"
+    },
+    {
+      "source": "ra-qm-team/CLAUDE.md",
+      "translation": "ra-qm-team/CLAUDE.md",
+      "source_sha256": "1f7230f29f072c033d75a42a8e462a9db5f28329e5961e6874a260c470497bd0"
+    },
+    {
+      "source": "custom-gpt/README.md",
+      "translation": "custom-gpt/README.md",
+      "source_sha256": "dc32576079a0ec74e0e6074f8403f1eadd714de7ec3abbadd257db886fb8b60e"
+    }
+  ]
+}

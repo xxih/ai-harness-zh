@@ -1,0 +1,58 @@
+{
+  "repo": "gstack",
+  "source": {
+    "path": "references/repos/gstack",
+    "remote": "https://github.com/garrytan/gstack.git",
+    "branch": "main",
+    "head_commit": "7ea6ead9fa88ba439002a6dc1d7409649b45e9f5"
+  },
+  "scope": {
+    "include": [
+      "README.zh-CN.md",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "ARCHITECTURE.md",
+      "BROWSER.md",
+      "ETHOS.md",
+      "CONTRIBUTING.md"
+    ],
+    "notes": "当前先同步 gstack 根级核心文档的中文翻译，覆盖定位、安装、工作流主线、工程约定、浏览器架构、builder 哲学与贡献方式。"
+  },
+  "translations": [
+    {
+      "source": "README.md",
+      "translation": "README.zh-CN.md",
+      "source_sha256": "0a020be85ae46d59841815fa8fad4848e4336e34f25a7daf41a7a31f029e2928"
+    },
+    {
+      "source": "AGENTS.md",
+      "translation": "AGENTS.md",
+      "source_sha256": "a51aede57220121046392c57a603814ba3201884d321def6f8e693b0b9aa9028"
+    },
+    {
+      "source": "CLAUDE.md",
+      "translation": "CLAUDE.md",
+      "source_sha256": "76b50a3e75b59fb57b708c2efa04ed88796e61995eff6d17da759f909331e4c0"
+    },
+    {
+      "source": "ARCHITECTURE.md",
+      "translation": "ARCHITECTURE.md",
+      "source_sha256": "316e7676697d8920631ae22185b6a16dba6c4e83c575ae4cb29eb5915c3cf51b"
+    },
+    {
+      "source": "BROWSER.md",
+      "translation": "BROWSER.md",
+      "source_sha256": "ee5d6d8fd3dacfc5e9f8a419e81887bbcb2fd9cdfc58171343f6fb88f6c94908"
+    },
+    {
+      "source": "ETHOS.md",
+      "translation": "ETHOS.md",
+      "source_sha256": "b21349b6b4a32dab057d0001a1a669d99692fd8451291f6d5a01228812171863"
+    },
+    {
+      "source": "CONTRIBUTING.md",
+      "translation": "CONTRIBUTING.md",
+      "source_sha256": "ccb5f17c4401c6b9a541dadf2c3df403eb1943b9af2049dbdee0304a649458d8"
+    }
+  ]
+}

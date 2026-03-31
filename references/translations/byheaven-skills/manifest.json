@@ -1,0 +1,49 @@
+{
+  "repo": "byheaven-skills",
+  "source": {
+    "path": "references/repos/byheaven-skills",
+    "remote": "https://github.com/byheaven/byheaven-skills.git",
+    "branch": "main",
+    "head_commit": "fbbab52c747d43617c86ae5d18332e44a3d14f14"
+  },
+  "scope": {
+    "include": [
+      "README.md -> README.zh-CN.md",
+      "plugins/newproject/README.md -> plugins/newproject/README.zh-CN.md",
+      "plugins/newproject/skills/newproject/SKILL.md",
+      "plugins/xhs-publisher/README.md",
+      "plugins/xhs-publisher/skills/xhs-publisher/SKILL.md"
+    ],
+    "notes": "当前只收录 byheaven-skills 的仓库级 README、newproject 核心说明与 SKILL，以及 xhs-publisher 已有中文 README 和 SKILL。"
+  },
+  "translations": [
+    {
+      "source": "README.md",
+      "translation": "README.zh-CN.md",
+      "source_sha256": "2d3711b7d1709603843de141114da11e86aa60f8ab9cd633a2b28ed3ba69e7b0",
+      "notes": "当前直接收录 upstream 自带的 README.zh-CN.md。"
+    },
+    {
+      "source": "plugins/newproject/README.md",
+      "translation": "plugins/newproject/README.zh-CN.md",
+      "source_sha256": "a8c6244ac36090996a8908831919c9f29a510d076e3f6fdc1f6be1da6f7e92b3"
+    },
+    {
+      "source": "plugins/newproject/skills/newproject/SKILL.md",
+      "translation": "plugins/newproject/skills/newproject/SKILL.md",
+      "source_sha256": "386385e31893f89e35c318f89d5a4144b65545d6ad9f3a64ad762b5bf431eb28"
+    },
+    {
+      "source": "plugins/xhs-publisher/README.md",
+      "translation": "plugins/xhs-publisher/README.md",
+      "source_sha256": "51cce4bcca192e89ff2cb8831a1b335d62c54d4633035e3b5ff6a466ee96580f",
+      "notes": "源文件已为中文原文，按中文核心 prompt 资产镜像收录。"
+    },
+    {
+      "source": "plugins/xhs-publisher/skills/xhs-publisher/SKILL.md",
+      "translation": "plugins/xhs-publisher/skills/xhs-publisher/SKILL.md",
+      "source_sha256": "7521b7e44788c2cb82a64f716c28d2e6277195f08aa13676ae8030e6b0b91793",
+      "notes": "源文件已为中文原文，按中文核心 prompt 资产镜像收录。"
+    }
+  ]
+}

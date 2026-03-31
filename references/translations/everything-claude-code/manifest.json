@@ -1,73 +1,35 @@
 {
   "repo": "everything-claude-code",
   "source": {
-    "path": "/Users/xxih/workspace/my-everything-claude-code",
+    "path": "references/repos/everything-claude-code",
     "remote": "https://github.com/affaan-m/everything-claude-code.git",
     "branch": "main",
-    "head_commit": "c5ccf8857bd9a1cef4ff52a745c45948f622d565"
+    "head_commit": "bacc585b877b4426627d1cc478e1f1e5eb0c4f94",
+    "notes": "当前翻译直接镜像 canonical 副本内置的中文文件，不再以旧的本机工作副本作为新鲜度基线。"
   },
   "canonical_reference": {
     "path": "references/repos/everything-claude-code",
     "head_commit": "bacc585b877b4426627d1cc478e1f1e5eb0c4f94",
-    "notes": "后续日常对照仍优先看当前仓库内的 references/repos 副本。2026-03-23 已基于最新 canonical 做 README 与 commands/orchestrate 的增量补同步。"
+    "notes": "当前中文镜像与 canonical 副本对齐；后续继续以该目录作为唯一对照基线。"
   },
   "scope": {
     "include": [
       "README.zh-CN.md",
       "docs/zh-CN/**"
     ],
-    "notes": "当前范围仍以本机既有 ECC 中文译稿为主；2026-03-23 已按最新 canonical 对部分高频入口文件做增量补同步。"
+    "notes": "默认完整镜像 upstream 当前提供的 zh-CN 文件；仓库本地额外保留 docs/zh-CN/codex-mcp-servers-guide.md，并将上游 docs/zh-CN/AGENTS.md 落为 docs/zh-CN/_AGENTS.md。"
   },
   "translations": [
     {
-      "source": "README.md",
       "translation": "README.zh-CN.md",
-      "source_sha256": "1fa4c6eb004633b8c4ada77d44eddcddb0ad5e6a833c93bed90fa484c08a92a4"
-    },
-    {
-      "translation": "docs/zh-CN/AGENTS.md",
-      "source": "AGENTS.md",
-      "source_sha256": "c9d2719b58dddff01810215c5de55634dbcd99d3b1e8867b60a6617143b103a7"
-    },
-    {
-      "translation": "docs/zh-CN/CHANGELOG.md",
-      "source": "CHANGELOG.md",
-      "source_sha256": "e37badabc53abc70ef00f423fcc749195ed1ee0651deaceda92f4e24a3afa744"
-    },
-    {
-      "translation": "docs/zh-CN/CLAUDE.md",
-      "source": "CLAUDE.md",
-      "source_sha256": "30106929c6ad2fe9729fbc0fbe4c4e4c62a33cae12e02cda5fd98a76ca6c793d"
-    },
-    {
-      "translation": "docs/zh-CN/CODE_OF_CONDUCT.md",
-      "source": "CODE_OF_CONDUCT.md",
-      "source_sha256": "fd6627320ddc0581d756ee3bda4e85916a229bdb39cc93b202df1cd771cfa485"
-    },
-    {
-      "translation": "docs/zh-CN/CONTRIBUTING.md",
-      "source": "CONTRIBUTING.md",
-      "source_sha256": "345d61a1b9ad67188b9df8793a8204ffb13b057da09b9eec9f1a11702102a410"
-    },
-    {
-      "translation": "docs/zh-CN/README.md",
       "source": "README.md",
       "source_sha256": "1fa4c6eb004633b8c4ada77d44eddcddb0ad5e6a833c93bed90fa484c08a92a4"
     },
     {
-      "translation": "docs/zh-CN/SPONSORING.md",
-      "source": "SPONSORING.md",
-      "source_sha256": "c6472611950ba42767ee0fa03ca0cc9e75dcff6bda606f8349d082be0a817b41"
-    },
-    {
-      "translation": "docs/zh-CN/SPONSORS.md",
-      "source": "SPONSORS.md",
-      "source_sha256": "293816d7715eb2c8e62d0b3ede5fbfede781b45f813ae315b514ac0efa840df7"
-    },
-    {
-      "translation": "docs/zh-CN/TROUBLESHOOTING.md",
-      "source": "TROUBLESHOOTING.md",
-      "source_sha256": "3fb114bc9556d61c2994a7d849ceb829c4c0056907697834e74bdf9bddb63555"
+      "translation": "docs/zh-CN/_AGENTS.md",
+      "source": "AGENTS.md",
+      "source_sha256": "845da8de69bb336ae568765f740c8cd058cc2da67692de1901dd0e3a9ff9e3bc",
+      "notes": "上游为 docs/zh-CN/AGENTS.md；当前仓库为遵守 AGENTS.md 约束改存为 docs/zh-CN/_AGENTS.md。"
     },
     {
       "translation": "docs/zh-CN/agents/architect.md",
@@ -90,6 +52,16 @@
       "source_sha256": "e112e5e0bbc501788e8a3bfd2771d34e31a8564bbd87391bff7401af1509782c"
     },
     {
+      "translation": "docs/zh-CN/agents/cpp-build-resolver.md",
+      "source": "agents/cpp-build-resolver.md",
+      "source_sha256": "d6f04ffc3f0ee17e736ae9bab044474a61fcd9d0114d290e868f3c64557c45af"
+    },
+    {
+      "translation": "docs/zh-CN/agents/cpp-reviewer.md",
+      "source": "agents/cpp-reviewer.md",
+      "source_sha256": "df35c817ffd9782dc34fe4c6c586cab34f1ae62940345893a529e5bb34cca923"
+    },
+    {
       "translation": "docs/zh-CN/agents/database-reviewer.md",
       "source": "agents/database-reviewer.md",
       "source_sha256": "2dcb2e2dc99f8425cf260ee3630920bc80da18959dde7ad95350ccf70c0931a4"
@@ -100,9 +72,19 @@
       "source_sha256": "a0b96a358534fc9cefc33355b73d8b232132754283c3f335907468cb98ee021d"
     },
     {
+      "translation": "docs/zh-CN/agents/docs-lookup.md",
+      "source": "agents/docs-lookup.md",
+      "source_sha256": "2e6cb9b0168e83c66b201bc155506d7aa0050108684ec844f79803d9aba4f4fb"
+    },
+    {
       "translation": "docs/zh-CN/agents/e2e-runner.md",
       "source": "agents/e2e-runner.md",
       "source_sha256": "89813024c93cb28948656b066609eb42b4d024e96a8aeb5cbc320913c1e75123"
+    },
+    {
+      "translation": "docs/zh-CN/agents/flutter-reviewer.md",
+      "source": "agents/flutter-reviewer.md",
+      "source_sha256": "9e6969d3a2941143629452345e5562a484b9e40dac48f2e94bde01f3820d83ad"
     },
     {
       "translation": "docs/zh-CN/agents/go-build-resolver.md",
@@ -118,6 +100,16 @@
       "translation": "docs/zh-CN/agents/harness-optimizer.md",
       "source": "agents/harness-optimizer.md",
       "source_sha256": "a0f42e525781a1fc4a2305ef4b5d055f296a04b9814ff81b7d1d99be93c48b58"
+    },
+    {
+      "translation": "docs/zh-CN/agents/java-build-resolver.md",
+      "source": "agents/java-build-resolver.md",
+      "source_sha256": "99e05ac7d2a6cd6c93d87c45e9113bbe3d6f91f78e14facf244b5ecbfd693b48"
+    },
+    {
+      "translation": "docs/zh-CN/agents/java-reviewer.md",
+      "source": "agents/java-reviewer.md",
+      "source_sha256": "78e3dfa68be7668296dcdc2e249e63c62e4bd4efae3751d5f9a9483cca3d9143"
     },
     {
       "translation": "docs/zh-CN/agents/kotlin-build-resolver.md",
@@ -145,9 +137,24 @@
       "source_sha256": "e2cf129892998841b01817e03736a9b5f9598681a096e28afbc12577d3ed9adf"
     },
     {
+      "translation": "docs/zh-CN/agents/pytorch-build-resolver.md",
+      "source": "agents/pytorch-build-resolver.md",
+      "source_sha256": "7ac671d451e70433514c6f52aa2d0291ec9d40c840488048d6507aaef1cb4533"
+    },
+    {
       "translation": "docs/zh-CN/agents/refactor-cleaner.md",
       "source": "agents/refactor-cleaner.md",
       "source_sha256": "30ed8fae5a0bf75ded440a3cce716ece4e5ab3d8e4912415211a20bb76409e75"
+    },
+    {
+      "translation": "docs/zh-CN/agents/rust-build-resolver.md",
+      "source": "agents/rust-build-resolver.md",
+      "source_sha256": "2f2e0d76b17151a266de32d408f2f1119e206d4026f0a0983cfb4fcb34ccd7ea"
+    },
+    {
+      "translation": "docs/zh-CN/agents/rust-reviewer.md",
+      "source": "agents/rust-reviewer.md",
+      "source_sha256": "e7ced0ac1d8306a57fd49312e49188b7309383b65a4b68d30b385476e792764b"
     },
     {
       "translation": "docs/zh-CN/agents/security-reviewer.md",
@@ -160,10 +167,30 @@
       "source_sha256": "de339a6158d7708000ef796f8bd5e6d7ed45fe744f443d2d84739470ba4c5f2c"
     },
     {
+      "translation": "docs/zh-CN/agents/typescript-reviewer.md",
+      "source": "agents/typescript-reviewer.md",
+      "source_sha256": "ea5ec5c98a89beb0204ef8e9498677c3d1ea61b4b62a691137775e17e11460c1"
+    },
+    {
+      "translation": "docs/zh-CN/CHANGELOG.md",
+      "source": "CHANGELOG.md",
+      "source_sha256": "400fa0e74842252d91e6b874e508807363c21d43bf9c0ca531ed8f74f07bf089"
+    },
+    {
+      "translation": "docs/zh-CN/CLAUDE.md",
+      "source": "CLAUDE.md",
+      "source_sha256": "9c9201e3330c83fcd340e6b8ddda8a20327321749e00137ebee46a71f1776ea2"
+    },
+    {
+      "translation": "docs/zh-CN/CODE_OF_CONDUCT.md",
+      "source": "CODE_OF_CONDUCT.md",
+      "source_sha256": "fd6627320ddc0581d756ee3bda4e85916a229bdb39cc93b202df1cd771cfa485"
+    },
+    {
       "translation": "docs/zh-CN/codex-mcp-servers-guide.md",
       "source": null,
       "source_sha256": null,
-      "notes": "仅在本机已翻译仓库中存在的中文补充文档。"
+      "notes": "仅在当前仓库中保留的中文补充文档，不对应 upstream 英文源文件。"
     },
     {
       "translation": "docs/zh-CN/commands/aside.md",
@@ -173,7 +200,7 @@
     {
       "translation": "docs/zh-CN/commands/build-fix.md",
       "source": "commands/build-fix.md",
-      "source_sha256": "5088ccbffd1fdea77681916a92832a5c19a71333f04a5f066e1a36670521caa1"
+      "source_sha256": "90349cab44f99608e68634fa8545f0ee95c1e379a02c0eff577f62fd44e47f33"
     },
     {
       "translation": "docs/zh-CN/commands/checkpoint.md",
@@ -189,6 +216,36 @@
       "translation": "docs/zh-CN/commands/code-review.md",
       "source": "commands/code-review.md",
       "source_sha256": "690b878d1b9ba6ecf6c1ce180ec5de0d79db5575d367e52f91031f103a2ff9df"
+    },
+    {
+      "translation": "docs/zh-CN/commands/context-budget.md",
+      "source": "commands/context-budget.md",
+      "source_sha256": "143cb070f365b534a716e88e495b0debc9d6139f488fc7af470cecd274271be7"
+    },
+    {
+      "translation": "docs/zh-CN/commands/cpp-build.md",
+      "source": "commands/cpp-build.md",
+      "source_sha256": "61706136a28c219cce7dc0d86bdeef1da9d9db7c5d9c07b6d5d4c8872e048d28"
+    },
+    {
+      "translation": "docs/zh-CN/commands/cpp-review.md",
+      "source": "commands/cpp-review.md",
+      "source_sha256": "d7b080ef52d09399039e1394ff001271f5eacd058d56b951c8f1d037feac93aa"
+    },
+    {
+      "translation": "docs/zh-CN/commands/cpp-test.md",
+      "source": "commands/cpp-test.md",
+      "source_sha256": "a1d0c512528f82e842d635ed51bcc08e770ac108bb6c29ad0cda60144f1b23c7"
+    },
+    {
+      "translation": "docs/zh-CN/commands/devfleet.md",
+      "source": "commands/devfleet.md",
+      "source_sha256": "409d9642905a18fe81c41405e133c33217462dc6fa1580efd961d724ac1e9694"
+    },
+    {
+      "translation": "docs/zh-CN/commands/docs.md",
+      "source": "commands/docs.md",
+      "source_sha256": "ac9d0886cd2c4ffefdb75aaa4a2e993578ca3f615f5a28a1145d02bb348a116d"
     },
     {
       "translation": "docs/zh-CN/commands/e2e.md",
@@ -228,7 +285,7 @@
     {
       "translation": "docs/zh-CN/commands/harness-audit.md",
       "source": "commands/harness-audit.md",
-      "source_sha256": "8051ebfe1ac1efd74d9cf6f1dc526a06bc35fdfab88ac40c6700dbfa51504542"
+      "source_sha256": "62ea46a413be15b1ddbfb44dcc43412c6a54b40b59e036bc3ff35275c6b41a23"
     },
     {
       "translation": "docs/zh-CN/commands/instinct-export.md",
@@ -361,6 +418,26 @@
       "source_sha256": "f92fc2998cb16a4331938ca4437b3a4c936e7b3672f896d02f21bc198611fe6c"
     },
     {
+      "translation": "docs/zh-CN/commands/rules-distill.md",
+      "source": "commands/rules-distill.md",
+      "source_sha256": "6ebde0e280575a9bfa9403a3844c65b78db8d825ee7a2dc7b3d919c47fbb5033"
+    },
+    {
+      "translation": "docs/zh-CN/commands/rust-build.md",
+      "source": "commands/rust-build.md",
+      "source_sha256": "8b60350b177bbee9543d1ea1a8929d9f2a035752c77c24f2a44998b3947c1395"
+    },
+    {
+      "translation": "docs/zh-CN/commands/rust-review.md",
+      "source": "commands/rust-review.md",
+      "source_sha256": "19e9eb0c5805e982f9d864202dde19c49b394e8d8e28030b3aeac33c157d812c"
+    },
+    {
+      "translation": "docs/zh-CN/commands/rust-test.md",
+      "source": "commands/rust-test.md",
+      "source_sha256": "dc474e6373e274b8bf032dc8e401ec0eb24e24f50acf993f273bb1258f77864a"
+    },
+    {
       "translation": "docs/zh-CN/commands/save-session.md",
       "source": "commands/save-session.md",
       "source_sha256": "f4a5799907d588588279adef8f0879a2532c0489c02ea83b64fe7bf1b62a0085"
@@ -368,7 +445,7 @@
     {
       "translation": "docs/zh-CN/commands/sessions.md",
       "source": "commands/sessions.md",
-      "source_sha256": "ee453dbcd9d6763f05af238e3d86481b453424d5eb590f20793e86d927efa126"
+      "source_sha256": "abd0a778c24dd4b9f31ef6f76c01c2930e2faf80b9eea677314b99b683a974d7"
     },
     {
       "translation": "docs/zh-CN/commands/setup-pm.md",
@@ -379,6 +456,11 @@
       "translation": "docs/zh-CN/commands/skill-create.md",
       "source": "commands/skill-create.md",
       "source_sha256": "3acec769ffb32348d5865d3ba24fa3e62feb1096fefdbce8e0ac52779b5659cd"
+    },
+    {
+      "translation": "docs/zh-CN/commands/skill-health.md",
+      "source": "commands/skill-health.md",
+      "source_sha256": "0aaee17765f3703203d7edbb782c13421df1832b70d21d1bf468330daef85cb2"
     },
     {
       "translation": "docs/zh-CN/commands/tdd.md",
@@ -421,6 +503,11 @@
       "source_sha256": "95ad8fc5851f61bd169377ce94df22bc996b69ff72f09aa51e7f16ed92930411"
     },
     {
+      "translation": "docs/zh-CN/CONTRIBUTING.md",
+      "source": "CONTRIBUTING.md",
+      "source_sha256": "03c783a174842f1ec981fa5047fbf40c6a55cdba0c243ddc88d45388ae395a9c"
+    },
+    {
       "translation": "docs/zh-CN/examples/CLAUDE.md",
       "source": "examples/CLAUDE.md",
       "source_sha256": "d4737049df03cadbadd6ffc2825f9fa8ed0e5ef0c6e03e0702d38baed70eb464"
@@ -434,6 +521,11 @@
       "translation": "docs/zh-CN/examples/go-microservice-CLAUDE.md",
       "source": "examples/go-microservice-CLAUDE.md",
       "source_sha256": "387bb2672aff21839c6a2358453937c3759a7ad623c6a32145517276ac3b137a"
+    },
+    {
+      "translation": "docs/zh-CN/examples/laravel-api-CLAUDE.md",
+      "source": "examples/laravel-api-CLAUDE.md",
+      "source_sha256": "800a48f0f70fcce5ab11c4f83af1fce6dd6f8ec22a22c9ef98d11f1d6ac4f2c1"
     },
     {
       "translation": "docs/zh-CN/examples/rust-api-CLAUDE.md",
@@ -461,14 +553,14 @@
       "source_sha256": "06fb66aa01b0874e05e1c7c77456213e6d003801318b0d23cf50f6e206544ca9"
     },
     {
-      "translation": "docs/zh-CN/rules/README.md",
-      "source": "rules/README.md",
-      "source_sha256": "207a7716438375cec5b058ca2898ef344c8f4f4d8aaa805486bc8065074e4144"
+      "translation": "docs/zh-CN/README.md",
+      "source": "README.md",
+      "source_sha256": "1fa4c6eb004633b8c4ada77d44eddcddb0ad5e6a833c93bed90fa484c08a92a4"
     },
     {
       "translation": "docs/zh-CN/rules/common/agents.md",
       "source": "rules/common/agents.md",
-      "source_sha256": "84acffb05e73de7264c89e6b302e653140a3a5b98897601c14edaf0b11065e93"
+      "source_sha256": "fcd916d9223f9e10a4a6fdf65c6b5a0c56806d1ed345fa8b96987ae2eebaaa9d"
     },
     {
       "translation": "docs/zh-CN/rules/common/coding-style.md",
@@ -511,6 +603,56 @@
       "source_sha256": "1fe96e1188217bcf35acca3459d9afe00dcfb84bc938bba5abf2c4d8e0d9b4a9"
     },
     {
+      "translation": "docs/zh-CN/rules/cpp/coding-style.md",
+      "source": "rules/cpp/coding-style.md",
+      "source_sha256": "3d25db0df6aa37cd58117d927020102b4e991fb820b9a6ff193058f0652be611"
+    },
+    {
+      "translation": "docs/zh-CN/rules/cpp/hooks.md",
+      "source": "rules/cpp/hooks.md",
+      "source_sha256": "51c511ea9706f53399649a52030484e14317b26f717488807a1faa2a2b9e0331"
+    },
+    {
+      "translation": "docs/zh-CN/rules/cpp/patterns.md",
+      "source": "rules/cpp/patterns.md",
+      "source_sha256": "0d4ad5083495eb234e43f65ed6e097494c06cf6886774d870fa27e6f11ffb27c"
+    },
+    {
+      "translation": "docs/zh-CN/rules/cpp/security.md",
+      "source": "rules/cpp/security.md",
+      "source_sha256": "16ca65265e3202d59046a70bd925d8f882d7f8494152e4839f1e5b89a6c5a2cd"
+    },
+    {
+      "translation": "docs/zh-CN/rules/cpp/testing.md",
+      "source": "rules/cpp/testing.md",
+      "source_sha256": "07f8098577dbcf2bdefb24721ec571badd7c646fbe760cc2a2293455515da5dd"
+    },
+    {
+      "translation": "docs/zh-CN/rules/csharp/coding-style.md",
+      "source": "rules/csharp/coding-style.md",
+      "source_sha256": "355de4ecd0690f7dbaa78e2fe24c9b82a153247c9f23adfa6de5a49a812ae3ce"
+    },
+    {
+      "translation": "docs/zh-CN/rules/csharp/hooks.md",
+      "source": "rules/csharp/hooks.md",
+      "source_sha256": "9975e503eedc5a9a02a8ba8cee8fbee804210632db0ec00b2185ef225e3dfa82"
+    },
+    {
+      "translation": "docs/zh-CN/rules/csharp/patterns.md",
+      "source": "rules/csharp/patterns.md",
+      "source_sha256": "05ed05365fd93ac93245244878229106eefb88164db43555d14d8bbd4999023f"
+    },
+    {
+      "translation": "docs/zh-CN/rules/csharp/security.md",
+      "source": "rules/csharp/security.md",
+      "source_sha256": "94b105e20d72ba2fbe457a42e9232001dd5dd338e816a091094b0d518280eb07"
+    },
+    {
+      "translation": "docs/zh-CN/rules/csharp/testing.md",
+      "source": "rules/csharp/testing.md",
+      "source_sha256": "797db2f53f2dd34c2fb2732d9498d63b818473c6599e9124c46c668ab70226a6"
+    },
+    {
       "translation": "docs/zh-CN/rules/golang/coding-style.md",
       "source": "rules/golang/coding-style.md",
       "source_sha256": "c32f6a2715297a1637b35567bb2e65054b4b28064b4d91fad26ad688f758243d"
@@ -534,6 +676,31 @@
       "translation": "docs/zh-CN/rules/golang/testing.md",
       "source": "rules/golang/testing.md",
       "source_sha256": "b0fcde8be4ce98e34fe872cc2ecca63cab8c8cd87d5faa1e1667ee82f3707d74"
+    },
+    {
+      "translation": "docs/zh-CN/rules/java/coding-style.md",
+      "source": "rules/java/coding-style.md",
+      "source_sha256": "4ce94d84b6d23615ae5843892bb434dcccd3173938cfffb2701a61c17d1e9a67"
+    },
+    {
+      "translation": "docs/zh-CN/rules/java/hooks.md",
+      "source": "rules/java/hooks.md",
+      "source_sha256": "b3c2e5aa683bb14a804dc9a5b59c255e5de763d35abc94daac17c859cdb6fad7"
+    },
+    {
+      "translation": "docs/zh-CN/rules/java/patterns.md",
+      "source": "rules/java/patterns.md",
+      "source_sha256": "4ff895cdd9c4d05f0d1f9651174e6050e819f1633a80bce33662a28db7532abc"
+    },
+    {
+      "translation": "docs/zh-CN/rules/java/security.md",
+      "source": "rules/java/security.md",
+      "source_sha256": "d3ca12313109954498fa2a33fd03cd9c3d3308d00d4dc4d346829f7cdd91edda"
+    },
+    {
+      "translation": "docs/zh-CN/rules/java/testing.md",
+      "source": "rules/java/testing.md",
+      "source_sha256": "7723d18a6f797a83bba9b492dac55f7e3956a40e4a527c6533aa284d54f14ee0"
     },
     {
       "translation": "docs/zh-CN/rules/kotlin/coding-style.md",
@@ -588,7 +755,7 @@
     {
       "translation": "docs/zh-CN/rules/php/coding-style.md",
       "source": "rules/php/coding-style.md",
-      "source_sha256": "1f2740a185711c2199f19f46d9be54f3f1205bf49f40f9f36924d3c41ea20fd1"
+      "source_sha256": "e6492b2e6f90a957a2f4664f2e01640fcc5ff77a81ab44c9cee42f3590be8b59"
     },
     {
       "translation": "docs/zh-CN/rules/php/hooks.md",
@@ -598,17 +765,17 @@
     {
       "translation": "docs/zh-CN/rules/php/patterns.md",
       "source": "rules/php/patterns.md",
-      "source_sha256": "c987916a7bd785d7a4cb90ef984640b9d0b0ee3b500da6c3aa174c48fd3250d4"
+      "source_sha256": "f370b0af1e12d067fb4263ad829f62fedbc37e6e9aedf698d3939b6ee69cd1ea"
     },
     {
       "translation": "docs/zh-CN/rules/php/security.md",
       "source": "rules/php/security.md",
-      "source_sha256": "bf8ca6b0931da5f39b3194d68528e47d0311c835145df4b2cf9bf7a0802d69ad"
+      "source_sha256": "c3ab3949fab80c9bde6d0f6925984dbd094e66b6a790c4cba29f6d74dd07d2b2"
     },
     {
       "translation": "docs/zh-CN/rules/php/testing.md",
       "source": "rules/php/testing.md",
-      "source_sha256": "bda6f0d18a7db94b6ab78d26cd70ca9c24a717d4cf9069185f13c5797127421f"
+      "source_sha256": "027a2fb6619fd671060a6d8283ee6cae2898eee20f26557f75626fc2d18ffdf9"
     },
     {
       "translation": "docs/zh-CN/rules/python/coding-style.md",
@@ -634,6 +801,36 @@
       "translation": "docs/zh-CN/rules/python/testing.md",
       "source": "rules/python/testing.md",
       "source_sha256": "92655aa5047ee456501ad6605c428680bac6433965f89ce531fe79627004e8c6"
+    },
+    {
+      "translation": "docs/zh-CN/rules/README.md",
+      "source": "rules/README.md",
+      "source_sha256": "207a7716438375cec5b058ca2898ef344c8f4f4d8aaa805486bc8065074e4144"
+    },
+    {
+      "translation": "docs/zh-CN/rules/rust/coding-style.md",
+      "source": "rules/rust/coding-style.md",
+      "source_sha256": "01c056bef1bf3b7ca7cfc516986c1d05bcd341c620d2a09ce75acdc2ed539f5f"
+    },
+    {
+      "translation": "docs/zh-CN/rules/rust/hooks.md",
+      "source": "rules/rust/hooks.md",
+      "source_sha256": "a7494896f1c8838f31cd72846f435e6388f91bf94e0d91eb226dd9b5b684ca55"
+    },
+    {
+      "translation": "docs/zh-CN/rules/rust/patterns.md",
+      "source": "rules/rust/patterns.md",
+      "source_sha256": "08a09f7cf61991f4bdb69e388a9df546ea490c5c822aebcdd066e227cb06e16b"
+    },
+    {
+      "translation": "docs/zh-CN/rules/rust/security.md",
+      "source": "rules/rust/security.md",
+      "source_sha256": "09c5225869c09fc605f8495ae2c3728093e3b652dcc0ab55a9186946f5c67995"
+    },
+    {
+      "translation": "docs/zh-CN/rules/rust/testing.md",
+      "source": "rules/rust/testing.md",
+      "source_sha256": "54987d858918a433aea954c272c519d7ccb113834013fb79cc77ef7e6d571c8e"
     },
     {
       "translation": "docs/zh-CN/rules/swift/coding-style.md",
@@ -686,6 +883,16 @@
       "source_sha256": "92e3d02b4fff30899bc1a2af043d74941adbf3b2c0e972d2fcd2c68c9c2ea70b"
     },
     {
+      "translation": "docs/zh-CN/SECURITY.md",
+      "source": "SECURITY.md",
+      "source_sha256": "46ccef6285397e78ce99c0341ae8ca977a53441a33f0ec609d49d72395645787"
+    },
+    {
+      "translation": "docs/zh-CN/skills/agent-eval/SKILL.md",
+      "source": "skills/agent-eval/SKILL.md",
+      "source_sha256": "200179d515f9961a469f30a4fa072b08d1527a3906ba46162b64a6011ce3c57d"
+    },
+    {
       "translation": "docs/zh-CN/skills/agent-harness-construction/SKILL.md",
       "source": "skills/agent-harness-construction/SKILL.md",
       "source_sha256": "8da8d0cd5ab9bcdfc3885818de04fbb7de18446b282138bb1b39b6863f335020"
@@ -701,6 +908,11 @@
       "source_sha256": "41239a1d15ef590efe9836f686a07697586acf8b6a2f3248b8cb55322484c6a9"
     },
     {
+      "translation": "docs/zh-CN/skills/ai-regression-testing/SKILL.md",
+      "source": "skills/ai-regression-testing/SKILL.md",
+      "source_sha256": "f859cee42144e1ba28f7adab6296ecac56151d9f042f9a6744cd218b49005af0"
+    },
+    {
       "translation": "docs/zh-CN/skills/android-clean-architecture/SKILL.md",
       "source": "skills/android-clean-architecture/SKILL.md",
       "source_sha256": "b3f84e98979fb517a4ba6e2ee44d5dd6045133285a51bbc2c892f165fb492563"
@@ -711,6 +923,11 @@
       "source_sha256": "d2b090c4319e030fddb576950400724ff12ccb285083a540b6afb62431185d25"
     },
     {
+      "translation": "docs/zh-CN/skills/architecture-decision-records/SKILL.md",
+      "source": "skills/architecture-decision-records/SKILL.md",
+      "source_sha256": "be3ce03e4ad61f5a652cfe27c666aad048d883ed00d3ef057664de8128cd0bfb"
+    },
+    {
       "translation": "docs/zh-CN/skills/article-writing/SKILL.md",
       "source": "skills/article-writing/SKILL.md",
       "source_sha256": "6ab082c7850e8e46e471026ea388024b1b9a574d84eb210fcb7391c15aa6b51a"
@@ -718,7 +935,7 @@
     {
       "translation": "docs/zh-CN/skills/autonomous-loops/SKILL.md",
       "source": "skills/autonomous-loops/SKILL.md",
-      "source_sha256": "3a3d9a1bc8f1d7e0574d2733e56d1de03ca25091a407a96404bf9b74e6ae0aac"
+      "source_sha256": "25431f497ec2b2b449ad280070e5f27566c06c2f39d9e1538996f92deee3d2f4"
     },
     {
       "translation": "docs/zh-CN/skills/backend-patterns/SKILL.md",
@@ -731,6 +948,11 @@
       "source_sha256": "f74f4f312e2cca732e3764f618caebcc43aea3e62b0a59cccca041941d7302d9"
     },
     {
+      "translation": "docs/zh-CN/skills/bun-runtime/SKILL.md",
+      "source": "skills/bun-runtime/SKILL.md",
+      "source_sha256": "2929d1f227962d86bfb2f0e45efd81590cfc90aeaad5b449f4630207e4e07204"
+    },
+    {
       "translation": "docs/zh-CN/skills/carrier-relationship-management/SKILL.md",
       "source": "skills/carrier-relationship-management/SKILL.md",
       "source_sha256": "9999c1066965db0ad0458de7b35f2d3af327096254a09b46161dbe7e372b2ee0"
@@ -741,9 +963,19 @@
       "source_sha256": "b708d716177edb76a986c20215c20b64d91f5d57a078ae0d879459a44499e202"
     },
     {
+      "translation": "docs/zh-CN/skills/claude-devfleet/SKILL.md",
+      "source": "skills/claude-devfleet/SKILL.md",
+      "source_sha256": "3ae3f7bb4ae392afe4727ee7eee3d4c9e45b2c2e6c8d722191a95a347ed7dabb"
+    },
+    {
       "translation": "docs/zh-CN/skills/clickhouse-io/SKILL.md",
       "source": "skills/clickhouse-io/SKILL.md",
       "source_sha256": "bc0d9351ae909eaa725b57ee5c4928274ed94e0b55e0fef4076cbe2844ae8a7b"
+    },
+    {
+      "translation": "docs/zh-CN/skills/codebase-onboarding/SKILL.md",
+      "source": "skills/codebase-onboarding/SKILL.md",
+      "source_sha256": "716e42006634cc5c81a744f217452d2149bf768008df30500a349e3920d1e588"
     },
     {
       "translation": "docs/zh-CN/skills/coding-standards/SKILL.md",
@@ -758,7 +990,7 @@
     {
       "translation": "docs/zh-CN/skills/configure-ecc/SKILL.md",
       "source": "skills/configure-ecc/SKILL.md",
-      "source_sha256": "dd2a1f902eb1ada0ed3cc0879304bfc3a52863c059e920d21c3d8ac9a921d0ea"
+      "source_sha256": "43dbbd0be4c10f3e1afd05d84f50c5cb8314fdf0b56435b776b37d3f3e1b8aaf"
     },
     {
       "translation": "docs/zh-CN/skills/content-engine/SKILL.md",
@@ -771,24 +1003,29 @@
       "source_sha256": "cdef26f0fc59be4320d3b8acc75a1084c06d7f8b58d635de51cd98e1d4343dbc"
     },
     {
+      "translation": "docs/zh-CN/skills/context-budget/SKILL.md",
+      "source": "skills/context-budget/SKILL.md",
+      "source_sha256": "ed3e05b80b4ecc0c40222f44c640d2e25645adda46dbfb66113e7139ab3b15ad"
+    },
+    {
       "translation": "docs/zh-CN/skills/continuous-agent-loop/SKILL.md",
       "source": "skills/continuous-agent-loop/SKILL.md",
       "source_sha256": "9a014a9cf31cbc43dc2e48e4323438de562fa28de017a9c3b9bad8863d16eb6d"
     },
     {
-      "translation": "docs/zh-CN/skills/continuous-learning/SKILL.md",
-      "source": "skills/continuous-learning/SKILL.md",
-      "source_sha256": "93924eec09b0cae312cfeda0441764602f313d1914fe899981497697fe13822d"
+      "translation": "docs/zh-CN/skills/continuous-learning-v2/agents/observer.md",
+      "source": "skills/continuous-learning-v2/agents/observer.md",
+      "source_sha256": "654f2f0fc9d9ee1ee6e16e56c24cdb7aced277cddf0dd7961e91443291a79187"
     },
     {
       "translation": "docs/zh-CN/skills/continuous-learning-v2/SKILL.md",
       "source": "skills/continuous-learning-v2/SKILL.md",
-      "source_sha256": "dbef608cea4b7b4c1911a7d6d5fb28ae0390bfa7100a1aa1138dc466de7030b7"
+      "source_sha256": "7629ed1a18ce078b57f22f407115a41a7f404aee73de17667ec5571b0001a8e4"
     },
     {
-      "translation": "docs/zh-CN/skills/continuous-learning-v2/agents/observer.md",
-      "source": "skills/continuous-learning-v2/agents/observer.md",
-      "source_sha256": "654f2f0fc9d9ee1ee6e16e56c24cdb7aced277cddf0dd7961e91443291a79187"
+      "translation": "docs/zh-CN/skills/continuous-learning/SKILL.md",
+      "source": "skills/continuous-learning/SKILL.md",
+      "source_sha256": "93924eec09b0cae312cfeda0441764602f313d1914fe899981497697fe13822d"
     },
     {
       "translation": "docs/zh-CN/skills/cost-aware-llm-pipeline/SKILL.md",
@@ -808,7 +1045,7 @@
     {
       "translation": "docs/zh-CN/skills/crosspost/SKILL.md",
       "source": "skills/crosspost/SKILL.md",
-      "source_sha256": "18196627f48f597275c36eacc518070a8aa898d08e817d536a296a369956fc45"
+      "source_sha256": "c6dc30b5634b643ca043b03b8facb1835621349519b7867f8f3a8f2705823f48"
     },
     {
       "translation": "docs/zh-CN/skills/customs-trade-compliance/SKILL.md",
@@ -816,9 +1053,14 @@
       "source_sha256": "be0030f456b7d26e608230a81f49dc2ca7ec725110d22c31f8a354bceb3ce0d1"
     },
     {
+      "translation": "docs/zh-CN/skills/data-scraper-agent/SKILL.md",
+      "source": "skills/data-scraper-agent/SKILL.md",
+      "source_sha256": "cf0e128c18d212b086645136b1708f2afe2607d1b811783dc965dc679f2a8361"
+    },
+    {
       "translation": "docs/zh-CN/skills/database-migrations/SKILL.md",
       "source": "skills/database-migrations/SKILL.md",
-      "source_sha256": "01d862480a071015cd9a7efedb4e0ec63568a1e90bbe82d4d135cad03f795309"
+      "source_sha256": "645290c5763d31649bd6c071245b53198cdaf4438d9aa091b6ee6bd3ab085fea"
     },
     {
       "translation": "docs/zh-CN/skills/deep-research/SKILL.md",
@@ -853,12 +1095,17 @@
     {
       "translation": "docs/zh-CN/skills/dmux-workflows/SKILL.md",
       "source": "skills/dmux-workflows/SKILL.md",
-      "source_sha256": "2ded928fadc25b343fb8aa1f077e88889b8a6aa3b8f8c45085c180bb5faee948"
+      "source_sha256": "d82ed05f4713fc85612485e866dcb770126e0003b6ded65f178cf2f9c1a00db7"
     },
     {
       "translation": "docs/zh-CN/skills/docker-patterns/SKILL.md",
       "source": "skills/docker-patterns/SKILL.md",
       "source_sha256": "6deb8e45b322481036cbf21c0ea61fb1427b0f47a01e675068ccdba93a1a2164"
+    },
+    {
+      "translation": "docs/zh-CN/skills/documentation-lookup/SKILL.md",
+      "source": "skills/documentation-lookup/SKILL.md",
+      "source_sha256": "89cc655f72a5e3a947e88b7bae419c068f9ea34101b3fc9e7129184432b507cd"
     },
     {
       "translation": "docs/zh-CN/skills/e2e-testing/SKILL.md",
@@ -883,12 +1130,17 @@
     {
       "translation": "docs/zh-CN/skills/exa-search/SKILL.md",
       "source": "skills/exa-search/SKILL.md",
-      "source_sha256": "9ff6b56abed8dd6f01704827802274579de9d62017c1c1d164c5b7ae93a601d8"
+      "source_sha256": "b802dedcf7a5cc5ef2dea7d3551030c705e4fe371afe052cf3e06e1d618ce0c0"
     },
     {
       "translation": "docs/zh-CN/skills/fal-ai-media/SKILL.md",
       "source": "skills/fal-ai-media/SKILL.md",
       "source_sha256": "5aa3ff04a2f7ef2fcdb5735cf8597abaa2b0c6ad3060c0cee45c665a9af5b2f1"
+    },
+    {
+      "translation": "docs/zh-CN/skills/flutter-dart-code-review/SKILL.md",
+      "source": "skills/flutter-dart-code-review/SKILL.md",
+      "source_sha256": "908b324fd2514ff0d842f20e7a8aeab6b6335f5393135d68464f267709ef8553"
     },
     {
       "translation": "docs/zh-CN/skills/foundation-models-on-device/SKILL.md",
@@ -976,6 +1228,26 @@
       "source_sha256": "46f9f7da6a6391038c11ea0c3d8ca8275077d83a3e651963c25a1f73b381e4f4"
     },
     {
+      "translation": "docs/zh-CN/skills/laravel-patterns/SKILL.md",
+      "source": "skills/laravel-patterns/SKILL.md",
+      "source_sha256": "b69b40b57bbf9bb106ed07c6f1192be9fc30ba6c63bc51bfb86fc1fdc6cd5e0a"
+    },
+    {
+      "translation": "docs/zh-CN/skills/laravel-security/SKILL.md",
+      "source": "skills/laravel-security/SKILL.md",
+      "source_sha256": "bffcb2824e7d0c4f6cd7728aa0d64aa81508e40e3c367ecf1ba2876c40c15e05"
+    },
+    {
+      "translation": "docs/zh-CN/skills/laravel-tdd/SKILL.md",
+      "source": "skills/laravel-tdd/SKILL.md",
+      "source_sha256": "09e0ee17c37b012fea4d7b8e7e2b894da749171f4e31537a6b6e5b9b192455f9"
+    },
+    {
+      "translation": "docs/zh-CN/skills/laravel-verification/SKILL.md",
+      "source": "skills/laravel-verification/SKILL.md",
+      "source_sha256": "64549241636322e25322b3c9472a020244170bc4284fdda377d3e587e4fdd0f3"
+    },
+    {
       "translation": "docs/zh-CN/skills/liquid-glass-design/SKILL.md",
       "source": "skills/liquid-glass-design/SKILL.md",
       "source_sha256": "024aa207eb3d4d31d868954a7352a40b78c61f2fd007ab8b452afb6217070f84"
@@ -991,14 +1263,29 @@
       "source_sha256": "7ef3fa13d6272fd295eeb2aca9f6a2f09f6a8270cf33b0675fc5a0018cf6e406"
     },
     {
+      "translation": "docs/zh-CN/skills/mcp-server-patterns/SKILL.md",
+      "source": "skills/mcp-server-patterns/SKILL.md",
+      "source_sha256": "8da7edb0647f1015c5d70951d66a8f9dd2108726eb1cf9949ff2874849c4a880"
+    },
+    {
       "translation": "docs/zh-CN/skills/nanoclaw-repl/SKILL.md",
       "source": "skills/nanoclaw-repl/SKILL.md",
       "source_sha256": "a917d56baef854638fd6a33c9d9ce4f819d3dd128286514ed28807d911935d27"
     },
     {
+      "translation": "docs/zh-CN/skills/nextjs-turbopack/SKILL.md",
+      "source": "skills/nextjs-turbopack/SKILL.md",
+      "source_sha256": "f65da15aabeb9dca7ae08525739e72ab16e79a78ff4004f7cab6ad2de1c2a79b"
+    },
+    {
       "translation": "docs/zh-CN/skills/nutrient-document-processing/SKILL.md",
       "source": "skills/nutrient-document-processing/SKILL.md",
-      "source_sha256": "0a3c491ccad41aeabea783e3b42a53d1b790e5b68fcacfb62d954f81cc0c1467"
+      "source_sha256": "bf680ac62b6881b4468d075178b9e8332c62c3e4618a64b82b64742fbd7ded65"
+    },
+    {
+      "translation": "docs/zh-CN/skills/nuxt4-patterns/SKILL.md",
+      "source": "skills/nuxt4-patterns/SKILL.md",
+      "source_sha256": "a5282f46c6738b1d83067ee77a5a251bfc22da7735c7b7442acc15f20d2e8659"
     },
     {
       "translation": "docs/zh-CN/skills/perl-patterns/SKILL.md",
@@ -1018,7 +1305,7 @@
     {
       "translation": "docs/zh-CN/skills/plankton-code-quality/SKILL.md",
       "source": "skills/plankton-code-quality/SKILL.md",
-      "source_sha256": "e75be8a685f21a10c12e137a6500e349c242791c24d98dd118d5c1845f2070c2"
+      "source_sha256": "e8dbe35029c890d9ec01cde3b499deec2e8c2a43c2821ad239b0a386838e4ecf"
     },
     {
       "translation": "docs/zh-CN/skills/postgres-patterns/SKILL.md",
@@ -1051,6 +1338,11 @@
       "source_sha256": "b304a8c503af32644f97a889c5545ee4f90e91980462ad4ce33fee3dea6f414f"
     },
     {
+      "translation": "docs/zh-CN/skills/pytorch-patterns/SKILL.md",
+      "source": "skills/pytorch-patterns/SKILL.md",
+      "source_sha256": "22b76f559f17d4b0e44eda71d353065e5da181203d165546edb08c16cc362d85"
+    },
+    {
       "translation": "docs/zh-CN/skills/quality-nonconformance/SKILL.md",
       "source": "skills/quality-nonconformance/SKILL.md",
       "source_sha256": "c2cfc8c7f53ea2710d2ea8c2410dfc52c3cc80fd92b2fd49ccd3cec557113623"
@@ -1071,19 +1363,34 @@
       "source_sha256": "0662462b5fc12f35ed2adf0c27ee3bc4b7f96ba78a9aeeb131f57bf148972ffc"
     },
     {
+      "translation": "docs/zh-CN/skills/rules-distill/SKILL.md",
+      "source": "skills/rules-distill/SKILL.md",
+      "source_sha256": "5c457a1789f7312436656536d0799008850c9cf5206c031d399cba64f76fa488"
+    },
+    {
+      "translation": "docs/zh-CN/skills/rust-patterns/SKILL.md",
+      "source": "skills/rust-patterns/SKILL.md",
+      "source_sha256": "2c8a7b1110a7c8d9f659a26f34db3cb774c592ca89c928df6d71255aa3eaafc6"
+    },
+    {
+      "translation": "docs/zh-CN/skills/rust-testing/SKILL.md",
+      "source": "skills/rust-testing/SKILL.md",
+      "source_sha256": "e55dc89ab64a49f9cec0d6d15b14a21f5c096f342e0046799f47b7fa2d22e770"
+    },
+    {
       "translation": "docs/zh-CN/skills/search-first/SKILL.md",
       "source": "skills/search-first/SKILL.md",
       "source_sha256": "752b24a8a06b3df1ce35598a789af92a72b61ecbb3c73e69d9af38708015d903"
     },
     {
-      "translation": "docs/zh-CN/skills/security-review/SKILL.md",
-      "source": "skills/security-review/SKILL.md",
-      "source_sha256": "f7530a63c7561bd1036cf4cd4d5939b04ac7a9e919ceefeb4c1a3586eb907d82"
-    },
-    {
       "translation": "docs/zh-CN/skills/security-review/cloud-infrastructure-security.md",
       "source": "skills/security-review/cloud-infrastructure-security.md",
       "source_sha256": "98419e575de23d9ea9eef052556fcf8502cf19f307af0a0597997fd1ddd0d6dd"
+    },
+    {
+      "translation": "docs/zh-CN/skills/security-review/SKILL.md",
+      "source": "skills/security-review/SKILL.md",
+      "source_sha256": "f7530a63c7561bd1036cf4cd4d5939b04ac7a9e919ceefeb4c1a3586eb907d82"
     },
     {
       "translation": "docs/zh-CN/skills/security-scan/SKILL.md",
@@ -1146,6 +1453,11 @@
       "source_sha256": "0c0d287804b33a98bbba2df8169da80403b29fcae4a45aca96522e6c8d022d17"
     },
     {
+      "translation": "docs/zh-CN/skills/team-builder/SKILL.md",
+      "source": "skills/team-builder/SKILL.md",
+      "source_sha256": "eae4647e11db69679b8cf1ae98766c2a4dff0a025e0b2cddd74b26df02944276"
+    },
+    {
       "translation": "docs/zh-CN/skills/verification-loop/SKILL.md",
       "source": "skills/verification-loop/SKILL.md",
       "source_sha256": "01a9ae310ad4426bb05660dda6cefdeaac9513417585c09c8bb1b94738649a78"
@@ -1154,11 +1466,6 @@
       "translation": "docs/zh-CN/skills/video-editing/SKILL.md",
       "source": "skills/video-editing/SKILL.md",
       "source_sha256": "ce3ab2e576e0863086453b78ca171e4a998f4d56d2b4c59fc530f920d88f5bf1"
-    },
-    {
-      "translation": "docs/zh-CN/skills/videodb/SKILL.md",
-      "source": "skills/videodb/SKILL.md",
-      "source_sha256": "5ef039ce34632de4faaba3029bcb122909d5b10ef0aee077c4dd8318277799e9"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/api-reference.md",
@@ -1211,6 +1518,11 @@
       "source_sha256": "b64966f872d036191747050c5c8121601f54ce8099716665cf09bc0a66c69905"
     },
     {
+      "translation": "docs/zh-CN/skills/videodb/SKILL.md",
+      "source": "skills/videodb/SKILL.md",
+      "source_sha256": "85e9391e62346721a6248c952ff196e966f2907991a56e98b7d760585893b263"
+    },
+    {
       "translation": "docs/zh-CN/skills/visa-doc-translate/README.md",
       "source": "skills/visa-doc-translate/README.md",
       "source_sha256": "d17f5db284f703ee0d432a4b73886780b9c9c0f7dfe1d9c46c21d6b352bca642"
@@ -1223,7 +1535,17 @@
     {
       "translation": "docs/zh-CN/skills/x-api/SKILL.md",
       "source": "skills/x-api/SKILL.md",
-      "source_sha256": "422f2450c510c4c845c9669b5870558e03027815be9e4f11d59ff5f391e92ba5"
+      "source_sha256": "f20c06afe00e5de48f74f5bcd4293590516a4d9acef421d61669aeccd44e0994"
+    },
+    {
+      "translation": "docs/zh-CN/SPONSORING.md",
+      "source": "SPONSORING.md",
+      "source_sha256": "c6472611950ba42767ee0fa03ca0cc9e75dcff6bda606f8349d082be0a817b41"
+    },
+    {
+      "translation": "docs/zh-CN/SPONSORS.md",
+      "source": "SPONSORS.md",
+      "source_sha256": "293816d7715eb2c8e62d0b3ede5fbfede781b45f813ae315b514ac0efa840df7"
     },
     {
       "translation": "docs/zh-CN/the-longform-guide.md",
@@ -1232,18 +1554,24 @@
     },
     {
       "translation": "docs/zh-CN/the-openclaw-guide.md",
-      "source": "the-openclaw-guide.md",
-      "source_sha256": "52d776829d0760db8c41abcd21eb2da27d41c16eaa0ce94696e296978292f79e"
+      "source": null,
+      "source_sha256": null,
+      "notes": "上游仅提供中文文件，当前同步按中文原稿镜像保留。"
     },
     {
       "translation": "docs/zh-CN/the-security-guide.md",
       "source": "the-security-guide.md",
-      "source_sha256": "ec76f66f8faaf0709e5a5ba60e39d22dc7d07a7b8a4ce9b563706fbdea43a7e1"
+      "source_sha256": "094e72eee29d5c8dedd31ac81460ffd99417e5e53f4f4a3ea8cb212a1b7c7607"
     },
     {
       "translation": "docs/zh-CN/the-shortform-guide.md",
       "source": "the-shortform-guide.md",
       "source_sha256": "780261fb326500c94c2a33eb2639f4bad8251d571916dd8df87a5562604ebef4"
+    },
+    {
+      "translation": "docs/zh-CN/TROUBLESHOOTING.md",
+      "source": "TROUBLESHOOTING.md",
+      "source_sha256": "3fb114bc9556d61c2994a7d849ceb829c4c0056907697834e74bdf9bddb63555"
     }
   ]
 }

@@ -21,9 +21,14 @@
 - 优先先回收你本机已经存在的中文译稿，再补缺口
 - 当前已汇总：
   - `superpowers`：`skills/*/SKILL.md`
+  - `byheaven-skills`：仓库级 README、`newproject` 中文 README / SKILL，以及 `xhs-publisher` 中文 README / SKILL
+  - `happy-claude-skills`：仓库级 README、`browser` / `docx-format-replicator` / `video-processor` / `wechat-article-writer` 的核心文档与 `docx-format-replicator` 的两份 schema
   - `everything-claude-code`：`README.zh-CN.md` 与 `docs/zh-CN/**`
   - `oh-my-opencode`：`README.zh-cn.md` 与一份中文能力拆解稿
-- `claudeception`：`README.zh-CN.md`、`SKILL.md`、`WARP.md`、`resources/research-references.md`、`resources/skill-template.md` 与 `examples/*/SKILL.md`
+  - `claudeception`：`README.zh-CN.md`、`SKILL.md`、`WARP.md`、`resources/research-references.md`、`resources/skill-template.md` 与 `examples/*/SKILL.md`
+  - `agency-agents`：`strategy/EXECUTIVE-BRIEF.md`、`strategy/QUICKSTART.md` 与若干 `integrations/*/README.md` 首批译稿
+  - `alirezarezvani-claude-skills`：`README.zh-CN.md`、仓库级 `CLAUDE.md` / `GEMINI.md`、`orchestration/ORCHESTRATION.md` 与 8 个顶层 domain `SKILL.md`
+  - `gstack`：`README.zh-CN.md`，先覆盖仓库定位、安装方式、sprint 主线和关键 skill 总览
 
 ## 同步流程
 

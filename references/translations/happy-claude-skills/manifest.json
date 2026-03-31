@@ -1,0 +1,59 @@
+{
+  "repo": "happy-claude-skills",
+  "source": {
+    "path": "references/repos/happy-claude-skills",
+    "remote": "https://github.com/iamzhihuix/happy-claude-skills.git",
+    "branch": "main",
+    "head_commit": "cffc6762831eade80ed101346e1e53c0b579011e"
+  },
+  "scope": {
+    "include": [
+      "README.md -> README.zh-CN.md",
+      "skills/browser/SKILL.md",
+      "skills/docx-format-replicator/SKILL.md",
+      "skills/docx-format-replicator/references/content_data_schema.md",
+      "skills/docx-format-replicator/references/format_config_schema.md",
+      "skills/video-processor/SKILL.md",
+      "skills/wechat-article-writer/SKILL.md"
+    ],
+    "notes": "当前收录 happy-claude-skills 的仓库级 README、4 个核心 skill 文档，以及 docx-format-replicator 的两份 schema 参考文档。wechat-article-writer 源文件已是中文，按中文核心 prompt 资产镜像收录。"
+  },
+  "translations": [
+    {
+      "source": "README.md",
+      "translation": "README.zh-CN.md",
+      "source_sha256": "4170777da62c269ed47815def10b9290c46b913d055e2348233ea9fbec8c3243"
+    },
+    {
+      "source": "skills/browser/SKILL.md",
+      "translation": "skills/browser/SKILL.md",
+      "source_sha256": "0d88355cd9743064132e4c1e07310d82115e0f05ef7972cb8a24f3e8ab47bfee"
+    },
+    {
+      "source": "skills/docx-format-replicator/SKILL.md",
+      "translation": "skills/docx-format-replicator/SKILL.md",
+      "source_sha256": "1f65319200fa94bafe9f50642856fe52c8d88ee3957aeb90bb446063c2cd2e9c"
+    },
+    {
+      "source": "skills/docx-format-replicator/references/content_data_schema.md",
+      "translation": "skills/docx-format-replicator/references/content_data_schema.md",
+      "source_sha256": "7dd4d4a2583bdb9d5550545034a9676ed666f6ef17ed759edc15be6c8236ff0a"
+    },
+    {
+      "source": "skills/docx-format-replicator/references/format_config_schema.md",
+      "translation": "skills/docx-format-replicator/references/format_config_schema.md",
+      "source_sha256": "b2c820d8116d3f4cff55cc1e72550414aea208e0f73187d021b3276269fc6bc1"
+    },
+    {
+      "source": "skills/video-processor/SKILL.md",
+      "translation": "skills/video-processor/SKILL.md",
+      "source_sha256": "ed1ad7d08ef91f83fd65eaf45319d98386cb634931259648a2464d869f2e10a2"
+    },
+    {
+      "source": "skills/wechat-article-writer/SKILL.md",
+      "translation": "skills/wechat-article-writer/SKILL.md",
+      "source_sha256": "01682853fc3219624df12aa8d1ec1af5dc7c558b5a7a2cf4296d7cbbba99480e",
+      "notes": "源文件已为中文原文，按中文核心 prompt 资产镜像收录。"
+    }
+  ]
+}

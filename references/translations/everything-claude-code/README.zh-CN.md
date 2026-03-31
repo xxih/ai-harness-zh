@@ -1,208 +1,128 @@
-**语言：** English | [Português (Brasil)](docs/pt-BR/README.md) | [简体中文](README.zh-CN.md) | [繁體中文](docs/zh-TW/README.md) | [日本語](docs/ja-JP/README.md) | [한국어](docs/ko-KR/README.md) | [Türkçe](docs/tr/README.md)
-
 # Everything Claude Code
 
 [![Stars](https://img.shields.io/github/stars/affaan-m/everything-claude-code?style=flat)](https://github.com/affaan-m/everything-claude-code/stargazers)
-[![Forks](https://img.shields.io/github/forks/affaan-m/everything-claude-code?style=flat)](https://github.com/affaan-m/everything-claude-code/network/members)
-[![Contributors](https://img.shields.io/github/contributors/affaan-m/everything-claude-code?style=flat)](https://github.com/affaan-m/everything-claude-code/graphs/contributors)
-[![npm ecc-universal](https://img.shields.io/npm/dw/ecc-universal?label=ecc-universal%20weekly%20downloads&logo=npm)](https://www.npmjs.com/package/ecc-universal)
-[![npm ecc-agentshield](https://img.shields.io/npm/dw/ecc-agentshield?label=ecc-agentshield%20weekly%20downloads&logo=npm)](https://www.npmjs.com/package/ecc-agentshield)
-[![GitHub App Install](https://img.shields.io/badge/GitHub%20App-150%20installs-2ea44f?logo=github)](https://github.com/marketplace/ecc-tools)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Shell](https://img.shields.io/badge/-Shell-4EAA25?logo=gnu-bash&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
 ![Go](https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white)
-![Java](https://img.shields.io/badge/-Java-ED8B00?logo=openjdk&logoColor=white)
 ![Perl](https://img.shields.io/badge/-Perl-39457E?logo=perl&logoColor=white)
 ![Markdown](https://img.shields.io/badge/-Markdown-000000?logo=markdown&logoColor=white)
-
-> **50K+ stars** | **6K+ forks** | **30 contributors** | **7 languages supported** | **Anthropic Hackathon Winner**
 
 ---
 
 <div align="center">
 
-**🌐 Language / 语言 / 語言 / Dil**
+**🌐 Language / 语言 / 語言**
 
-[**English**](README.md) | [Português (Brasil)](docs/pt-BR/README.md) | [简体中文](README.zh-CN.md) | [繁體中文](docs/zh-TW/README.md) | [日本語](docs/ja-JP/README.md) | [한국어](docs/ko-KR/README.md) | [Türkçe](docs/tr/README.md)
+[**English**](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](docs/zh-TW/README.md) | [日本語](docs/ja-JP/README.md) | [한국어](docs/ko-KR/README.md)
 
 </div>
 
 ---
 
-**适用于 AI 智能体平台的性能优化系统。来自 Anthropic 黑客马拉松获胜者。**
+**来自 Anthropic 黑客马拉松获胜者的完整 Claude Code 配置集合。**
 
-不只是配置，而是一整套系统：skills、instincts、记忆优化、持续学习、安全扫描，以及 research-first 开发。这里沉淀的是经过 10 多个月高频真实产品开发演化出的生产级 agents、hooks、commands、rules 和 MCP 配置。
-
-适用于 **Claude Code**、**Codex**、**Cowork** 以及其他 AI 智能体平台。
+生产级代理、技能、钩子、命令、规则和 MCP 配置，经过 10 多个月构建真实产品的密集日常使用而演化。
 
 ---
 
 ## 指南
 
-这个仓库只包含原始代码，完整方法论请看配套指南。
+这个仓库只包含原始代码。指南解释了一切。
 
 <table>
 <tr>
-<td width="33%">
+<td width="50%">
 <a href="https://x.com/affaanmustafa/status/2012378465664745795">
-<img src="./assets/images/guides/shorthand-guide.png" alt="Everything Claude Code 速记指南" />
+<img src="https://github.com/user-attachments/assets/1a471488-59cc-425b-8345-5245c7efbcef" alt="The Shorthand Guide to Everything Claude Code" />
 </a>
 </td>
-<td width="33%">
+<td width="50%">
 <a href="https://x.com/affaanmustafa/status/2014040193557471352">
-<img src="./assets/images/guides/longform-guide.png" alt="Everything Claude Code 详细指南" />
-</a>
-</td>
-<td width="33%">
-<a href="https://x.com/affaanmustafa/status/2033263813387223421">
-<img src="./assets/images/security/security-guide-header.png" alt="Everything Agentic Security 速记指南" />
+<img src="https://github.com/user-attachments/assets/c9ca43bc-b149-427f-b551-af6840c368f0" alt="The Longform Guide to Everything Claude Code" />
 </a>
 </td>
 </tr>
 <tr>
-<td align="center"><b>Shorthand Guide</b><br/>安装、基础与理念。<b>建议先读。</b></td>
-<td align="center"><b>Longform Guide</b><br/>令牌优化、记忆持久化、评估与并行化。</td>
-<td align="center"><b>Security Guide</b><br/>攻击面、沙箱、净化、CVE 与 AgentShield。</td>
+<td align="center"><b>精简指南</b><br/>设置、基础、理念。<b>先读这个。</b></td>
+<td align="center"><b>详细指南</b><br/>Token 优化、内存持久化、评估、并行化。</td>
 </tr>
 </table>
 
 | 主题 | 你将学到什么 |
 |-------|-------------------|
 | Token 优化 | 模型选择、系统提示精简、后台进程 |
-| 记忆持久化 | 自动在会话间保存/加载上下文的 hooks |
-| 持续学习 | 从会话中自动提取模式并沉淀为可复用 skills |
-| 验证循环 | checkpoint 与 continuous eval、grader 类型、pass@k 指标 |
-| 并行化 | Git worktree、级联方法、何时扩展实例 |
-| 子代理编排 | 上下文问题与迭代检索模式 |
-
----
-
-## 最新动态
-
-### v1.9.0 — 选择性安装与语言扩展（2026 年 3 月）
-
-- **选择性安装架构**：基于 manifest 的安装流水线，引入 `install-plan.js` 与 `install-apply.js`，支持按组件定向安装，并通过状态仓跟踪已安装内容。
-- **6 个新 agent**：`typescript-reviewer`、`pytorch-build-resolver`、`java-build-resolver`、`java-reviewer`、`kotlin-reviewer`、`kotlin-build-resolver`，将语言覆盖扩展到 10 种。
-- **一批新 skills**：包括 `pytorch-patterns`、`documentation-lookup`、`bun-runtime`、`nextjs-turbopack`、8 个运营类 skills，以及 `mcp-server-patterns`。
-- **会话与状态基础设施**：新增 SQLite state store、query CLI、session adapters，以及面向自我改进 skill 的演化基础。
-- **编排能力增强**：`harness-audit` 评分改为确定性，编排状态与 launcher 兼容性加强，observer 循环加入 5 层防护。
-- **Observer 稳定性提升**：修复内存膨胀，引入节流与 tail sampling，补齐沙箱访问、lazy-start 与重入保护。
-- **12 个语言生态**：新增 Java、PHP、Perl、Kotlin/Android/KMP、C++、Rust 规则，与既有 TypeScript、Python、Go 及 common 规则并列。
-- **社区贡献扩展**：包括韩文与中文翻译、安全 hook、biome hook 优化、视频处理 skills、运营类 skills、PowerShell 安装器与 Antigravity IDE 支持。
-- **CI 加固**：修复 19 个测试失败，补上 catalog 计数校验、安装 manifest 校验，并让全量测试重新转绿。
-
-### v1.8.0 — 平台性能系统（2026 年 3 月）
-
-- **平台优先发布**：ECC 被明确定位为 AI 智能体平台性能系统，而不只是配置集合。
-- **Hook 可靠性重构**：加入 SessionStart 根目录回退、Stop 阶段会话摘要，以及以脚本替代脆弱单行 hook。
-- **Hook 运行时控制**：支持 `ECC_HOOK_PROFILE=minimal|standard|strict` 和 `ECC_DISABLED_HOOKS=...`，无需改文件即可临时门控。
-- **新增平台命令**：`/harness-audit`、`/loop-start`、`/loop-status`、`/quality-gate`、`/model-route`。
-- **NanoClaw v2**：模型路由、skill 热加载、会话分支/搜索/导出/压缩/指标。
-- **跨平台一致性增强**：Claude Code、Cursor、OpenCode 和 Codex app/CLI 的行为进一步收敛。
-- **997 项内部测试通过**：hook/runtime 重构与兼容性调整后，全套测试恢复为绿色。
-
-### v1.7.0 — 跨平台扩展与演示文稿生成器（2026 年 2 月）
-
-- **Codex 应用 + CLI 支持**：通过 `AGENTS.md` 直接支持 Codex，并补充安装器目标与 Codex 文档。
-- **`frontend-slides` skill**：零依赖 HTML 幻灯片生成器，附带 PPTX 转换指导与严格视口适配规则。
-- **5 个通用业务/内容 skills**：`article-writing`、`content-engine`、`market-research`、`investor-materials`、`investor-outreach`。
-- **更广泛的工具覆盖**：进一步增强对 Cursor、Codex 与 OpenCode 的支持。
-- **992 项内部测试**：扩展了对插件、hooks、skills 与打包层的验证与回归覆盖。
-
-### v1.6.0 — Codex CLI、AgentShield 与 Marketplace（2026 年 2 月）
-
-- **Codex CLI 支持**：新增 `/codex-setup`，生成适配 OpenAI Codex CLI 的 `codex.md`。
-- **7 个新 skills**：`search-first`、`swift-actor-persistence`、`swift-protocol-di-testing`、`regex-vs-llm-structured-text`、`content-hash-cache-pattern`、`cost-aware-llm-pipeline`、`skill-stocktake`。
-- **AgentShield 集成**：`/security-scan` 可直接在 Claude Code 中运行 AgentShield；当时测试数为 1282，规则数为 102。
-- **GitHub Marketplace**：ECC Tools GitHub App 已上线 <https://github.com/marketplace/ecc-tools>。
-- **30+ 社区 PR 合并**：来自 30 位贡献者，覆盖 6 种语言。
-- **978 项内部测试**：扩展 agents、skills、commands、hooks 与 rules 的验证套件。
-
-完整变更日志请参见 [Releases](https://github.com/affaan-m/everything-claude-code/releases)。
+| 内存持久化 | 自动跨会话保存/加载上下文的钩子 |
+| 持续学习 | 从会话中自动提取模式到可重用的技能 |
+| 验证循环 | 检查点 vs 持续评估、评分器类型、pass@k 指标 |
+| 并行化 | Git worktrees、级联方法、何时扩展实例 |
+| 子代理编排 | 上下文问题、迭代检索模式 |
 
 ---
 
 ## 🚀 快速开始
 
-2 分钟内上手：
+在 2 分钟内快速上手：
 
-### 第 1 步：安装插件
+### 第一步：安装插件
 
 ```bash
-# 添加 marketplace
+# 添加市场
 /plugin marketplace add affaan-m/everything-claude-code
 
 # 安装插件
 /plugin install everything-claude-code@everything-claude-code
 ```
 
-### 第 2 步：安装规则（必需）
+### 第二步：安装规则（必需）
 
-> ⚠️ **重要：** Claude Code 插件无法自动分发 `rules`，需要手动安装。
+> ⚠️ **重要提示：** Claude Code 插件无法自动分发 `rules`，需要手动安装：
 
 ```bash
-# 先克隆仓库
+# 首先克隆仓库
 git clone https://github.com/affaan-m/everything-claude-code.git
-cd everything-claude-code
 
-# 安装依赖（任选一种包管理器）
-npm install        # 或 pnpm install | yarn install | bun install
-
-# macOS/Linux
-./install.sh typescript    # 或 python / golang / swift / php
-# ./install.sh typescript python golang swift php
-# ./install.sh --target cursor typescript
-# ./install.sh --target antigravity typescript
+# 复制规则（通用 + 语言特定）
+cp -r everything-claude-code/rules/common/* ~/.claude/rules/
+cp -r everything-claude-code/rules/typescript/* ~/.claude/rules/   # 选择你的技术栈
+cp -r everything-claude-code/rules/python/* ~/.claude/rules/
+cp -r everything-claude-code/rules/golang/* ~/.claude/rules/
+cp -r everything-claude-code/rules/perl/* ~/.claude/rules/
 ```
 
-```powershell
-# Windows PowerShell
-.\install.ps1 typescript   # 或 python / golang / swift / php
-# .\install.ps1 typescript python golang swift php
-# .\install.ps1 --target cursor typescript
-# .\install.ps1 --target antigravity typescript
-
-# 通过 npm 安装时，也可使用跨平台入口
-npx ecc-install typescript
-```
-
-手动安装说明请查看 `rules/README.md`。
-
-### 第 3 步：开始使用
+### 第三步：开始使用
 
 ```bash
-# 尝试一个命令（插件安装使用带命名空间的形式）
-/everything-claude-code:plan "Add user authentication"
+# 尝试一个命令（插件安装使用命名空间形式）
+/everything-claude-code:plan "添加用户认证"
 
-# 手动安装（Option 2）时可使用短形式：
-# /plan "Add user authentication"
+# 手动安装（选项2）使用简短形式：
+# /plan "添加用户认证"
 
 # 查看可用命令
 /plugin list everything-claude-code@everything-claude-code
 ```
 
-✨ **完成。** 现在可使用 28 个 agents、119 个 skills 和 60 个 commands。
+✨ **完成！** 你现在可以使用 13 个代理、43 个技能和 31 个命令。
 
 ---
 
 ## 🌐 跨平台支持
 
-现在已完整支持 **Windows、macOS 和 Linux**，并与 Cursor、OpenCode、Antigravity 等主流 IDE 以及 CLI 平台保持紧密集成。所有 hooks 与脚本都已改写为 Node.js，以提高跨平台兼容性。
+此插件现在完全支持 **Windows、macOS 和 Linux**。所有钩子和脚本都已用 Node.js 重写，以实现最大的兼容性。
 
 ### 包管理器检测
 
-插件会按以下优先级自动检测你偏好的包管理器（npm、pnpm、yarn、bun）：
+插件自动检测你首选的包管理器（npm、pnpm、yarn 或 bun），优先级如下：
 
-1. **环境变量**：`CLAUDE_PACKAGE_MANAGER`
-2. **项目配置**：`.claude/package-manager.json`
-3. **package.json**：`packageManager` 字段
-4. **锁文件**：`package-lock.json`、`yarn.lock`、`pnpm-lock.yaml`、`bun.lockb`
-5. **全局配置**：`~/.claude/package-manager.json`
-6. **回退**：第一个可用的包管理器
+1. **环境变量**: `CLAUDE_PACKAGE_MANAGER`
+2. **项目配置**: `.claude/package-manager.json`
+3. **package.json**: `packageManager` 字段
+4. **锁文件**: 从 package-lock.json、yarn.lock、pnpm-lock.yaml 或 bun.lockb 检测
+5. **全局配置**: `~/.claude/package-manager.json`
+6. **回退**: 第一个可用的包管理器
 
-设置方式如下：
+要设置你首选的包管理器：
 
 ```bash
 # 通过环境变量
@@ -218,19 +138,7 @@ node scripts/setup-package-manager.js --project bun
 node scripts/setup-package-manager.js --detect
 ```
 
-也可以直接使用 Claude Code 中的 `/setup-pm`。
-
-### Hook 运行时控制
-
-你可以通过运行时标志临时调整严格度或禁用指定 hooks：
-
-```bash
-# Hook 严格度配置（默认：standard）
-export ECC_HOOK_PROFILE=standard
-
-# 用逗号分隔要禁用的 hook ID
-export ECC_DISABLED_HOOKS="pre:bash:tmux-reminder,post:edit:typecheck"
-```
+或在 Claude Code 中使用 `/setup-pm` 命令。
 
 ---
 
