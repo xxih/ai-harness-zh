@@ -1,28 +1,25 @@
 {
   "repo": "oh-my-opencode",
   "source": {
-    "path": "/Users/xxih/workspace/oh-my-opencode",
+    "path": "references/repos/oh-my-opencode",
     "remote": "https://github.com/code-yeongyu/oh-my-opencode.git",
     "branch": "main",
-    "head_commit": "a5db86ee1593cdf6379db9400ddce5ee783c9f5d"
-  },
-  "canonical_reference": {
-    "path": "references/repos/oh-my-opencode",
     "head_commit": "5073efef485611eb5470a7efdf96354ec00f8fa3",
-    "notes": "后续日常对照仍优先看当前仓库内的 references/repos 副本。"
+    "notes": "后续日常巡检统一以当前仓库内的 references/repos/oh-my-opencode 作为唯一对照基线。"
   },
   "scope": {
     "include": [
       "README.zh-cn.md",
       "docs/oh-my-opencode-capability-breakdown.zh-cn.md"
     ],
-    "notes": "README 是现成中文译稿；能力拆解文档是本机已有的中文提炼稿。"
+    "notes": "README 是现成中文译稿；能力拆解文档是本机已有的中文提炼稿。README.zh-cn.md 当前作为中文参考资产保留，不承诺与 canonical README.md 严格逐段镜像。"
   },
   "translations": [
     {
-      "source": "README.md",
+      "source": null,
       "translation": "README.zh-cn.md",
-      "source_sha256": "97b667828de50fff7979579dec0badc7805748d4439f78009db3d128be76fe73"
+      "source_sha256": null,
+      "notes": "现成中文 README；后续统一以 references/repos/oh-my-opencode 为基线审阅，但当前不把它标记为与某一版 README.md 严格逐段对照。"
     },
     {
       "source": null,

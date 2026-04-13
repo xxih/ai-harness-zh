@@ -24,14 +24,19 @@
       "strategy/runbooks/scenario-enterprise-feature.md",
       "strategy/runbooks/scenario-marketing-campaign.md",
       "strategy/runbooks/scenario-incident-response.md",
+      "integrations/README.md",
+      "integrations/antigravity/README.md",
       "integrations/aider/README.md",
       "integrations/claude-code/README.md",
       "integrations/cursor/README.md",
+      "integrations/gemini-cli/README.md",
       "integrations/github-copilot/README.md",
       "integrations/mcp-memory/README.md",
-      "integrations/openclaw/README.md"
+      "integrations/opencode/README.md",
+      "integrations/openclaw/README.md",
+      "integrations/windsurf/README.md"
     ],
-    "notes": "当前覆盖 agency-agents 的战略导读、完整 NEXUS 战略文档、coordination 模板、7 份 playbooks、4 份 runbooks 与短集成说明，暂不覆盖整份 README 与各 division 的 agent prompt。"
+    "notes": "当前覆盖 agency-agents 的战略导读、完整 NEXUS 战略文档、coordination 模板、7 份 playbooks、4 份 runbooks，以及 integrations 目录下全部 README 说明，暂不覆盖整份根 README 与各 division 的 agent prompt。"
   },
   "translations": [
     {
@@ -115,6 +120,16 @@
       "source_sha256": "b08fe23eddcc6f5038a4a8e33930f7d40d67b6916144076667eb6d50ce604fff"
     },
     {
+      "source": "integrations/README.md",
+      "translation": "integrations/README.md",
+      "source_sha256": "497acb01b68469fa182d2f56e105b5f3bc4ba9e0e633b9013b3eea4a927c0df6"
+    },
+    {
+      "source": "integrations/antigravity/README.md",
+      "translation": "integrations/antigravity/README.md",
+      "source_sha256": "806941ccd528a978504f07603b51018394d680403658be6d31e81e7eadebe111"
+    },
+    {
       "source": "integrations/aider/README.md",
       "translation": "integrations/aider/README.md",
       "source_sha256": "3e3f31ba521db394d350453bb6765f562c375db66d92220e77b13c92e72ac06f"
@@ -130,6 +145,11 @@
       "source_sha256": "8eeab520b7d7da3f78a84fcb24cf15eaecfb18b4aff41ee755b0bee46efacef9"
     },
     {
+      "source": "integrations/gemini-cli/README.md",
+      "translation": "integrations/gemini-cli/README.md",
+      "source_sha256": "9f54cd4d8b4ef54a552bbd7ab06f79f1f9b3fd92aeb5ae8c47c720829af1b9ac"
+    },
+    {
       "source": "integrations/github-copilot/README.md",
       "translation": "integrations/github-copilot/README.md",
       "source_sha256": "81c59088b32258ba22ae553997f7b9e9c2d33268871ab914747ce5d1015ec7f4"
@@ -140,9 +160,19 @@
       "source_sha256": "e3252682132b4aa6f95f17fb4888cf8722b8bd9c747af403e3d6651b1dd57cf4"
     },
     {
+      "source": "integrations/opencode/README.md",
+      "translation": "integrations/opencode/README.md",
+      "source_sha256": "4db4e70ae72fd43f5f5779bb9070bc12dc6b6167fb8b716f78d29fef5eb1ff13"
+    },
+    {
       "source": "integrations/openclaw/README.md",
       "translation": "integrations/openclaw/README.md",
       "source_sha256": "4a2a0d6fb6d2ec7a360d3e023ab5e333c3508e4a6d4312120e28eba1aef6d00a"
+    },
+    {
+      "source": "integrations/windsurf/README.md",
+      "translation": "integrations/windsurf/README.md",
+      "source_sha256": "93b3c1dc2ac3c884f32f0469ada9f268a399bc7f423402b29ea4dc84482fb19a"
     }
   ]
 }

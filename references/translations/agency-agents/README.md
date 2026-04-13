@@ -15,16 +15,18 @@
   - `strategy/runbooks/scenario-marketing-campaign.md`
   - `strategy/runbooks/scenario-incident-response.md`
   - `integrations/aider/README.md`
+  - `integrations/README.md`
+  - `integrations/antigravity/README.md`
   - `integrations/claude-code/README.md`
   - `integrations/cursor/README.md`
+  - `integrations/gemini-cli/README.md`
   - `integrations/github-copilot/README.md`
   - `integrations/mcp-memory/README.md`
+  - `integrations/opencode/README.md`
   - `integrations/openclaw/README.md`
+  - `integrations/windsurf/README.md`
 - 当前不覆盖：
   - 根目录 `README.md` 的整份逐段翻译
-  - `strategy/nexus-strategy.md`
-  - `strategy/playbooks/**`
-  - `strategy/runbooks/**`
   - 各 division 下的大批 agent prompt
   - `integrations/aider/CONVENTIONS.md` 这类生成型聚合文件
 
@@ -51,8 +53,8 @@
   - 覆盖从 discovery 到 operate 的 7 阶段执行手册
 - `strategy/runbooks/*.md`
   - 针对 Startup MVP、Enterprise Feature、Marketing Campaign、Incident Response 的场景化流程
-- `integrations/*/README.md`
-  - Aider、Claude Code、Cursor、GitHub Copilot、MCP Memory、OpenClaw 的简要接入说明
+- `integrations/README.md` 与 `integrations/*/README.md`
+  - integrations 总览页与全部工具接入说明
 
 ## 同步规则
 
