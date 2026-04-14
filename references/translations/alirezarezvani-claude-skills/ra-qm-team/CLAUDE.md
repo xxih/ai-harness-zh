@@ -1,6 +1,6 @@
 # Regulatory Affairs & Quality Management Skills - Claude Code Guidance
 
-本指南覆盖 12 个面向 HealthTech / MedTech 公司的生产级 RA/QM 合规 skill。
+本指南覆盖 13 个面向 HealthTech / MedTech 公司的生产级 RA/QM 合规 skill。
 
 ## RA/QM Skills 概览
 
@@ -25,13 +25,14 @@
 - `mdr-745-specialist`：EU MDR 2017/745 合规、技术文档
 - `fda-consultant-specialist`：FDA 510(k)、PMA、QSR 合规
 
-**Audit & Compliance（3 个 skills）：**
+**Audit & Compliance（4 个 skills）：**
 
 - `qms-audit-expert`：内审、ISO 13485 认证
 - `isms-audit-expert`：ISO 27001 审计、安全评估
 - `gdpr-dsgvo-expert`：GDPR / DSGVO 合规、数据隐私
+- `soc2-compliance`：SOC 2 Type I/II 合规、信任服务标准与审计就绪
 
-**总计：** 面向医疗器械行业的 12 个专业合规 skill
+**总计：** 面向医疗器械行业的 13 个专业合规 skill
 
 ## Compliance Frameworks
 
@@ -160,5 +161,5 @@
 ---
 
 **Last Updated:** November 5, 2025  
-**Skills Deployed:** 12/12 RA/QM skills production-ready  
+**Skills Deployed:** 13/13 RA/QM skills production-ready  
 **Focus:** Medical device compliance（ISO 13485、MDR、FDA、ISO 27001、GDPR）

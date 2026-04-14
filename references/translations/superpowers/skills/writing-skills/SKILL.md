@@ -91,7 +91,7 @@ skills/
 ## SKILL.md 结构
 
 ### Frontmatter
-只支持两个字段：`name` 和 `description`
+必需字段是 `name` 和 `description`；其他受支持字段请参考 [agentskills.io/specification](https://agentskills.io/specification)
 
 - 总长度建议不超过 1024 字符
 - `name`：只用字母、数字、连字符
@@ -435,7 +435,7 @@ Write code before test? Delete it. Start over.
 
 **GREEN：**
 - [ ] `name` 只用字母、数字、连字符
-- [ ] frontmatter 只包含 `name` / `description`
+- [ ] YAML frontmatter 至少包含必需的 `name` 与 `description` 字段（总长度建议不超过 1024 字符）
 - [ ] `description` 以 `Use when...` 开头
 - [ ] `description` 只写触发条件，不写 workflow
 - [ ] skill 内有清晰的 Overview

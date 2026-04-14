@@ -4,7 +4,7 @@
     "path": "references/repos/get-shit-done",
     "remote": "https://github.com/gsd-build/get-shit-done.git",
     "branch": "main",
-    "head_commit": "d7d88ae46a9281dbbc4f455b74044aeceeabea5a"
+    "head_commit": "e6e33602c314ffbf62b9f72017aa0b868a6e94ff"
   },
   "scope": {
     "include": [
@@ -15,43 +15,45 @@
       "docs/zh-CN/AGENTS.md",
       "docs/zh-CN/references/*.md"
     ],
-    "notes": "首批优先回收 upstream 已有的 README.zh-CN 与 docs/zh-CN 资料，并补翻 docs/COMMANDS.md 与 docs/AGENTS.md。暂不覆盖 commands/gsd/*.md 与 agents/*.md。"
+    "notes": "优先回收 upstream 已有的 README.zh-CN 与 docs/zh-CN 资料；`docs/zh-CN/COMMANDS.md` 与 `docs/zh-CN/AGENTS.md` 目前为本地手翻参考稿，尚未完全对齐最新 upstream 英文版。"
   },
   "translations": [
     {
       "source": "README.md",
       "translation": "README.zh-CN.md",
-      "source_sha256": "22341194fb7c0dac9773b5d5074576a69b15de9979471a9e666459103179c789"
+      "source_sha256": "7654b014d727459082fdbf2b92821ae00dc1d74a3df5089f62def1060e1a95bf"
     },
     {
       "source": "docs/README.md",
       "translation": "docs/zh-CN/README.md",
-      "source_sha256": "355582d5dc34f762cd8fce8dd4db23ec9ffedd7eb9848f284bc78f96697e015b"
+      "source_sha256": "8c5f8af497ad3fc4cce8680a4888d3d8919858991bb50445c541e90cf8c81d7e"
     },
     {
       "source": "docs/USER-GUIDE.md",
       "translation": "docs/zh-CN/USER-GUIDE.md",
-      "source_sha256": "a05158cb7dc0c84cd13ef6610aaa2f583eab94c44a3c6d9798324b7f4dcb4d1a"
+      "source_sha256": "a1f0dc2fb997c27a00b657b5db8fcc768cccd4fd929e80dec8c7078162c4eb45"
     },
     {
-      "source": "docs/COMMANDS.md",
+      "source": null,
       "translation": "docs/zh-CN/COMMANDS.md",
-      "source_sha256": "280a74f2bcb08f1719e574a3959259e7a9a834804e792cc8cd7051e6bf2ac26e"
+      "source_sha256": null,
+      "notes": "本地手翻参考稿，当前未严格对照最新 upstream 英文文件；需后续继续补译。"
     },
     {
-      "source": "docs/AGENTS.md",
+      "source": null,
       "translation": "docs/zh-CN/AGENTS.md",
-      "source_sha256": "f97764a2b504a7625d67e78ee2efea322e954ea745239bdb91ba4f536519194b"
+      "source_sha256": null,
+      "notes": "本地手翻参考稿，当前未严格对照最新 upstream 英文文件；需后续继续补译。"
     },
     {
       "source": "get-shit-done/references/checkpoints.md",
       "translation": "docs/zh-CN/references/checkpoints.md",
-      "source_sha256": "0c7dd9ecbc5526a1964f58ca558f0464b07fb0437c8a480b75c39a3d8b0c650a"
+      "source_sha256": "19b3f9c4eca2232f16084c7b3742c66ede9f50ffdd196c5d0b142066d2c1e1b3"
     },
     {
       "source": "get-shit-done/references/continuation-format.md",
       "translation": "docs/zh-CN/references/continuation-format.md",
-      "source_sha256": "27a6c21ac06e80baad4d99a3fa31d514d26178a377ae2c8426b131c1bad3b928"
+      "source_sha256": "448fc1ec5586b7f5deb3087abf3299b1285734d78124d79d0028cbcdd276e412"
     },
     {
       "source": "get-shit-done/references/decimal-phase-calculation.md",
@@ -61,7 +63,7 @@
     {
       "source": "get-shit-done/references/git-integration.md",
       "translation": "docs/zh-CN/references/git-integration.md",
-      "source_sha256": "529d21d0a140e4b4e3eef9fbb1db9dfa99bd244a7992de864d02f8f25b9f5736"
+      "source_sha256": "3e1d5c84714454cff57777640224cac027f6116cd33485723f42d50b4b60134b"
     },
     {
       "source": "get-shit-done/references/git-planning-commit.md",
@@ -71,12 +73,12 @@
     {
       "source": "get-shit-done/references/model-profile-resolution.md",
       "translation": "docs/zh-CN/references/model-profile-resolution.md",
-      "source_sha256": "a88ab958167f2def9d6000338b0a19c74acb846a23d5b2c4a34556184ae2c342"
+      "source_sha256": "08f9cb9584685b774da6c6303165fea9b6b8f427fc7a7cb552e104565397f503"
     },
     {
       "source": "get-shit-done/references/model-profiles.md",
       "translation": "docs/zh-CN/references/model-profiles.md",
-      "source_sha256": "ad9d04bdbe03d5911cb01a9cda17376b84ece2c4dc5e198451fdccac52b9bd97"
+      "source_sha256": "c7921f1f012c4db7d465038bae4d8eb280dbe148ef9787e68268ed6bf9e9a97a"
     },
     {
       "source": "get-shit-done/references/phase-argument-parsing.md",
@@ -86,7 +88,7 @@
     {
       "source": "get-shit-done/references/planning-config.md",
       "translation": "docs/zh-CN/references/planning-config.md",
-      "source_sha256": "90ba1c15a1fe8b1cde007f86e4b5b32ae94fd8fb7f3d8e043ecd6e5442da2de5"
+      "source_sha256": "a3c2a08081a8cf0f05b66bd9526ed6be200968cd0369ebbb598cec65be5dc13e"
     },
     {
       "source": "get-shit-done/references/questioning.md",
@@ -96,12 +98,12 @@
     {
       "source": "get-shit-done/references/tdd.md",
       "translation": "docs/zh-CN/references/tdd.md",
-      "source_sha256": "edc637151a18d2521c538d91b2208ff478549ca2f2f2d4d6e64a7f2144589ed9"
+      "source_sha256": "e4708ede157478b6b5c011e4b1defafb4967a0b0d29b1cdf355edfaa843c6fde"
     },
     {
       "source": "get-shit-done/references/ui-brand.md",
       "translation": "docs/zh-CN/references/ui-brand.md",
-      "source_sha256": "b8cd57dc29a2071a6865a8f07a76260946ea4c13628e3cbc96cfb4ade970ae8b"
+      "source_sha256": "85f237a70bf25ab803e5ac6e8e60915c77c07605aeef1f8dce791c633dc3a05e"
     },
     {
       "source": "get-shit-done/references/verification-patterns.md",

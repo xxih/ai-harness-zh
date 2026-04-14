@@ -4,7 +4,7 @@
     "path": "references/repos/superpowers",
     "remote": "https://github.com/obra/superpowers.git",
     "branch": "main",
-    "head_commit": "8ea39819eed74fe2a0338e71789f06b30e953041"
+    "head_commit": "917e5f53b16b115b70a3a355ed5f4993b9f8b73d"
   },
   "scope": {
     "include": [
@@ -16,7 +16,7 @@
     {
       "source": "skills/brainstorming/SKILL.md",
       "translation": "skills/brainstorming/SKILL.md",
-      "source_sha256": "58353e42ac33396a4b3cc62e69df35f3d3f1d18e60877bf39d492c77dc6a928d"
+      "source_sha256": "bba47904a7f6bbee3bf8a107ebbe84e65d392be683bbb898ded736b29e415f90"
     },
     {
       "source": "skills/dispatching-parallel-agents/SKILL.md",
@@ -66,7 +66,7 @@
     {
       "source": "skills/using-superpowers/SKILL.md",
       "translation": "skills/using-superpowers/SKILL.md",
-      "source_sha256": "5fa548a85ce639dc6a2ea53607f9d405363c9b935004d0d95dc16e9629752d00"
+      "source_sha256": "316e29381219adf0cac62190c67aeabf427d6e6e5f2735541d502b3d339be7aa"
     },
     {
       "source": "skills/verification-before-completion/SKILL.md",
@@ -76,12 +76,12 @@
     {
       "source": "skills/writing-plans/SKILL.md",
       "translation": "skills/writing-plans/SKILL.md",
-      "source_sha256": "d936159ad11f2e79ba8ae8b8653f87bb924ddaf78ae11dc3a424b4032ad1bd23"
+      "source_sha256": "90056bad3d5f196fa7c9fec0ffe592e6d9c86bc983e406642a51d1a4198b7024"
     },
     {
       "source": "skills/writing-skills/SKILL.md",
       "translation": "skills/writing-skills/SKILL.md",
-      "source_sha256": "d83a09d6a1c6976f6cc2f40addeae653a4a6eb5903097ebc365d90242e00e379"
+      "source_sha256": "38ba648975ae6ba512d6695676f146163db61a496b867f716f4bdfb0ee3aca3e"
     }
   ]
 }

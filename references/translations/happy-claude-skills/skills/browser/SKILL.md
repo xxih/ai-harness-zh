@@ -1,6 +1,9 @@
 ---
 name: browser
 description: 用于浏览器自动化与网页抓取的最小 Chrome DevTools Protocol 工具集。当你需要启动 Chrome、导航页面、执行 JavaScript、截图或交互式选择 DOM 元素时使用。触发词包括 “browse website”、“scrape page”、“take screenshot”、“automate browser”、“extract DOM”、“web scraping”。
+metadata:
+  author: iamzhihuix
+  version: "1.0.0"
 ---
 
 # Browser Tools

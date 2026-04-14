@@ -1,6 +1,6 @@
 # Product Team Skills - Claude Code Guidance
 
-本指南覆盖 14 个可用于生产环境的产品管理 skill 及其 Python 自动化工具。
+本指南覆盖 16 个可用于生产环境的产品管理 skill 及其 Python 自动化工具。
 
 ## Product Skills 概览
 
@@ -20,8 +20,10 @@
 12. **roadmap-communicator/**：路线图沟通与 changelog 生成（1 个工具）
 13. **code-to-prd/**：从任意代码库逆向生成 PRD（2 个工具：`codebase_analyzer`、`prd_scaffolder`）
 14. **research-summarizer/**：研究归纳与总结（1 个工具）
+15. **apple-hig-expert/**：Apple Human Interface Guidelines 合规与设计（1 个工具：`hig_checker`）
+16. **spec-to-repo/**：把 spec 文档转换为脚手架仓库
 
-**工具总数：** 16 个 Python 自动化工具
+**工具总数：** 17 个 Python 自动化工具
 
 **Agents：** 5 个（`cs-product-manager`、`cs-agile-product-owner`、`cs-product-strategist`、`cs-ux-researcher`、`cs-product-analyst`）
 
@@ -337,6 +339,6 @@ python roadmap-communicator/scripts/changelog_generator.py --from v1.0.0 --to HE
 ---
 
 **Last Updated:** March 17, 2026  
-**Skills Deployed:** 14/14 product skills production-ready  
+**Skills Deployed:** 16/16 product skills production-ready  
 **Total Tools:** 16 Python automation tools  
 **Agents:** 5 | **Commands:** 8

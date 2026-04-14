@@ -1,6 +1,6 @@
 ---
 name: brainstorming
-description: "在任何创造性工作之前必须使用：创建功能、构建组件、添加能力或修改行为前，先探索用户意图、需求与设计。"
+description: "在任何创造性工作之前必须使用：创建功能、构建组件、添加能力或修改行为前，先探索用户意图、需求与设计，再进入实现。"
 ---
 
 # 把想法梳理成设计
@@ -27,7 +27,7 @@ description: "在任何创造性工作之前必须使用：创建功能、构建
 4. **提出 2-3 种方案** —— 给出权衡和你的推荐
 5. **展示设计** —— 根据复杂度拆成多个部分展示，每个部分都先获得用户确认
 6. **写设计文档** —— 保存到 `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md` 并提交
-7. **Spec 评审循环** —— 派发 spec-document-reviewer subagent，只给精心构造的评审上下文（绝不传会话历史）；根据反馈修复并重新评审，直到通过（最多 3 轮，超过则交给人类）
+7. **Spec 自检** —— 快速检查占位符、矛盾、歧义和范围问题（见下文）
 8. **用户审阅已写出的 spec** —— 开始实现前，请用户先看 spec 文件
 9. **切换到实现阶段** —— 调用 writing-plans skill 生成实现计划
 
@@ -44,8 +44,7 @@ digraph brainstorming {
     "Present design sections" [shape=box];
     "User approves design?" [shape=diamond];
     "Write design doc" [shape=box];
-    "Spec review loop" [shape=box];
-    "Spec review passed?" [shape=diamond];
+    "Spec self-review\n(fix inline)" [shape=box];
     "User reviews spec?" [shape=diamond];
     "Invoke writing-plans skill" [shape=doublecircle];
 
@@ -60,11 +59,8 @@ digraph brainstorming {
     "Present design sections" -> "User approves design?";
     "User approves design?" -> "Present design sections" [label="no, revise"];
     "User approves design?" -> "Write design doc" [label="yes"];
-    "Write design doc" -> "Spec review loop";
-    "Spec review loop" -> "Spec review passed?";
-    "Spec review passed?" -> "Spec review loop" [label="issues found,
-fix and re-dispatch"];
-    "Spec review passed?" -> "User reviews spec?" [label="approved"];
+    "Write design doc" -> "Spec self-review\n(fix inline)";
+    "Spec self-review\n(fix inline)" -> "User reviews spec?";
     "User reviews spec?" -> "Write design doc" [label="changes requested"];
     "User reviews spec?" -> "Invoke writing-plans skill" [label="approved"];
 }
@@ -120,19 +116,22 @@ fix and re-dispatch"];
 - 如果可用，使用 `elements-of-style:writing-clearly-and-concisely` skill
 - 把设计文档提交到 git
 
-**Spec 评审循环：**
-写完 spec 文档后：
+**Spec 自检：**
+写完 spec 文档后，用新鲜视角快速检查：
 
-1. 派发 spec-document-reviewer subagent（见 `spec-document-reviewer-prompt.md`）
-2. 如果返回 Issues Found：修复，再次派发，直到 Approved
-3. 如果循环超过 3 轮，升级给人类协作者处理
+1. **占位符扫描：** 是否有 `TBD`、`TODO`、未写完的章节，或过于含糊的要求？有就直接补齐。
+2. **内部一致性：** 各章节之间是否互相矛盾？架构是否和功能说明对得上？
+3. **范围检查：** 当前 spec 是否足够聚焦，适合进入单份实现计划？如果太大，就先拆分。
+4. **歧义检查：** 是否存在可以被理解成两种不同意思的要求？有的话，明确选一种写清楚。
+
+发现问题后直接原地修掉，不需要再派 reviewer 循环。
 
 **用户审阅闸门：**
-Spec 评审通过后，继续前先请用户审阅：
+完成自检后，继续前先请用户审阅：
 
 > "Spec written and committed to `<path>`. Please review it and let me know if you want to make any changes before we start writing out the implementation plan."
 
-等待用户回复。如果用户要改动，就先改，并重新跑 spec review loop。只有用户明确批准后才能继续。
+等待用户回复。如果用户要改动，就先改，并重新做一轮自检。只有用户明确批准后才能继续。
 
 **进入实现：**
 

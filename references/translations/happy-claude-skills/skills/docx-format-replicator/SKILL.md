@@ -1,6 +1,9 @@
 ---
 name: docx-format-replicator
 description: 从现有 Word 文档中提取格式，并基于相同格式生成内容不同的新文档。当用户需要批量生成格式一致的文档、复刻文档模板，或在不同内容之间保持企业文档标准时使用。
+metadata:
+  author: iamzhihuix
+  version: "1.0.0"
 ---
 
 # DOCX Format Replicator

@@ -4,7 +4,7 @@
     "path": "references/repos/alirezarezvani-claude-skills",
     "remote": "https://github.com/alirezarezvani/claude-skills.git",
     "branch": "main",
-    "head_commit": "5adbfdce47c913d2bcffa8936b431e19d6ea177a"
+    "head_commit": "f567c61def3fb86046d7242b4bf27fceb63ad8b4"
   },
   "scope": {
     "include": [
@@ -39,12 +39,12 @@
     {
       "source": "README.md",
       "translation": "README.zh-CN.md",
-      "source_sha256": "1f921a7a040cc539583c36739795c5e215b9894809fb2373e925c05584454294"
+      "source_sha256": "27d76eb6b062acf654148cd95faaf79febb2217f247441b19df3058a366e9bcf"
     },
     {
       "source": "CLAUDE.md",
       "translation": "CLAUDE.md",
-      "source_sha256": "db5e0824fbf8c23ee04120fa809da0587002ab7c6f755e800146547d702b9a33"
+      "source_sha256": "72371283c1056a9d2467dc7121dde95ea0fcd57657b0ffb28bf3f9dc311d99bb"
     },
     {
       "source": "GEMINI.md",
@@ -94,7 +94,7 @@
     {
       "source": "engineering-team/CLAUDE.md",
       "translation": "engineering-team/CLAUDE.md",
-      "source_sha256": "6658304804ba51ed18364dfc08a524179dca5f483bf09aaa50841e0673c44b60"
+      "source_sha256": "021a75b5dd54c75c28f83cdd97ad9c7a6144a265a6c98a7705014867b2b028f5"
     },
     {
       "source": "engineering/SKILL.md",
@@ -129,7 +129,7 @@
     {
       "source": "product-team/CLAUDE.md",
       "translation": "product-team/CLAUDE.md",
-      "source_sha256": "5ebcc3ca89c96e680c6e2917945d47c63826c6801748b1e4e2f4626f873102d7"
+      "source_sha256": "f8cd54c9ce84c377331f104348e8b38c313519232dcb13582de674a47a72728b"
     },
     {
       "source": "project-management/SKILL.md",
@@ -149,7 +149,7 @@
     {
       "source": "ra-qm-team/CLAUDE.md",
       "translation": "ra-qm-team/CLAUDE.md",
-      "source_sha256": "1f7230f29f072c033d75a42a8e462a9db5f28329e5961e6874a260c470497bd0"
+      "source_sha256": "a6bfc86dfbf72852af726ef42951c92dc8778d1266db84eb5cc30cd94d12901c"
     },
     {
       "source": "custom-gpt/README.md",

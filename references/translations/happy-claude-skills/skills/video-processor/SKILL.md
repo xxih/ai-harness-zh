@@ -1,6 +1,9 @@
 ---
-name: Video Processor
+name: video-processor
 description: 从 YouTube 和其他平台下载并处理视频。支持视频下载、音频提取、格式转换（mp4、webm）以及 Whisper 转录。当用户提到 YouTube 下载、视频转换、音频提取、转录、mp4、webm、ffmpeg、yt-dlp 或 whisper transcription 时使用。
+metadata:
+  author: iamzhihuix
+  version: "1.0.0"
 ---
 
 # Video Processor

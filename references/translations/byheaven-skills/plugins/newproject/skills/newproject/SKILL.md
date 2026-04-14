@@ -1,6 +1,6 @@
 ---
 name: newproject
-description: "面向 Codex、Claude Code 与其他 AI 工具的一站式项目初始化 skill。用户要创建新项目、把现有仓库升级到可用于生产的基线，或一次性补齐项目基础设施、代码质量、发布自动化、CI、GitHub 仓库设置、依赖管理与安全扫描时使用。所需模板、workflow 与脚本都包含在 `assets/` 下。"
+description: "用于新建项目或升级既有仓库的项目引导与仓库基线初始化 skill。当用户要补齐基础文件、代码质量、发布自动化、CI、GitHub 配置、依赖管理与安全扫描时使用；所需模板、workflow 与脚本都内置在 `assets/` 下。"
 ---
 
 # newproject
@@ -27,7 +27,7 @@ Tier 1 — Foundation
 
 Tier 2 — Quality and Governance
   code quality          ESLint/Prettier or Ruff/golangci-lint/rustfmt + markdownlint
-  GitHub repo setup     PR template, issue forms, CODEOWNERS, branch protection
+  GitHub repo setup     PR template, issue forms, labels, 可选 CODEOWNERS, branch protection
   dependencies          Dependabot + auto-merge workflow
 
 Tier 3 — Security
@@ -42,7 +42,7 @@ Tier 3 — Security
 - `assets/quality/`：ESLint、Prettier、Ruff、markdownlint、pre-commit hook
 - `assets/ci/`：GitHub Actions CI 模板
 - `assets/release/`：commitlint 配置、release workflow、提取脚本与参考说明
-- `assets/github/`：PR 模板、issue forms、CODEOWNERS、branch protection 脚本
+- `assets/github/`：PR 模板、issue forms、labels、CODEOWNERS 模板、branch protection 脚本
 - `assets/dependencies/`：Dependabot 模板与 auto-merge workflow
 - `assets/security/`：CodeQL 与 dependency review workflows
 

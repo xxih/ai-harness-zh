@@ -1,6 +1,6 @@
 # Engineering Team Skills - Claude Code Guidance
 
-本指南覆盖 26 个可用于生产环境的工程 skill 及其 Python 自动化工具。
+本指南覆盖 36 个可用于生产环境的工程 skill 及其 Python 自动化工具。
 
 ## Engineering Skills 概览
 
@@ -11,6 +11,15 @@
 - `code-reviewer`、`senior-security`
 - `aws-solution-architect`、`ms365-tenant-manager`、`google-workspace-cli`、`tdd-guide`、`tech-stack-evaluator`、`epic-design`
 - **`a11y-audit`**：WCAG 2.2 无障碍审计与修复（`a11y_scanner.py`、`contrast_checker.py`）
+- **`azure-cloud-architect`**：Azure 基础设施设计、ARM/Bicep 模板与 landing zone
+- **`gcp-cloud-architect`**：GCP 基础设施设计、Terraform 模块与云原生模式
+- **`security-pen-testing`**：渗透测试方法论、漏洞评估与 exploit 分析
+- **`snowflake-development`**：Snowflake 数仓开发、SQL 优化与数据管道模式
+
+**Security（5 个 skills）：**
+
+- `adversarial-reviewer`、`senior-security`、`security-auditor`
+- `security-pen-testing`、`a11y-audit`
 
 **AI/ML/Data（5 个 skills）：**
 

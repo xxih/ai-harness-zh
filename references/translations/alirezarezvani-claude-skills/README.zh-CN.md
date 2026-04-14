@@ -2,17 +2,17 @@
 
 面向各类编码工具的 agent skills 库。
 
-**为 11 种 AI 编码工具提供的 205 个可用于生产环境的 Claude Code skills、plugins 与 agent skills。**
+**为 12 种 AI 编码工具提供的 235 个可用于生产环境的 Claude Code skills、plugins 与 agent skills。**
 
-这是目前最完整的开源 Claude Code skills 与 agent plugins 库之一，同时也可用于 OpenAI Codex、Gemini CLI、Cursor 以及另外 7 种编码代理。它把工程、DevOps、营销、合规、C-level 咨询等领域的可复用专业能力打包成可直接使用的资产。
+这是目前最完整的开源 Claude Code skills 与 agent plugins 库之一，同时也可用于 OpenAI Codex、Gemini CLI、Hermes Agent、Cursor 以及另外 8 种编码代理。它把工程、DevOps、营销、合规、C-level 咨询等领域的可复用专业能力打包成可直接使用的资产。
 
-**支持的平台：** Claude Code · OpenAI Codex · Gemini CLI · OpenClaw · Cursor · Aider · Windsurf · Kilo Code · OpenCode · Augment · Antigravity
+**支持的平台：** Claude Code · OpenAI Codex · Gemini CLI · OpenClaw · Hermes Agent · Cursor · Aider · Windsurf · Kilo Code · OpenCode · Augment · Antigravity
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Skills](https://img.shields.io/badge/Skills-205-brightgreen?style=for-the-badge)](#skills-overview)
-[![Agents](https://img.shields.io/badge/Agents-16-blue?style=for-the-badge)](#agents)
+[![Skills](https://img.shields.io/badge/Skills-235-brightgreen?style=for-the-badge)](#skills-overview)
+[![Agents](https://img.shields.io/badge/Agents-28-blue?style=for-the-badge)](#agents)
 [![Personas](https://img.shields.io/badge/Personas-3-purple?style=for-the-badge)](#personas)
-[![Commands](https://img.shields.io/badge/Commands-19-orange?style=for-the-badge)](#commands)
+[![Commands](https://img.shields.io/badge/Commands-27-orange?style=for-the-badge)](#commands)
 [![Stars](https://img.shields.io/github/stars/alirezarezvani/claude-skills?style=for-the-badge)](https://github.com/alirezarezvani/claude-skills/stargazers)
 [![SkillCheck Validated](https://img.shields.io/badge/SkillCheck-Validated-4c1?style=for-the-badge)](https://getskillcheck.com)
 
@@ -25,10 +25,10 @@
 Claude Code skills，也常被称为 agent skills 或 coding agent plugins，本质上是模块化的指令包，用来给 AI 编码代理补足其默认不具备的领域专业能力。每个 skill 通常包含：
 
 - **SKILL.md**：结构化指令、工作流与决策框架
-- **Python tools**：268 个 CLI 脚本，全部只依赖标准库，无需 `pip install`
+- **Python tools**：305 个 CLI 脚本，全部只依赖标准库，无需 `pip install`
 - **Reference docs**：模板、检查清单与领域知识资料
 
-**一个仓库，覆盖 11 个平台。** 它可以原生作为 Claude Code plugins、Codex agent skills、Gemini CLI skills 使用，也可以通过 `scripts/convert.sh` 转换到另外 8 种工具。全部 268 个 Python 工具都可以在任何支持 Python 的环境中运行。
+**一个仓库，覆盖 12 个平台。** 它可以原生作为 Claude Code plugins、Codex agent skills、Gemini CLI skills 使用，也可以通过 `scripts/convert.sh` 转换到另外 9 种工具。全部 305 个 Python 工具都可以在任何支持 Python 的环境中运行。
 
 ### Skills、Agents 与 Personas 的区别
 
@@ -148,18 +148,18 @@ find .cursor/rules -name "*.mdc" | wc -l  # 应显示 156
 
 ## Skills Overview
 
-**9 个 domain，205 个 skills：**
+**9 个 domain，235 个 skills：**
 
 | Domain | Skills | Highlights | Details |
 |--------|--------|------------|---------|
-| **🔧 Engineering — Core** | 26 | 架构、前端、后端、全栈、QA、DevOps、SecOps、AI/ML、数据、Playwright、自进化 agent、Google Workspace CLI、a11y 审计 | [engineering-team/](engineering-team/) |
+| **🔧 Engineering — Core** | 36 | 架构、前端、后端、全栈、QA、DevOps、SecOps、AI/ML、数据、Playwright、自进化 agent、Google Workspace CLI、a11y 审计，以及 Azure/GCP/渗透测试/Snowflake 等扩展能力 | [engineering-team/](engineering-team/) |
 | **🎭 Playwright Pro** | 9+3 | 测试生成、flaky 修复、Cypress/Selenium 迁移、TestRail、BrowserStack、55 个模板 | [engineering-team/playwright-pro](engineering-team/playwright-pro/) |
 | **🧠 Self-Improving Agent** | 5+2 | 自动记忆整理、模式提升、skill 提炼、记忆健康检查 | [engineering-team/self-improving-agent](engineering-team/self-improving-agent/) |
 | **⚡ Engineering — POWERFUL** | 30 | Agent designer、RAG architect、database designer、CI/CD builder、security auditor、MCP builder、AgentHub、Helm charts、Terraform | [engineering/](engineering/) |
-| **🎯 Product** | 14 | 产品经理、敏捷 PO、战略、UX 研究、UI 设计、落地页、SaaS scaffolder、分析、实验设计、discovery、roadmap communicator、code-to-prd | [product-team/](product-team/) |
+| **🎯 Product** | 16 | 产品经理、敏捷 PO、战略、UX 研究、UI 设计、落地页、SaaS scaffolder、分析、实验设计、discovery、roadmap communicator、code-to-prd，以及 apple-hig-expert 与 spec-to-repo | [product-team/](product-team/) |
 | **📣 Marketing** | 43 | 7 个 pod：内容（8）、SEO（5）、CRO（6）、渠道（6）、增长（4）、情报（4）、销售（2），另加 context foundation 与 orchestration router。32 个 Python 工具。 | [marketing-skill/](marketing-skill/) |
 | **📋 Project Management** | 6 | Senior PM、scrum master、Jira、Confluence、Atlassian admin、templates | [project-management/](project-management/) |
-| **🏥 Regulatory & QM** | 12 | ISO 13485、MDR 2017/745、FDA、ISO 27001、GDPR、CAPA、风险管理 | [ra-qm-team/](ra-qm-team/) |
+| **🏥 Regulatory & QM** | 13 | ISO 13485、MDR 2017/745、FDA、ISO 27001、GDPR、CAPA、风险管理，以及 SOC 2 合规 | [ra-qm-team/](ra-qm-team/) |
 | **💼 C-Level Advisory** | 28 | 完整 C-suite（10 个角色）+ 编排 + 董事会会议 + 文化与协作 | [c-level-advisor/](c-level-advisor/) |
 | **📈 Business & Growth** | 4 | 客户成功、售前工程、Revenue Ops、合同与提案 | [business-growth/](business-growth/) |
 | **💰 Finance** | 2 | 财务分析师（DCF、预算、预测），SaaS metrics coach（ARR、MRR、流失、LTV、CAC） | [finance/](finance/) |

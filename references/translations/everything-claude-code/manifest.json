@@ -4,12 +4,12 @@
     "path": "references/repos/everything-claude-code",
     "remote": "https://github.com/affaan-m/everything-claude-code.git",
     "branch": "main",
-    "head_commit": "bacc585b877b4426627d1cc478e1f1e5eb0c4f94",
+    "head_commit": "e0ddb331f67bb5ddabeaf4874a28d54f4b3b836e",
     "notes": "当前翻译直接镜像 canonical 副本内置的中文文件，不再以旧的本机工作副本作为新鲜度基线。"
   },
   "canonical_reference": {
     "path": "references/repos/everything-claude-code",
-    "head_commit": "bacc585b877b4426627d1cc478e1f1e5eb0c4f94",
+    "head_commit": "e0ddb331f67bb5ddabeaf4874a28d54f4b3b836e",
     "notes": "当前中文镜像与 canonical 副本对齐；后续继续以该目录作为唯一对照基线。"
   },
   "scope": {
@@ -21,170 +21,165 @@
   },
   "translations": [
     {
-      "translation": "README.zh-CN.md",
-      "source": "README.md",
-      "source_sha256": "1fa4c6eb004633b8c4ada77d44eddcddb0ad5e6a833c93bed90fa484c08a92a4"
-    },
-    {
       "translation": "docs/zh-CN/_AGENTS.md",
-      "source": "AGENTS.md",
-      "source_sha256": "845da8de69bb336ae568765f740c8cd058cc2da67692de1901dd0e3a9ff9e3bc",
+      "source": "docs/zh-CN/AGENTS.md",
+      "source_sha256": "49b21923c763b5e0a7440850049ee45032796fde6a4a7a56c8cd70699b6813fa",
       "notes": "上游为 docs/zh-CN/AGENTS.md；当前仓库为遵守 AGENTS.md 约束改存为 docs/zh-CN/_AGENTS.md。"
     },
     {
       "translation": "docs/zh-CN/agents/architect.md",
-      "source": "agents/architect.md",
-      "source_sha256": "e4c02d466d90f1b70d77a0ad9c23b048d852a1d4e040d33e55ba1a859801a1f0"
+      "source": "docs/zh-CN/agents/architect.md",
+      "source_sha256": "148edfd5903c680caea20d8e8b29ae3ac6145c81d6d755f9a39dd8b98e8db2a2"
     },
     {
       "translation": "docs/zh-CN/agents/build-error-resolver.md",
-      "source": "agents/build-error-resolver.md",
-      "source_sha256": "28597d1e97a68701999704b789a97a20a28b121b7c27ee6a6e80ab43bcd514b8"
+      "source": "docs/zh-CN/agents/build-error-resolver.md",
+      "source_sha256": "0e3043c002ab28a413a16c13dd8f9cbaff88caaea62286076f2279f4b7986ffe"
     },
     {
       "translation": "docs/zh-CN/agents/chief-of-staff.md",
-      "source": "agents/chief-of-staff.md",
-      "source_sha256": "1a1f971e158824a89b7986f6688fe16d7708b88b0a00631b28bd53956c68e9d2"
+      "source": "docs/zh-CN/agents/chief-of-staff.md",
+      "source_sha256": "92fa42c72c835fe2b8a5d1be2e140e84f17f1be90d14e1399796d7b4837c5e4e"
     },
     {
       "translation": "docs/zh-CN/agents/code-reviewer.md",
-      "source": "agents/code-reviewer.md",
-      "source_sha256": "e112e5e0bbc501788e8a3bfd2771d34e31a8564bbd87391bff7401af1509782c"
+      "source": "docs/zh-CN/agents/code-reviewer.md",
+      "source_sha256": "6b195a7a70874c92a90f1ad1beb3ac6b60799eb7182e1a68126847936335632f"
     },
     {
       "translation": "docs/zh-CN/agents/cpp-build-resolver.md",
-      "source": "agents/cpp-build-resolver.md",
-      "source_sha256": "d6f04ffc3f0ee17e736ae9bab044474a61fcd9d0114d290e868f3c64557c45af"
+      "source": "docs/zh-CN/agents/cpp-build-resolver.md",
+      "source_sha256": "14526ac6ee7d6e1d0d0015d4669d8f7de2630bc383b9a8a711556df7b8f310c3"
     },
     {
       "translation": "docs/zh-CN/agents/cpp-reviewer.md",
-      "source": "agents/cpp-reviewer.md",
-      "source_sha256": "df35c817ffd9782dc34fe4c6c586cab34f1ae62940345893a529e5bb34cca923"
+      "source": "docs/zh-CN/agents/cpp-reviewer.md",
+      "source_sha256": "6a83125adba46f8a4dd88d3deb866ea83c04e736edd4739ab36d5e8c97bd8ff7"
     },
     {
       "translation": "docs/zh-CN/agents/database-reviewer.md",
-      "source": "agents/database-reviewer.md",
-      "source_sha256": "2dcb2e2dc99f8425cf260ee3630920bc80da18959dde7ad95350ccf70c0931a4"
+      "source": "docs/zh-CN/agents/database-reviewer.md",
+      "source_sha256": "18130aee26183ae0c1a968ddd3e9c80cea42f7931949362bb843459b3c2acf14"
     },
     {
       "translation": "docs/zh-CN/agents/doc-updater.md",
-      "source": "agents/doc-updater.md",
-      "source_sha256": "a0b96a358534fc9cefc33355b73d8b232132754283c3f335907468cb98ee021d"
+      "source": "docs/zh-CN/agents/doc-updater.md",
+      "source_sha256": "d96a64aa3af0860ca120415f65b09cb33f79fdac3fe482adeb6c381e1e25a446"
     },
     {
       "translation": "docs/zh-CN/agents/docs-lookup.md",
-      "source": "agents/docs-lookup.md",
-      "source_sha256": "2e6cb9b0168e83c66b201bc155506d7aa0050108684ec844f79803d9aba4f4fb"
+      "source": "docs/zh-CN/agents/docs-lookup.md",
+      "source_sha256": "5c2a437e619b4af41a4c4760231e413201198bcaa0fcb2f44376d29b03914838"
     },
     {
       "translation": "docs/zh-CN/agents/e2e-runner.md",
-      "source": "agents/e2e-runner.md",
-      "source_sha256": "89813024c93cb28948656b066609eb42b4d024e96a8aeb5cbc320913c1e75123"
+      "source": "docs/zh-CN/agents/e2e-runner.md",
+      "source_sha256": "a596ec5b2251341bff7151d60ef0ee9df64cd813904f96734d590227103f4d37"
     },
     {
       "translation": "docs/zh-CN/agents/flutter-reviewer.md",
-      "source": "agents/flutter-reviewer.md",
-      "source_sha256": "9e6969d3a2941143629452345e5562a484b9e40dac48f2e94bde01f3820d83ad"
+      "source": "docs/zh-CN/agents/flutter-reviewer.md",
+      "source_sha256": "b130200be82da7e67556e102d71454127a40651449d05f3330d998e05bd19c6a"
     },
     {
       "translation": "docs/zh-CN/agents/go-build-resolver.md",
-      "source": "agents/go-build-resolver.md",
-      "source_sha256": "f331c2a89232b8d24712b4ceb6a63f4180eab6e81cbe75dc13390947ac3fd4a9"
+      "source": "docs/zh-CN/agents/go-build-resolver.md",
+      "source_sha256": "1155783e8f0a102e9eb02d41e269a4b79d3f0702dab0e289cada1dd007fd600d"
     },
     {
       "translation": "docs/zh-CN/agents/go-reviewer.md",
-      "source": "agents/go-reviewer.md",
-      "source_sha256": "83e6fd9f80c05e4dc1cdfd325e611ab4d3543226c68e91425b876a920514a520"
+      "source": "docs/zh-CN/agents/go-reviewer.md",
+      "source_sha256": "594b37d6f3c0ad71409b75462cadf15738ee51d82ce7820f9620823f240ed660"
     },
     {
       "translation": "docs/zh-CN/agents/harness-optimizer.md",
-      "source": "agents/harness-optimizer.md",
-      "source_sha256": "a0f42e525781a1fc4a2305ef4b5d055f296a04b9814ff81b7d1d99be93c48b58"
+      "source": "docs/zh-CN/agents/harness-optimizer.md",
+      "source_sha256": "c8ebf05893263192f8596d5cdd60bcb456813b153585dc8b914086ada972333d"
     },
     {
       "translation": "docs/zh-CN/agents/java-build-resolver.md",
-      "source": "agents/java-build-resolver.md",
-      "source_sha256": "99e05ac7d2a6cd6c93d87c45e9113bbe3d6f91f78e14facf244b5ecbfd693b48"
+      "source": "docs/zh-CN/agents/java-build-resolver.md",
+      "source_sha256": "85e5b7f52f3280367cf449d302e31a784998be724aae275766c577c37428ea8c"
     },
     {
       "translation": "docs/zh-CN/agents/java-reviewer.md",
-      "source": "agents/java-reviewer.md",
-      "source_sha256": "78e3dfa68be7668296dcdc2e249e63c62e4bd4efae3751d5f9a9483cca3d9143"
+      "source": "docs/zh-CN/agents/java-reviewer.md",
+      "source_sha256": "5b68470b064126aa0a48265d7b0c1eacf18e1023e53576c68f4bce8304bc21f4"
     },
     {
       "translation": "docs/zh-CN/agents/kotlin-build-resolver.md",
-      "source": "agents/kotlin-build-resolver.md",
-      "source_sha256": "7637a3fc10b67534474f787acfcb13354d9dee3f61a75ad96a6efc4dca061a0c"
+      "source": "docs/zh-CN/agents/kotlin-build-resolver.md",
+      "source_sha256": "02eb9f37a9f51ae072a8ecf094bb576b413aa6486163b38ceb042250dd0c048b"
     },
     {
       "translation": "docs/zh-CN/agents/kotlin-reviewer.md",
-      "source": "agents/kotlin-reviewer.md",
-      "source_sha256": "f3e5e28d7400bf0d3ab1e7d14abf4d3b6b3d6c25416da0677d83ca83cb958494"
+      "source": "docs/zh-CN/agents/kotlin-reviewer.md",
+      "source_sha256": "8ba76e531a9ed79c83d7b4f4eb880bbcc47754b79fd7ed88d898cb8944737d28"
     },
     {
       "translation": "docs/zh-CN/agents/loop-operator.md",
-      "source": "agents/loop-operator.md",
-      "source_sha256": "1a2b9c6cd104f76b071ac14eb35aea16d09d631b583fd2e8152b2ccb1ccb6f1b"
+      "source": "docs/zh-CN/agents/loop-operator.md",
+      "source_sha256": "fe9fe8bdb3f3ed68d9b82b933501c38509ff9ae8357eef73127562d11bda4a4f"
     },
     {
       "translation": "docs/zh-CN/agents/planner.md",
-      "source": "agents/planner.md",
-      "source_sha256": "b4ab1263bcd0257cfd7f99075f1cae6ea17cb32f37235fbb76fdf71bc3b21c4e"
+      "source": "docs/zh-CN/agents/planner.md",
+      "source_sha256": "e0941094dd41e8ca27a2a3f537ca32f17616c28887dcc910d6e504ea875213e1"
     },
     {
       "translation": "docs/zh-CN/agents/python-reviewer.md",
-      "source": "agents/python-reviewer.md",
-      "source_sha256": "e2cf129892998841b01817e03736a9b5f9598681a096e28afbc12577d3ed9adf"
+      "source": "docs/zh-CN/agents/python-reviewer.md",
+      "source_sha256": "4c13d5b032b99ba9cded34992095e39675acda4caec7eaec4b744d0bdfd76a81"
     },
     {
       "translation": "docs/zh-CN/agents/pytorch-build-resolver.md",
-      "source": "agents/pytorch-build-resolver.md",
-      "source_sha256": "7ac671d451e70433514c6f52aa2d0291ec9d40c840488048d6507aaef1cb4533"
+      "source": "docs/zh-CN/agents/pytorch-build-resolver.md",
+      "source_sha256": "07785bed0f06fd936e9bd07d5a11eb93052ada1510cce4f7bc0971a844b9bdec"
     },
     {
       "translation": "docs/zh-CN/agents/refactor-cleaner.md",
-      "source": "agents/refactor-cleaner.md",
-      "source_sha256": "30ed8fae5a0bf75ded440a3cce716ece4e5ab3d8e4912415211a20bb76409e75"
+      "source": "docs/zh-CN/agents/refactor-cleaner.md",
+      "source_sha256": "4bd5cbb4e65edf9bb32d1bb2f12cb06f11b2302e1d1ecc99d554b5bc8c27aa29"
     },
     {
       "translation": "docs/zh-CN/agents/rust-build-resolver.md",
-      "source": "agents/rust-build-resolver.md",
-      "source_sha256": "2f2e0d76b17151a266de32d408f2f1119e206d4026f0a0983cfb4fcb34ccd7ea"
+      "source": "docs/zh-CN/agents/rust-build-resolver.md",
+      "source_sha256": "9ecd65769406971ca297c03ce8a3d1cc7e70705a0dd2255393b7d1c90c9b6376"
     },
     {
       "translation": "docs/zh-CN/agents/rust-reviewer.md",
-      "source": "agents/rust-reviewer.md",
-      "source_sha256": "e7ced0ac1d8306a57fd49312e49188b7309383b65a4b68d30b385476e792764b"
+      "source": "docs/zh-CN/agents/rust-reviewer.md",
+      "source_sha256": "349d1ffd064be1bc52b6e102684e361be8fbc4b51b334720210e92f136b742ac"
     },
     {
       "translation": "docs/zh-CN/agents/security-reviewer.md",
-      "source": "agents/security-reviewer.md",
-      "source_sha256": "eacaa50c2b2fdee398ba2e3c896c018ea8887d34701e5b841278ea2c1472cc19"
+      "source": "docs/zh-CN/agents/security-reviewer.md",
+      "source_sha256": "5d37bfa8dea9307b55262b00bae54ddecefa7117913ba141ea30c21d546d9e09"
     },
     {
       "translation": "docs/zh-CN/agents/tdd-guide.md",
-      "source": "agents/tdd-guide.md",
-      "source_sha256": "de339a6158d7708000ef796f8bd5e6d7ed45fe744f443d2d84739470ba4c5f2c"
+      "source": "docs/zh-CN/agents/tdd-guide.md",
+      "source_sha256": "0fe18a17ec5168697ad35e5a960f71622a5874bcb5b322529255b8123aa5238e"
     },
     {
       "translation": "docs/zh-CN/agents/typescript-reviewer.md",
-      "source": "agents/typescript-reviewer.md",
-      "source_sha256": "ea5ec5c98a89beb0204ef8e9498677c3d1ea61b4b62a691137775e17e11460c1"
+      "source": "docs/zh-CN/agents/typescript-reviewer.md",
+      "source_sha256": "d8639ccbf4e50c704c7278ecfde26c97089f340db0c6998dbdaeb1192898dfaf"
     },
     {
       "translation": "docs/zh-CN/CHANGELOG.md",
-      "source": "CHANGELOG.md",
-      "source_sha256": "400fa0e74842252d91e6b874e508807363c21d43bf9c0ca531ed8f74f07bf089"
+      "source": "docs/zh-CN/CHANGELOG.md",
+      "source_sha256": "f180320a8ae77b45377477de126db31d701dec90cc004e67381a46b6237f2e18"
     },
     {
       "translation": "docs/zh-CN/CLAUDE.md",
-      "source": "CLAUDE.md",
-      "source_sha256": "9c9201e3330c83fcd340e6b8ddda8a20327321749e00137ebee46a71f1776ea2"
+      "source": "docs/zh-CN/CLAUDE.md",
+      "source_sha256": "3bb8f03a899a4a70c12bfa261aa2d7b119f2b417df72ebc8bdf1b7b7a6c70b02"
     },
     {
       "translation": "docs/zh-CN/CODE_OF_CONDUCT.md",
-      "source": "CODE_OF_CONDUCT.md",
-      "source_sha256": "fd6627320ddc0581d756ee3bda4e85916a229bdb39cc93b202df1cd771cfa485"
+      "source": "docs/zh-CN/CODE_OF_CONDUCT.md",
+      "source_sha256": "65ad67b6aea6553275decc2c865e39d8944b6452fd675cee9f836db830f1f0c0"
     },
     {
       "translation": "docs/zh-CN/codex-mcp-servers-guide.md",
@@ -194,1384 +189,1394 @@
     },
     {
       "translation": "docs/zh-CN/commands/aside.md",
-      "source": "commands/aside.md",
-      "source_sha256": "62a658fce3504fd560657bd1912c246ebf6ad58691011d30afbe7a0f4d31d8bd"
+      "source": "docs/zh-CN/commands/aside.md",
+      "source_sha256": "382d8d91c1ed1254e2e8612719a11895869169b2e41f56aca248891b4742b815"
     },
     {
       "translation": "docs/zh-CN/commands/build-fix.md",
-      "source": "commands/build-fix.md",
-      "source_sha256": "90349cab44f99608e68634fa8545f0ee95c1e379a02c0eff577f62fd44e47f33"
+      "source": "docs/zh-CN/commands/build-fix.md",
+      "source_sha256": "128d8549d6a543166e47cd04f96521ed0003a51cf222c2653fcdce92576aec1e"
     },
     {
       "translation": "docs/zh-CN/commands/checkpoint.md",
-      "source": "commands/checkpoint.md",
-      "source_sha256": "688a05474a64fb9543841d8e428a3a27dfb999bb88c0e648df09961b2247ddad"
+      "source": "docs/zh-CN/commands/checkpoint.md",
+      "source_sha256": "703583afadee72be00decba8a989fb6c5ed3060169fe8a8eaa0c1f0b666b5c73"
     },
     {
       "translation": "docs/zh-CN/commands/claw.md",
-      "source": "commands/claw.md",
-      "source_sha256": "2ecf2219ff15469acb63d250eb5e0119fde4e85557e8a5e965c18280a25ab7ce"
+      "source": "docs/zh-CN/commands/claw.md",
+      "source_sha256": "4d7576f173760e39fe074dafea3a2197400189331eb5cd6c54f0a0ee0acd97c2"
     },
     {
       "translation": "docs/zh-CN/commands/code-review.md",
-      "source": "commands/code-review.md",
-      "source_sha256": "690b878d1b9ba6ecf6c1ce180ec5de0d79db5575d367e52f91031f103a2ff9df"
+      "source": "docs/zh-CN/commands/code-review.md",
+      "source_sha256": "b6047bd772f6fc170c27508e2170d8b294633bc1154890d247d622fc7be4693c"
     },
     {
       "translation": "docs/zh-CN/commands/context-budget.md",
-      "source": "commands/context-budget.md",
-      "source_sha256": "143cb070f365b534a716e88e495b0debc9d6139f488fc7af470cecd274271be7"
+      "source": "docs/zh-CN/commands/context-budget.md",
+      "source_sha256": "f74acb5afc645a7889ad34f9260ad95887c80bba314b14fe46dbc4d75af74df9"
     },
     {
       "translation": "docs/zh-CN/commands/cpp-build.md",
-      "source": "commands/cpp-build.md",
-      "source_sha256": "61706136a28c219cce7dc0d86bdeef1da9d9db7c5d9c07b6d5d4c8872e048d28"
+      "source": "docs/zh-CN/commands/cpp-build.md",
+      "source_sha256": "770c2a368edea9335f1179a59380d345544622f0bf9057c53a01e994fd723c6b"
     },
     {
       "translation": "docs/zh-CN/commands/cpp-review.md",
-      "source": "commands/cpp-review.md",
-      "source_sha256": "d7b080ef52d09399039e1394ff001271f5eacd058d56b951c8f1d037feac93aa"
+      "source": "docs/zh-CN/commands/cpp-review.md",
+      "source_sha256": "ad0dcf84a4038a53323494f90ff86dff8120e3061fa1e19d3cedc3b7fc2b02a1"
     },
     {
       "translation": "docs/zh-CN/commands/cpp-test.md",
-      "source": "commands/cpp-test.md",
-      "source_sha256": "a1d0c512528f82e842d635ed51bcc08e770ac108bb6c29ad0cda60144f1b23c7"
+      "source": "docs/zh-CN/commands/cpp-test.md",
+      "source_sha256": "f8af9a9a1275c9386f03dab1ac8609dcaf6a538bfad42a99df9ed7d4253280a3"
     },
     {
       "translation": "docs/zh-CN/commands/devfleet.md",
-      "source": "commands/devfleet.md",
-      "source_sha256": "409d9642905a18fe81c41405e133c33217462dc6fa1580efd961d724ac1e9694"
+      "source": "docs/zh-CN/commands/devfleet.md",
+      "source_sha256": "e522f7c80dabdc05fc05d495648b5d24d070626939c70ee0f79726f3e723255b"
     },
     {
       "translation": "docs/zh-CN/commands/docs.md",
-      "source": "commands/docs.md",
-      "source_sha256": "ac9d0886cd2c4ffefdb75aaa4a2e993578ca3f615f5a28a1145d02bb348a116d"
+      "source": "docs/zh-CN/commands/docs.md",
+      "source_sha256": "e6802d23d6b40c3cfd42e9b4eec8ed29dbfc391208f9ea3de5bb1c2c6bf1982b"
     },
     {
       "translation": "docs/zh-CN/commands/e2e.md",
-      "source": "commands/e2e.md",
-      "source_sha256": "b1196cfc5ffc33160b774bec037bc29ea80848777efa08c8f1a7f28bed103665"
+      "source": "docs/zh-CN/commands/e2e.md",
+      "source_sha256": "e4f432505b2d6c3fe22bb60ff352325091997ef5fafe7acba7d537daf7130b02"
     },
     {
       "translation": "docs/zh-CN/commands/eval.md",
-      "source": "commands/eval.md",
-      "source_sha256": "7c8e20c659952ce33b248d83517ad988abefe0bff31580a937896b3531a8798f"
+      "source": "docs/zh-CN/commands/eval.md",
+      "source_sha256": "68e29a4c64ad04d016a2fd87b5b0ebf118ecd9082cbd5e3a0574eb168b143c6d"
     },
     {
       "translation": "docs/zh-CN/commands/evolve.md",
-      "source": "commands/evolve.md",
-      "source_sha256": "c8f94e2d2517539fd3e3cf05edb5a7187a887d76f2c936798e93e546f8b30ebb"
+      "source": "docs/zh-CN/commands/evolve.md",
+      "source_sha256": "1eb9ac0d35d1f0158e1c58428efea6c2770de14e26526e2e23bed1446491c1f1"
     },
     {
       "translation": "docs/zh-CN/commands/go-build.md",
-      "source": "commands/go-build.md",
-      "source_sha256": "ebb9375b0c441f0be31d47992709cc1ef878acb2e531edfad6daec563eb9ac62"
+      "source": "docs/zh-CN/commands/go-build.md",
+      "source_sha256": "d1f85803b6e9a3eb0711913fed8867679bae152c323462a67fe447917cf4a796"
     },
     {
       "translation": "docs/zh-CN/commands/go-review.md",
-      "source": "commands/go-review.md",
-      "source_sha256": "4cbaf58d3f2d8bf82cb37d1e3985ad48d994d162e96bb470af05e194e978e43a"
+      "source": "docs/zh-CN/commands/go-review.md",
+      "source_sha256": "fc83cb774f70e0620bed2bc6ee7cd3d0873e34e857bbcf47c10461127e9cd9ad"
     },
     {
       "translation": "docs/zh-CN/commands/go-test.md",
-      "source": "commands/go-test.md",
-      "source_sha256": "803cec4d92a361e2623fdf027eb67eea56843ad563814d693382ab7fe6163708"
+      "source": "docs/zh-CN/commands/go-test.md",
+      "source_sha256": "095d93c883def14bab2b08645741eb5964914270408e2754159357dca8ba28df"
     },
     {
       "translation": "docs/zh-CN/commands/gradle-build.md",
-      "source": "commands/gradle-build.md",
-      "source_sha256": "c2aa086148316326ae10ee97229d040a0b7a9b743c016bfad4032ce96bb097a9"
+      "source": "docs/zh-CN/commands/gradle-build.md",
+      "source_sha256": "213efd53003648d63aa1f83c27dbbe069ee6fe9cb0d1dda43e5727294b899cff"
     },
     {
       "translation": "docs/zh-CN/commands/harness-audit.md",
-      "source": "commands/harness-audit.md",
-      "source_sha256": "62ea46a413be15b1ddbfb44dcc43412c6a54b40b59e036bc3ff35275c6b41a23"
+      "source": "docs/zh-CN/commands/harness-audit.md",
+      "source_sha256": "1d1d2a142b1e8ec9aceadbfb6b27280207cf88d04a7af402f039112b8e6c7dfd"
     },
     {
       "translation": "docs/zh-CN/commands/instinct-export.md",
-      "source": "commands/instinct-export.md",
-      "source_sha256": "cd2052ae1b9c49f75ad81aae6e236be959cc6656d32e3b8f3e6e13d2d3bd2d3c"
+      "source": "docs/zh-CN/commands/instinct-export.md",
+      "source_sha256": "78ebc586be7354a5eb749d505e67719d4d6ec80922ffc7a4faf450f49fcedeb0"
     },
     {
       "translation": "docs/zh-CN/commands/instinct-import.md",
-      "source": "commands/instinct-import.md",
-      "source_sha256": "6c4cba6af60c8f11926578d8c74d62b295209c1567a72bb3f688ac82662f17f5"
+      "source": "docs/zh-CN/commands/instinct-import.md",
+      "source_sha256": "478a915f982c9d738a1bfd814d9cd5db4a1e24349fe60c6d0cdf1328ea30e2ec"
     },
     {
       "translation": "docs/zh-CN/commands/instinct-status.md",
-      "source": "commands/instinct-status.md",
-      "source_sha256": "514b31b312e7d093edc7da373de25898490f363d9cf34ae5e6508e769b78d384"
+      "source": "docs/zh-CN/commands/instinct-status.md",
+      "source_sha256": "e9481fda3576fa747ad023fcef8b36c6fa6bfe304ca60b0ccd304e82fc113d43"
     },
     {
       "translation": "docs/zh-CN/commands/kotlin-build.md",
-      "source": "commands/kotlin-build.md",
-      "source_sha256": "40dd40c6db3b65db4a63fef973f30ef7b89e2b380a1e7be8f6eeda59a34f8e33"
+      "source": "docs/zh-CN/commands/kotlin-build.md",
+      "source_sha256": "1818362299ddeddb46abb1eaac87401a6ab5504a0296e07a785cabf6c99638ca"
     },
     {
       "translation": "docs/zh-CN/commands/kotlin-review.md",
-      "source": "commands/kotlin-review.md",
-      "source_sha256": "8f8f8813a7d341e801221d6cdf2aeba107699921c175c843d5c8be9da1bd8893"
+      "source": "docs/zh-CN/commands/kotlin-review.md",
+      "source_sha256": "5784e623e4c01d60bb1f00c91c16dd4e172365386d7c68953752e1876fd52cde"
     },
     {
       "translation": "docs/zh-CN/commands/kotlin-test.md",
-      "source": "commands/kotlin-test.md",
-      "source_sha256": "f32e850de1f29031e16cbb869071eca800d3d1632968ba4c4e23d1cda9da155d"
+      "source": "docs/zh-CN/commands/kotlin-test.md",
+      "source_sha256": "eab8da221455c5d4b4e7bbcbad98483ad979bb671846147291c87f0f70fc1216"
     },
     {
       "translation": "docs/zh-CN/commands/learn-eval.md",
-      "source": "commands/learn-eval.md",
-      "source_sha256": "6907c2ba7b1b794974a63dcd4df2ce0f098a1aca79228b081ebb862ca9527469"
+      "source": "docs/zh-CN/commands/learn-eval.md",
+      "source_sha256": "76f4c39d90bdcf7673f2d6c56d4d10cb8f638c4c6623c89890c8d30a8d379e03"
     },
     {
       "translation": "docs/zh-CN/commands/learn.md",
-      "source": "commands/learn.md",
-      "source_sha256": "696c0a0aa3d5053ff3b383f167225fcc8dc8b91f1bc54fea2bf3826e830a70e8"
+      "source": "docs/zh-CN/commands/learn.md",
+      "source_sha256": "742dbb55da61f5c14a77b4459dfdc337013b60ed73749244543951cd75b24153"
     },
     {
       "translation": "docs/zh-CN/commands/loop-start.md",
-      "source": "commands/loop-start.md",
-      "source_sha256": "3ad109a9f69cfd2ae041d3fe09aff963e00ba0a63408a1fa5fb2ff408085d69b"
+      "source": "docs/zh-CN/commands/loop-start.md",
+      "source_sha256": "6e805b8aa514d1f8d2b4321bab1f0fd589acdc89b7c7d968715498e2e45080b2"
     },
     {
       "translation": "docs/zh-CN/commands/loop-status.md",
-      "source": "commands/loop-status.md",
-      "source_sha256": "24181d1392154e6b7a3aedd1691e021a43de2a9c0969074accfff7ccb800967e"
+      "source": "docs/zh-CN/commands/loop-status.md",
+      "source_sha256": "cb202cbc5a8b6433d12f5daa2cffdd24437202d7b3d3cb39f0b65135cb008d96"
     },
     {
       "translation": "docs/zh-CN/commands/model-route.md",
-      "source": "commands/model-route.md",
-      "source_sha256": "9ad52439f152dd7c94c935f827bb8ef366f87c1848aefa4f054e34bd9365c500"
+      "source": "docs/zh-CN/commands/model-route.md",
+      "source_sha256": "ebe36c2caef081efeb4f770ba2b3ae740f61b8fe9a2952d1f1ff0fe1be8097eb"
     },
     {
       "translation": "docs/zh-CN/commands/multi-backend.md",
-      "source": "commands/multi-backend.md",
-      "source_sha256": "6f8d4989c25f0963ec30869c3fdf747f07ac5a993de27b1e5d9b0fc874f828b1"
+      "source": "docs/zh-CN/commands/multi-backend.md",
+      "source_sha256": "3a367192d0ecee655635846f3eed1796a00a4918d63eda3b35e303dbf70a6f5b"
     },
     {
       "translation": "docs/zh-CN/commands/multi-execute.md",
-      "source": "commands/multi-execute.md",
-      "source_sha256": "d848b570000f80588ac2d3f1125280a47ad4b21a5302c3d740e0c269cd57f92f"
+      "source": "docs/zh-CN/commands/multi-execute.md",
+      "source_sha256": "7dad3dea8723b5971c39765ddfd2237ec76bbd6e80d15147848cf43c055f81e1"
     },
     {
       "translation": "docs/zh-CN/commands/multi-frontend.md",
-      "source": "commands/multi-frontend.md",
-      "source_sha256": "9e85eb5eb5478b45ccc4e5f1f86978eb29aae1971cbf9774900c9d27faa89e0b"
+      "source": "docs/zh-CN/commands/multi-frontend.md",
+      "source_sha256": "86714d4c6110ef4c8be4c567771de81df1a57563d4cf7171fe8667142fda29a2"
     },
     {
       "translation": "docs/zh-CN/commands/multi-plan.md",
-      "source": "commands/multi-plan.md",
-      "source_sha256": "ec3f524c6ff7d5f7f0aea3536eff0bc7032bb1c779bbd5f5cbd8e7cd84c3d6e5"
+      "source": "docs/zh-CN/commands/multi-plan.md",
+      "source_sha256": "ae3b6b5a217f09005bb3eae73a7029cabd1988b0f9bd9f5461a8f559ab7c46d0"
     },
     {
       "translation": "docs/zh-CN/commands/multi-workflow.md",
-      "source": "commands/multi-workflow.md",
-      "source_sha256": "aa29af2c5fc8155227ed91e8cc3ef67242e0cfb817520b0dd15fe23d7ac97210"
+      "source": "docs/zh-CN/commands/multi-workflow.md",
+      "source_sha256": "0f77e09077a6e0a3e326269642efb68e02e35d635bd4d0b37916fd222bac59c7"
     },
     {
       "translation": "docs/zh-CN/commands/orchestrate.md",
-      "source": "commands/orchestrate.md",
-      "source_sha256": "e7af24ef2c694dd4e17fd7d77d24779ba4ecfc250e683cfdce6200838f866fba"
+      "source": "docs/zh-CN/commands/orchestrate.md",
+      "source_sha256": "3aa6f9886f111f48b3aa2a4522241119ffb7098c320c7e8512168e4ed93738bf"
     },
     {
       "translation": "docs/zh-CN/commands/plan.md",
-      "source": "commands/plan.md",
-      "source_sha256": "b3c2e2eac500c7c7642f12feecad77a72a526477bd03c3aae1903600bd63de9b"
+      "source": "docs/zh-CN/commands/plan.md",
+      "source_sha256": "14efab7c7eed83bcc7c2b6442d74d738247334422f2408afa11379c4f8967f43"
     },
     {
       "translation": "docs/zh-CN/commands/pm2.md",
-      "source": "commands/pm2.md",
-      "source_sha256": "638ff26f4ede729d6639f32e4077aa423f72d92725b34936afffe57ba2076cb3"
+      "source": "docs/zh-CN/commands/pm2.md",
+      "source_sha256": "ff4664b2b6810dd6206e6eafedf1f25145b1010a3edaea470c388d253e74ccaf"
     },
     {
       "translation": "docs/zh-CN/commands/projects.md",
-      "source": "commands/projects.md",
-      "source_sha256": "dc939242028d24119b985e6ad4fee3d6c8185f6bd19c716535384149bc9876f3"
+      "source": "docs/zh-CN/commands/projects.md",
+      "source_sha256": "356a15bb52088a632fa693552836c1ac4fa8b84fa677ef8b1bad41406081b08c"
     },
     {
       "translation": "docs/zh-CN/commands/promote.md",
-      "source": "commands/promote.md",
-      "source_sha256": "8d2faf47b1322c24a1dfa221b2f5e85b9e766fcd1d460c157c472246a3b86846"
+      "source": "docs/zh-CN/commands/promote.md",
+      "source_sha256": "986931f1d3b9eae238cb9399163207a9b4027b4ccd38705313cf8073ff760d0e"
     },
     {
       "translation": "docs/zh-CN/commands/prompt-optimize.md",
-      "source": "commands/prompt-optimize.md",
-      "source_sha256": "6ba929312e14a3e183c02c2cb12220a29ea6a73827f7539eb2d0e9c163092b84"
+      "source": "docs/zh-CN/commands/prompt-optimize.md",
+      "source_sha256": "fb7f41f694892383f0813a75c3a568315d77da2ae892dfe5d54b8cbb71716e7f"
+    },
+    {
+      "translation": "docs/zh-CN/commands/prune.md",
+      "source": "docs/zh-CN/commands/prune.md",
+      "source_sha256": "f3aeb7b82c75d990c287e50016ade3d56d1bcbf6fce343580631e042887b6124"
     },
     {
       "translation": "docs/zh-CN/commands/python-review.md",
-      "source": "commands/python-review.md",
-      "source_sha256": "3f1791ba569f79098bb337dad1bca989e13dc0ac03dba7483183ce4937bb9662"
+      "source": "docs/zh-CN/commands/python-review.md",
+      "source_sha256": "9c7a4b3b3620131edb4fcc11495fb99a5cc35bf2f054d4e8faee53fae5267af7"
     },
     {
       "translation": "docs/zh-CN/commands/quality-gate.md",
-      "source": "commands/quality-gate.md",
-      "source_sha256": "826bbb000043b1401fb8c73cff9cace55cfd38d7f6c7b006efbd43c8ce9cb754"
+      "source": "docs/zh-CN/commands/quality-gate.md",
+      "source_sha256": "3d6f1cf9f3932a1486ddf8684e1cccb4f44abe235189b4e03eb53f47a187860c"
     },
     {
       "translation": "docs/zh-CN/commands/refactor-clean.md",
-      "source": "commands/refactor-clean.md",
-      "source_sha256": "f78cb91996bcb5cd816b28b617fa3cbf7ce814c559ba18f6fa48e1f7ca16af0a"
+      "source": "docs/zh-CN/commands/refactor-clean.md",
+      "source_sha256": "e7e2ade1888ad7b1e6a5fba330199a1a0815c89d53df4e4fb4e651e83a1fc4af"
     },
     {
       "translation": "docs/zh-CN/commands/resume-session.md",
-      "source": "commands/resume-session.md",
-      "source_sha256": "f92fc2998cb16a4331938ca4437b3a4c936e7b3672f896d02f21bc198611fe6c"
+      "source": "docs/zh-CN/commands/resume-session.md",
+      "source_sha256": "9634c086638ea5341385edfc766dbc33d5481fbe235c49f70d8d9d4e5435d3c3"
     },
     {
       "translation": "docs/zh-CN/commands/rules-distill.md",
-      "source": "commands/rules-distill.md",
-      "source_sha256": "6ebde0e280575a9bfa9403a3844c65b78db8d825ee7a2dc7b3d919c47fbb5033"
+      "source": "docs/zh-CN/commands/rules-distill.md",
+      "source_sha256": "145ea945957cea7d4bf12d49deb1f6a60b987eee60a81f9a0596465a6b1900c3"
     },
     {
       "translation": "docs/zh-CN/commands/rust-build.md",
-      "source": "commands/rust-build.md",
-      "source_sha256": "8b60350b177bbee9543d1ea1a8929d9f2a035752c77c24f2a44998b3947c1395"
+      "source": "docs/zh-CN/commands/rust-build.md",
+      "source_sha256": "dc00f1447f83f785aa0f6275082c24f59d30ecad03dd75d56ec8c7f8a3a37a21"
     },
     {
       "translation": "docs/zh-CN/commands/rust-review.md",
-      "source": "commands/rust-review.md",
-      "source_sha256": "19e9eb0c5805e982f9d864202dde19c49b394e8d8e28030b3aeac33c157d812c"
+      "source": "docs/zh-CN/commands/rust-review.md",
+      "source_sha256": "c3b63921fcac03acc072c928b289a0fd86118ab9b8a3e879a22cd39f1621eb7d"
     },
     {
       "translation": "docs/zh-CN/commands/rust-test.md",
-      "source": "commands/rust-test.md",
-      "source_sha256": "dc474e6373e274b8bf032dc8e401ec0eb24e24f50acf993f273bb1258f77864a"
+      "source": "docs/zh-CN/commands/rust-test.md",
+      "source_sha256": "74a4176105a9b18135829640534baf426cd789f26f323309cd3eebc7a0bb14a1"
     },
     {
       "translation": "docs/zh-CN/commands/save-session.md",
-      "source": "commands/save-session.md",
-      "source_sha256": "f4a5799907d588588279adef8f0879a2532c0489c02ea83b64fe7bf1b62a0085"
+      "source": "docs/zh-CN/commands/save-session.md",
+      "source_sha256": "1a82b079f81eee71a4a12733468393205afbd48395fe074e5046cd2e1e7de0c5"
     },
     {
       "translation": "docs/zh-CN/commands/sessions.md",
-      "source": "commands/sessions.md",
-      "source_sha256": "abd0a778c24dd4b9f31ef6f76c01c2930e2faf80b9eea677314b99b683a974d7"
+      "source": "docs/zh-CN/commands/sessions.md",
+      "source_sha256": "e703d4e7daf06d62af5f996332e61b7601ee2983bd3ba641b8dadd711f1d4f72"
     },
     {
       "translation": "docs/zh-CN/commands/setup-pm.md",
-      "source": "commands/setup-pm.md",
-      "source_sha256": "163b3cd106028d21dbd2a91b47f1cf99957e40a78ed9e5e5dc8507e225f73a2d"
+      "source": "docs/zh-CN/commands/setup-pm.md",
+      "source_sha256": "6961fe19e3ecf784ad397203a4aad7b57cec58bcc2ad9296b131150c40193fde"
     },
     {
       "translation": "docs/zh-CN/commands/skill-create.md",
-      "source": "commands/skill-create.md",
-      "source_sha256": "3acec769ffb32348d5865d3ba24fa3e62feb1096fefdbce8e0ac52779b5659cd"
+      "source": "docs/zh-CN/commands/skill-create.md",
+      "source_sha256": "a3acdc866e073721d4a6ec810c4554dab3b810b476c6f59b4fae70f8b762b52a"
     },
     {
       "translation": "docs/zh-CN/commands/skill-health.md",
-      "source": "commands/skill-health.md",
-      "source_sha256": "0aaee17765f3703203d7edbb782c13421df1832b70d21d1bf468330daef85cb2"
+      "source": "docs/zh-CN/commands/skill-health.md",
+      "source_sha256": "49921497c124594aa186115a58af1ab11e8342531c6afeadca6af01dc2cc34e3"
     },
     {
       "translation": "docs/zh-CN/commands/tdd.md",
-      "source": "commands/tdd.md",
-      "source_sha256": "9f054ac6db111f2a742c9ca561f3fa1d7ab691f133151a2856261dea0cff2fea"
+      "source": "docs/zh-CN/commands/tdd.md",
+      "source_sha256": "4d5e6bbf6ca40053c8919c3c07c2bec6c8359afbf1bea7f63e875e47b5b61fa4"
     },
     {
       "translation": "docs/zh-CN/commands/test-coverage.md",
-      "source": "commands/test-coverage.md",
-      "source_sha256": "3b6899e41753d91ba7e376f107269694e814c7d5523a18fa7785516390bb4dbd"
+      "source": "docs/zh-CN/commands/test-coverage.md",
+      "source_sha256": "6073b8d315d6cb1ac5964ec0251dd22fbcb32cd44133a6a2a777c1f8554f154c"
     },
     {
       "translation": "docs/zh-CN/commands/update-codemaps.md",
-      "source": "commands/update-codemaps.md",
-      "source_sha256": "3514e183daeda86331687ed3f863b3ad8e4e2b91a0430b72cd1d28316c0b585b"
+      "source": "docs/zh-CN/commands/update-codemaps.md",
+      "source_sha256": "48d4326ac9c2d8458443b73ca9b35bd13656f87995aa6ae88801beb2b6d45e1e"
     },
     {
       "translation": "docs/zh-CN/commands/update-docs.md",
-      "source": "commands/update-docs.md",
-      "source_sha256": "09d8332a9e11a94b84462f7918471e1db5264312619d687496ad3ff8e8226631"
+      "source": "docs/zh-CN/commands/update-docs.md",
+      "source_sha256": "9b8cf91523bb6e1770b4ff2241e841bbe1348f8a7629319d01dd45a32bc3d18d"
     },
     {
       "translation": "docs/zh-CN/commands/verify.md",
-      "source": "commands/verify.md",
-      "source_sha256": "22ad1cca29aa497327d466836e16604a9b4561c2fd6a293ec7ab5780f9966708"
+      "source": "docs/zh-CN/commands/verify.md",
+      "source_sha256": "98937d13af626efdca1f7c3bb8e1950d6782587c015212f7d0bdcbaf9338b411"
     },
     {
       "translation": "docs/zh-CN/contexts/dev.md",
-      "source": "contexts/dev.md",
-      "source_sha256": "340ea6af2e75f71f38d53975ed51d94f2062bc4aaf3ce8f2157d2e961ed0c4d4"
+      "source": "docs/zh-CN/contexts/dev.md",
+      "source_sha256": "1a19c92129bde027d2d25faa6f44a0e1e0506241a4f75431fc3a58340bf5ff78"
     },
     {
       "translation": "docs/zh-CN/contexts/research.md",
-      "source": "contexts/research.md",
-      "source_sha256": "8af3ae79e470c6051d2f03e3c900484d224ecbb3da76056f88bdc3bde95fc265"
+      "source": "docs/zh-CN/contexts/research.md",
+      "source_sha256": "3f6acc7916cdf79e139f92f958a9bbf9077dfc530978fba2c3421ff40277d552"
     },
     {
       "translation": "docs/zh-CN/contexts/review.md",
-      "source": "contexts/review.md",
-      "source_sha256": "95ad8fc5851f61bd169377ce94df22bc996b69ff72f09aa51e7f16ed92930411"
+      "source": "docs/zh-CN/contexts/review.md",
+      "source_sha256": "bc765e6a811aafb3526d38165d439795635c7397c7ec0d7f00fb723734003d88"
     },
     {
       "translation": "docs/zh-CN/CONTRIBUTING.md",
-      "source": "CONTRIBUTING.md",
-      "source_sha256": "03c783a174842f1ec981fa5047fbf40c6a55cdba0c243ddc88d45388ae395a9c"
+      "source": "docs/zh-CN/CONTRIBUTING.md",
+      "source_sha256": "5093db66ec7e258de9e8a1ea43554d34d250479b3b632b9e5a70716a7a955a22"
     },
     {
       "translation": "docs/zh-CN/examples/CLAUDE.md",
-      "source": "examples/CLAUDE.md",
-      "source_sha256": "d4737049df03cadbadd6ffc2825f9fa8ed0e5ef0c6e03e0702d38baed70eb464"
+      "source": "docs/zh-CN/examples/CLAUDE.md",
+      "source_sha256": "2afea54ab1ddedca4e489d134148cf2551e0e0b642602a8d5934d09f00978ef1"
     },
     {
       "translation": "docs/zh-CN/examples/django-api-CLAUDE.md",
-      "source": "examples/django-api-CLAUDE.md",
-      "source_sha256": "2402194c3588b819a103a7a830f30a57ca755ac993b1df4dca37811fcbb03bd3"
+      "source": "docs/zh-CN/examples/django-api-CLAUDE.md",
+      "source_sha256": "9b576b81291a1a652499439e2aa79ede7325b0b0279d5742770e0f579a89ccf3"
     },
     {
       "translation": "docs/zh-CN/examples/go-microservice-CLAUDE.md",
-      "source": "examples/go-microservice-CLAUDE.md",
-      "source_sha256": "387bb2672aff21839c6a2358453937c3759a7ad623c6a32145517276ac3b137a"
+      "source": "docs/zh-CN/examples/go-microservice-CLAUDE.md",
+      "source_sha256": "0ff99e8589658fc46112ead58a31146b286b7427c75078ad342d2237113efd2c"
     },
     {
       "translation": "docs/zh-CN/examples/laravel-api-CLAUDE.md",
-      "source": "examples/laravel-api-CLAUDE.md",
-      "source_sha256": "800a48f0f70fcce5ab11c4f83af1fce6dd6f8ec22a22c9ef98d11f1d6ac4f2c1"
+      "source": "docs/zh-CN/examples/laravel-api-CLAUDE.md",
+      "source_sha256": "04b5721f9bfe081ae210c6908131ec0c4ffa7b639e5c543116449d0a991db445"
     },
     {
       "translation": "docs/zh-CN/examples/rust-api-CLAUDE.md",
-      "source": "examples/rust-api-CLAUDE.md",
-      "source_sha256": "b8f63e040221680f91f9e04205e0454d1fc6c4ba9b6aaa755cc12de050283c55"
+      "source": "docs/zh-CN/examples/rust-api-CLAUDE.md",
+      "source_sha256": "310a4f5830bf88b637e0909dad506c88e98cc969c7ef1718f9e72fee82afb417"
     },
     {
       "translation": "docs/zh-CN/examples/saas-nextjs-CLAUDE.md",
-      "source": "examples/saas-nextjs-CLAUDE.md",
-      "source_sha256": "4ee3079d752baf72e6c395bbd644ad2f603697248df755d1bcb9a8b2a825146a"
+      "source": "docs/zh-CN/examples/saas-nextjs-CLAUDE.md",
+      "source_sha256": "0b302d8fb4ca8d05a55c77e9bed91be328d23de9e535749f0aea4cb45f7c11c2"
     },
     {
       "translation": "docs/zh-CN/examples/user-CLAUDE.md",
-      "source": "examples/user-CLAUDE.md",
-      "source_sha256": "aadfabffaebd70a5eac3132f4d46cadeffa2894723afaa1a6cf74e618f81bbb5"
+      "source": "docs/zh-CN/examples/user-CLAUDE.md",
+      "source_sha256": "407c9b2effcfd53164b4e32438519bda44caf8824669250fb11695d7edb43702"
     },
     {
       "translation": "docs/zh-CN/hooks/README.md",
-      "source": "hooks/README.md",
-      "source_sha256": "7db009c8fffa3f4c07c5a6401c6ef7549ab6da84d507bc3561e47c8da3df06ad"
+      "source": "docs/zh-CN/hooks/README.md",
+      "source_sha256": "1a2799ca2644d860d8501990fc438cc45cd08f4dd368ff1d8e1a4cee33b79c7e"
     },
     {
       "translation": "docs/zh-CN/plugins/README.md",
-      "source": "plugins/README.md",
-      "source_sha256": "06fb66aa01b0874e05e1c7c77456213e6d003801318b0d23cf50f6e206544ca9"
+      "source": "docs/zh-CN/plugins/README.md",
+      "source_sha256": "e6ee26df51b4ef26d7d043c0398be5548eaa0d5ad726ee70ebcbbf5cd8d00a57"
     },
     {
       "translation": "docs/zh-CN/README.md",
-      "source": "README.md",
-      "source_sha256": "1fa4c6eb004633b8c4ada77d44eddcddb0ad5e6a833c93bed90fa484c08a92a4"
+      "source": "docs/zh-CN/README.md",
+      "source_sha256": "57a5ce87025a6f63e3074b50f917ec560ca84eda669320660995b28ad72f0814"
     },
     {
       "translation": "docs/zh-CN/rules/common/agents.md",
-      "source": "rules/common/agents.md",
-      "source_sha256": "fcd916d9223f9e10a4a6fdf65c6b5a0c56806d1ed345fa8b96987ae2eebaaa9d"
+      "source": "docs/zh-CN/rules/common/agents.md",
+      "source_sha256": "d95692c7823dfe42886386eee533efd20a0713b5f9bf1543bae8d6af4e67aa35"
     },
     {
       "translation": "docs/zh-CN/rules/common/coding-style.md",
-      "source": "rules/common/coding-style.md",
-      "source_sha256": "52d1da9e124bfbef9f65f0401ec76b48f8e6293c8971969303efd4d7292a6a90"
+      "source": "docs/zh-CN/rules/common/coding-style.md",
+      "source_sha256": "fe13d29179f2f515771071c196c193d224d441fe83fa30e57127cfbc3562f483"
     },
     {
       "translation": "docs/zh-CN/rules/common/development-workflow.md",
-      "source": "rules/common/development-workflow.md",
-      "source_sha256": "717c24653ae22f55b3e1e17304bdd650672a033c524ac4741871338d23d6e213"
+      "source": "docs/zh-CN/rules/common/development-workflow.md",
+      "source_sha256": "d06ddbaa0118dcffe4d9ccdd3f677fa50c27a97f28146cb2850e5a341bfcd4ea"
     },
     {
       "translation": "docs/zh-CN/rules/common/git-workflow.md",
-      "source": "rules/common/git-workflow.md",
-      "source_sha256": "c8a1fac8bb9563406a1d04c6fd87737b4790d6699dfdde8a868248c8e261c18c"
+      "source": "docs/zh-CN/rules/common/git-workflow.md",
+      "source_sha256": "f71f0a583be2df86c76bd1f5fee15b78283c22ca72eb91ce7545e4a494c5fdd8"
     },
     {
       "translation": "docs/zh-CN/rules/common/hooks.md",
-      "source": "rules/common/hooks.md",
-      "source_sha256": "b3bfb0ed86bfa71d29c076de5363656265218aa5fb8abd26edf285e652a2b234"
+      "source": "docs/zh-CN/rules/common/hooks.md",
+      "source_sha256": "b5f0a4d7a6fcd40fead711aca93fca4ced0e16504523810384f31a0844682e01"
     },
     {
       "translation": "docs/zh-CN/rules/common/patterns.md",
-      "source": "rules/common/patterns.md",
-      "source_sha256": "8a32c0552c8b309e961ef3f68a56ae84b0b1d411c17f23675ec26b685dea5e9a"
+      "source": "docs/zh-CN/rules/common/patterns.md",
+      "source_sha256": "e6d1467ebca49fe5057739f0a265a03b54d1bd50161e0ef115e051aef6bada56"
     },
     {
       "translation": "docs/zh-CN/rules/common/performance.md",
-      "source": "rules/common/performance.md",
-      "source_sha256": "227f8aa0fb711335e0f341bfa0ad46e81271434f03c467acce9aef5fec13fa97"
+      "source": "docs/zh-CN/rules/common/performance.md",
+      "source_sha256": "c7224cf03930ce2dd6c58866e4a7e4bb20e34bfe40208ae56008230167f0c090"
     },
     {
       "translation": "docs/zh-CN/rules/common/security.md",
-      "source": "rules/common/security.md",
-      "source_sha256": "58f0acc56331b8d554dd036b8a1d5b2305a908e3960ff1e2d7e55223d5918bc3"
+      "source": "docs/zh-CN/rules/common/security.md",
+      "source_sha256": "b863b9330e5e78656bf402833c6678921f8eb7b75e06e2d0ef45405b1f57cb2c"
     },
     {
       "translation": "docs/zh-CN/rules/common/testing.md",
-      "source": "rules/common/testing.md",
-      "source_sha256": "1fe96e1188217bcf35acca3459d9afe00dcfb84bc938bba5abf2c4d8e0d9b4a9"
+      "source": "docs/zh-CN/rules/common/testing.md",
+      "source_sha256": "1dd10a7db9b795520a99f646441ea8adde9a6a7da901e3203915357fce12c845"
     },
     {
       "translation": "docs/zh-CN/rules/cpp/coding-style.md",
-      "source": "rules/cpp/coding-style.md",
-      "source_sha256": "3d25db0df6aa37cd58117d927020102b4e991fb820b9a6ff193058f0652be611"
+      "source": "docs/zh-CN/rules/cpp/coding-style.md",
+      "source_sha256": "a177073601b6f3b21211a6e6ea31c2620a4721798f2b2099f350fadfee59291c"
     },
     {
       "translation": "docs/zh-CN/rules/cpp/hooks.md",
-      "source": "rules/cpp/hooks.md",
-      "source_sha256": "51c511ea9706f53399649a52030484e14317b26f717488807a1faa2a2b9e0331"
+      "source": "docs/zh-CN/rules/cpp/hooks.md",
+      "source_sha256": "188dab8a04ebda8fdfe0558d82f60d47cb8b3f678c1d0d797890770cf56c9696"
     },
     {
       "translation": "docs/zh-CN/rules/cpp/patterns.md",
-      "source": "rules/cpp/patterns.md",
-      "source_sha256": "0d4ad5083495eb234e43f65ed6e097494c06cf6886774d870fa27e6f11ffb27c"
+      "source": "docs/zh-CN/rules/cpp/patterns.md",
+      "source_sha256": "5b2b06cb41b7bb685540a5b0983780115ea0901156e7f238613488f74b9d70c2"
     },
     {
       "translation": "docs/zh-CN/rules/cpp/security.md",
-      "source": "rules/cpp/security.md",
-      "source_sha256": "16ca65265e3202d59046a70bd925d8f882d7f8494152e4839f1e5b89a6c5a2cd"
+      "source": "docs/zh-CN/rules/cpp/security.md",
+      "source_sha256": "d8404296f7fabee032ad664f711ed87f83c92b65ca85be9770a2eeede665f377"
     },
     {
       "translation": "docs/zh-CN/rules/cpp/testing.md",
-      "source": "rules/cpp/testing.md",
-      "source_sha256": "07f8098577dbcf2bdefb24721ec571badd7c646fbe760cc2a2293455515da5dd"
+      "source": "docs/zh-CN/rules/cpp/testing.md",
+      "source_sha256": "cd3be0cff58dc699c1c85900fb02505760ce8b974f6b1e89829173e1f27d3602"
     },
     {
       "translation": "docs/zh-CN/rules/csharp/coding-style.md",
-      "source": "rules/csharp/coding-style.md",
-      "source_sha256": "355de4ecd0690f7dbaa78e2fe24c9b82a153247c9f23adfa6de5a49a812ae3ce"
+      "source": "docs/zh-CN/rules/csharp/coding-style.md",
+      "source_sha256": "7167b79901ae5d503c9c5bc268feb2d4bbe859559a80a8054810c68656601e9e"
     },
     {
       "translation": "docs/zh-CN/rules/csharp/hooks.md",
-      "source": "rules/csharp/hooks.md",
-      "source_sha256": "9975e503eedc5a9a02a8ba8cee8fbee804210632db0ec00b2185ef225e3dfa82"
+      "source": "docs/zh-CN/rules/csharp/hooks.md",
+      "source_sha256": "d0d62cf55fda15ad375dc7f22ef8c49dc0df678f6720ecd2e68db56c3bbc1551"
     },
     {
       "translation": "docs/zh-CN/rules/csharp/patterns.md",
-      "source": "rules/csharp/patterns.md",
-      "source_sha256": "05ed05365fd93ac93245244878229106eefb88164db43555d14d8bbd4999023f"
+      "source": "docs/zh-CN/rules/csharp/patterns.md",
+      "source_sha256": "246658730adc14e6f5c8c00944ea1178d1bb009fd033cd09de363cb587715233"
     },
     {
       "translation": "docs/zh-CN/rules/csharp/security.md",
-      "source": "rules/csharp/security.md",
-      "source_sha256": "94b105e20d72ba2fbe457a42e9232001dd5dd338e816a091094b0d518280eb07"
+      "source": "docs/zh-CN/rules/csharp/security.md",
+      "source_sha256": "a413add6af0add8bfa9931830dd8aad07a64170e246f5c1e6f779673fc5dee64"
     },
     {
       "translation": "docs/zh-CN/rules/csharp/testing.md",
-      "source": "rules/csharp/testing.md",
-      "source_sha256": "797db2f53f2dd34c2fb2732d9498d63b818473c6599e9124c46c668ab70226a6"
+      "source": "docs/zh-CN/rules/csharp/testing.md",
+      "source_sha256": "d1a8bc9fec798b0f609e20197bdaaf9da9266745a352a95bf3bb1e0ae3844538"
     },
     {
       "translation": "docs/zh-CN/rules/golang/coding-style.md",
-      "source": "rules/golang/coding-style.md",
-      "source_sha256": "c32f6a2715297a1637b35567bb2e65054b4b28064b4d91fad26ad688f758243d"
+      "source": "docs/zh-CN/rules/golang/coding-style.md",
+      "source_sha256": "1f76f7089db690076bf634b66849671207cdc69dad5ac1c98ce3065d5906f5bf"
     },
     {
       "translation": "docs/zh-CN/rules/golang/hooks.md",
-      "source": "rules/golang/hooks.md",
-      "source_sha256": "518fe31d4baa4a10e2f5ae341ececb7063bbc794ef44c4cdefd7dcf75ab50cc3"
+      "source": "docs/zh-CN/rules/golang/hooks.md",
+      "source_sha256": "52c630e6691ec3c1c3888a1d9cc5d8a3372277c3762a6583773e26a09e9dd315"
     },
     {
       "translation": "docs/zh-CN/rules/golang/patterns.md",
-      "source": "rules/golang/patterns.md",
-      "source_sha256": "aca279088c39a43e8b1371d61abbb5da15206c5f52cce52443252d47ad5c5ddb"
+      "source": "docs/zh-CN/rules/golang/patterns.md",
+      "source_sha256": "a36b7a582948a65f6cea8aa480ce29a30dbb13ace3f5ffe2c38f7519fdec7706"
     },
     {
       "translation": "docs/zh-CN/rules/golang/security.md",
-      "source": "rules/golang/security.md",
-      "source_sha256": "72ff9516083e017b718f76e7a6f6838611fa3c02b810b3572fef7d605b38d033"
+      "source": "docs/zh-CN/rules/golang/security.md",
+      "source_sha256": "7819d34aa17b6506f199e36f88d34d8920c727495f4e935fb19ca6520bfaf294"
     },
     {
       "translation": "docs/zh-CN/rules/golang/testing.md",
-      "source": "rules/golang/testing.md",
-      "source_sha256": "b0fcde8be4ce98e34fe872cc2ecca63cab8c8cd87d5faa1e1667ee82f3707d74"
+      "source": "docs/zh-CN/rules/golang/testing.md",
+      "source_sha256": "1935c3d2a6c7208ff36b01b7f3e246c0c8109a0ced60b84488ebfef08d84d99d"
     },
     {
       "translation": "docs/zh-CN/rules/java/coding-style.md",
-      "source": "rules/java/coding-style.md",
-      "source_sha256": "4ce94d84b6d23615ae5843892bb434dcccd3173938cfffb2701a61c17d1e9a67"
+      "source": "docs/zh-CN/rules/java/coding-style.md",
+      "source_sha256": "b3babec2b2f8323f964a2d0b6a3450630016a65e915190110ece66840f5f370f"
     },
     {
       "translation": "docs/zh-CN/rules/java/hooks.md",
-      "source": "rules/java/hooks.md",
-      "source_sha256": "b3c2e5aa683bb14a804dc9a5b59c255e5de763d35abc94daac17c859cdb6fad7"
+      "source": "docs/zh-CN/rules/java/hooks.md",
+      "source_sha256": "8987efe477ab4377045c6553a66ba251123fd624666eae4fce3169ffe5c2151b"
     },
     {
       "translation": "docs/zh-CN/rules/java/patterns.md",
-      "source": "rules/java/patterns.md",
-      "source_sha256": "4ff895cdd9c4d05f0d1f9651174e6050e819f1633a80bce33662a28db7532abc"
+      "source": "docs/zh-CN/rules/java/patterns.md",
+      "source_sha256": "93997f08c4571d96d3dd9dd36c8194f098d9e54be476a2b42c2c98cf7dfef4df"
     },
     {
       "translation": "docs/zh-CN/rules/java/security.md",
-      "source": "rules/java/security.md",
-      "source_sha256": "d3ca12313109954498fa2a33fd03cd9c3d3308d00d4dc4d346829f7cdd91edda"
+      "source": "docs/zh-CN/rules/java/security.md",
+      "source_sha256": "9211c549d8d4d1fc04ad13b4f0dc8bfe874dcba3b6cb67aecaeeb9aa64e06902"
     },
     {
       "translation": "docs/zh-CN/rules/java/testing.md",
-      "source": "rules/java/testing.md",
-      "source_sha256": "7723d18a6f797a83bba9b492dac55f7e3956a40e4a527c6533aa284d54f14ee0"
+      "source": "docs/zh-CN/rules/java/testing.md",
+      "source_sha256": "9cc6a81656bbfcc30f0421879611f7af936b14cceb9be38c304f3fa6c574e159"
     },
     {
       "translation": "docs/zh-CN/rules/kotlin/coding-style.md",
-      "source": "rules/kotlin/coding-style.md",
-      "source_sha256": "63c86f8bb5366901f3233f2b71880c4e9c0bde794bf2276745f2d2f6706d99c2"
+      "source": "docs/zh-CN/rules/kotlin/coding-style.md",
+      "source_sha256": "c748edd2e68bdd3aa8f260e10bfde83eace1834bcd83205aeb10e9d4a7259271"
     },
     {
       "translation": "docs/zh-CN/rules/kotlin/hooks.md",
-      "source": "rules/kotlin/hooks.md",
-      "source_sha256": "f5f703d6395984d4bbbdef4df9ee7875879a77551d3cc75acdf8b1054d09142c"
+      "source": "docs/zh-CN/rules/kotlin/hooks.md",
+      "source_sha256": "8ebef24efce493fc3f4918de13e5e23b2babe38c8b9bf5fc736053bd7e1f42fc"
     },
     {
       "translation": "docs/zh-CN/rules/kotlin/patterns.md",
-      "source": "rules/kotlin/patterns.md",
-      "source_sha256": "1c043217f0a9b7a5f013ce6dbfe0ef065d56ee6afcb30010f99ccdaf22349805"
+      "source": "docs/zh-CN/rules/kotlin/patterns.md",
+      "source_sha256": "fe2d81c9179cca806e88a377c2fc2404760c5d5a9679137d54cebe59343ad900"
     },
     {
       "translation": "docs/zh-CN/rules/kotlin/security.md",
-      "source": "rules/kotlin/security.md",
-      "source_sha256": "f2cb2185afce33a401fc815fc28581eae21f5f75382cad2082b27557d9cd18ac"
+      "source": "docs/zh-CN/rules/kotlin/security.md",
+      "source_sha256": "5a843f1e90caec773fdeab277473184d50b91579ae617b26024a892860604cee"
     },
     {
       "translation": "docs/zh-CN/rules/kotlin/testing.md",
-      "source": "rules/kotlin/testing.md",
-      "source_sha256": "441d35861a1297cabd698b7f3886c5f0bdc59727cb99fde135f8ecb06025f6e7"
+      "source": "docs/zh-CN/rules/kotlin/testing.md",
+      "source_sha256": "f715c042c7ea7819b1355e1285801cf902b5a0bc91e56188f066e19f798e56a4"
     },
     {
       "translation": "docs/zh-CN/rules/perl/coding-style.md",
-      "source": "rules/perl/coding-style.md",
-      "source_sha256": "4f134e0da0e332280e6c6803c5dec6edb38088c42f4bb6270c27e81f579a853a"
+      "source": "docs/zh-CN/rules/perl/coding-style.md",
+      "source_sha256": "eb74f6c0abcf8ee950f49b8ef98534e5890307ff071afc40e55eb712720cd654"
     },
     {
       "translation": "docs/zh-CN/rules/perl/hooks.md",
-      "source": "rules/perl/hooks.md",
-      "source_sha256": "a71f48f8b6068436a5b47c4f32291208ebd5d6b311b2ad1d393c1a0ad96c764d"
+      "source": "docs/zh-CN/rules/perl/hooks.md",
+      "source_sha256": "bc7b56bc882bc943dcf50832272dfe2d728f6fce5cb4b95a925df3f3e93da576"
     },
     {
       "translation": "docs/zh-CN/rules/perl/patterns.md",
-      "source": "rules/perl/patterns.md",
-      "source_sha256": "55a86b5bca376dc511bd9b4fa2d0b29985f4d7576aae715d68b760afe0628169"
+      "source": "docs/zh-CN/rules/perl/patterns.md",
+      "source_sha256": "3d8621198e82749542ce51dc0c0088c5be5e98614ef8da0519defe40b637b43f"
     },
     {
       "translation": "docs/zh-CN/rules/perl/security.md",
-      "source": "rules/perl/security.md",
-      "source_sha256": "c3d0311c2bd9b0fbe94d079e410561fa6a918180925f86c29dfadd06d32a00b5"
+      "source": "docs/zh-CN/rules/perl/security.md",
+      "source_sha256": "d5bac274873823d18201d6a561a236c85482080da42a456c18a21871c340b4b8"
     },
     {
       "translation": "docs/zh-CN/rules/perl/testing.md",
-      "source": "rules/perl/testing.md",
-      "source_sha256": "4e8377928b5da585aebeaa278e3f293365d84df7819cb44d8efb1b5dc4631e68"
+      "source": "docs/zh-CN/rules/perl/testing.md",
+      "source_sha256": "4108e2f2b098be24d3bbe7a9f85a53da7f640003d58cd379ae23ac6362ffb071"
     },
     {
       "translation": "docs/zh-CN/rules/php/coding-style.md",
-      "source": "rules/php/coding-style.md",
-      "source_sha256": "e6492b2e6f90a957a2f4664f2e01640fcc5ff77a81ab44c9cee42f3590be8b59"
+      "source": "docs/zh-CN/rules/php/coding-style.md",
+      "source_sha256": "d5b72f5d53927d6888d21510cb96c643178bff6bf6d15797a3eb932aa75349a9"
     },
     {
       "translation": "docs/zh-CN/rules/php/hooks.md",
-      "source": "rules/php/hooks.md",
-      "source_sha256": "624c6126b5c245aaf9af301f71f46a2b059baf94ef3de5c6bdb5dbf859ec0090"
+      "source": "docs/zh-CN/rules/php/hooks.md",
+      "source_sha256": "cc4a462ab2ad097eac6cea496a742ad5a02ad782a60d3bbb4aab49deed9d2a4a"
     },
     {
       "translation": "docs/zh-CN/rules/php/patterns.md",
-      "source": "rules/php/patterns.md",
-      "source_sha256": "f370b0af1e12d067fb4263ad829f62fedbc37e6e9aedf698d3939b6ee69cd1ea"
+      "source": "docs/zh-CN/rules/php/patterns.md",
+      "source_sha256": "11883f81f5ab50720dd6998a62f9d4a78acc935f463cbb474f172ce1e783ef51"
     },
     {
       "translation": "docs/zh-CN/rules/php/security.md",
-      "source": "rules/php/security.md",
-      "source_sha256": "c3ab3949fab80c9bde6d0f6925984dbd094e66b6a790c4cba29f6d74dd07d2b2"
+      "source": "docs/zh-CN/rules/php/security.md",
+      "source_sha256": "d2836db41901c151200a8b8d58beb1159b4a386ba86faeeddeadad315558251f"
     },
     {
       "translation": "docs/zh-CN/rules/php/testing.md",
-      "source": "rules/php/testing.md",
-      "source_sha256": "027a2fb6619fd671060a6d8283ee6cae2898eee20f26557f75626fc2d18ffdf9"
+      "source": "docs/zh-CN/rules/php/testing.md",
+      "source_sha256": "e60de3ae4e49e0a907b6d833ee272900f202f37ec4a24cabb26fd4f282e98bca"
     },
     {
       "translation": "docs/zh-CN/rules/python/coding-style.md",
-      "source": "rules/python/coding-style.md",
-      "source_sha256": "f9d6d7a39c5f5ea809579fecac591f390fa9264c088c7e209d464d5244747003"
+      "source": "docs/zh-CN/rules/python/coding-style.md",
+      "source_sha256": "91e9a994c73b09d5fc8f7392ea00aaf75398e89ed2318bde7156b8f87149ac73"
     },
     {
       "translation": "docs/zh-CN/rules/python/hooks.md",
-      "source": "rules/python/hooks.md",
-      "source_sha256": "7ebd12233f6917905d5653a63afe2361450ed732fd965de55055ed5ffd3c14a7"
+      "source": "docs/zh-CN/rules/python/hooks.md",
+      "source_sha256": "30d353f1dc92a93e3580b74ef6d1fa6d5c7bd7756bebde1a40ff2427a70025c7"
     },
     {
       "translation": "docs/zh-CN/rules/python/patterns.md",
-      "source": "rules/python/patterns.md",
-      "source_sha256": "d9cab9b536321ea7efc6180668fd48820deaf571400db732f0ca17bdda92b7d0"
+      "source": "docs/zh-CN/rules/python/patterns.md",
+      "source_sha256": "6a283de60fcc065fe7945a884e0b252f72c88059ce38860d20c90fceac9fe7d7"
     },
     {
       "translation": "docs/zh-CN/rules/python/security.md",
-      "source": "rules/python/security.md",
-      "source_sha256": "6bbbb6c800cdfef23c3f9a5055ce31096a7724b51f0d528935f6c32970639453"
+      "source": "docs/zh-CN/rules/python/security.md",
+      "source_sha256": "7e0eb6ef5fc11b29c210c41fe23485ab10ac7f38c1f801e0bf6b4f3f97585fbe"
     },
     {
       "translation": "docs/zh-CN/rules/python/testing.md",
-      "source": "rules/python/testing.md",
-      "source_sha256": "92655aa5047ee456501ad6605c428680bac6433965f89ce531fe79627004e8c6"
+      "source": "docs/zh-CN/rules/python/testing.md",
+      "source_sha256": "449e4ebabf5292042d13d3c2b6dad0da61b3e2fec362393d3bdb682af40605c7"
     },
     {
       "translation": "docs/zh-CN/rules/README.md",
-      "source": "rules/README.md",
-      "source_sha256": "207a7716438375cec5b058ca2898ef344c8f4f4d8aaa805486bc8065074e4144"
+      "source": "docs/zh-CN/rules/README.md",
+      "source_sha256": "24fc32925731f117bee3f855de32ac9f21a92753ff1658e2f7f25d19b92b8b75"
     },
     {
       "translation": "docs/zh-CN/rules/rust/coding-style.md",
-      "source": "rules/rust/coding-style.md",
-      "source_sha256": "01c056bef1bf3b7ca7cfc516986c1d05bcd341c620d2a09ce75acdc2ed539f5f"
+      "source": "docs/zh-CN/rules/rust/coding-style.md",
+      "source_sha256": "882dc336d6f12febc5b5cefd31f6bcd11cab23a68d95ff74401d64651614b3ec"
     },
     {
       "translation": "docs/zh-CN/rules/rust/hooks.md",
-      "source": "rules/rust/hooks.md",
-      "source_sha256": "a7494896f1c8838f31cd72846f435e6388f91bf94e0d91eb226dd9b5b684ca55"
+      "source": "docs/zh-CN/rules/rust/hooks.md",
+      "source_sha256": "de962ac13b4649973c20f523a6f450378747e586d9037dc193e203ed13c84bbd"
     },
     {
       "translation": "docs/zh-CN/rules/rust/patterns.md",
-      "source": "rules/rust/patterns.md",
-      "source_sha256": "08a09f7cf61991f4bdb69e388a9df546ea490c5c822aebcdd066e227cb06e16b"
+      "source": "docs/zh-CN/rules/rust/patterns.md",
+      "source_sha256": "1c8ec626d90519839bce3519c238be1d8fb7ea44a8ff8f9f52cc1d8123b9716e"
     },
     {
       "translation": "docs/zh-CN/rules/rust/security.md",
-      "source": "rules/rust/security.md",
-      "source_sha256": "09c5225869c09fc605f8495ae2c3728093e3b652dcc0ab55a9186946f5c67995"
+      "source": "docs/zh-CN/rules/rust/security.md",
+      "source_sha256": "506c50917f8602a5e146fdb837b1335a85315382f3d59e492f780caa6be0064f"
     },
     {
       "translation": "docs/zh-CN/rules/rust/testing.md",
-      "source": "rules/rust/testing.md",
-      "source_sha256": "54987d858918a433aea954c272c519d7ccb113834013fb79cc77ef7e6d571c8e"
+      "source": "docs/zh-CN/rules/rust/testing.md",
+      "source_sha256": "871de6dc754a0cd4ee529fcc58f438f89b9798a881f42accf6709d761b9ef07d"
     },
     {
       "translation": "docs/zh-CN/rules/swift/coding-style.md",
-      "source": "rules/swift/coding-style.md",
-      "source_sha256": "187d44050ed492076640f504a3fe7eb132ddabad262099d698a5b703b89d2659"
+      "source": "docs/zh-CN/rules/swift/coding-style.md",
+      "source_sha256": "78a534e23e57363a3a08db07a0babaa92308f0f18dd49ef8ae3dcd1d7a2b6360"
     },
     {
       "translation": "docs/zh-CN/rules/swift/hooks.md",
-      "source": "rules/swift/hooks.md",
-      "source_sha256": "654da388192df405927c5e4cea2f588d01cd349ba7ba30a813a4aa7c3d3a4661"
+      "source": "docs/zh-CN/rules/swift/hooks.md",
+      "source_sha256": "dfbcf063cd5bc7d32543b0c914324b8daa8ccafe99b15e5fc957aba63a1e20ff"
     },
     {
       "translation": "docs/zh-CN/rules/swift/patterns.md",
-      "source": "rules/swift/patterns.md",
-      "source_sha256": "4381cb9fa1c1ec01a600a96d80e320385148728748fb702822f9ac1c3c079860"
+      "source": "docs/zh-CN/rules/swift/patterns.md",
+      "source_sha256": "3172bf452a5b13d73a67ce3315f4845c162466b2d6282ab5853663935e7d4961"
     },
     {
       "translation": "docs/zh-CN/rules/swift/security.md",
-      "source": "rules/swift/security.md",
-      "source_sha256": "345a471220b7f448d991b9d28a0a047165aa7480a1ed758703d0c74041239b3a"
+      "source": "docs/zh-CN/rules/swift/security.md",
+      "source_sha256": "6e7a2cbf011d06ad4c579b11c3153799e65ec67b37ead9ff2510abcb901057b5"
     },
     {
       "translation": "docs/zh-CN/rules/swift/testing.md",
-      "source": "rules/swift/testing.md",
-      "source_sha256": "9a44133b6a8afd496a79bd4e8211985f44cb4a24f83c45b64160d26411e434e9"
+      "source": "docs/zh-CN/rules/swift/testing.md",
+      "source_sha256": "25235158e31bcc7c452701a1d22cd70262d13f6340eaef8ee53f61209de55339"
     },
     {
       "translation": "docs/zh-CN/rules/typescript/coding-style.md",
-      "source": "rules/typescript/coding-style.md",
-      "source_sha256": "cb6fbe555d700a65d466fc27377fbb66d6da0e2bcf4411656918f6a45402af1a"
+      "source": "docs/zh-CN/rules/typescript/coding-style.md",
+      "source_sha256": "71ef2a689737a59c075f433b32cbf28cbb678cff33bdd0512171511e91490ac2"
     },
     {
       "translation": "docs/zh-CN/rules/typescript/hooks.md",
-      "source": "rules/typescript/hooks.md",
-      "source_sha256": "930bbe5d5a66e0022a55c87d5a17765d1633669620f9a3be6815f3ab4ddcd6b4"
+      "source": "docs/zh-CN/rules/typescript/hooks.md",
+      "source_sha256": "bb082cba8d5a57034a6e15a6f8e8000dad911541c8acefd8c550405cdb39668a"
     },
     {
       "translation": "docs/zh-CN/rules/typescript/patterns.md",
-      "source": "rules/typescript/patterns.md",
-      "source_sha256": "20870f78aa32429fe13f35b415e9f6f8f7809e39c460cf8146d181b7306159fd"
+      "source": "docs/zh-CN/rules/typescript/patterns.md",
+      "source_sha256": "9a96a7ad74862da79c6d7b087dd463824978f40b4042814b8e38e668971b1490"
     },
     {
       "translation": "docs/zh-CN/rules/typescript/security.md",
-      "source": "rules/typescript/security.md",
-      "source_sha256": "7a74c95dfebca6923ab602edfe49688c9e4212defed40579de6fc0bb809f909a"
+      "source": "docs/zh-CN/rules/typescript/security.md",
+      "source_sha256": "0c914996955a39ca476612f059cde117f58e2967ce5685889afbf4d4f0b49054"
     },
     {
       "translation": "docs/zh-CN/rules/typescript/testing.md",
-      "source": "rules/typescript/testing.md",
-      "source_sha256": "92e3d02b4fff30899bc1a2af043d74941adbf3b2c0e972d2fcd2c68c9c2ea70b"
+      "source": "docs/zh-CN/rules/typescript/testing.md",
+      "source_sha256": "41681ee736867e916ed830cb48b0dd5045c0a31f84309d3fc4b156f7ef0c7b3f"
     },
     {
       "translation": "docs/zh-CN/SECURITY.md",
-      "source": "SECURITY.md",
-      "source_sha256": "46ccef6285397e78ce99c0341ae8ca977a53441a33f0ec609d49d72395645787"
+      "source": "docs/zh-CN/SECURITY.md",
+      "source_sha256": "b84e785be6c30bed54799e1210de03df89ffd9656afdb1845a197ac3e50e9aa9"
     },
     {
       "translation": "docs/zh-CN/skills/agent-eval/SKILL.md",
-      "source": "skills/agent-eval/SKILL.md",
-      "source_sha256": "200179d515f9961a469f30a4fa072b08d1527a3906ba46162b64a6011ce3c57d"
+      "source": "docs/zh-CN/skills/agent-eval/SKILL.md",
+      "source_sha256": "a9bd303c4176f4909e8d3ee779ca92febb58bbf52acd5c805114e25f6d0c558a"
     },
     {
       "translation": "docs/zh-CN/skills/agent-harness-construction/SKILL.md",
-      "source": "skills/agent-harness-construction/SKILL.md",
-      "source_sha256": "8da8d0cd5ab9bcdfc3885818de04fbb7de18446b282138bb1b39b6863f335020"
+      "source": "docs/zh-CN/skills/agent-harness-construction/SKILL.md",
+      "source_sha256": "866eea65549c97af4c1d85d36bd0e933e0804ccb5ad855ad46d6419801add57b"
     },
     {
       "translation": "docs/zh-CN/skills/agentic-engineering/SKILL.md",
-      "source": "skills/agentic-engineering/SKILL.md",
-      "source_sha256": "c202c6bfe6c98a6842b2e2c99c0bf030d82200fccf1f9fdb0143d7b51f0a3d13"
+      "source": "docs/zh-CN/skills/agentic-engineering/SKILL.md",
+      "source_sha256": "e29b392fc716b63b0b63e1bc5b097b4c149a296195869f71a6396ae5488ad125"
     },
     {
       "translation": "docs/zh-CN/skills/ai-first-engineering/SKILL.md",
-      "source": "skills/ai-first-engineering/SKILL.md",
-      "source_sha256": "41239a1d15ef590efe9836f686a07697586acf8b6a2f3248b8cb55322484c6a9"
+      "source": "docs/zh-CN/skills/ai-first-engineering/SKILL.md",
+      "source_sha256": "aa694f63af0d6ca1472c42c3d15e23e8656f29d8dddca0f79bef028d257ba7e6"
     },
     {
       "translation": "docs/zh-CN/skills/ai-regression-testing/SKILL.md",
-      "source": "skills/ai-regression-testing/SKILL.md",
-      "source_sha256": "f859cee42144e1ba28f7adab6296ecac56151d9f042f9a6744cd218b49005af0"
+      "source": "docs/zh-CN/skills/ai-regression-testing/SKILL.md",
+      "source_sha256": "a358fb7d3e0ab4458be348c097bf90f921b30104d55656531a8cdcb7db33e334"
     },
     {
       "translation": "docs/zh-CN/skills/android-clean-architecture/SKILL.md",
-      "source": "skills/android-clean-architecture/SKILL.md",
-      "source_sha256": "b3f84e98979fb517a4ba6e2ee44d5dd6045133285a51bbc2c892f165fb492563"
+      "source": "docs/zh-CN/skills/android-clean-architecture/SKILL.md",
+      "source_sha256": "b275aabe40a16f7e267ec3a5e9d311f7fd1eba34d11037996ec0ebeb336e9a4f"
     },
     {
       "translation": "docs/zh-CN/skills/api-design/SKILL.md",
-      "source": "skills/api-design/SKILL.md",
-      "source_sha256": "d2b090c4319e030fddb576950400724ff12ccb285083a540b6afb62431185d25"
+      "source": "docs/zh-CN/skills/api-design/SKILL.md",
+      "source_sha256": "6733723d14ffa638a8fdf3b1f90cb31a3108a6d6d42e9162c5080b97127cd70b"
     },
     {
       "translation": "docs/zh-CN/skills/architecture-decision-records/SKILL.md",
-      "source": "skills/architecture-decision-records/SKILL.md",
-      "source_sha256": "be3ce03e4ad61f5a652cfe27c666aad048d883ed00d3ef057664de8128cd0bfb"
+      "source": "docs/zh-CN/skills/architecture-decision-records/SKILL.md",
+      "source_sha256": "509713ba6e24caeb7d9581d83f45212699d9135e40569a19eef265e1c6800348"
     },
     {
       "translation": "docs/zh-CN/skills/article-writing/SKILL.md",
-      "source": "skills/article-writing/SKILL.md",
-      "source_sha256": "6ab082c7850e8e46e471026ea388024b1b9a574d84eb210fcb7391c15aa6b51a"
+      "source": "docs/zh-CN/skills/article-writing/SKILL.md",
+      "source_sha256": "a06b98e18501b50cdf5d261f4c1801458e24c87e0cd11fb12cabc67bad742675"
     },
     {
       "translation": "docs/zh-CN/skills/autonomous-loops/SKILL.md",
-      "source": "skills/autonomous-loops/SKILL.md",
-      "source_sha256": "25431f497ec2b2b449ad280070e5f27566c06c2f39d9e1538996f92deee3d2f4"
+      "source": "docs/zh-CN/skills/autonomous-loops/SKILL.md",
+      "source_sha256": "ec18be9827d0f2b818dfc695e0ef4de105f867c5c9b905b3b07a4b6ef22b2d32"
     },
     {
       "translation": "docs/zh-CN/skills/backend-patterns/SKILL.md",
-      "source": "skills/backend-patterns/SKILL.md",
-      "source_sha256": "681c33b4e125860295ca2639083cba524c77261e81efd67a3ce30b75593e7512"
+      "source": "docs/zh-CN/skills/backend-patterns/SKILL.md",
+      "source_sha256": "dc0eb1af74d6e303494c7449a0eecbe8fd742a5ce3c97037c3d95b2c6f8339e9"
     },
     {
       "translation": "docs/zh-CN/skills/blueprint/SKILL.md",
-      "source": "skills/blueprint/SKILL.md",
-      "source_sha256": "f74f4f312e2cca732e3764f618caebcc43aea3e62b0a59cccca041941d7302d9"
+      "source": "docs/zh-CN/skills/blueprint/SKILL.md",
+      "source_sha256": "c6ee0b2bc2ab57bc701b3bb8d70f8ad94fd8fbe0da1e053fac7e76157ee51541"
+    },
+    {
+      "translation": "docs/zh-CN/skills/browser-qa/SKILL.md",
+      "source": "docs/zh-CN/skills/browser-qa/SKILL.md",
+      "source_sha256": "5ac580d11939a10ebd76c27bc1674d424460435f896af4d250760b718369938b"
     },
     {
       "translation": "docs/zh-CN/skills/bun-runtime/SKILL.md",
-      "source": "skills/bun-runtime/SKILL.md",
-      "source_sha256": "2929d1f227962d86bfb2f0e45efd81590cfc90aeaad5b449f4630207e4e07204"
+      "source": "docs/zh-CN/skills/bun-runtime/SKILL.md",
+      "source_sha256": "979e540af73e82800ab62c2623f4784fd46a46bf847ec60d9f0091d94afe6d65"
     },
     {
       "translation": "docs/zh-CN/skills/carrier-relationship-management/SKILL.md",
-      "source": "skills/carrier-relationship-management/SKILL.md",
-      "source_sha256": "9999c1066965db0ad0458de7b35f2d3af327096254a09b46161dbe7e372b2ee0"
+      "source": "docs/zh-CN/skills/carrier-relationship-management/SKILL.md",
+      "source_sha256": "6309a6f0cb9bfaec2a4970d3849dddcf4da2d8680c9d00932cfb6b1ec70bf6c7"
     },
     {
       "translation": "docs/zh-CN/skills/claude-api/SKILL.md",
-      "source": "skills/claude-api/SKILL.md",
-      "source_sha256": "b708d716177edb76a986c20215c20b64d91f5d57a078ae0d879459a44499e202"
+      "source": "docs/zh-CN/skills/claude-api/SKILL.md",
+      "source_sha256": "a42924e2267a0fd05ac98577064da9543d25523bec30cefd00f9281b9de65820"
     },
     {
       "translation": "docs/zh-CN/skills/claude-devfleet/SKILL.md",
-      "source": "skills/claude-devfleet/SKILL.md",
-      "source_sha256": "3ae3f7bb4ae392afe4727ee7eee3d4c9e45b2c2e6c8d722191a95a347ed7dabb"
+      "source": "docs/zh-CN/skills/claude-devfleet/SKILL.md",
+      "source_sha256": "7181187e5c9547d4300272a13a4038822f7ffca9092cc7912b726888449d8b4b"
     },
     {
       "translation": "docs/zh-CN/skills/clickhouse-io/SKILL.md",
-      "source": "skills/clickhouse-io/SKILL.md",
-      "source_sha256": "bc0d9351ae909eaa725b57ee5c4928274ed94e0b55e0fef4076cbe2844ae8a7b"
+      "source": "docs/zh-CN/skills/clickhouse-io/SKILL.md",
+      "source_sha256": "c8b731c55a1fb5b9e52f2280c2e06a05a989c9afd2b98f4f8bc339d0c07566b8"
     },
     {
       "translation": "docs/zh-CN/skills/codebase-onboarding/SKILL.md",
-      "source": "skills/codebase-onboarding/SKILL.md",
-      "source_sha256": "716e42006634cc5c81a744f217452d2149bf768008df30500a349e3920d1e588"
+      "source": "docs/zh-CN/skills/codebase-onboarding/SKILL.md",
+      "source_sha256": "eb07e6e065eba0dc15e8658cae91e4508a5a0839dfc06f3e4c3954c0d5ee51d5"
     },
     {
       "translation": "docs/zh-CN/skills/coding-standards/SKILL.md",
-      "source": "skills/coding-standards/SKILL.md",
-      "source_sha256": "be0b5f2063e9b4b1c6514889b0dc408316f7b0c7892832d10b69ec28e1389b7c"
+      "source": "docs/zh-CN/skills/coding-standards/SKILL.md",
+      "source_sha256": "a7c34a238305eade0b688d6ce185a4f4820fc30a4bb97d34cb9e43e910f2d85e"
     },
     {
       "translation": "docs/zh-CN/skills/compose-multiplatform-patterns/SKILL.md",
-      "source": "skills/compose-multiplatform-patterns/SKILL.md",
-      "source_sha256": "c81cbd0422f70719f8a9da87c653b0b484d02747d1c54d3467d332ccbedcecc9"
+      "source": "docs/zh-CN/skills/compose-multiplatform-patterns/SKILL.md",
+      "source_sha256": "4b915648f7a6e84420993bab81e3a9cf3c5c75b08c0941ce9c2905538419051b"
     },
     {
       "translation": "docs/zh-CN/skills/configure-ecc/SKILL.md",
-      "source": "skills/configure-ecc/SKILL.md",
-      "source_sha256": "43dbbd0be4c10f3e1afd05d84f50c5cb8314fdf0b56435b776b37d3f3e1b8aaf"
+      "source": "docs/zh-CN/skills/configure-ecc/SKILL.md",
+      "source_sha256": "c32710e131649418106b050e876d0fcfeea94a476a6159812eea488eb28fb631"
     },
     {
       "translation": "docs/zh-CN/skills/content-engine/SKILL.md",
-      "source": "skills/content-engine/SKILL.md",
-      "source_sha256": "057a610eab12e16bf447a46dd91de867ea450ce541fddc956d1abd55be5ec2cc"
+      "source": "docs/zh-CN/skills/content-engine/SKILL.md",
+      "source_sha256": "c05ae681bfb5b467f4c7a6a9893d010164f46b64510475ea476da20ddda8043b"
     },
     {
       "translation": "docs/zh-CN/skills/content-hash-cache-pattern/SKILL.md",
-      "source": "skills/content-hash-cache-pattern/SKILL.md",
-      "source_sha256": "cdef26f0fc59be4320d3b8acc75a1084c06d7f8b58d635de51cd98e1d4343dbc"
+      "source": "docs/zh-CN/skills/content-hash-cache-pattern/SKILL.md",
+      "source_sha256": "4a588ebf75ac4b2fffffe32c6ed085a9f1df6a5dd5351abda0099a2f9b843580"
     },
     {
       "translation": "docs/zh-CN/skills/context-budget/SKILL.md",
-      "source": "skills/context-budget/SKILL.md",
-      "source_sha256": "ed3e05b80b4ecc0c40222f44c640d2e25645adda46dbfb66113e7139ab3b15ad"
+      "source": "docs/zh-CN/skills/context-budget/SKILL.md",
+      "source_sha256": "d4b2dad70c7fe84dbd7c106de0ff7fda3b0a59f5356d15614c8edc52281a965c"
     },
     {
       "translation": "docs/zh-CN/skills/continuous-agent-loop/SKILL.md",
-      "source": "skills/continuous-agent-loop/SKILL.md",
-      "source_sha256": "9a014a9cf31cbc43dc2e48e4323438de562fa28de017a9c3b9bad8863d16eb6d"
+      "source": "docs/zh-CN/skills/continuous-agent-loop/SKILL.md",
+      "source_sha256": "3af31789a063d9e7d099bac1d4353bf50d112551d9c2a64faa9fdd38183dd654"
     },
     {
       "translation": "docs/zh-CN/skills/continuous-learning-v2/agents/observer.md",
-      "source": "skills/continuous-learning-v2/agents/observer.md",
-      "source_sha256": "654f2f0fc9d9ee1ee6e16e56c24cdb7aced277cddf0dd7961e91443291a79187"
+      "source": "docs/zh-CN/skills/continuous-learning-v2/agents/observer.md",
+      "source_sha256": "9989fb9eb6a5cbadd6f03c6a1f6e771455aaedb290fd453ae4f58a8bc46f7c29"
     },
     {
       "translation": "docs/zh-CN/skills/continuous-learning-v2/SKILL.md",
-      "source": "skills/continuous-learning-v2/SKILL.md",
-      "source_sha256": "7629ed1a18ce078b57f22f407115a41a7f404aee73de17667ec5571b0001a8e4"
+      "source": "docs/zh-CN/skills/continuous-learning-v2/SKILL.md",
+      "source_sha256": "668fc8de1792837500994f80251fa1bfede65bf56c525fb04105f70e65dc3166"
     },
     {
       "translation": "docs/zh-CN/skills/continuous-learning/SKILL.md",
-      "source": "skills/continuous-learning/SKILL.md",
-      "source_sha256": "93924eec09b0cae312cfeda0441764602f313d1914fe899981497697fe13822d"
+      "source": "docs/zh-CN/skills/continuous-learning/SKILL.md",
+      "source_sha256": "8bae3b10385d9f13e7fe63f7fa6cc23bcec253b5c99e2f7b4f5301e90207ff1f"
     },
     {
       "translation": "docs/zh-CN/skills/cost-aware-llm-pipeline/SKILL.md",
-      "source": "skills/cost-aware-llm-pipeline/SKILL.md",
-      "source_sha256": "09eb41fdfa081cd09d3843449275d80ae1c56938a459061d4d3faac3b13012cd"
+      "source": "docs/zh-CN/skills/cost-aware-llm-pipeline/SKILL.md",
+      "source_sha256": "bc715e679153a4c1b9314d8574c8758e648652b55538a473aa080fc2a2a5e27f"
     },
     {
       "translation": "docs/zh-CN/skills/cpp-coding-standards/SKILL.md",
-      "source": "skills/cpp-coding-standards/SKILL.md",
-      "source_sha256": "70919980c635f66db649b7eb1e426fb2098754ed6c9db22f1a7eee0935227d35"
+      "source": "docs/zh-CN/skills/cpp-coding-standards/SKILL.md",
+      "source_sha256": "bdbd3a84cb388d737e31400aa43d812803833693cd738f39939389ec9af3b696"
     },
     {
       "translation": "docs/zh-CN/skills/cpp-testing/SKILL.md",
-      "source": "skills/cpp-testing/SKILL.md",
-      "source_sha256": "84e58979240d0387d55dd5bf0d4ba9976733098e2f839f10b17251797eae7e50"
+      "source": "docs/zh-CN/skills/cpp-testing/SKILL.md",
+      "source_sha256": "7b15f0c64107ffade356ed84423990d7b9f26af2e449ba312067f0d372e24c0d"
     },
     {
       "translation": "docs/zh-CN/skills/crosspost/SKILL.md",
-      "source": "skills/crosspost/SKILL.md",
-      "source_sha256": "c6dc30b5634b643ca043b03b8facb1835621349519b7867f8f3a8f2705823f48"
+      "source": "docs/zh-CN/skills/crosspost/SKILL.md",
+      "source_sha256": "6641022b1a50e37d568a9f6dd3f7b79ee9897e1347a0c7b594bdc7065de53c9c"
     },
     {
       "translation": "docs/zh-CN/skills/customs-trade-compliance/SKILL.md",
-      "source": "skills/customs-trade-compliance/SKILL.md",
-      "source_sha256": "be0030f456b7d26e608230a81f49dc2ca7ec725110d22c31f8a354bceb3ce0d1"
+      "source": "docs/zh-CN/skills/customs-trade-compliance/SKILL.md",
+      "source_sha256": "c168781f8c5e66b6a1cadae6cb12336afd6349317874b2edee50c6173287db2f"
     },
     {
       "translation": "docs/zh-CN/skills/data-scraper-agent/SKILL.md",
-      "source": "skills/data-scraper-agent/SKILL.md",
-      "source_sha256": "cf0e128c18d212b086645136b1708f2afe2607d1b811783dc965dc679f2a8361"
+      "source": "docs/zh-CN/skills/data-scraper-agent/SKILL.md",
+      "source_sha256": "6901fd0c332eadf4763909307ff5e538605093c50b3506e5a5778745a24faa40"
     },
     {
       "translation": "docs/zh-CN/skills/database-migrations/SKILL.md",
-      "source": "skills/database-migrations/SKILL.md",
-      "source_sha256": "645290c5763d31649bd6c071245b53198cdaf4438d9aa091b6ee6bd3ab085fea"
+      "source": "docs/zh-CN/skills/database-migrations/SKILL.md",
+      "source_sha256": "293632329c927ea425989c37dbe38bacb6c09a0dff64d11e5ea74fd168f5f81e"
     },
     {
       "translation": "docs/zh-CN/skills/deep-research/SKILL.md",
-      "source": "skills/deep-research/SKILL.md",
-      "source_sha256": "2d631427fc9aba27a318735f930bdb49f5c6ce416506340025eac01648f1df09"
+      "source": "docs/zh-CN/skills/deep-research/SKILL.md",
+      "source_sha256": "9ec6d738c16021dfd53d1d160b895da578bdde4ab62bb0d70c605f9f71d2f151"
     },
     {
       "translation": "docs/zh-CN/skills/deployment-patterns/SKILL.md",
-      "source": "skills/deployment-patterns/SKILL.md",
-      "source_sha256": "b2d18f90ea5f5b7e6c357c3ded7353fa2d23b04464eed4b81745b0c8340e31ba"
+      "source": "docs/zh-CN/skills/deployment-patterns/SKILL.md",
+      "source_sha256": "267d299228ee86933d5ac1386693c8eafd444364f41a0871ab2a336f5b47a633"
     },
     {
       "translation": "docs/zh-CN/skills/django-patterns/SKILL.md",
-      "source": "skills/django-patterns/SKILL.md",
-      "source_sha256": "267eb89f537a6626937d60fc732675f685b11209fa9025599c80e0f322e9a503"
+      "source": "docs/zh-CN/skills/django-patterns/SKILL.md",
+      "source_sha256": "226df2e04040dd7d7d0a8e81c5b46ad767fe10206edc86f856d2f43f0692e9ad"
     },
     {
       "translation": "docs/zh-CN/skills/django-security/SKILL.md",
-      "source": "skills/django-security/SKILL.md",
-      "source_sha256": "d5d174690a16dca99798693f47b5df17478bfc5ff0f91684caf56dc1e9bef8b5"
+      "source": "docs/zh-CN/skills/django-security/SKILL.md",
+      "source_sha256": "93c96a19af12d8231ce8491c9638a0dead9577a4a06416ed247d96d45d0fb4d0"
     },
     {
       "translation": "docs/zh-CN/skills/django-tdd/SKILL.md",
-      "source": "skills/django-tdd/SKILL.md",
-      "source_sha256": "99ef0936053afecf9f1ebbca687cd4232f4baa5f491878d5157c70344f237cd6"
+      "source": "docs/zh-CN/skills/django-tdd/SKILL.md",
+      "source_sha256": "a5f34c4328dae0eb45611bd40c40a34765631c2372697289f090d482fcd8378b"
     },
     {
       "translation": "docs/zh-CN/skills/django-verification/SKILL.md",
-      "source": "skills/django-verification/SKILL.md",
-      "source_sha256": "b330cd018e559d568990f485f6ba90795e22e4b38dd68911167af88f54388674"
+      "source": "docs/zh-CN/skills/django-verification/SKILL.md",
+      "source_sha256": "09bff830a5e37374ddd14b023a94b8b187d631a7757b93abf17a59938b9b3f1b"
     },
     {
       "translation": "docs/zh-CN/skills/dmux-workflows/SKILL.md",
-      "source": "skills/dmux-workflows/SKILL.md",
-      "source_sha256": "d82ed05f4713fc85612485e866dcb770126e0003b6ded65f178cf2f9c1a00db7"
+      "source": "docs/zh-CN/skills/dmux-workflows/SKILL.md",
+      "source_sha256": "bcbfd73f195ca68065ef5456d621513ca540dda8944d8c5d18474923f175193a"
     },
     {
       "translation": "docs/zh-CN/skills/docker-patterns/SKILL.md",
-      "source": "skills/docker-patterns/SKILL.md",
-      "source_sha256": "6deb8e45b322481036cbf21c0ea61fb1427b0f47a01e675068ccdba93a1a2164"
+      "source": "docs/zh-CN/skills/docker-patterns/SKILL.md",
+      "source_sha256": "74200ce2d49fec3417ea27290ab2fb0975cea4a92eaae267e3136ddb2bcb7e28"
     },
     {
       "translation": "docs/zh-CN/skills/documentation-lookup/SKILL.md",
-      "source": "skills/documentation-lookup/SKILL.md",
-      "source_sha256": "89cc655f72a5e3a947e88b7bae419c068f9ea34101b3fc9e7129184432b507cd"
+      "source": "docs/zh-CN/skills/documentation-lookup/SKILL.md",
+      "source_sha256": "e07ad1a86197716f5665362a971680759ced580e8b0752444cec80a479922bcb"
     },
     {
       "translation": "docs/zh-CN/skills/e2e-testing/SKILL.md",
-      "source": "skills/e2e-testing/SKILL.md",
-      "source_sha256": "f84ae93c159bf6ecef5a60c9735dc82d96bc5f977ef52eb71678b66722acf684"
+      "source": "docs/zh-CN/skills/e2e-testing/SKILL.md",
+      "source_sha256": "963dabb1698c2f4499a0392646b842e24fd65587e85649108a38d3def9ff137e"
     },
     {
       "translation": "docs/zh-CN/skills/energy-procurement/SKILL.md",
-      "source": "skills/energy-procurement/SKILL.md",
-      "source_sha256": "5de19b7c80092f5f118f8b59d688556faca02a7cbdb8fef69df75feda50d916e"
+      "source": "docs/zh-CN/skills/energy-procurement/SKILL.md",
+      "source_sha256": "8eaa15e034dd3ef3ac4e0772fd48dad5a4fd522b34819a2722fcda6fe41446ce"
     },
     {
       "translation": "docs/zh-CN/skills/enterprise-agent-ops/SKILL.md",
-      "source": "skills/enterprise-agent-ops/SKILL.md",
-      "source_sha256": "27edc796df2bf30b611b05ca443434bf65bfc6fde18c94cd16ec41357f4c8ac5"
+      "source": "docs/zh-CN/skills/enterprise-agent-ops/SKILL.md",
+      "source_sha256": "2547103466926819771a302b8b69436858efeafe760ac505d8f304f73c911ce8"
     },
     {
       "translation": "docs/zh-CN/skills/eval-harness/SKILL.md",
-      "source": "skills/eval-harness/SKILL.md",
-      "source_sha256": "0b1933f5532df4bcc750d8799b7b33037e66c5d41f87d2953065868d08981926"
+      "source": "docs/zh-CN/skills/eval-harness/SKILL.md",
+      "source_sha256": "0eb45792738403ac189492e196342b81466769000d587c6fee93a326290834e4"
     },
     {
       "translation": "docs/zh-CN/skills/exa-search/SKILL.md",
-      "source": "skills/exa-search/SKILL.md",
-      "source_sha256": "b802dedcf7a5cc5ef2dea7d3551030c705e4fe371afe052cf3e06e1d618ce0c0"
+      "source": "docs/zh-CN/skills/exa-search/SKILL.md",
+      "source_sha256": "d884b1f233bdf6dfde6ec7dccc27d87848df8c6e074577cc7f89468df960ba92"
     },
     {
       "translation": "docs/zh-CN/skills/fal-ai-media/SKILL.md",
-      "source": "skills/fal-ai-media/SKILL.md",
-      "source_sha256": "5aa3ff04a2f7ef2fcdb5735cf8597abaa2b0c6ad3060c0cee45c665a9af5b2f1"
+      "source": "docs/zh-CN/skills/fal-ai-media/SKILL.md",
+      "source_sha256": "2ce85237ab2988974c15feac026deebd8da0635a839ca2a39070cd5342dc1812"
     },
     {
       "translation": "docs/zh-CN/skills/flutter-dart-code-review/SKILL.md",
-      "source": "skills/flutter-dart-code-review/SKILL.md",
-      "source_sha256": "908b324fd2514ff0d842f20e7a8aeab6b6335f5393135d68464f267709ef8553"
+      "source": "docs/zh-CN/skills/flutter-dart-code-review/SKILL.md",
+      "source_sha256": "618a04d22aa2e4ad3c659b48182b5f934033aca51a3abc7c6dffc45b3d1566b9"
     },
     {
       "translation": "docs/zh-CN/skills/foundation-models-on-device/SKILL.md",
-      "source": "skills/foundation-models-on-device/SKILL.md",
-      "source_sha256": "8efee7e392b39990e4ed58d85ac0783c1cbaac8e1cd87e7a4ef502f15987963e"
+      "source": "docs/zh-CN/skills/foundation-models-on-device/SKILL.md",
+      "source_sha256": "213bfc50aba9b5affefcbb6ba52602ef4d5a6b3656bb4b335e0e375319d76669"
     },
     {
       "translation": "docs/zh-CN/skills/frontend-patterns/SKILL.md",
-      "source": "skills/frontend-patterns/SKILL.md",
-      "source_sha256": "d32a3f430d658a8a8adb3d05da56fa1b49ef39cf2d1a6be8f27e5164f2d510df"
+      "source": "docs/zh-CN/skills/frontend-patterns/SKILL.md",
+      "source_sha256": "845f0613f080d09ddc74fb1ae9479edf4b96767c770ea4c906e6f6636859d92d"
     },
     {
       "translation": "docs/zh-CN/skills/frontend-slides/SKILL.md",
-      "source": "skills/frontend-slides/SKILL.md",
-      "source_sha256": "bc890c0deeb766e78991d6de150fd981a70b3dac5507a4d20b43c1a210b1819d"
+      "source": "docs/zh-CN/skills/frontend-slides/SKILL.md",
+      "source_sha256": "dbaf7ca6ac13196928978e5c23edbf91e9440a56a7299daf72a0a00950580fc7"
     },
     {
       "translation": "docs/zh-CN/skills/frontend-slides/STYLE_PRESETS.md",
-      "source": "skills/frontend-slides/STYLE_PRESETS.md",
-      "source_sha256": "f3448493022f8fa3f858319b14c0c48a35d441864dc78a2411f7938c28e7a265"
+      "source": "docs/zh-CN/skills/frontend-slides/STYLE_PRESETS.md",
+      "source_sha256": "548e6f0c33a161064d52858961eb7eaa98b7ffae4bf9fb484c475ea3c946438c"
     },
     {
       "translation": "docs/zh-CN/skills/golang-patterns/SKILL.md",
-      "source": "skills/golang-patterns/SKILL.md",
-      "source_sha256": "f36a89926fab1e895e7e2e2522e4104e1d7b07452244f31ff09ef1eeb069495c"
+      "source": "docs/zh-CN/skills/golang-patterns/SKILL.md",
+      "source_sha256": "2b8742dc6c2015087fcbc45526b4a36fc904b39525d97b834d5c0097693615b5"
     },
     {
       "translation": "docs/zh-CN/skills/golang-testing/SKILL.md",
-      "source": "skills/golang-testing/SKILL.md",
-      "source_sha256": "2da1afcd9df6529392653cd450edc40eb8bbc0b073f3eda17a510f4b89411c1b"
+      "source": "docs/zh-CN/skills/golang-testing/SKILL.md",
+      "source_sha256": "38e09dc9bb433a5f488f138d66bff3c217f4e9c5535a02b073f644ab35464984"
     },
     {
       "translation": "docs/zh-CN/skills/inventory-demand-planning/SKILL.md",
-      "source": "skills/inventory-demand-planning/SKILL.md",
-      "source_sha256": "e8ccbdc15eb335dd6f7e3d45ab6bc822c3e530ded2fee229e9b00d37221829bf"
+      "source": "docs/zh-CN/skills/inventory-demand-planning/SKILL.md",
+      "source_sha256": "6433ace3d4b156f927650e0a54573814c0466456f325a1019937bb5e9ca0e18a"
     },
     {
       "translation": "docs/zh-CN/skills/investor-materials/SKILL.md",
-      "source": "skills/investor-materials/SKILL.md",
-      "source_sha256": "0541ac8ede8d39c59a646834481d0de86312e598331b86dc7027ece0def3c193"
+      "source": "docs/zh-CN/skills/investor-materials/SKILL.md",
+      "source_sha256": "f3593ce732df071d0bf4348de4d4206b2117fc0bc34f2baecea2e726f8297820"
     },
     {
       "translation": "docs/zh-CN/skills/investor-outreach/SKILL.md",
-      "source": "skills/investor-outreach/SKILL.md",
-      "source_sha256": "e1f6e1ac6d85381cdc7f8ae29ff60647f9de46b4c17ef452f7e343ae50749c55"
+      "source": "docs/zh-CN/skills/investor-outreach/SKILL.md",
+      "source_sha256": "b57c63faf6ac76a79210a8e102c79fb30efe06d30b5aaf09f2aa7b7edac4a6c0"
     },
     {
       "translation": "docs/zh-CN/skills/iterative-retrieval/SKILL.md",
-      "source": "skills/iterative-retrieval/SKILL.md",
-      "source_sha256": "a2648eff0f88bd9b7d2f4ffdf272052caf82d8f7d9bf48260bfd42d83b723713"
+      "source": "docs/zh-CN/skills/iterative-retrieval/SKILL.md",
+      "source_sha256": "2e02416be579ce32aa16345f5a4b27c1e1a9f4ab12a20620143c7ed3b4139022"
     },
     {
       "translation": "docs/zh-CN/skills/java-coding-standards/SKILL.md",
-      "source": "skills/java-coding-standards/SKILL.md",
-      "source_sha256": "253c3ef143330a2901c2b75fd8def3a3f9ec66e6cb1f8fd1e323b803004dd22b"
+      "source": "docs/zh-CN/skills/java-coding-standards/SKILL.md",
+      "source_sha256": "a0847ac06ecd6e579cfc4a2f649cf30f545145aaf4682794cf4d13913e80430a"
     },
     {
       "translation": "docs/zh-CN/skills/jpa-patterns/SKILL.md",
-      "source": "skills/jpa-patterns/SKILL.md",
-      "source_sha256": "5302c813a58deb5420e10c6dec4c5f0d036c278f2c494c8243a23326a994063e"
+      "source": "docs/zh-CN/skills/jpa-patterns/SKILL.md",
+      "source_sha256": "70cfd0d2bba87b50c6d3361aa89e3a4a92e240a295bcc0bf53e5a49fbed1b9da"
     },
     {
       "translation": "docs/zh-CN/skills/kotlin-coroutines-flows/SKILL.md",
-      "source": "skills/kotlin-coroutines-flows/SKILL.md",
-      "source_sha256": "aaac6a9031e4a7c72cf6c958c21f80941132527ed280af245b593ec3efa115c5"
+      "source": "docs/zh-CN/skills/kotlin-coroutines-flows/SKILL.md",
+      "source_sha256": "f3439df44250b215d03f291db7d08d4eacb711d5ad0ff5db21e65d0a9f597455"
     },
     {
       "translation": "docs/zh-CN/skills/kotlin-exposed-patterns/SKILL.md",
-      "source": "skills/kotlin-exposed-patterns/SKILL.md",
-      "source_sha256": "e5c29d23513adba9f047ca31422be0c814678751e4501466de6f30a044cd163f"
+      "source": "docs/zh-CN/skills/kotlin-exposed-patterns/SKILL.md",
+      "source_sha256": "94c6b78934fe1dca9685b34bda0559ce8ddb52c14e6f2551cbb3c123cdecf37f"
     },
     {
       "translation": "docs/zh-CN/skills/kotlin-ktor-patterns/SKILL.md",
-      "source": "skills/kotlin-ktor-patterns/SKILL.md",
-      "source_sha256": "71982b984b919891b2a33513feb69f3f3f69d47fde16d8e7e5373cba49e6289a"
+      "source": "docs/zh-CN/skills/kotlin-ktor-patterns/SKILL.md",
+      "source_sha256": "eac50711c4568c2f1bdd7260cb68629aa722f247baadd8d6ac0f0a7bcd13fc91"
     },
     {
       "translation": "docs/zh-CN/skills/kotlin-patterns/SKILL.md",
-      "source": "skills/kotlin-patterns/SKILL.md",
-      "source_sha256": "b98d254f9f0c1af600fa9b096c015981ffa2b3ebe651893ad09c56c8fb8aa5e9"
+      "source": "docs/zh-CN/skills/kotlin-patterns/SKILL.md",
+      "source_sha256": "ff3f4b87cd952126a1f9bc609c3162bccaad6bd0cd051ca9b2d19cc410fbb1a4"
     },
     {
       "translation": "docs/zh-CN/skills/kotlin-testing/SKILL.md",
-      "source": "skills/kotlin-testing/SKILL.md",
-      "source_sha256": "46f9f7da6a6391038c11ea0c3d8ca8275077d83a3e651963c25a1f73b381e4f4"
+      "source": "docs/zh-CN/skills/kotlin-testing/SKILL.md",
+      "source_sha256": "4686e383ce42c81054934b02fc6ec6ca14395a1982921dea4fa10712e4b4e2a1"
     },
     {
       "translation": "docs/zh-CN/skills/laravel-patterns/SKILL.md",
-      "source": "skills/laravel-patterns/SKILL.md",
-      "source_sha256": "b69b40b57bbf9bb106ed07c6f1192be9fc30ba6c63bc51bfb86fc1fdc6cd5e0a"
+      "source": "docs/zh-CN/skills/laravel-patterns/SKILL.md",
+      "source_sha256": "61b29006b77bb2ead407b0394612ca0e3c26e87a4a32a819928c217990134b11"
     },
     {
       "translation": "docs/zh-CN/skills/laravel-security/SKILL.md",
-      "source": "skills/laravel-security/SKILL.md",
-      "source_sha256": "bffcb2824e7d0c4f6cd7728aa0d64aa81508e40e3c367ecf1ba2876c40c15e05"
+      "source": "docs/zh-CN/skills/laravel-security/SKILL.md",
+      "source_sha256": "c07aa2611b663bc496d630ede0e05978ea7b3934e5e08bdfea01ef3cd463915f"
     },
     {
       "translation": "docs/zh-CN/skills/laravel-tdd/SKILL.md",
-      "source": "skills/laravel-tdd/SKILL.md",
-      "source_sha256": "09e0ee17c37b012fea4d7b8e7e2b894da749171f4e31537a6b6e5b9b192455f9"
+      "source": "docs/zh-CN/skills/laravel-tdd/SKILL.md",
+      "source_sha256": "9917e5a10693a44afdfd82d1ac8cf126c2f6d05fbb82c212862f364fec5ddba3"
     },
     {
       "translation": "docs/zh-CN/skills/laravel-verification/SKILL.md",
-      "source": "skills/laravel-verification/SKILL.md",
-      "source_sha256": "64549241636322e25322b3c9472a020244170bc4284fdda377d3e587e4fdd0f3"
+      "source": "docs/zh-CN/skills/laravel-verification/SKILL.md",
+      "source_sha256": "1b7dce0a4f5bd992459d362df2e604bda594920fd49badead132cb542eb3b6b3"
     },
     {
       "translation": "docs/zh-CN/skills/liquid-glass-design/SKILL.md",
-      "source": "skills/liquid-glass-design/SKILL.md",
-      "source_sha256": "024aa207eb3d4d31d868954a7352a40b78c61f2fd007ab8b452afb6217070f84"
+      "source": "docs/zh-CN/skills/liquid-glass-design/SKILL.md",
+      "source_sha256": "edceabe090f221e8ea66f7aaa8ef93e10186c4bc96205d7cb73f6900fa2d81bd"
     },
     {
       "translation": "docs/zh-CN/skills/logistics-exception-management/SKILL.md",
-      "source": "skills/logistics-exception-management/SKILL.md",
-      "source_sha256": "f19fc1cfb212dabb780ac645e0ee427357519a3490a7df1ffdbeabe4c458afb3"
+      "source": "docs/zh-CN/skills/logistics-exception-management/SKILL.md",
+      "source_sha256": "bcb36af8a01bf741c81a23db6adae4e7a2c8a585c87dbe10607e96d88fd60241"
     },
     {
       "translation": "docs/zh-CN/skills/market-research/SKILL.md",
-      "source": "skills/market-research/SKILL.md",
-      "source_sha256": "7ef3fa13d6272fd295eeb2aca9f6a2f09f6a8270cf33b0675fc5a0018cf6e406"
+      "source": "docs/zh-CN/skills/market-research/SKILL.md",
+      "source_sha256": "df40cbc582dedb4d3acfc4f78b53f41e8458fad2a4027f81321ebdd799fe87eb"
     },
     {
       "translation": "docs/zh-CN/skills/mcp-server-patterns/SKILL.md",
-      "source": "skills/mcp-server-patterns/SKILL.md",
-      "source_sha256": "8da7edb0647f1015c5d70951d66a8f9dd2108726eb1cf9949ff2874849c4a880"
+      "source": "docs/zh-CN/skills/mcp-server-patterns/SKILL.md",
+      "source_sha256": "79cf956ca96fc3344fbeb288707b3f60997f8baa28237f70b6c0f58fae4d1b6d"
     },
     {
       "translation": "docs/zh-CN/skills/nanoclaw-repl/SKILL.md",
-      "source": "skills/nanoclaw-repl/SKILL.md",
-      "source_sha256": "a917d56baef854638fd6a33c9d9ce4f819d3dd128286514ed28807d911935d27"
+      "source": "docs/zh-CN/skills/nanoclaw-repl/SKILL.md",
+      "source_sha256": "c67c1b7c13ae69fbc729baf970081f31b297fa1193a5e881b2914d4c6cc54191"
     },
     {
       "translation": "docs/zh-CN/skills/nextjs-turbopack/SKILL.md",
-      "source": "skills/nextjs-turbopack/SKILL.md",
-      "source_sha256": "f65da15aabeb9dca7ae08525739e72ab16e79a78ff4004f7cab6ad2de1c2a79b"
+      "source": "docs/zh-CN/skills/nextjs-turbopack/SKILL.md",
+      "source_sha256": "6084ff19da8cb0145571c2a2e3db90b3b18c2d90feeee2dae015b87249afa424"
     },
     {
       "translation": "docs/zh-CN/skills/nutrient-document-processing/SKILL.md",
-      "source": "skills/nutrient-document-processing/SKILL.md",
-      "source_sha256": "bf680ac62b6881b4468d075178b9e8332c62c3e4618a64b82b64742fbd7ded65"
+      "source": "docs/zh-CN/skills/nutrient-document-processing/SKILL.md",
+      "source_sha256": "65da4ae1ac29b97f2262d7a51a7b882ed8eee9e875ee338ff9196127802d2b41"
     },
     {
       "translation": "docs/zh-CN/skills/nuxt4-patterns/SKILL.md",
-      "source": "skills/nuxt4-patterns/SKILL.md",
-      "source_sha256": "a5282f46c6738b1d83067ee77a5a251bfc22da7735c7b7442acc15f20d2e8659"
+      "source": "docs/zh-CN/skills/nuxt4-patterns/SKILL.md",
+      "source_sha256": "011c032b91944a327388c709b75d7edbe6265a782eb1eb94016de5d8e594e930"
     },
     {
       "translation": "docs/zh-CN/skills/perl-patterns/SKILL.md",
-      "source": "skills/perl-patterns/SKILL.md",
-      "source_sha256": "7051a5b3b005f90faa6dac264510b42b54d6c0b69f2149c34ac57883489af3cd"
+      "source": "docs/zh-CN/skills/perl-patterns/SKILL.md",
+      "source_sha256": "4fef099c8d7b1e7246bfcf3bdf194068e15d221036e805bda2f9b5197aec6d8e"
     },
     {
       "translation": "docs/zh-CN/skills/perl-security/SKILL.md",
-      "source": "skills/perl-security/SKILL.md",
-      "source_sha256": "99cffd27aff013ab071716c7eb40f7c595dbf2165ad1825a7458122a4281bfdd"
+      "source": "docs/zh-CN/skills/perl-security/SKILL.md",
+      "source_sha256": "b2790980049efbd253dab1062c5b078fea60cd8856adfe2b69f45af3c7ddc8e0"
     },
     {
       "translation": "docs/zh-CN/skills/perl-testing/SKILL.md",
-      "source": "skills/perl-testing/SKILL.md",
-      "source_sha256": "b9ea58b1e80df6332254e84d274b52eddd0eba28ea096eaf18149025ff2115f4"
+      "source": "docs/zh-CN/skills/perl-testing/SKILL.md",
+      "source_sha256": "790fd69466f85f540a29f8f9bb4caf9ee68d230a1d7a7ff7b817bd6e33471460"
     },
     {
       "translation": "docs/zh-CN/skills/plankton-code-quality/SKILL.md",
-      "source": "skills/plankton-code-quality/SKILL.md",
-      "source_sha256": "e8dbe35029c890d9ec01cde3b499deec2e8c2a43c2821ad239b0a386838e4ecf"
+      "source": "docs/zh-CN/skills/plankton-code-quality/SKILL.md",
+      "source_sha256": "901c3a8f3563b0d472a1dd1d949494c61d2b9ead7ebee0ec67101a036c2e5124"
     },
     {
       "translation": "docs/zh-CN/skills/postgres-patterns/SKILL.md",
-      "source": "skills/postgres-patterns/SKILL.md",
-      "source_sha256": "2b07d5f7de1b68a93c8b25d093be2f0e9bfde11b8f488bd5433f0bac15415074"
+      "source": "docs/zh-CN/skills/postgres-patterns/SKILL.md",
+      "source_sha256": "73cdd50c4d01855ae09c3456c6cd8b8444540a073c747a301dfe3107e44cbd14"
     },
     {
       "translation": "docs/zh-CN/skills/production-scheduling/SKILL.md",
-      "source": "skills/production-scheduling/SKILL.md",
-      "source_sha256": "e88b683d8ec6c5ec173af63e8065d200dd00b1ae31fe4aa9425e1b8e3274fab4"
-    },
-    {
-      "translation": "docs/zh-CN/skills/project-guidelines-example/SKILL.md",
-      "source": "skills/project-guidelines-example/SKILL.md",
-      "source_sha256": "68a3764074ab8b9448049010b368c2be75295b9d1e1de8bec6ccacf35fd52c08"
+      "source": "docs/zh-CN/skills/production-scheduling/SKILL.md",
+      "source_sha256": "a1ad55f39e24f2aba91e8c8b529190c757caa9ca2b26bbaccc71d9fd06138611"
     },
     {
       "translation": "docs/zh-CN/skills/prompt-optimizer/SKILL.md",
-      "source": "skills/prompt-optimizer/SKILL.md",
-      "source_sha256": "645df8819e848ddc131b7c61e87a99bdab15f2098a83a6dcabf44e155846e293"
+      "source": "docs/zh-CN/skills/prompt-optimizer/SKILL.md",
+      "source_sha256": "0310da3837850cf56a1f0d54ef19da9e98cc87e2bb3422ca9462e18069172780"
     },
     {
       "translation": "docs/zh-CN/skills/python-patterns/SKILL.md",
-      "source": "skills/python-patterns/SKILL.md",
-      "source_sha256": "df0c0abbbd0e6a01811d1b1d10d8fa7a8a19ce73afdc9432d24843f62649cdd2"
+      "source": "docs/zh-CN/skills/python-patterns/SKILL.md",
+      "source_sha256": "04a3124be07005173ead92ff34a562f48158c0a517c01a1466e481c1d0a1bcee"
     },
     {
       "translation": "docs/zh-CN/skills/python-testing/SKILL.md",
-      "source": "skills/python-testing/SKILL.md",
-      "source_sha256": "b304a8c503af32644f97a889c5545ee4f90e91980462ad4ce33fee3dea6f414f"
+      "source": "docs/zh-CN/skills/python-testing/SKILL.md",
+      "source_sha256": "f922acc81bef140245ae89e5c2c445dc224137f86b0290dacb4c92d279227e69"
     },
     {
       "translation": "docs/zh-CN/skills/pytorch-patterns/SKILL.md",
-      "source": "skills/pytorch-patterns/SKILL.md",
-      "source_sha256": "22b76f559f17d4b0e44eda71d353065e5da181203d165546edb08c16cc362d85"
+      "source": "docs/zh-CN/skills/pytorch-patterns/SKILL.md",
+      "source_sha256": "1c0c811302c8ece652885e23d7570cce04135e68005fd824130320dcaa469585"
     },
     {
       "translation": "docs/zh-CN/skills/quality-nonconformance/SKILL.md",
-      "source": "skills/quality-nonconformance/SKILL.md",
-      "source_sha256": "c2cfc8c7f53ea2710d2ea8c2410dfc52c3cc80fd92b2fd49ccd3cec557113623"
+      "source": "docs/zh-CN/skills/quality-nonconformance/SKILL.md",
+      "source_sha256": "87343c4e095e6e193edbc11a9981e2ac7501a71a6ee2d9c5a776d65482610d83"
     },
     {
       "translation": "docs/zh-CN/skills/ralphinho-rfc-pipeline/SKILL.md",
-      "source": "skills/ralphinho-rfc-pipeline/SKILL.md",
-      "source_sha256": "3564f14e56b1af6019bbf59a7162136f4971f9884243fcb67d1229d039e3f19f"
+      "source": "docs/zh-CN/skills/ralphinho-rfc-pipeline/SKILL.md",
+      "source_sha256": "6ccb62d990dba9cfb642cf77d193f11718038bd5cdd883077d261076a86bd6b2"
     },
     {
       "translation": "docs/zh-CN/skills/regex-vs-llm-structured-text/SKILL.md",
-      "source": "skills/regex-vs-llm-structured-text/SKILL.md",
-      "source_sha256": "1f4338a9d8eee84bf9236e1377aae2d44fc067e10d7eb923bebe06d6c006d26f"
+      "source": "docs/zh-CN/skills/regex-vs-llm-structured-text/SKILL.md",
+      "source_sha256": "d8a8aa938996fa58c950c3041874738eac360ccd65dd04226927453f33c4d1b7"
     },
     {
       "translation": "docs/zh-CN/skills/returns-reverse-logistics/SKILL.md",
-      "source": "skills/returns-reverse-logistics/SKILL.md",
-      "source_sha256": "0662462b5fc12f35ed2adf0c27ee3bc4b7f96ba78a9aeeb131f57bf148972ffc"
+      "source": "docs/zh-CN/skills/returns-reverse-logistics/SKILL.md",
+      "source_sha256": "623feaaa7e0a6f84e6b5e15b6e2605f1b414d52b06bb752c17a45d3406948c7c"
     },
     {
       "translation": "docs/zh-CN/skills/rules-distill/SKILL.md",
-      "source": "skills/rules-distill/SKILL.md",
-      "source_sha256": "5c457a1789f7312436656536d0799008850c9cf5206c031d399cba64f76fa488"
+      "source": "docs/zh-CN/skills/rules-distill/SKILL.md",
+      "source_sha256": "f49399661e4f0244b116f7f70d8a4954cc7549716ce295561419fb4d1cc5debe"
     },
     {
       "translation": "docs/zh-CN/skills/rust-patterns/SKILL.md",
-      "source": "skills/rust-patterns/SKILL.md",
-      "source_sha256": "2c8a7b1110a7c8d9f659a26f34db3cb774c592ca89c928df6d71255aa3eaafc6"
+      "source": "docs/zh-CN/skills/rust-patterns/SKILL.md",
+      "source_sha256": "1f2772fbc8a3978637c4fde35a16c362c441cbd447e15400d6dc158b87eb5658"
     },
     {
       "translation": "docs/zh-CN/skills/rust-testing/SKILL.md",
-      "source": "skills/rust-testing/SKILL.md",
-      "source_sha256": "e55dc89ab64a49f9cec0d6d15b14a21f5c096f342e0046799f47b7fa2d22e770"
+      "source": "docs/zh-CN/skills/rust-testing/SKILL.md",
+      "source_sha256": "2e5d007851106e0374e6abad81f860067e6998f2e2ec94d56bacf9ae8767dcc9"
     },
     {
       "translation": "docs/zh-CN/skills/search-first/SKILL.md",
-      "source": "skills/search-first/SKILL.md",
-      "source_sha256": "752b24a8a06b3df1ce35598a789af92a72b61ecbb3c73e69d9af38708015d903"
+      "source": "docs/zh-CN/skills/search-first/SKILL.md",
+      "source_sha256": "23ebc2a7f31fd18577809bcf0771ad94a598f6c1cf08013e25af4fd405222627"
     },
     {
       "translation": "docs/zh-CN/skills/security-review/cloud-infrastructure-security.md",
-      "source": "skills/security-review/cloud-infrastructure-security.md",
-      "source_sha256": "98419e575de23d9ea9eef052556fcf8502cf19f307af0a0597997fd1ddd0d6dd"
+      "source": "docs/zh-CN/skills/security-review/cloud-infrastructure-security.md",
+      "source_sha256": "019bafc294bb0d3f498ecd27bec6cd11882d161d08fbb76959a727b8c6bead9f"
     },
     {
       "translation": "docs/zh-CN/skills/security-review/SKILL.md",
-      "source": "skills/security-review/SKILL.md",
-      "source_sha256": "f7530a63c7561bd1036cf4cd4d5939b04ac7a9e919ceefeb4c1a3586eb907d82"
+      "source": "docs/zh-CN/skills/security-review/SKILL.md",
+      "source_sha256": "2cea5d6ff52edb5bd6ed70335c272a6b8fd43350b2eece3ab04f85c396ff5c5a"
     },
     {
       "translation": "docs/zh-CN/skills/security-scan/SKILL.md",
-      "source": "skills/security-scan/SKILL.md",
-      "source_sha256": "6facddfa83c1c53eb02d21e0fc4cfe70d785b9fd5159ed91e918c47466bf12d8"
+      "source": "docs/zh-CN/skills/security-scan/SKILL.md",
+      "source_sha256": "297fe7c5af239b6f8a75b4a370ff457be2efd6c510ddf9f23df83c1d344990a6"
     },
     {
       "translation": "docs/zh-CN/skills/skill-stocktake/SKILL.md",
-      "source": "skills/skill-stocktake/SKILL.md",
-      "source_sha256": "c03bfae29e91ada17e818a058a6489e19e64dcc52179d65885c40e7afc25d1cc"
+      "source": "docs/zh-CN/skills/skill-stocktake/SKILL.md",
+      "source_sha256": "7b7d97957131fb3fa71c4a4a29fb7f5fb6a19c55b240f168a0f13a6f71b374fe"
     },
     {
       "translation": "docs/zh-CN/skills/springboot-patterns/SKILL.md",
-      "source": "skills/springboot-patterns/SKILL.md",
-      "source_sha256": "7ecbb9ce50282c9c1cf71e3e9245d077036c3f72bd589418d8dd573118faa0e5"
+      "source": "docs/zh-CN/skills/springboot-patterns/SKILL.md",
+      "source_sha256": "186be834e464fcabaf01caa29fad446591368e89bfe127f8329a6fa68133010f"
     },
     {
       "translation": "docs/zh-CN/skills/springboot-security/SKILL.md",
-      "source": "skills/springboot-security/SKILL.md",
-      "source_sha256": "7bfabd0a87dd3abda4af572e913a84bd2470a876490799d3bf024e22a6870885"
+      "source": "docs/zh-CN/skills/springboot-security/SKILL.md",
+      "source_sha256": "1f82468e04e4fef7d82a68a241dfc5785712277d02fad3fb999164fd35f23f65"
     },
     {
       "translation": "docs/zh-CN/skills/springboot-tdd/SKILL.md",
-      "source": "skills/springboot-tdd/SKILL.md",
-      "source_sha256": "67d3d67c8f9d18109979944c028d8c0e1a219c0366ef96c95befd6fb3a0856d4"
+      "source": "docs/zh-CN/skills/springboot-tdd/SKILL.md",
+      "source_sha256": "f701171df5ec6c7951cce96fe7deac7a0361365b4e2f1dd37db330dba4a14db9"
     },
     {
       "translation": "docs/zh-CN/skills/springboot-verification/SKILL.md",
-      "source": "skills/springboot-verification/SKILL.md",
-      "source_sha256": "4895b880d86d5703f167f88ca376a55195b40c3b459ec228f5ec8f27bd1a704a"
+      "source": "docs/zh-CN/skills/springboot-verification/SKILL.md",
+      "source_sha256": "107f64095103fd9818b57b58f48438aa6ef957c2d407a795cc0172a239cba8bd"
     },
     {
       "translation": "docs/zh-CN/skills/strategic-compact/SKILL.md",
-      "source": "skills/strategic-compact/SKILL.md",
-      "source_sha256": "c8e861a39fb84968aefa82783c1b25e61d1b625c29c0f5b2bb301f4652c93e9d"
+      "source": "docs/zh-CN/skills/strategic-compact/SKILL.md",
+      "source_sha256": "c2f00aa26f92375ff2550f21c5a39138760df5cb808b9e955bcc003d44761c16"
     },
     {
       "translation": "docs/zh-CN/skills/swift-actor-persistence/SKILL.md",
-      "source": "skills/swift-actor-persistence/SKILL.md",
-      "source_sha256": "dddfd2f5da0c3fa674dfdd9c54abecb004be1259cb2a892b38dd703f02fbb6aa"
+      "source": "docs/zh-CN/skills/swift-actor-persistence/SKILL.md",
+      "source_sha256": "41cbee87c864c30348a160910f451f708bed2c47307ba54b98cb7977606a661f"
     },
     {
       "translation": "docs/zh-CN/skills/swift-concurrency-6-2/SKILL.md",
-      "source": "skills/swift-concurrency-6-2/SKILL.md",
-      "source_sha256": "f12ca9feeed25834fc06f59a70c679629962a4653c8354ecd833b68403da652c"
+      "source": "docs/zh-CN/skills/swift-concurrency-6-2/SKILL.md",
+      "source_sha256": "e4eaf24f90e69a8f38b403ecacc64ee5d1f970bad3760736fc5791688d089ee8"
     },
     {
       "translation": "docs/zh-CN/skills/swift-protocol-di-testing/SKILL.md",
-      "source": "skills/swift-protocol-di-testing/SKILL.md",
-      "source_sha256": "780bf7d46242c38b74af0a4d56ea368f288e8dd5132e1b64850614ed2cf20a61"
+      "source": "docs/zh-CN/skills/swift-protocol-di-testing/SKILL.md",
+      "source_sha256": "edeca9637950d0d028c2c19c128f5c144836d2b8dbb23639774f8eada10ebc18"
     },
     {
       "translation": "docs/zh-CN/skills/swiftui-patterns/SKILL.md",
-      "source": "skills/swiftui-patterns/SKILL.md",
-      "source_sha256": "c27f90145101dd77d64e9f9b70297c4167af26abb8a924f2a91326289bc3ec2c"
+      "source": "docs/zh-CN/skills/swiftui-patterns/SKILL.md",
+      "source_sha256": "fbd96b72264e8e47640e1dc89481cae58541986ec55e3bc670a54c4fce2d7303"
     },
     {
       "translation": "docs/zh-CN/skills/tdd-workflow/SKILL.md",
-      "source": "skills/tdd-workflow/SKILL.md",
-      "source_sha256": "0c0d287804b33a98bbba2df8169da80403b29fcae4a45aca96522e6c8d022d17"
+      "source": "docs/zh-CN/skills/tdd-workflow/SKILL.md",
+      "source_sha256": "3fc65c7d3a6196628ad387c315ee151b4b3c4eee29ee2809b1f4d1c1fe794dea"
     },
     {
       "translation": "docs/zh-CN/skills/team-builder/SKILL.md",
-      "source": "skills/team-builder/SKILL.md",
-      "source_sha256": "eae4647e11db69679b8cf1ae98766c2a4dff0a025e0b2cddd74b26df02944276"
+      "source": "docs/zh-CN/skills/team-builder/SKILL.md",
+      "source_sha256": "1fa838e605c8b6dba14e437ce90c8870d8c8fd684b53468ac3d86b12faf3859f"
     },
     {
       "translation": "docs/zh-CN/skills/verification-loop/SKILL.md",
-      "source": "skills/verification-loop/SKILL.md",
-      "source_sha256": "01a9ae310ad4426bb05660dda6cefdeaac9513417585c09c8bb1b94738649a78"
+      "source": "docs/zh-CN/skills/verification-loop/SKILL.md",
+      "source_sha256": "449c6b6085ae07ad1ec300e69191a040724c40a87158fa6a4e3b5ef376936fbe"
     },
     {
       "translation": "docs/zh-CN/skills/video-editing/SKILL.md",
-      "source": "skills/video-editing/SKILL.md",
-      "source_sha256": "ce3ab2e576e0863086453b78ca171e4a998f4d56d2b4c59fc530f920d88f5bf1"
+      "source": "docs/zh-CN/skills/video-editing/SKILL.md",
+      "source_sha256": "8563f8cfba4592b0a5264f426e366430636c87d515a94df3746a03cc7ab7d1b6"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/api-reference.md",
-      "source": "skills/videodb/reference/api-reference.md",
-      "source_sha256": "fa15b0239185cc807ee77f201818c49cdaf74a50142a04ab8acfa0d90eef43b9"
+      "source": "docs/zh-CN/skills/videodb/reference/api-reference.md",
+      "source_sha256": "0dbee1ccbb15ac41965c050cf63b2c20985935d3706963133144e965edfad049"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/capture-reference.md",
-      "source": "skills/videodb/reference/capture-reference.md",
-      "source_sha256": "c84989ef482bbb5504d6952ee5733b2a5f1e70c5bc0478dd475041b647351c6b"
+      "source": "docs/zh-CN/skills/videodb/reference/capture-reference.md",
+      "source_sha256": "082b670b468ea76a1da96936d0459c6e5368dd7760ecfc74b77ae8e26239e629"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/capture.md",
-      "source": "skills/videodb/reference/capture.md",
-      "source_sha256": "e0021243fda7da46f4d080af9a2fc9b3e067a0554cdc64bba5313b269e05f948"
+      "source": "docs/zh-CN/skills/videodb/reference/capture.md",
+      "source_sha256": "88264479c47e682d7670e122370f44103190bb441242e88728d5f086074ad765"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/editor.md",
-      "source": "skills/videodb/reference/editor.md",
-      "source_sha256": "5f0d0ac43c9534f4eed8e1459a17a3879ee5e4e4d36aed5d6b58561f379a668e"
+      "source": "docs/zh-CN/skills/videodb/reference/editor.md",
+      "source_sha256": "e037ff6d6193eadbf05cea1a38f2058bc2c788c4910f61e3d6a08adab94a537d"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/generative.md",
-      "source": "skills/videodb/reference/generative.md",
-      "source_sha256": "2004debb4e62aa904f7163c1d5252bbd21e7400c5495caaaf91fdb752371ff9f"
+      "source": "docs/zh-CN/skills/videodb/reference/generative.md",
+      "source_sha256": "f4eb17d016d0910a91dfc5cc4186e12678562092f6e38582d232dc7410c7763c"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/rtstream-reference.md",
-      "source": "skills/videodb/reference/rtstream-reference.md",
-      "source_sha256": "1ad450d9f6dd6c2e0b2e5edc9a9f0a993c936ad1dc4df93f667a53baac737766"
+      "source": "docs/zh-CN/skills/videodb/reference/rtstream-reference.md",
+      "source_sha256": "3b09c7606ea827c0a9f90d1257f35cfa2c6eaee2095cd4ee6a47d3445016c5b0"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/rtstream.md",
-      "source": "skills/videodb/reference/rtstream.md",
-      "source_sha256": "bd929e5583ff6377b7b5d72fb8c3416f97c8548450dc6d570fb75586753fea73"
+      "source": "docs/zh-CN/skills/videodb/reference/rtstream.md",
+      "source_sha256": "54814cc159234ce63a6050e72b367bdf005823694543bcf1264279343f4d854d"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/search.md",
-      "source": "skills/videodb/reference/search.md",
-      "source_sha256": "c26a1eab8b4adde439f1bdf252ef4dc1dd17275ebc65c3524ed8c6061b836797"
+      "source": "docs/zh-CN/skills/videodb/reference/search.md",
+      "source_sha256": "5cfdd2730120bd98fff477991bee02e6fc4cb945718032f5dd8d52f4e47b0b35"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/streaming.md",
-      "source": "skills/videodb/reference/streaming.md",
-      "source_sha256": "8963e4a52985dd2b274a259d815dd2ef23bdc2b75930d7f42cb2b8d6a6e0f935"
+      "source": "docs/zh-CN/skills/videodb/reference/streaming.md",
+      "source_sha256": "c118cf9879732d6c6dcc91f08b444487d263ba056a5f348e0a2656869650ad25"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/reference/use-cases.md",
-      "source": "skills/videodb/reference/use-cases.md",
-      "source_sha256": "b64966f872d036191747050c5c8121601f54ce8099716665cf09bc0a66c69905"
+      "source": "docs/zh-CN/skills/videodb/reference/use-cases.md",
+      "source_sha256": "7826dbfea01195ab72a0df6af36d7cc1f187fb7b09d0a709b9a1cbefab295885"
     },
     {
       "translation": "docs/zh-CN/skills/videodb/SKILL.md",
-      "source": "skills/videodb/SKILL.md",
-      "source_sha256": "85e9391e62346721a6248c952ff196e966f2907991a56e98b7d760585893b263"
+      "source": "docs/zh-CN/skills/videodb/SKILL.md",
+      "source_sha256": "8854cbffa4a5447b3e86b66e71f7ff2a7850738cd69c1b7098bf508edf9ca53d"
     },
     {
       "translation": "docs/zh-CN/skills/visa-doc-translate/README.md",
-      "source": "skills/visa-doc-translate/README.md",
-      "source_sha256": "d17f5db284f703ee0d432a4b73886780b9c9c0f7dfe1d9c46c21d6b352bca642"
+      "source": "docs/zh-CN/skills/visa-doc-translate/README.md",
+      "source_sha256": "c6de5cbd762983c8b956acefa34a4c7ee59b2d110e8ee1fe600e7c01ba9fed21"
     },
     {
       "translation": "docs/zh-CN/skills/visa-doc-translate/SKILL.md",
-      "source": "skills/visa-doc-translate/SKILL.md",
-      "source_sha256": "9c429c2c57789cc6631c9a9d244c40026d96b65f8a6c927e44abc152c463320a"
+      "source": "docs/zh-CN/skills/visa-doc-translate/SKILL.md",
+      "source_sha256": "1376b324ced9cabde6cef0d11b3a32babec4c5f753ef0bf4b9b4b2eb31714ec0"
     },
     {
       "translation": "docs/zh-CN/skills/x-api/SKILL.md",
-      "source": "skills/x-api/SKILL.md",
-      "source_sha256": "f20c06afe00e5de48f74f5bcd4293590516a4d9acef421d61669aeccd44e0994"
+      "source": "docs/zh-CN/skills/x-api/SKILL.md",
+      "source_sha256": "e6090a1e3c54750f4e1ed4979a838e6b6cb0b52f62d02e9ad440d47b926451cc"
     },
     {
       "translation": "docs/zh-CN/SPONSORING.md",
-      "source": "SPONSORING.md",
-      "source_sha256": "c6472611950ba42767ee0fa03ca0cc9e75dcff6bda606f8349d082be0a817b41"
+      "source": "docs/zh-CN/SPONSORING.md",
+      "source_sha256": "03ddd4f071b84df695746660b0536094968fa811ce73357667b57f5f3862aab0"
     },
     {
       "translation": "docs/zh-CN/SPONSORS.md",
-      "source": "SPONSORS.md",
-      "source_sha256": "293816d7715eb2c8e62d0b3ede5fbfede781b45f813ae315b514ac0efa840df7"
+      "source": "docs/zh-CN/SPONSORS.md",
+      "source_sha256": "ae05737d7272ed40712f1e572ac6ba84794abc62a8c8d4bd847a80562877e966"
     },
     {
       "translation": "docs/zh-CN/the-longform-guide.md",
-      "source": "the-longform-guide.md",
-      "source_sha256": "da2e0c5b308b26f70e8ea3eced8cbe075fe9b1f0390168907e6c8f0559850757"
+      "source": "docs/zh-CN/the-longform-guide.md",
+      "source_sha256": "eb34f11d8e820debf05388003467ae8159739f7033bca8f1291daa957c6f109c"
     },
     {
       "translation": "docs/zh-CN/the-openclaw-guide.md",
-      "source": null,
-      "source_sha256": null,
-      "notes": "上游仅提供中文文件，当前同步按中文原稿镜像保留。"
+      "source": "docs/zh-CN/the-openclaw-guide.md",
+      "source_sha256": "227c5a830e1727b644cbe1464899ef604ec5fc1daab875e9887038fd91b2c1e1"
     },
     {
       "translation": "docs/zh-CN/the-security-guide.md",
-      "source": "the-security-guide.md",
-      "source_sha256": "094e72eee29d5c8dedd31ac81460ffd99417e5e53f4f4a3ea8cb212a1b7c7607"
+      "source": "docs/zh-CN/the-security-guide.md",
+      "source_sha256": "8ad883aaedd06cce4324bdbedc330d1547a0803b0542881091a40fbd73e3cedf"
     },
     {
       "translation": "docs/zh-CN/the-shortform-guide.md",
-      "source": "the-shortform-guide.md",
-      "source_sha256": "780261fb326500c94c2a33eb2639f4bad8251d571916dd8df87a5562604ebef4"
+      "source": "docs/zh-CN/the-shortform-guide.md",
+      "source_sha256": "47ff14220307aca43c96ad995fa2afac9b0d4ff8c0d8a55b011a0fdf162bdb8a"
     },
     {
       "translation": "docs/zh-CN/TROUBLESHOOTING.md",
-      "source": "TROUBLESHOOTING.md",
-      "source_sha256": "3fb114bc9556d61c2994a7d849ceb829c4c0056907697834e74bdf9bddb63555"
+      "source": "docs/zh-CN/TROUBLESHOOTING.md",
+      "source_sha256": "ff32a3a882d38db13484c4ca32a555efe61c20d10369707d02221c94a1cd8abc"
+    },
+    {
+      "translation": "README.zh-CN.md",
+      "source": "README.zh-CN.md",
+      "source_sha256": "6e775f4f753d46fdaf56696139d8caa590121ca1a76a0dc199fc59d0b608ac11",
+      "notes": "当前直接镜像 upstream 提供的 README.zh-CN.md。"
     }
   ]
 }
