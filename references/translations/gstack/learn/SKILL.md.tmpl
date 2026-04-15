@@ -1,0 +1,29 @@
+---
+name: learn
+preamble-tier: 2
+version: 1.0.0
+description: |
+  管理 gstack 跨会话沉淀下来的 learnings。支持查看、搜索、清理、导出、
+  统计与手工补录。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - AskUserQuestion
+  - Glob
+  - Grep
+---
+<!-- 中文参考译文。该文件是 /learn 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /learn 模板
+
+这个模板定义项目 learnings 的管理操作面。
+
+## 模板职责
+- 浏览、搜索和导出 learnings
+- 清理 stale entries
+- 支持手工补录与统计查看
+- 让其他 skill 可以复用同一套项目记忆

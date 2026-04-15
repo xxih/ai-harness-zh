@@ -1,6 +1,6 @@
 # Antigravity 集成
 
-将全部 61 个 Agency agents 安装为 Antigravity skills。每个 agent 都会带上 `agency-` 前缀，避免与现有 skills 冲突。
+将完整的 Agency roster 安装为 Antigravity skills。每个 agent 都会带上 `agency-` 前缀，避免与现有 skills 冲突。
 
 ## 安装
 

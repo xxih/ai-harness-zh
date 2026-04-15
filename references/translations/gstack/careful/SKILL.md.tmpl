@@ -1,0 +1,29 @@
+---
+name: careful
+version: 0.1.0
+description: |
+  面向破坏性命令的安全护栏。在执行 rm -rf、DROP TABLE、force-push、
+  git reset --hard、kubectl delete 等操作前先给出警告。用户可逐次覆盖。
+  适用于生产环境、在线调试或共享环境。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+hooks:
+  PreToolUse:
+    - matcher: "Bash"
+      hooks:
+        - type: command
+          command: "bash ${CLAUDE_SKILL_DIR}/bin/check-careful.sh"
+          statusMessage: "Checking for destructive commands..."
+sensitive: true
+---
+<!-- 中文参考译文。该文件是 /careful 的模板源。 -->
+
+# /careful 模板
+
+这个模板几乎不靠长 prompt，而是靠 `PreToolUse` hook 在 Bash 调用前拦截破坏性命令。
+
+## 模板职责
+- 在执行高风险命令前先做命令级检查
+- 允许用户按次覆盖，而不是默认阻断一切
+- 让生产环境、共享环境和在线调试具备最小安全护栏

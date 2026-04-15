@@ -1,0 +1,39 @@
+---
+name: guard
+version: 0.1.0
+description: |
+  完整安全模式：同时启用破坏性命令警告与目录级编辑边界。
+  等于把 /careful 与 /freeze 合并到一条命令里。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - AskUserQuestion
+hooks:
+  PreToolUse:
+    - matcher: "Bash"
+      hooks:
+        - type: command
+          command: "bash ${CLAUDE_SKILL_DIR}/../careful/bin/check-careful.sh"
+          statusMessage: "Checking for destructive commands..."
+    - matcher: "Edit"
+      hooks:
+        - type: command
+          command: "bash ${CLAUDE_SKILL_DIR}/../freeze/bin/check-freeze.sh"
+          statusMessage: "Checking freeze boundary..."
+    - matcher: "Write"
+      hooks:
+        - type: command
+          command: "bash ${CLAUDE_SKILL_DIR}/../freeze/bin/check-freeze.sh"
+          statusMessage: "Checking freeze boundary..."
+sensitive: true
+---
+<!-- 中文参考译文。该文件是 /guard 的模板源。 -->
+
+# /guard 模板
+
+这个模板把 `/careful` 和 `/freeze` 的 hook 组合成一套完整安全模式。
+
+## 模板职责
+- 对 Bash 先做破坏性命令检查
+- 对 Edit / Write 先做目录边界检查
+- 在生产或高风险调试场景里同时管住“能不能执行”和“能改到哪里”

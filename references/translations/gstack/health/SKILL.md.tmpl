@@ -1,0 +1,44 @@
+---
+name: health
+preamble-tier: 2
+version: 1.0.0
+description: |
+  代码质量仪表盘。包装项目已有的 type checker、linter、test runner、
+  dead code detector、shell linter，计算加权 0-10 综合分，并追踪趋势。
+  当用户说“health check”“代码质量”“代码库健康度”“跑全部检查”
+  或“质量分数”时使用。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /health 的模板源。 -->
+
+# /health 模板
+
+这个模板定义代码质量仪表盘的检测、评分、落盘和趋势分析流程。
+
+## 模板职责
+
+- 自动识别 repo 里的质量工具栈
+- 分别执行 typecheck / lint / tests / deadcode / shell lint
+- 计算 composite score，并持久化到 health history
+
+## 主步骤
+
+1. Detect Health Stack
+2. Run Tools
+3. Score Each Category
+4. Present Dashboard
+5. Persist to Health History
+6. Trend Analysis + Recommendations
+
+## 关键规则
+
+- 只诊断，不修复。
+- 低分项必须附带具体问题摘要。
+- 输出既要能看当前状态，也要能看趋势变化。

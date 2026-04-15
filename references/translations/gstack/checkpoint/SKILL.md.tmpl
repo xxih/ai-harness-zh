@@ -1,0 +1,47 @@
+---
+name: checkpoint
+preamble-tier: 2
+version: 1.0.0
+description: |
+  保存与恢复工作状态检查点。会记录 git 状态、已做决定和剩余工作，
+  让你在中断后能准确续跑，包含跨分支、跨 Conductor workspace handoff 的场景。
+  当用户说“checkpoint”“保存进度”“我刚做到哪了”“resume”“我在做什么”
+  或“接着上次做”时使用；也适合在 session 即将结束、用户要切换上下文、
+  或长时间暂停前主动建议。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Glob
+  - Grep
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /checkpoint 的模板源。 -->
+
+# /checkpoint 模板
+
+这个模板定义状态检查点的保存、恢复与列举协议。
+
+## 模板职责
+
+- 把当前工作状态写成结构化 checkpoint 文件
+- 用固定字段恢复标题、分支、摘要与剩余工作
+- 在 `save` / `resume` / `list` 三种模式间切换
+
+## Save 骨架
+
+1. 收集 git 状态、分支、改动文件和上下文。
+2. 汇总 `Summary`、`Decisions Made`、`Remaining Work`、`Notes`。
+3. 计算 session duration。
+4. 写入 checkpoint 文件，并向用户确认路径和摘要。
+
+## Resume / List 骨架
+
+- `resume`：读取 checkpoint，展示摘要，并通过 `AskUserQuestion` 给出下一步选项。
+- `list`：默认只列当前分支，`--all` 时增加 Branch 列。
+
+## 关键规则
+
+- 严禁修改业务代码。
+- checkpoint 只能追加，不能覆写旧文件。
+- 分支名必须写入文件，方便跨分支 handoff。

@@ -1,0 +1,26 @@
+---
+name: canary
+preamble-tier: 2
+version: 1.0.0
+description: |
+  部署后的金丝雀监控。借助 browse daemon 持续观察线上应用的控制台错误、
+  性能回归和页面故障，并定期截图、对比基线。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Glob
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /canary 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /canary 模板
+
+这个模板定义部署后 canary 监控的 prompt 骨架。
+
+## 模板职责
+- 监控线上页面是否加载、是否报 console / network 错误
+- 与部署前基线对比性能和视觉状态
+- 在异常出现时产出可追溯证据

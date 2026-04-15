@@ -1,0 +1,21 @@
+---
+name: connect-chrome
+version: 0.1.0
+description: |
+  启动由 gstack 控制、自动加载 Side Panel extension 的真实 Chrome。
+  用户可以实时看到 AI 的点击、输入与导航。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /connect-chrome 的模板源。 -->
+
+# /connect-chrome 模板
+
+这个模板定义 headed Chrome 的接线入口。
+
+## 模板职责
+- 拉起可见 Chrome 窗口
+- 自动带上 gstack Side Panel extension
+- 让用户在同一窗口里实时观察浏览器动作与活动流

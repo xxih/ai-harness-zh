@@ -1,0 +1,39 @@
+---
+name: office-hours
+preamble-tier: 3
+version: 2.0.0
+description: |
+  YC 风格的 office hours。先把问题讲清楚，再谈方案。会根据用户目标切换
+  Startup mode 或 Builder mode，最终产出设计文档而不是代码。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Grep
+  - Glob
+  - Write
+  - Edit
+  - AskUserQuestion
+  - WebSearch
+---
+<!-- 中文参考译文。该文件是 /office-hours 的模板源。 -->
+
+{{PREAMBLE}}
+{{BROWSE_SETUP}}
+
+# /office-hours 模板
+
+这是 gstack founder discovery 主线的模板源文件。
+
+## 模板职责
+- 根据上下文切到 Startup mode 或 Builder mode
+- 用六个 forcing questions 压出 demand reality、status quo、narrowest wedge 等关键信号
+- 在 premise challenge 与 alternatives generation 后产出 design doc
+- 用 founder-style handoff 收束，并给出后续 skill 建议
+
+## 关键占位符
+- `{{PREAMBLE}}`：共享前置
+- `{{BROWSE_SETUP}}`：浏览器研究接线
+- `{{LEARNINGS_SEARCH}}`：历史 learnings 载入
+- `{{CODEX_SECOND_OPINION}}`：第二模型视角
+- `{{DESIGN_MOCKUP}}` / `{{DESIGN_SKETCH}}`：设计草图注入
+- `{{SPEC_REVIEW_LOOP}}`：设计文档回看与修订

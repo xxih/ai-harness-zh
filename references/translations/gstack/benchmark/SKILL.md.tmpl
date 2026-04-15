@@ -1,0 +1,29 @@
+---
+name: benchmark
+preamble-tier: 1
+version: 1.0.0
+description: |
+  基于 browse daemon 的性能回归检测。建立页面加载时间、Core Web Vitals、
+  资源体积的基线，并在 PR 前后做对比。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Glob
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /benchmark 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /benchmark 模板
+
+这个模板定义 `/benchmark` 的性能基线与回归检测 prompt 骨架。
+
+## 模板职责
+- 建立页面性能基线
+- 对比 PR 前后加载速度、Core Web Vitals 与资源体积
+- 记录长期趋势，给出 regression 结论
+
+## 关键占位符
+- `{{PREAMBLE}}`：共享前置与会话初始化

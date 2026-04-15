@@ -1,0 +1,21 @@
+---
+name: unfreeze
+version: 0.1.0
+description: |
+  清除 /freeze 建立的目录边界，让所有目录重新可编辑。
+  适用于想扩大编辑范围但不想重开会话的时候。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+sensitive: true
+---
+<!-- 中文参考译文。该文件是 /unfreeze 的模板源。 -->
+
+# /unfreeze 模板
+
+这个模板负责移除 `/freeze` 建立的编辑限制。
+
+## 模板职责
+- 清除目录级编辑边界
+- 让后续 Edit / Write 恢复到全目录可用
+- 与 `/freeze`、`/guard` 成对配合使用

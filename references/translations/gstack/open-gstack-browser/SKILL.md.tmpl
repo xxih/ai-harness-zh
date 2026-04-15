@@ -1,0 +1,38 @@
+---
+name: open-gstack-browser
+version: 0.2.0
+description: |
+  启动 GStack Browser，这是一套内置 sidebar extension 的 AI 控制 Chromium。
+  会打开一个可见浏览器窗口，让用户实时看到每一步操作。
+  侧栏会显示活动流和聊天面板，并默认带上反爬 stealth。
+  当用户说“open gstack browser”“launch browser”“connect chrome”
+  “open chrome”“real browser”“side panel”或“control my browser”时使用。
+voice-triggers:
+  - "show me the browser"
+allowed-tools:
+  - Bash
+  - Read
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /open-gstack-browser 的模板源。 -->
+
+# /open-gstack-browser 模板
+
+这个模板定义 GStack Browser 的拉起、验证和用户引导流程。
+
+## 模板职责
+
+- 做 pre-flight cleanup
+- 拉起 headed browser 与 sidebar extension
+- 验证端口 / mode / extension path
+- 指导用户打开 side panel，并跑一个 demo
+
+## 主步骤
+
+1. `Step 0: Pre-flight cleanup`
+2. `Step 1: Connect`
+3. `Step 2: Verify`
+4. `Step 3: Guide the user to the Side Panel`
+5. `Step 4: Demo`
+6. `Step 5: Sidebar chat`
+7. `Step 6: What's next`

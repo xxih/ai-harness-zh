@@ -1,6 +1,6 @@
 # Aider 集成
 
-所有 61 个 Agency agents 会被汇总成一个 `CONVENTIONS.md` 文件。只要它位于项目根目录，Aider 就会自动读取它。
+完整的 Agency roster 会被汇总成一个 `CONVENTIONS.md` 文件。只要它位于项目根目录，Aider 就会自动读取它。
 
 ## 安装
 

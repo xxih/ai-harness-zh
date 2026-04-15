@@ -1,0 +1,41 @@
+---
+name: investigate
+preamble-tier: 2
+version: 1.0.0
+description: |
+  系统化 root-cause debugging。遵守“没有调查就没有修复”的铁律，
+  先锁范围、看模式、测假设，再实现修复与验证。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Grep
+  - Glob
+  - AskUserQuestion
+  - WebSearch
+hooks:
+  PreToolUse:
+    - matcher: "Edit"
+      hooks:
+        - type: command
+          command: "bash ${CLAUDE_SKILL_DIR}/../freeze/bin/check-freeze.sh"
+          statusMessage: "Checking debug scope boundary..."
+    - matcher: "Write"
+      hooks:
+        - type: command
+          command: "bash ${CLAUDE_SKILL_DIR}/../freeze/bin/check-freeze.sh"
+          statusMessage: "Checking debug scope boundary..."
+---
+<!-- 中文参考译文。该文件是 /investigate 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /investigate 模板
+
+这个模板定义 root-cause debugging 的四阶段 prompt。
+
+## 模板职责
+- 先调查，再分析模式、建立假设、实施修复
+- 强制遵守“没有根因，就没有修复”
+- 借助 `freeze` 边界在调试过程中缩小改动范围

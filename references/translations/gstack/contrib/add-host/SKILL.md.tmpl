@@ -1,0 +1,27 @@
+---
+name: gstack-contrib-add-host
+description: |
+  仅供贡献者使用：为 gstack 的 multi-host 系统新增一个 host 配置。
+  不面向终端用户安装，只能在 gstack 源码仓库内使用。
+---
+<!-- 中文参考译文。该文件是 /gstack-contrib-add-host 的模板源。 -->
+
+# /gstack-contrib-add-host 模板
+
+这个模板描述如何把一个新的 AI coding agent host 接进 gstack。
+
+## 模板职责
+
+- 生成 `hosts/<name>.ts`
+- 定义 CLI binary、全局 / 本地 skill 路径
+- 写 frontmatter 转换、路径 / 工具名重写规则
+- 更新索引、`.gitignore`，并验证生成结果
+
+## 主步骤
+
+1. 收集 host 信息
+2. 创建 config 文件
+3. 注册到 `hosts/index.ts`
+4. 更新 `.gitignore`
+5. 生成并验证产物
+6. 运行 tests

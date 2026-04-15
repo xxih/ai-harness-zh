@@ -68,7 +68,7 @@
 | **Testing** | Evidence Collector, Reality Checker, Test Results Analyzer, Performance Benchmarker, API Tester, Tool Evaluator, Workflow Optimizer | 通过证据驱动的评估验证质量 |
 | **Support** | Support Responder, Analytics Reporter, Finance Tracker, Infrastructure Maintainer, Legal Compliance Checker, Executive Summary Generator | 维持运营、合规和业务 intelligence |
 | **Spatial Computing** | XR Interface Architect, macOS Spatial/Metal Engineer, XR Immersive Developer, XR Cockpit Interaction Specialist, visionOS Spatial Engineer, Terminal Integration Specialist | 构建沉浸式与空间计算体验 |
-| **Specialized** | Agents Orchestrator, Data Analytics Reporter, LSP/Index Engineer, Sales Data Extraction Agent, Data Consolidation Agent, Report Distribution Agent | 跨层协调、深度分析和 code intelligence |
+| **Specialized** | Agents Orchestrator, Analytics Reporter, LSP/Index Engineer, Sales Data Extraction Agent, Data Consolidation Agent, Report Distribution Agent | 跨层协调、深度分析和 code intelligence |
 
 ---
 
@@ -323,7 +323,7 @@ WORKSTREAM A: Infrastructure              WORKSTREAM B: Application Foundation
 | Backend API | Backend Architect | API Tester | Performance Benchmarker |
 | Database | Backend Architect | API Tester | Analytics Reporter |
 | Mobile | Mobile App Builder | Evidence Collector | UX Researcher |
-| AI/ML Feature | AI Engineer | Test Results Analyzer | Data Analytics Reporter |
+| AI/ML Feature | AI Engineer | Test Results Analyzer | Analytics Reporter |
 | Infrastructure | DevOps Automator | Performance Benchmarker | Infrastructure Maintainer |
 | Premium Polish | Senior Developer | Evidence Collector | Visual Storyteller |
 | Rapid Prototype | Rapid Prototyper | Evidence Collector | Experiment Tracker |
@@ -1034,7 +1034,7 @@ Use the NEXUS QA Feedback Loop Protocol format
 | Agent | Superpower | Activation Trigger |
 |-------|-----------|-------------------|
 | Agents Orchestrator | Multi-agent pipeline management | Any multi-agent workflow |
-| Data Analytics Reporter | Business intelligence, deep analytics | Deep data analysis |
+| Analytics Reporter | Business intelligence, deep analytics | Deep data analysis |
 | LSP/Index Engineer | Language Server Protocol, code intelligence | Code intelligence systems |
 | Sales Data Extraction Agent | Excel monitoring, sales metric extraction | Sales data ingestion |
 | Data Consolidation Agent | Sales data aggregation, dashboard reports | Territory and rep reporting |

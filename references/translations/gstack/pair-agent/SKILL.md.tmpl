@@ -1,0 +1,42 @@
+---
+name: pair-agent
+version: 0.1.0
+description: |
+  把远端 AI agent 配对到你的浏览器里。一次命令会生成 setup key，
+  并输出对方 agent 可直接照着执行的接线说明。
+  兼容 OpenClaw、Hermes、Codex、Cursor，或任何可发 HTTP 请求的 agent。
+  远端 agent 会拿到一个带作用域控制的独立 tab，默认 read+write，需要时可申请 admin。
+  当用户说“pair agent”“connect agent”“share browser”“remote browser”
+  “让另一个 agent 用我的浏览器”或“给它浏览器权限”时使用。 (gstack)
+voice-triggers:
+  - "pair agent"
+  - "connect agent"
+  - "share my browser"
+  - "remote browser access"
+allowed-tools:
+  - Bash
+  - Read
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /pair-agent 的模板源。 -->
+
+# /pair-agent 模板
+
+这个模板定义浏览器共享与远端 agent 配对流程。
+
+## 模板职责
+
+- 识别目标 host 与部署方式（同机 / 远程）
+- 生成 pairing 凭据与接线说明
+- 校验远端 agent 是否真的连上
+- 说明权限边界、排障与撤销方式
+
+## 主步骤
+
+1. `Check prerequisites`
+2. `Ask what they want`
+3. `Local or remote?`
+4. `Execute pairing`
+5. `Verify connection`
+6. `Troubleshooting`
+7. `Revoking access`

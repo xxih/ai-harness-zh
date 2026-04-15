@@ -1,0 +1,28 @@
+---
+name: codex
+preamble-tier: 3
+version: 1.0.0
+description: |
+  OpenAI Codex CLI 包装器。支持 review、challenge、consult 三种模式：
+  独立 code review、对抗式挑战、以及带会话连续性的开放咨询。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Glob
+  - Grep
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /codex 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /codex 模板
+
+这个模板负责把 Codex 当作 gstack 的第二模型视角接进来。
+
+## 模板职责
+- 在 review 场景下做独立 diff 审查
+- 在 challenge 模式下做 adversarial pressure test
+- 在 consult 模式下维持多轮连续咨询
+- 把 cross-model tension 汇总给主流程使用

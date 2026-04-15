@@ -1,0 +1,38 @@
+---
+name: plan-eng-review
+preamble-tier: 3
+version: 1.0.0
+description: |
+  工程经理视角的 plan review。锁架构、代码质量、测试、性能、失败模式和并行策略，
+  并强制要求图示与可验证输出。 (gstack)
+benefits-from: [office-hours]
+allowed-tools:
+  - Read
+  - Write
+  - Grep
+  - Glob
+  - AskUserQuestion
+  - Bash
+  - WebSearch
+---
+<!-- 中文参考译文。该文件是 /plan-eng-review 的模板源。 -->
+
+{{PREAMBLE}}
+{{BENEFITS_FROM}}
+
+# /plan-eng-review 模板
+
+这个模板定义 engineering review 的交互式 prompt。
+
+## 模板职责
+- 先做 scope challenge，再逐段审 architecture、code quality、tests、performance
+- 强制输出 “NOT in scope”、现有资产、`TODOS.md` 更新、图示、failure modes 与并行策略
+- 把 cross-model review、review dashboard 与 plan file review report 接进来
+
+## 关键占位符
+- `{{LEARNINGS_SEARCH}}`
+- `{{CONFIDENCE_CALIBRATION}}`
+- `{{TEST_COVERAGE_AUDIT_PLAN}}`
+- `{{CODEX_PLAN_REVIEW}}`
+- `{{REVIEW_DASHBOARD}}`
+- `{{PLAN_FILE_REVIEW_REPORT}}`

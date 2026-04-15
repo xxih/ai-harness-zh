@@ -1,0 +1,29 @@
+---
+name: design-review
+preamble-tier: 4
+version: 2.0.0
+description: |
+  设计审计 -> 修复 -> 再验证的闭环。支持 full / quick / deep / diff-aware /
+  regression 模式，带 80 项检查表、fix loop、回归验证与最终报告。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - AskUserQuestion
+  - WebSearch
+---
+<!-- 中文参考译文。该文件是 /design-review 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /design-review 模板
+
+这个模板定义 live site 的视觉审计与修复闭环。
+
+## 模板职责
+- 对视觉一致性、层级、spacing、交互状态和 AI slop 做系统性检查
+- 在 source code 中按 issue 逐个修复，并逐个回归验证
+- 输出 before / after 证据与最终健康度判断

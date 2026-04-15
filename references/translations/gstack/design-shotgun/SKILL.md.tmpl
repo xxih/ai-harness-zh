@@ -1,0 +1,28 @@
+---
+name: design-shotgun
+preamble-tier: 2
+version: 1.0.0
+description: |
+  多方案视觉探索器。结合上下文、taste memory 和并行生成，产出多版设计方向，
+  再通过 comparison board 与反馈循环收敛出一个被批准的方向。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Glob
+  - Grep
+  - Agent
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /design-shotgun 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /design-shotgun 模板
+
+这个模板定义多方案设计探索的 prompt 主线。
+
+## 模板职责
+- 并行生成多个设计方向
+- 打开 comparison board 收集结构化反馈
+- 支持 regenerate、more-like-this 与逐轮收敛
+- 最终沉淀被批准的设计方向，供 `/design-html` 接手

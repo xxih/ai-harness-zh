@@ -1,0 +1,27 @@
+---
+name: land-and-deploy
+preamble-tier: 4
+version: 1.0.0
+description: |
+  合并 PR、等待 CI / deploy、验证生产健康的发布工程流程。承接 /ship 的结果，
+  把“PR 已准备好”推进到“已合并并经生产验证”。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Glob
+  - AskUserQuestion
+sensitive: true
+---
+<!-- 中文参考译文。该文件是 /land-and-deploy 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /land-and-deploy 模板
+
+这个模板接在 `/ship` 之后，负责真正把改动合并并验证生产状态。
+
+## 模板职责
+- 合并 PR 并等待 CI / deploy 完成
+- 在失败时给出可操作阻塞信息
+- 通过 canary / browse 证据确认生产健康

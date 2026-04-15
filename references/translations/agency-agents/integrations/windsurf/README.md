@@ -1,6 +1,6 @@
 # Windsurf 集成
 
-全部 61 个 Agency agents 会被合并成一个 `.windsurfrules` 文件。规则是**项目级作用域**，因此需要从你的项目根目录安装。
+完整的 Agency roster 会被合并成一个 `.windsurfrules` 文件。规则是**项目级作用域**，因此需要从你的项目根目录安装。
 
 ## 安装
 

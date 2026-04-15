@@ -13,6 +13,8 @@
 - **[Cursor](#cursor)**：`.mdc` rule 文件，位于 `cursor/`
 - **[Aider](#aider)**：`aider/` 下的 `CONVENTIONS.md`
 - **[Windsurf](#windsurf)**：`windsurf/` 下的 `.windsurfrules`
+- **[Kimi Code](#kimi-code)**：YAML agent 规格，位于 `kimi/`
+- **[Qwen Code](#qwen-code)**：项目级 `.md` SubAgent 文件，位于 `.qwen/agents/`
 
 ## 快速安装
 
@@ -29,9 +31,19 @@
 # Gemini CLI 在全新 clone 后需要先生成 integration 文件
 ./scripts/convert.sh --tool gemini-cli
 ./scripts/install.sh --tool gemini-cli
+
+# Qwen Code 在全新 clone 后也需要先生成 SubAgent 文件
+./scripts/convert.sh --tool qwen
+./scripts/install.sh --tool qwen
 ```
 
-对于 OpenCode、Cursor、Aider、Windsurf 这类项目级工具，请按各自章节里的方式，从目标项目根目录执行安装器。
+如果你安装 OpenClaw 时 gateway 已经在运行，安装完成后需要重启一次：
+
+```bash
+openclaw gateway restart
+```
+
+对于 OpenCode、Cursor、Aider、Windsurf、Qwen Code 这类项目级工具，请按各自章节里的方式，从目标项目根目录执行安装器。
 
 ## 重新生成 integration 文件
 
@@ -152,10 +164,61 @@ cd /your/project && /path/to/agency-agents/scripts/install.sh --tool aider
 
 ## Windsurf
 
-所有 agents 会被汇总成一个 `.windsurfrules` 文件，放在你的项目根目录。
+完整的 Agency roster 会被汇总成一个 `.windsurfrules` 文件，放在你的项目根目录。
 
 ```bash
 cd /your/project && /path/to/agency-agents/scripts/install.sh --tool windsurf
 ```
 
 细节见 [windsurf/README.md](windsurf/README.md)。
+
+---
+
+## Kimi Code
+
+每个 agent 会被转换成 Kimi Code CLI 的 agent 规格。每个 agent 对应一个目录，里面包含 `agent.yaml`（agent spec）和 `system.md`（system prompt）。
+
+由于 Kimi 的 agent 文件是从源 Markdown 生成的，全新 clone 后安装前需要先运行 `./scripts/convert.sh --tool kimi`。
+
+```bash
+./scripts/convert.sh --tool kimi
+./scripts/install.sh --tool kimi
+```
+
+### 用法
+
+安装后，使用 `--agent-file` 参数加载某个 agent：
+
+```bash
+kimi --agent-file ~/.config/kimi/agents/frontend-developer/agent.yaml
+```
+
+如果在某个具体项目里使用：
+
+```bash
+cd /your/project
+kimi --agent-file ~/.config/kimi/agents/frontend-developer/agent.yaml \
+     --work-dir /your/project
+```
+
+细节见 [kimi/README.md](kimi/README.md)。
+
+---
+
+## Qwen Code
+
+每个 agent 会变成 `.qwen/agents/` 下的项目级 `.md` SubAgent 文件。
+
+从全新 clone 开始时，需要先生成 Qwen 文件：
+
+```bash
+./scripts/convert.sh --tool qwen
+```
+
+然后从你的项目根目录执行安装：
+
+```bash
+cd /your/project && /path/to/agency-agents/scripts/install.sh --tool qwen
+```
+
+细节见 [qwen/README.md](qwen/README.md)。

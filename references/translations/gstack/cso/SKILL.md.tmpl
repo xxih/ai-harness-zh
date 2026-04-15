@@ -1,0 +1,34 @@
+---
+name: cso
+preamble-tier: 2
+version: 2.0.0
+description: |
+  首席安全官审计。结合 OWASP Top 10、STRIDE、供应链、CI/CD、Secrets、
+  Webhook、AI/LLM 风险与技能供应链，生成低噪声安全报告。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Grep
+  - Glob
+  - Write
+  - Agent
+  - WebSearch
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /cso 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /cso 模板
+
+这个模板定义 v2 安全审计的主 prompt，重点是 infrastructure-first、低噪声和置信度门槛。
+
+## 模板职责
+- 先建 stack / architecture mental model，再做 attack surface census
+- 依次覆盖 secrets、dependency、CI/CD、infra、webhook、LLM、skill supply chain
+- 用 OWASP Top 10 + STRIDE + data classification 收束 findings
+- 在 false positive filtering 与 active verification 之后才输出报告
+
+## 关键要求
+- 所有代码搜索优先用 `Grep`
+- daily / comprehensive 两种模式对应不同置信度阈值

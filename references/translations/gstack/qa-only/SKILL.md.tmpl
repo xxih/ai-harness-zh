@@ -1,0 +1,26 @@
+---
+name: qa-only
+preamble-tier: 4
+version: 1.0.0
+description: |
+  只出报告的 QA testing。沿用 /qa 的测试方法，但不改代码，只给出 bug、
+  health score、分类与修复建议。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - AskUserQuestion
+  - WebSearch
+---
+<!-- 中文参考译文。该文件是 /qa-only 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /qa-only 模板
+
+这个模板复用 `/qa` 的测试方法，但明确停在“只出报告、不改代码”。
+
+## 模板职责
+- 做完整 QA 探索并评分
+- 输出截图、复现步骤、严重级别和修复建议
+- 不进入修复、提交和回归测试写入环节

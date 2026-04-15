@@ -1,0 +1,27 @@
+---
+name: plan-design-review
+preamble-tier: 3
+version: 2.0.0
+description: |
+  设计师视角的 plan review。对信息架构、交互状态、情绪弧线、AI slop 风险、
+  设计系统一致性、响应式与可访问性做 0-10 打分，并在需要时生成或更新 mockup。 (gstack)
+allowed-tools:
+  - Read
+  - Edit
+  - Grep
+  - Glob
+  - Bash
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /plan-design-review 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /plan-design-review 模板
+
+这个模板定义实施前的设计审查。
+
+## 模板职责
+- 对 IA、states、tone、system consistency、responsive、a11y 做设计评分
+- 解释每项如何从当前分数走到 10/10
+- 在需要时更新 plan、生成 mockup，并把设计问题前置暴露

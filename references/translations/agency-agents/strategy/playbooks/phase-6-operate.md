@@ -76,7 +76,7 @@
 MEASURE (Analytics Reporter)
     │
     ▼
-ANALYZE (Feedback Synthesizer + Data Analytics Reporter)
+ANALYZE (Feedback Synthesizer + Analytics Reporter)
     │
     ▼
 PLAN (Sprint Prioritizer + Studio Producer)

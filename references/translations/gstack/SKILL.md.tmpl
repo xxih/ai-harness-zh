@@ -1,0 +1,34 @@
+---
+name: gstack
+preamble-tier: 1
+version: 1.1.0
+description: |
+  面向 QA 测试与真实站点试用的快速无头浏览器入口。可导航页面、与元素交互、
+  校验状态、比较前后差异、截图并留证。适用于打开站点、验证部署、完整试用用户流程、
+  或带截图提交 bug。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 gstack 共享入口的模板源，保留 resolver 与占位符；生成后的完整文本见 ./SKILL.md。 -->
+
+{{PREAMBLE}}
+
+# gstack 共享模板
+
+这是 gstack 的根模板源文件。它负责注入共享 preamble、proactive routing 规则，以及默认浏览器入口的工作流骨架。
+
+## 模板职责
+- 在所有 skill 运行前统一执行升级检查、telemetry、routing 与 learnings 载入
+- 定义“匹配 skill 就优先调用 skill”的默认路由原则
+- 把 browse / QA / dogfooding 作为共享默认工具面暴露出来
+- 提供常用浏览器命令族、证据留存方式与截图可见性要求
+
+## 关键占位符
+- `{{PREAMBLE}}`：共享 session 前置、upgrade flow、telemetry / proactive / routing 接线
+- `{{BROWSE_SETUP}}`：browse binary 与 host 相关初始化
+
+## 对照关系
+- 生成后的最终 prompt 见 [SKILL.md](/Users/xxih/workspace/my-ai-harness/references/translations/gstack/SKILL.md)
+- 该模板保留占位符、命令示例和 shell 片段，便于对照生成链路

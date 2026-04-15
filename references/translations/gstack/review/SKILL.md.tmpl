@@ -1,0 +1,41 @@
+---
+name: review
+preamble-tier: 4
+version: 1.0.0
+description: |
+  落地前 PR review。按 diff 对照 base branch，查 SQL 安全、LLM 信任边界、
+  条件副作用、文档漂移、scope drift，并在适合时自动修复简单问题。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Edit
+  - Write
+  - Grep
+  - Glob
+  - Agent
+  - AskUserQuestion
+  - WebSearch
+---
+<!-- 中文参考译文。该文件是 /review 的模板源。 -->
+
+{{PREAMBLE}}
+{{BASE_BRANCH_DETECT}}
+
+# /review 模板
+
+这个模板定义 pre-landing review 的完整 prompt 骨架。
+
+## 模板职责
+- 检查当前分支与 base branch 的真实 diff
+- 接入 checklist、Greptile triage、scope drift、plan completion audit 与 review army
+- 按 Fix-First Heuristic 自动修一批问题，再把剩余歧义项打包给用户
+- 持久化 review 结果，并把 learnings 写回项目记忆
+
+## 关键占位符
+- `{{SCOPE_DRIFT}}`
+- `{{PLAN_COMPLETION_AUDIT_REVIEW}}`
+- `{{LEARNINGS_SEARCH}}`
+- `{{CONFIDENCE_CALIBRATION}}`
+- `{{REVIEW_ARMY}}`
+- `{{ADVERSARIAL_STEP}}`
+- `{{LEARNINGS_LOG}}`

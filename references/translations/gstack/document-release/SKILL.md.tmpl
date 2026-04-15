@@ -1,0 +1,28 @@
+---
+name: document-release
+preamble-tier: 2
+version: 1.0.0
+description: |
+  发布后的文档同步器。按 diff 检查 README、ARCHITECTURE、CONTRIBUTING、
+  CHANGELOG、CLAUDE.md、TODOS 等文档是否过期，并尽量自动更新。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Grep
+  - Glob
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /document-release 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /document-release 模板
+
+这个模板定义“代码发布后把文档追平”的 prompt 骨架。
+
+## 模板职责
+- 把 diff 与仓库文档逐份交叉核对
+- 自动更新 README、ARCHITECTURE、CONTRIBUTING、CLAUDE.md 等主文档
+- 整理 CHANGELOG 与 TODOS，并在需要时处理版本号

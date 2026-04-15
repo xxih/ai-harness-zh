@@ -1,0 +1,40 @@
+---
+name: autoplan
+preamble-tier: 3
+version: 1.0.0
+description: |
+  自动化 plan review pipeline。依次加载 CEO、design、eng review，
+  按 6 条决策原则自动作出大多数判断，只把 taste decisions 和明显冲突
+  留给用户最终确认。 (gstack)
+benefits-from: [office-hours]
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - WebSearch
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /autoplan 的模板源，不是生成版；完整流程见同目录 SKILL.md。 -->
+
+{{PREAMBLE}}
+{{BASE_BRANCH_DETECT}}
+{{BENEFITS_FROM}}
+
+# /autoplan 模板
+
+这个模板把 `/plan-ceo-review`、`/plan-design-review`、`/plan-eng-review` 串成一条自动审查流水线。
+
+## 模板职责
+- 先建立 restore point，读取 plan、上下文与 skill files
+- 用 6 条决策原则自动吃掉大多数中间判断
+- 把 taste decisions、scope 边界、模型分歧留到最终 approval gate
+- 写 decision audit trail、review logs 与 completion evidence
+
+## 关键占位符
+- `{{PREAMBLE}}`：共享前置
+- `{{BASE_BRANCH_DETECT}}`：base branch 识别
+- `{{BENEFITS_FROM}}`：接入 `/office-hours` 作为先行上下文
+- `{{SLUG_SETUP}}`：restore point 与 plan 文件路径

@@ -1,0 +1,63 @@
+---
+name: plan-devex-review
+preamble-tier: 3
+version: 2.0.0
+description: |
+  交互式 developer experience 方案评审。先探索开发者 persona、竞品基线、
+  magical moment 与 friction points，再进入评分。三种模式：
+  DX EXPANSION（做成竞争优势）、DX POLISH（把所有触点打磨到位）、
+  DX TRIAGE（只抓致命缺口）。
+  当用户要求“DX review”“developer experience audit”“devex review”
+  或“API design review”时使用。
+  当用户正在规划 developer-facing 产品（API、CLI、SDK、library、platform、docs）时，
+  也适合主动建议。 (gstack)
+voice-triggers:
+  - "dx review"
+  - "developer experience review"
+  - "devex review"
+  - "devex audit"
+  - "API design review"
+  - "onboarding review"
+benefits-from: [office-hours]
+allowed-tools:
+  - Read
+  - Edit
+  - Grep
+  - Glob
+  - Bash
+  - AskUserQuestion
+  - WebSearch
+---
+<!-- 中文参考译文。该文件是 /plan-devex-review 的模板源。 -->
+
+# /plan-devex-review 模板
+
+这个模板定义 plan 阶段的交互式 DX review。
+
+## 模板职责
+
+- 在评分前先做 persona / benchmark / magical moment / journey 的调查
+- 按模式切换 DX EXPANSION、DX POLISH、DX TRIAGE
+- 产出带证据的 8-pass DX review
+
+## Step 0 骨架
+
+1. `Developer Persona Interrogation`
+2. `Empathy Narrative`
+3. `Competitive DX Benchmarking`
+4. `Magical Moment Design`
+5. `Mode Selection`
+6. `Developer Journey Trace`
+7. `First-Time Developer Roleplay`
+
+## 评分方法
+
+- 每一维都必须引用 Step 0 证据
+- 不可在 context pressure 下跳过 pass
+- 若前一轮已有 DX review，要先展示 trend
+
+## 输出要求
+
+- 先给 mode 与 developer product classification
+- 再给 8 个 review passes
+- 每个 issue 都要配推荐动作与理由

@@ -1,0 +1,54 @@
+---
+name: devex-review
+preamble-tier: 3
+version: 1.0.0
+description: |
+  开发者体验实测审计。使用 browse 工具真正去 TEST 开发者体验：
+  浏览文档、尝试 getting started、计时 TTHW、截图错误信息、评估 CLI help。
+  输出带证据的 DX scorecard，并与 /plan-devex-review 的预期分数做对照
+  （boomerang：计划说 3 分钟，现实可能是 8 分钟）。
+  当用户要求“测试 DX”“做 DX audit”“developer experience test”
+  或“试跑 onboarding”时使用；在 developer-facing 功能刚 ship 后也适合主动建议。 (gstack)
+voice-triggers:
+  - "dx audit"
+  - "test the developer experience"
+  - "try the onboarding"
+  - "developer experience test"
+allowed-tools:
+  - Read
+  - Edit
+  - Grep
+  - Glob
+  - Bash
+  - AskUserQuestion
+  - WebSearch
+---
+<!-- 中文参考译文。该文件是 /devex-review 的模板源。 -->
+
+# /devex-review 模板
+
+这个模板定义一次带证据的 developer experience 实测审计。
+
+## 模板职责
+
+- 建立 URL / docs / baseline
+- 对 getting started、API/CLI/SDK、错误信息、文档、升级路径、开发环境逐项评分
+- 产出 `DX Scorecard`、`Boomerang Comparison` 与 next steps
+
+## 核心步骤
+
+1. `Target Discovery`
+2. `Getting Started Audit`
+3. `API/CLI/SDK Ergonomics Audit`
+4. `Error Message Audit`
+5. `Documentation Audit`
+6. `Upgrade Path Audit`
+7. `Developer Environment Audit`
+8. `Community & Ecosystem Audit`
+9. `DX Measurement Audit`
+
+## 输出要求
+
+- 每一维都要附 evidence
+- 能截图就截图，不能截图时再引用 bash 输出或文件
+- 如果已有 `/plan-devex-review` 分数，必须做 boomerang 对照

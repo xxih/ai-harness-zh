@@ -1,0 +1,28 @@
+---
+name: setup-deploy
+preamble-tier: 2
+version: 1.0.0
+description: |
+  为 /land-and-deploy 配置部署信息。自动识别部署平台、生产 URL、健康检查端点
+  和 deploy 命令，并把结果写进 CLAUDE.md。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /setup-deploy 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /setup-deploy 模板
+
+这个模板负责给 `/land-and-deploy` 预先接好 deploy 配置。
+
+## 模板职责
+- 识别部署平台、生产 URL、health check endpoint 和 deploy status 命令
+- 把配置写回 `CLAUDE.md`
+- 为后续自动部署和生产验证提供单一配置源

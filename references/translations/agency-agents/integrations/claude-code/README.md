@@ -26,4 +26,4 @@ Use the Reality Checker agent to verify this feature is production-ready.
 
 ## Agent 目录
 
-这些 agents 按 division 组织。完整 roster 请看主仓库的 `README.md`。
+这些 agents 按 division 组织。完整的 Agency roster 请看主仓库的 `README.md`。

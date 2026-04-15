@@ -28,7 +28,7 @@
   - `claudeception`：`README.zh-CN.md`、`SKILL.md`、`WARP.md`、`resources/research-references.md`、`resources/skill-template.md` 与 `examples/*/SKILL.md`
   - `agency-agents`：`strategy/EXECUTIVE-BRIEF.md`、`strategy/QUICKSTART.md` 与若干 `integrations/*/README.md` 首批译稿
   - `alirezarezvani-claude-skills`：`README.zh-CN.md`、仓库级 `CLAUDE.md` / `GEMINI.md`、`orchestration/ORCHESTRATION.md` 与 8 个顶层 domain `SKILL.md`
-  - `gstack`：`README.zh-CN.md`，先覆盖仓库定位、安装方式、sprint 主线和关键 skill 总览
+  - `gstack`：`README.zh-CN.md`、根级核心文档、`docs/skills.md`、共享 `SKILL.md` / `SKILL.md.tmpl`、全部 skill 的 `SKILL.md` / `SKILL.md.tmpl`、`review/*.md`、`review/specialists/*.md`、`qa/references/*.md`、`qa/templates/*.md`、`cso/ACKNOWLEDGEMENTS.md`
 
 ## 同步流程
 

@@ -1,0 +1,25 @@
+---
+name: setup-browser-cookies
+preamble-tier: 1
+version: 1.0.0
+description: |
+  把真实 Chromium 浏览器中的 cookies 导入无头 browse 会话。会打开交互式选择器，
+  让用户决定导入哪些域名。适用于测试需要登录态的页面。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /setup-browser-cookies 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /setup-browser-cookies 模板
+
+这个模板定义把真实浏览器登录态导入 headless browse 会话的步骤。
+
+## 模板职责
+- 先检查是否已在 CDP mode
+- 接 browse binary，打开 cookie picker
+- 支持交互式导入和 direct import 两条路径
+- 导入后做验证，确保后续 QA / browse 能直接复用登录态

@@ -1,6 +1,6 @@
 # Cursor 集成
 
-该集成会把 61 个 Agency agents 转成 Cursor 的 `.mdc` rule 文件。规则是**项目级作用域**，需要从项目根目录安装。
+该集成会把完整的 Agency roster 转成 Cursor 的 `.mdc` rule 文件。规则是**项目级作用域**，需要从项目根目录安装。
 
 ## 安装
 

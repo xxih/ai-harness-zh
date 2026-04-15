@@ -1,0 +1,37 @@
+---
+name: qa
+preamble-tier: 4
+version: 2.0.0
+description: |
+  系统化 QA 测试并修复发现的问题。先测试，再按 bug 逐个修、逐个重新验证，
+  并为每个修复补回归测试。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - AskUserQuestion
+  - WebSearch
+---
+<!-- 中文参考译文。该文件是 /qa 的模板源。 -->
+
+{{PREAMBLE}}
+{{BASE_BRANCH_DETECT}}
+
+# /qa 模板
+
+这个模板定义完整的 “Test -> Fix -> Verify” QA 闭环。
+
+## 模板职责
+- 解析 URL、tier、mode、scope、auth 等运行参数
+- 在 baseline 阶段系统测试页面、记录 health score
+- 按严重级别进入 fix loop，并为每个 fix 单独提交
+- 对 verified fixes 补 regression test，并产出结构化 QA report
+
+## 关键占位符
+- `{{BROWSE_SETUP}}`：browse 接线
+- `{{TEST_BOOTSTRAP}}`：测试框架引导
+- `{{QA_METHODOLOGY}}`：QA baseline 方法学
+- `{{SLUG_EVAL}}` / `{{SLUG_SETUP}}`：项目路径与报告目录

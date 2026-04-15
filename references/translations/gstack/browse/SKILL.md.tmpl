@@ -1,0 +1,28 @@
+---
+name: browse
+preamble-tier: 1
+version: 1.1.0
+description: |
+  面向 QA 测试与真实站点试用的快速无头浏览器。可打开 URL、交互、校验页面状态、
+  对比前后差异、截图留证、检查响应式布局与表单上传。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /browse 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /browse 模板
+
+这个模板定义 gstack 浏览器能力的基础 prompt。它不是最终生成版，而是 browse 命令族的源模板。
+
+## 模板职责
+- 作为 QA、部署验证、dogfooding 的浏览器基础设施
+- 提供 snapshot、diff、annotated screenshot 与 assertions 的标准操作套路
+- 规范文件上传、对话框、响应式检查、环境对比与认证页面验证
+
+## 关键占位符
+- `{{PREAMBLE}}`：共享前置
+- `{{BROWSE_SETUP}}`：browse binary / host 初始化

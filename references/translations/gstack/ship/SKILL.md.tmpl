@@ -1,0 +1,43 @@
+---
+name: ship
+preamble-tier: 4
+version: 1.0.0
+description: |
+  全自动 ship workflow。合并 base branch、跑测试、做 coverage audit、
+  检查 plan 完成度与 review 状态、更新 CHANGELOG / VERSION、提交、推送并创建 PR。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Grep
+  - Glob
+  - Agent
+  - AskUserQuestion
+  - WebSearch
+sensitive: true
+---
+<!-- 中文参考译文。该文件是 /ship 的模板源。 -->
+
+{{PREAMBLE}}
+{{BASE_BRANCH_DETECT}}
+
+# /ship 模板
+
+这个模板定义 gstack 最强的自动发货主线。
+
+## 模板职责
+- 在 feature branch 上合并 base branch，再跑测试
+- 执行 distribution check、test failure triage、eval、coverage audit、plan completion audit
+- 自动接入 `/review`、Greptile triage、`CHANGELOG` / `VERSION` 处理与 PR 生成
+- 只在真正需要人判断的地方停下，例如大版本 bump、复杂 review ASK 项、关键 gate 失败
+
+## 关键占位符
+- `{{REVIEW_DASHBOARD}}`
+- `{{TEST_BOOTSTRAP}}`
+- `{{TEST_FAILURE_TRIAGE}}`
+- `{{TEST_COVERAGE_AUDIT_SHIP}}`
+- `{{PLAN_COMPLETION_AUDIT_SHIP}}`
+- `{{PLAN_VERIFICATION_EXEC}}`
+- `{{LEARNINGS_SEARCH}}`
+- `{{SCOPE_DRIFT}}`

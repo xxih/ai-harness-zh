@@ -44,11 +44,11 @@ color: "#00FFFF"
 
 ## 项目级与全局
 
-`.opencode/agents/` 下的 agents 是**项目级**的。若要让它们在所有项目里全局可用，可以把它们复制到 OpenCode 配置目录：
+`.opencode/agents/` 下的 agents 是**项目级**的。若要让它们在所有项目里全局可用，请先生成 agent 文件，再用 `--path` 安装到 OpenCode 配置目录：
 
 ```bash
-mkdir -p ~/.config/opencode/agents
-cp integrations/opencode/agents/*.md ~/.config/opencode/agents/
+./scripts/convert.sh --tool opencode
+./scripts/install.sh --tool opencode --path ~/.config/opencode/agents
 ```
 
 ## 重新生成

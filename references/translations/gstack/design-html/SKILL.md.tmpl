@@ -1,0 +1,29 @@
+---
+name: design-html
+preamble-tier: 2
+version: 1.0.0
+description: |
+  把批准后的设计稿转成 Pretext-native HTML。支持设计分析、智能 API 路由、
+  前端框架检测、live reload、验证截图与 refinement loop。 (gstack)
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - Agent
+  - AskUserQuestion
+---
+<!-- 中文参考译文。该文件是 /design-html 的模板源。 -->
+
+{{PREAMBLE}}
+
+# /design-html 模板
+
+这个模板定义“从批准的设计稿到可运行 HTML”的 prompt 主线。
+
+## 模板职责
+- 分析 design mockup，选择合适的 Pretext / 框架输出路径
+- 生成可重流文本、动态高度和可验证的 HTML / CSS
+- 在 live reload 与截图校验中持续 refinement
