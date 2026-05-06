@@ -48,12 +48,12 @@
     {
       "source": "ARCHITECTURE.md",
       "translation": "ARCHITECTURE.md",
-      "source_sha256": "316e7676697d8920631ae22185b6a16dba6c4e83c575ae4cb29eb5915c3cf51b"
+      "source_sha256": "8d0144efbb683111ae8fbea6ccb10c6d844ce7715cc3923aaa7c99399ef9ba81"
     },
     {
       "source": "BROWSER.md",
       "translation": "BROWSER.md",
-      "source_sha256": "ee5d6d8fd3dacfc5e9f8a419e81887bbcb2fd9cdfc58171343f6fb88f6c94908"
+      "source_sha256": "c5af0039cdc99e89f414b804b6633cb5b773300edba29fe39e9dde7b363d7a14"
     },
     {
       "source": "DESIGN.md",
@@ -503,7 +503,7 @@
     {
       "source": "review/design-checklist.md",
       "translation": "review/design-checklist.md",
-      "source_sha256": "1051805b3750195525c54610a7227f3050d1ee9040407e28d8390da67d93a14c"
+      "source_sha256": "e6f4ac34f034005c7fc91e4008bb8101a0973a26230b86b50c4f580182e6c8bb"
     },
     {
       "source": "review/greptile-triage.md",
