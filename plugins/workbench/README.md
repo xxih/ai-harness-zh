@@ -18,6 +18,8 @@ workbench/
 └── skills/
     ├── architecture-decision-records/
     │   └── SKILL.md
+    ├── grill-me/
+    │   └── SKILL.md
     ├── nanospec/
     │   └── SKILL.md
     ├── quality-tdd/
@@ -34,6 +36,7 @@ workbench/
 |------|------|------|------|
 | skill | `nanospec` | openspec + nanospec | 串起 propose → plan → apply，配 align 纠偏与 run 一键跑完，产物落到 `nanospec/<name>/` |
 | skill | `architecture-decision-records` | everything-claude-code | 在编码会话中捕捉架构决策，生成 ADR 文档 |
+| skill | `grill-me` | mattpocock/skills | 用户说"grill me / 烤我 / 拷问我"时，沿决策树逐项追问直到达成共同认知 |
 | skill | `quality-tdd` | packages/quality-workflows | 测试先行硬约束：没看到测试先失败就不算完成 TDD |
 | skill | `verification-before-completion` | superpowers | 声明完成前必须跑验证命令并确认输出，证据先于结论 |
 | command | `/propose` | — | 路由到 nanospec skill 的 propose 段 |
