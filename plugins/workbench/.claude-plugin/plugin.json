@@ -1,0 +1,9 @@
+{
+  "name": "workbench",
+  "version": "0.1.0",
+  "description": "个人日常使用的 Claude Code plugin。当前收录的 skill 来自 everything-claude-code，未来按需扩充。",
+  "author": {
+    "name": "xxih",
+    "email": "fynnxie@gmail.com"
+  }
+}
