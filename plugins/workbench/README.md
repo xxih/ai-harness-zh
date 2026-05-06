@@ -9,21 +9,63 @@ workbench/
 ├── .claude-plugin/
 │   └── plugin.json
 ├── README.md
+├── commands/
+│   ├── align.md
+│   ├── apply.md
+│   ├── plan.md
+│   ├── propose.md
+│   └── run.md
 └── skills/
     ├── architecture-decision-records/
     │   └── SKILL.md
-    └── quality-tdd/
-        ├── SKILL.md
-        └── references/
-            └── testing-anti-patterns.md
+    ├── nanospec/
+    │   └── SKILL.md
+    ├── quality-tdd/
+    │   ├── SKILL.md
+    │   └── references/
+    │       └── testing-anti-patterns.md
+    └── verification-before-completion/
+        └── SKILL.md
 ```
 
 ## 当前内容
 
 | 类型 | 名称 | 来源 | 说明 |
 |------|------|------|------|
+| skill | `nanospec` | openspec + nanospec | 串起 propose → plan → apply，配 align 纠偏与 run 一键跑完，产物落到 `nanospec/<name>/` |
 | skill | `architecture-decision-records` | everything-claude-code | 在编码会话中捕捉架构决策，生成 ADR 文档 |
 | skill | `quality-tdd` | packages/quality-workflows | 测试先行硬约束：没看到测试先失败就不算完成 TDD |
+| skill | `verification-before-completion` | superpowers | 声明完成前必须跑验证命令并确认输出，证据先于结论 |
+| command | `/propose` | — | 路由到 nanospec skill 的 propose 段 |
+| command | `/plan` | — | 路由到 nanospec skill 的 plan 段 |
+| command | `/apply` | — | 路由到 nanospec skill 的 apply 段 |
+| command | `/align` | — | 路由到 nanospec skill 的 align 段 |
+| command | `/run` | — | 路由到 nanospec skill 的 run 段（一键跑完） |
+
+### nanospec 工作流约定
+
+所有产物落到 `nanospec/<YYYYMMDD-task-name>/`：
+
+```
+nanospec/<name>/
+├── brief.md          # 用户原始需求（run 场景 A 自动写入）
+├── proposal.md       # propose 阶段产物：Why / What / Impact
+├── design.md         # plan 阶段产物：Decisions / Goals / Trade-offs
+├── tasks.md          # plan 阶段产物：可勾选任务清单
+└── alignment.md      # align 阶段产物：偏差日志（按需创建）
+```
+
+阶段之间的接力：
+
+```
+propose ──► plan ──► apply
+   │         │         │
+   └─────────┴────► align ─► (回写 proposal / design / tasks)
+
+run ：检测进度，从缺口处接力跑 propose → plan → apply
+```
+
+`nanospec/` 是项目级目录，建议加到 `.gitignore`，或按需选择性提交。
 
 ## 使用
 
