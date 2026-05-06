@@ -46,60 +46,90 @@ Fork 它，改进它，变成你自己的东西。如果你就是想喷免费开
 
 打开 Claude Code，直接粘贴下面这段。剩下的让 Claude 去做。
 
-> Install gstack: run **`git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup`** then add a "gstack" section to CLAUDE.md that says to use the /browse skill from gstack for all web browsing, never use mcp\_\_claude-in-chrome\_\_\* tools, and lists the available skills: /office-hours, /plan-ceo-review, /plan-eng-review, /plan-design-review, /design-consultation, /design-shotgun, /design-html, /review, /ship, /land-and-deploy, /canary, /benchmark, /browse, /connect-chrome, /qa, /qa-only, /design-review, /setup-browser-cookies, /setup-deploy, /retro, /investigate, /document-release, /codex, /cso, /autoplan, /careful, /freeze, /guard, /unfreeze, /gstack-upgrade, /learn. Then ask the user if they also want to add gstack to the current project so teammates get it.
+> Install gstack: run **`git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup`** then add a "gstack" section to CLAUDE.md that says to use the /browse skill from gstack for all web browsing, never use mcp\_\_claude-in-chrome\_\_\* tools, and lists the available skills: /office-hours, /plan-ceo-review, /plan-eng-review, /plan-design-review, /design-consultation, /design-shotgun, /design-html, /review, /ship, /land-and-deploy, /canary, /benchmark, /browse, /connect-chrome, /qa, /qa-only, /design-review, /setup-browser-cookies, /setup-deploy, /retro, /investigate, /document-release, /codex, /cso, /autoplan, /plan-devex-review, /devex-review, /careful, /freeze, /guard, /unfreeze, /gstack-upgrade, /learn. Then ask the user if they also want to add gstack to the current project so teammates get it.
 
-### 第 2 步：加进你的 repo，让队友也能直接用（可选）
+### 第 2 步：Team mode，给共享 repo 开自动升级（推荐）
 
-> Add gstack to this project: run **`cp -Rf ~/.claude/skills/gstack .claude/skills/gstack && rm -rf .claude/skills/gstack/.git && cd .claude/skills/gstack && ./setup`** then add a "gstack" section to this project's CLAUDE.md that says to use the /browse skill from gstack for all web browsing, never use mcp\_\_claude-in-chrome\_\_\* tools, lists the available skills: /office-hours, /plan-ceo-review, /plan-eng-review, /plan-design-review, /design-consultation, /design-shotgun, /design-html, /review, /ship, /land-and-deploy, /canary, /benchmark, /browse, /connect-chrome, /qa, /qa-only, /design-review, /setup-browser-cookies, /setup-deploy, /retro, /investigate, /document-release, /codex, /cso, /autoplan, /careful, /freeze, /guard, /unfreeze, /gstack-upgrade, /learn, and tells Claude that if gstack skills aren't working, run `cd .claude/skills/gstack && ./setup` to build the binary and register skills.
+每个开发者都先做全局安装，后续更新自动发生：
 
-真实文件会直接 commit 到你的 repo 里，不是 submodule，所以 `git clone` 下来就能用。所有内容都待在 `.claude/` 里，不会去碰你的 PATH，也不会在后台常驻运行。
+```bash
+cd ~/.claude/skills/gstack && ./setup --team
+```
+
+然后在你的 repo 里做一次 bootstrap，让队友也拿到同样的入口：
+
+```bash
+cd <your-repo>
+~/.claude/skills/gstack/bin/gstack-team-init required  # 或者 optional
+git add .claude/ CLAUDE.md && git commit -m "require gstack for AI-assisted work"
+```
+
+这样 repo 里不会 vendoring 一整份 gstack，也不会出现版本漂移，不需要手动升级。每次 Claude Code session 启动时只会做一次很快的自动更新检查，默认每小时至多一次；网络失败时静默跳过。
 
 > **要贡献代码，或者需要完整历史？** 上面的命令用了 `--depth 1`，为了装得更快。如果你准备参与贡献，或者需要完整 git history，就改成完整 clone：
 > ```bash
 > git clone https://github.com/garrytan/gstack.git ~/.claude/skills/gstack
 > ```
 
-### Codex、Gemini CLI 或 Cursor
+### OpenClaw
 
-gstack 适用于任何支持 [SKILL.md standard](https://github.com/anthropics/claude-code) 的 agent。skills 放在 `.agents/skills/` 里，会自动被发现。
+OpenClaw 通过 ACP 拉起 Claude Code session，所以只要 Claude Code 里已经安装好 gstack，所有 gstack skill 都能直接工作。可以把下面这段话粘给 OpenClaw agent：
 
-安装到单个 repo：
+> Install gstack: run `git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup` to install gstack for Claude Code. Then add a "Coding Tasks" section to AGENTS.md that says: when spawning Claude Code sessions for coding work, tell the session to use gstack skills. Include these examples — security audit: "Load gstack. Run /cso", code review: "Load gstack. Run /review", QA test a URL: "Load gstack. Run /qa https://...", build a feature end-to-end: "Load gstack. Run /autoplan, implement the plan, then run /ship", plan before building: "Load gstack. Run /office-hours then /autoplan. Save the plan, don't implement."
+
+装好之后，直接自然语言对 OpenClaw agent 提需求即可：
+
+| 你说什么 | 实际发生什么 |
+|---------|-------------|
+| “Fix the typo in README” | 简单任务，直接起一个 Claude Code session，不一定需要 gstack |
+| “Run a security audit on this repo” | 起 Claude Code，并明确要求执行 `/cso` |
+| “Build me a notifications feature” | 起 Claude Code，按 `/autoplan` → 实现 → `/ship` 这一整条链路走 |
+| “Help me plan the v2 API redesign” | 起 Claude Code，先 `/office-hours` 再 `/autoplan`，只保存计划、不直接实现 |
+
+更细的 dispatch routing 和 `gstack-lite` / `gstack-full` prompt 模板见 [docs/OPENCLAW.md](docs/OPENCLAW.md)。
+
+### 原生 OpenClaw Skills（通过 ClawHub）
+
+有 4 个方法论型 skill 可以直接跑在 OpenClaw agent 里，不需要额外起 Claude Code session：
 
 ```bash
-git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git .agents/skills/gstack
-cd .agents/skills/gstack && ./setup --host codex
+clawhub install gstack-openclaw-office-hours gstack-openclaw-ceo-review gstack-openclaw-investigate gstack-openclaw-retro
 ```
 
-当 setup 从 `.agents/skills/gstack` 运行时，它会把生成后的 Codex skills 安装到同一个 repo 旁边，不会写入 `~/.codex/skills`。
+| Skill | 它负责什么 |
+|-------|-------------|
+| `gstack-openclaw-office-hours` | 用 6 个强制问题做产品拷问 |
+| `gstack-openclaw-ceo-review` | 提供 4 种 scope 模式的战略挑战 |
+| `gstack-openclaw-investigate` | 系统化 root cause debugging 方法论 |
+| `gstack-openclaw-retro` | 每周工程复盘 |
 
-也可以只给当前用户装一次：
+这些 skill 是对话式的，OpenClaw agent 会直接在聊天里执行。
+
+### 其他 AI Agents
+
+gstack 现在支持 8 种 AI coding agents，不只 Claude 一家。默认 setup 会自动探测本机已经安装了哪些 agent：
 
 ```bash
 git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/gstack
-cd ~/gstack && ./setup --host codex
+cd ~/gstack && ./setup
 ```
 
-`setup --host codex` 会在 `~/.codex/skills/gstack` 下创建 runtime root，并把生成后的 Codex skills 链接到顶层。这样可以避免 source repo checkout 和实际运行时重复被发现。
-
-或者也可以让 setup 自动探测你机器上已经装了哪些 agents：
+也可以显式指定 host：
 
 ```bash
-git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/gstack
-cd ~/gstack && ./setup --host auto
+./setup --host <name>
 ```
 
-对于兼容 Codex 的 hosts，setup 现在同时支持两种方式：从 `.agents/skills/gstack` 做 repo-local install，或者从 `~/.codex/skills/gstack` 做 user-global install。31 个 skills 都能在所有支持的 agents 上工作。基于 hooks 的 safety skills（`careful`、`freeze`、`guard`）在非 Claude hosts 上会退化成 inline safety advisory prose。
+| Agent | Flag | skills 安装路径 |
+|-------|------|------------------|
+| OpenAI Codex CLI | `--host codex` | `~/.codex/skills/gstack-*/` |
+| OpenCode | `--host opencode` | `~/.config/opencode/skills/gstack-*/` |
+| Cursor | `--host cursor` | `~/.cursor/skills/gstack-*/` |
+| Factory Droid | `--host factory` | `~/.factory/skills/gstack-*/` |
+| Slate | `--host slate` | `~/.slate/skills/gstack-*/` |
+| Kiro | `--host kiro` | `~/.kiro/skills/gstack-*/` |
 
-### Factory Droid
-
-gstack 也支持 [Factory Droid](https://factory.ai)。skills 会安装到 `.factory/skills/`，并自动被发现。敏感技能（`ship`、`land-and-deploy`、`guard`）会使用 `disable-model-invocation: true`，避免 Droids 自动调用它们。
-
-```bash
-git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/gstack
-cd ~/gstack && ./setup --host factory
-```
-
-skills 会装到 `~/.factory/skills/gstack-*/`。重启 `droid` 让它重新扫描 skills，然后输入 `/qa` 开始。
+如果你想给新的 agent 增加支持，见 [docs/ADDING_A_HOST.md](docs/ADDING_A_HOST.md)。当前流程只需要再加一份 TypeScript host config，不用额外改业务代码。
 
 ## 看看它怎么工作
 
@@ -166,6 +196,7 @@ gstack 不是一堆零散工具，而是一条流程。skills 会按 sprint 的�
 | `/design-html` | **Design Engineer** | 把 `/design-shotgun` 里批准的 mockup 生成为 production-quality 的 Pretext HTML，用计算式文本布局避免写死高度。文本会随窗口大小重新流动，内容高度也会跟着变。还会按设计类型智能路由到合适的 Pretext patterns，并识别 React / Svelte / Vue。 |
 | `/qa` | **QA Lead** | 测你的 app，找 bug，用 atomic commits 修掉，然后重新验证。每个修复都会自动生成 regression test。 |
 | `/qa-only` | **QA Reporter** | 和 `/qa` 用同一套方法，但只出报告，不改代码。纯 bug report。 |
+| `/pair-agent` | **Multi-Agent Coordinator** | 把你的浏览器共享给任意 AI agent。一个命令，一段粘贴，马上连通。支持 OpenClaw、Hermes、Codex、Cursor 以及任何能 `curl` 的 agent。每个 agent 独占自己的 tab，自动起 headed 模式，还会自动开 ngrok tunnel 给远端 agent。 |
 | `/cso` | **Chief Security Officer** | OWASP Top 10 + STRIDE threat model。强调 zero-noise：17 条 false positive exclusions、8/10+ confidence gate、独立 finding verification。每条 finding 都给具体 exploit 场景。 |
 | `/ship` | **Release Engineer** | 同步 main，跑测试，审 coverage，push，开 PR。即使你项目里还没有 test framework，它也会帮你 bootstrap。 |
 | `/land-and-deploy` | **Release Engineer** | 合 PR，等 CI 和 deploy 完成，再验证 production 健康状态。一个命令，从“approved”到“verified in production”。 |
@@ -173,10 +204,19 @@ gstack 不是一堆零散工具，而是一条流程。skills 会按 sprint 的�
 | `/benchmark` | **Performance Engineer** | 建 page load times、Core Web Vitals 和资源体积基线。每个 PR 都能做 before / after 对比。 |
 | `/document-release` | **Technical Writer** | 把项目文档更新到和你刚 ship 的内容一致。会自动抓出过期 README。 |
 | `/retro` | **Eng Manager** | 团队感知的 weekly retro。有人维度拆解、shipping streaks、test health trends、成长机会都会给你。`/retro global` 还能跨你所有项目和 AI 工具（Claude Code、Codex、Gemini）一起跑。 |
-| `/browse` | **QA Engineer** | 给 agent 装上眼睛。真实 Chromium，真实点击，真实截图。单条命令大约 100ms。`$B connect` 还能直接拉起你本机可见的 Chrome headed window，让你现场看它怎么操作。 |
+| `/browse` | **QA Engineer** | 给 agent 装上眼睛。真实 Chromium，真实点击，真实截图。单条命令大约 100ms。`/open-gstack-browser` 会拉起带 sidebar、anti-bot stealth 和自动模型路由的 GStack Browser。 |
 | `/setup-browser-cookies` | **Session Manager** | 把你真实浏览器（Chrome、Arc、Brave、Edge）的 cookies 导入 headless session，测试需要登录的页面。 |
 | `/autoplan` | **Review Pipeline** | 一个命令，拿到完整评审过的 plan。自动跑 CEO → design → eng review，并带着编码好的决策原则执行。只把真正需要你拍板的 taste decisions 暴露给你。 |
 | `/learn` | **Memory** | 管 gstack 跨 session 学到了什么。查看、搜索、清理、导出项目特有的 patterns、pitfalls 和 preferences。learnings 会在 session 间累积，让 gstack 在你的代码库上越用越聪明。 |
+
+### 该用哪种 review？
+
+| 你在为谁构建 | 计划阶段（写代码前） | 上线后 live audit |
+|-------------|----------------------|-------------------|
+| **最终用户**（UI、web app、mobile） | `/plan-design-review` | `/design-review` |
+| **开发者**（API、CLI、SDK、docs） | `/plan-devex-review` | `/devex-review` |
+| **架构**（data flow、performance、tests） | `/plan-eng-review` | `/review` |
+| **全都要** | `/autoplan`（自动跑 CEO → design → eng → DX） | — |
 
 ### Power tools
 
@@ -187,9 +227,9 @@ gstack 不是一堆零散工具，而是一条流程。skills 会按 sprint 的�
 | `/freeze` | **Edit Lock**，把文件编辑范围限制到一个目录。debug 时防止误改范围外内容。 |
 | `/guard` | **Full Safety**，把 `/careful` 和 `/freeze` 合在一起。适合最谨慎的 prod 工作。 |
 | `/unfreeze` | **Unlock**，解除 `/freeze` 边界。 |
-| `/connect-chrome` | **Chrome Controller**，启动带 Side Panel extension 的 Chrome。可以实时观察每一步操作、检查任意元素的 CSS、清理页面、截图。每个 tab 都有自己的 agent。 |
+| `/open-gstack-browser` | **GStack Browser**，启动带 sidebar、anti-bot stealth、自动模型路由（操作走 Sonnet，分析走 Opus）、一键 cookie 导入和 Claude Code 集成的 GStack Browser。它还能清理页面、拍智能截图、改 CSS，并把信息回传到终端。 |
 | `/setup-deploy` | **Deploy Configurator**，给 `/land-and-deploy` 做一次性配置。自动检测平台、production URL 和 deploy commands。 |
-| `/gstack-upgrade` | **Self-Updater**，升级到最新版 gstack。能识别 global install 和 vendored install，并一起同步，顺便展示变化内容。 |
+| `/gstack-upgrade` | **Self-Updater**，升级到最新版 gstack。会识别你当前是 global install 还是 vendored install，同步两边状态，并展示这次升级改了什么。 |
 
 **[所有 skill 的示例、哲学和 workflow 深潜 →](docs/skills.md)**
 
@@ -197,7 +237,11 @@ gstack 不是一堆零散工具，而是一条流程。skills 会按 sprint 的�
 
 gstack 单跑一条 sprint 就已经很好用。十条一起跑，才是真的有意思。
 
-**Design 是这套系统的中心。** `/design-consultation` 会从零搭你的 design system，研究这个空间，提出创意风险，并写 `DESIGN.md`。`/design-shotgun` 会生成多版视觉方案，并在浏览器里打开 comparison board，方便你选方向。`/design-html` 会把批准后的 mockup 生成为 production-quality HTML，底层用的是 Pretext，所以文本在 resize 时会真实 reflow，而不是靠硬编码高度勉强拼出来。接着 `/design-review` 和 `/plan-eng-review` 会继续读取你的设计选择。设计决策会贯穿整条系统。
+**Design 是这套系统的中心。** `/design-consultation` 会从零搭你的 design system，研究竞品和空间，提出创意风险，并写出 `DESIGN.md`。真正的魔法在后面的 shotgun-to-HTML 流水线。
+
+**`/design-shotgun` 负责探索。** 你描述想法，它会用 GPT Image 生成 4 到 6 个 mockup 变体，在浏览器里打开 comparison board，让你直接挑方向、留反馈，比如“留白再多一点”“标题更激进”“把 gradient 去掉”。随后继续生成下一轮。跑过几轮后，taste memory 会开始偏向你真实喜欢的风格，而不是继续猜你脑子里的抽象描述。
+
+**`/design-html` 负责落地。** 它把已批准的 mockup 变成 production-quality HTML/CSS，不是那种单一 viewport 看着还行、一缩放就全坏掉的 AI HTML。底层用 Pretext 处理 computed text layout：文字会真实 reflow，高度会跟内容走，布局是动态的。它还能识别 React、Svelte、Vue，并按 landing page、dashboard、form、card layout 等不同类型选择合适的生成模式。产物是能 ship 的，不是 demo。
 
 **`/qa` 是一个非常大的 unlock。** 它让我能把并行 worker 数从 6 个拉到 12 个。Claude Code 会直接说出 *“I SEE THE ISSUE”*，然后真的去修、去补 regression test、再重新验证修复。这个变化改掉了我的工作方式。agent 现在真的有眼睛了。
 
@@ -207,9 +251,9 @@ gstack 单跑一条 sprint 就已经很好用。十条一起跑，才是真的�
 
 **`/document-release` 是你以前从来没有过的那种工程师。** 它会读遍项目里的每份文档，和 diff 交叉对照，把所有漂移的地方都更新掉。README、ARCHITECTURE、CONTRIBUTING、CLAUDE.md、TODOS，全都能自动保持最新。现在 `/ship` 甚至会自动调用它，所以文档不需要额外手动补。
 
-**真实浏览器模式。** `$B connect` 会拉起你真正的 Chrome，用 Playwright 控制，但窗口是可见的。你会实时看到 Claude 点击、填写、跳转，还是同一扇窗口、同一块屏幕。窗口顶边会有一条很轻的绿色 shimmer，提示你当前哪个 Chrome 窗口归 gstack 控制。现有所有 browse commands 都不需要改。`$B disconnect` 会切回 headless。Chrome extension 的 Side Panel 会显示每条命令的实时活动流，还提供一个聊天侧栏，让你直接指挥 Claude。这个体验不是远程操控隐藏浏览器，而是共处同一个驾驶舱。
+**真实浏览器模式。** `/open-gstack-browser` 会拉起 GStack Browser：一个带 anti-bot stealth、自定义品牌和内建 sidebar extension 的 AI 控制 Chromium。像 Google、NYTimes 这类站点也能更稳定地工作，不容易被 CAPTCHA 拦住。菜单栏显示的是 “GStack Browser”，不会碰你的日常 Chrome。现有 browse commands 基本不需要改；`$B disconnect` 会切回 headless。只要窗口还开着，浏览器就会一直存活，不会因为 idle timeout 在你工作时被杀掉。
 
-**Sidebar agent，你的 AI 浏览器助手。** 在 Chrome side panel 里输入自然语言指令，一个子 Claude 实例就会执行它们。“去 settings 页面然后截图。”“用测试数据填完这张表。”“遍历这个列表里的每个条目并提取价格。” 每个任务最多跑 5 分钟。sidebar agent 运行在隔离 session 中，不会影响你的主 Claude Code 窗口。就像浏览器里多了一双手。
+**Sidebar agent，你的 AI 浏览器助手。** 在 side panel 里直接输入自然语言指令，一个子 Claude 实例就会执行它们。“去 settings 页面然后截图。”“用测试数据填完这张表。”“遍历这个列表里的每个条目并提取价格。” sidebar 会自动把快动作（点击、跳转、截图）路由给 Sonnet，把阅读和分析路由给 Opus。每个任务最多 5 分钟，且运行在隔离 session 中，不会干扰你的主 Claude Code 窗口。sidebar footer 还支持一键导入 cookies。
 
 **个人自动化。** sidebar agent 不只适合开发工作流。比如：“打开我孩子学校的家长门户，把其他家长的名字、手机号和照片都加进我的 Google Contacts。” 有两种方式拿到登录态：1）你在 headed browser 里手动登录一次，session 会保留；2）跑 `/setup-browser-cookies`，从你的真实 Chrome 导入 cookies。认证完成后，Claude 会自己浏览目录、提取数据、创建联系人。
 
@@ -289,7 +333,8 @@ Available skills: /office-hours, /plan-ceo-review, /plan-eng-review, /plan-desig
 /design-consultation, /design-shotgun, /design-html, /review, /ship, /land-and-deploy,
 /canary, /benchmark, /browse, /connect-chrome, /qa, /qa-only, /design-review,
 /setup-browser-cookies, /setup-deploy, /retro, /investigate, /document-release, /codex,
-/cso, /autoplan, /careful, /freeze, /guard, /unfreeze, /gstack-upgrade, /learn.
+/cso, /autoplan, /plan-devex-review, /devex-review, /careful, /freeze, /guard,
+/unfreeze, /gstack-upgrade, /learn.
 ```
 
 ## License

@@ -20,6 +20,8 @@ bun run dev:skill    # watch 模式：变更后自动重新生成并校验
 bun run eval:list    # 列出 ~/.gstack-dev/evals/ 下所有 eval runs
 bun run eval:compare # 比较两次 eval runs（默认自动挑最近两次）
 bun run eval:summary # 汇总所有 eval runs 的统计
+bun run slop         # 输出完整 slop-scan 报告（全文件）
+bun run slop:diff    # 只看当前分支改动文件里的 slop findings
 ```
 
 `test:evals` 需要 `ANTHROPIC_API_KEY`。Codex E2E 测试（`test/codex-e2e.test.ts`）使用 `~/.codex/` 下 Codex 自己的认证配置，不需要 `OPENAI_API_KEY` 环境变量。E2E 测试会实时输出进度（按 tool-by-tool，使用 `--output-format stream-json --verbose`）。结果会持久化到 `~/.gstack-dev/evals/`，并自动与上一次运行做对比。
@@ -50,8 +52,16 @@ gstack/
 │   │   └── snapshot.ts  # SNAPSHOT_FLAGS 元数据数组
 │   ├── test/        # 集成测试 + fixtures
 │   └── dist/        # 编译后的二进制
+├── hosts/           # 强类型 host 配置（每个 AI host 一份）
+│   ├── claude.ts    # 主 host 配置
+│   ├── codex.ts, factory.ts, kiro.ts  # 现有 hosts
+│   ├── opencode.ts, slate.ts, cursor.ts, openclaw.ts  # 新 hosts
+│   └── index.ts     # 注册表：统一导出并派生 Host 类型
 ├── scripts/         # 构建与开发体验工具
 │   ├── gen-skill-docs.ts  # 模板 → SKILL.md 生成器
+│   ├── host-config.ts     # HostConfig 接口 + 校验器
+│   ├── host-config-export.ts  # setup 脚本用的 shell bridge
+│   ├── host-adapters/     # Host-specific adapters（例如 OpenClaw tool mapping）
 │   ├── resolvers/   # 模板解析模块（preamble、design、review 等）
 │   ├── skill-check.ts     # 健康面板
 │   └── dev-skill.ts       # watch 模式
@@ -82,7 +92,8 @@ gstack/
 ├── cso/             # /cso skill（OWASP Top 10 + STRIDE 安全审计）
 ├── design-consultation/ # /design-consultation skill（从零建立 design system）
 ├── design-shotgun/  # /design-shotgun skill（视觉方案探索）
-├── connect-chrome/  # /connect-chrome skill（带 side panel 的 headed Chrome）
+├── open-gstack-browser/  # /open-gstack-browser skill（启动 GStack Browser）
+├── connect-chrome/  # 指向 open-gstack-browser 的 symlink（向后兼容）
 ├── design/          # Design binary CLI（GPT Image API）
 │   ├── src/         # CLI + commands（generate、variants、compare、serve 等）
 │   ├── test/        # 集成测试
@@ -94,6 +105,8 @@ gstack/
 ├── .github/         # CI workflows + Docker image
 │   ├── workflows/   # evals.yml（在 Ubicloud 上跑 E2E）、skill-docs.yml、actionlint.yml
 │   └── docker/      # Dockerfile.ci（预烘焙工具链 + Playwright/Chromium）
+├── contrib/         # 仅供贡献者使用的工具（不会安装给用户）
+│   └── add-host/    # /gstack-contrib-add-host skill
 ├── setup            # 一次性 setup：构建二进制并创建 skill symlinks
 ├── SKILL.md         # 从 SKILL.md.tmpl 生成（不要直接改）
 ├── SKILL.md.tmpl    # 模板：改这个，再跑 gen:skill-docs
@@ -138,7 +151,9 @@ skills **绝不能**写死 framework-specific commands、文件模式或目录�
 
 只要需要和浏览器交互（QA、dogfooding、cookie setup），统一使用 `/browse` skill，或者直接用 `$B <command>` 跑 browse binary。**绝不要**使用 `mcp__claude-in-chrome__*` 工具，它们又慢又不稳定，也不是这个项目使用的路径。
 
-## Vendored symlink awareness
+**Sidebar architecture：** 在修改 `sidepanel.js`、`background.js`、`content.js`、`sidebar-agent.ts`，或任何 sidebar 相关 server endpoint 之前，先读 `docs/designs/SIDEBAR_MESSAGE_FLOW.md`。这份文档覆盖完整初始化时序、消息流、auth token 链路、tab 并发模型和已知故障模式。sidebar 跨越 2 个 codebase（extension + server）的 5 个文件，存在不少不显眼但很关键的顺序依赖；不先理解跨组件流向，就很容易引入静默失败。
+
+## Dev symlink awareness
 
 开发 gstack 时，`.claude/skills/gstack` 可能是一个指回当前工作目录的 symlink（被 gitignore）。这意味着 skill 改动会**立即生效**。这对快速迭代很好，但在大改时也有风险，因为你写到一半的 skills 可能会直接影响到其他同时在使用 gstack 的 Claude Code sessions。
 
@@ -147,9 +162,13 @@ skills **绝不能**写死 framework-specific commands、文件模式或目录�
 - 对 `SKILL.md.tmpl` 的破坏性修改可能会让并发 gstack sessions 一起坏掉
 - 做大重构时，应移除 symlink（`rm .claude/skills/gstack`），让系统退回全局安装 `~/.claude/skills/gstack/`
 
-**Prefix setting：** skill symlinks 可以是短名（`qa -> gstack/qa`），也可以是 namespaced（`gstack-qa -> gstack/qa`），由 `~/.gstack/config.yaml` 里的 `skill_prefix` 控制。把 gstack vendoring 到项目里时，symlink 完要再跑一次 `./setup`，它会按你偏好的命名方式创建逐 skill 的 symlinks。传 `--no-prefix` 或 `--prefix` 可以跳过交互式提示。
+**Prefix setting：** setup 会在顶层创建真实目录（不是 symlink），目录内再放一个指向 gstack 的 `SKILL.md` symlink，例如 `qa/SKILL.md -> gstack/qa/SKILL.md`。这样 Claude 会把它们识别成顶层 skills，而不是 `gstack/` 下的嵌套 skill。名字可以是短名（`qa`），也可以是 namespaced（`gstack-qa`），由 `~/.gstack/config.yaml` 里的 `skill_prefix` 控制。传 `--no-prefix` 或 `--prefix` 可以跳过交互式提示。
+
+**Note：** 已不再推荐把 gstack vendoring 到项目仓库里。优先使用全局安装 + `./setup --team`。团队模式的细节见 `README.md`。
 
 **For plan reviews：** 如果你在 review 的 plan 会改动 skill templates 或 gen-skill-docs pipeline，要考虑这些改动是否应该先在隔离环境里验证，再让它们 live，尤其是在用户其他窗口里也正在使用 gstack 时。
+
+**Upgrade migrations：** 只要改动会影响磁盘状态（目录结构、配置格式、陈旧文件等），并且可能破坏现有用户安装，就要在 `gstack-upgrade/migrations/` 下新增 migration script。格式和测试要求见 `CONTRIBUTING.md` 里的 “Upgrade migrations” 章节。`/gstack-upgrade` 在执行 `./setup` 后会自动跑这些迁移。
 
 ## Compiled binaries — 绝不要提交 browse/dist/ 或 design/dist/
 
@@ -168,6 +187,47 @@ skills **绝不能**写死 framework-specific commands、文件模式或目录�
 - 机械式重构和新功能分开
 
 当用户说 “bisect commit” 或 “bisect and push” 时，把 staged / unstaged changes 拆成逻辑清晰的 commits 再 push。
+
+## Slop-scan：关注 AI 代码质量，而不是伪装成人类代码
+
+我们使用 [slop-scan](https://github.com/benvinegar/slop-scan) 去捕捉那些“AI 写出来确实比一个好的人类工程师差”的模式。目标**不是**把代码伪装成人写的。我们就是 AI-coded，而且并不回避这一点；要追求的是代码质量。
+
+```bash
+npx slop-scan scan .          # 人类可读报告
+npx slop-scan scan . --json   # 机器可读输出，便于做 diff
+```
+
+配置文件在仓库根目录的 `slop-scan.config.json`（当前排除了 `**/vendor/**`）。
+
+### 应该修的（真实质量问题）
+
+- **文件操作外包着空 `catch`**：优先用 `safeUnlink()`。它会忽略 `ENOENT`，但对 `EPERM` / `EIO` 之类异常继续抛出。清理阶段把 `EPERM` 吞掉，通常意味着静默数据丢失。
+- **进程 kill 外包着空 `catch`**：优先用 `safeKill()`。它会忽略 `ESRCH`，但对 `EPERM` 继续抛出。把 `EPERM` 吞掉，会让你误以为进程已经被杀掉。
+- **多余的 `return await`**：如果外层没有 `try`，就删掉。这样既少一个 microtask，也更明确地表达真实意图。
+- **有类型约束的异常捕获**：像 `catch (err) { if (!(err instanceof TypeError)) throw err }` 这种写法，在处理 URL parsing 或 DOM 操作时，明显优于无差别的 `catch {}`。既然你知道预期异常类型，就应该明确说出来。
+
+### 不要修的（只是配合 linter/工具表演）
+
+- **靠字符串匹配错误消息**：`err.message.includes('closed')` 这种模式很脆弱。Playwright / Chrome 随时可能改措辞。如果某个 fire-and-forget 操作对任何失败都不关心，那 `catch {}` 反而是正确模式。
+- **为了豁免 pass-through wrapper 而硬加注释**：比如在方法上面写一句 “alias for active session”，只是为了骗过 slop-scan 规则。这是噪音，不是文档。
+- **把 extension 里的 catch-and-log 改成 selective rethrow**：Chrome extension 一旦出现未捕获异常，整个 extension 可能直接崩。对 extension 代码来说，记录后继续往往就是正确行为。
+- **过度收紧 best-effort cleanup 路径**：shutdown、emergency cleanup、disconnect 这类路径应使用 `safeUnlinkQuiet()`，它会吞掉所有错误。cleanup 因为 `EPERM` 提前抛出，通常比保守吞错更糟。
+
+### `browse/src/error-handling.ts` 里的工具约定
+
+| Function | 适用场景 | 行为 |
+|----------|----------|------|
+| `safeUnlink(path)` | 正常文件删除 | 忽略 `ENOENT`，其他继续抛出 |
+| `safeUnlinkQuiet(path)` | shutdown / emergency cleanup | 吞掉全部错误 |
+| `safeKill(pid, signal)` | 发送信号 | 忽略 `ESRCH`，其他继续抛出 |
+| `isProcessAlive(pid)` | 只想做布尔探测 | 只返回 true/false，不抛异常 |
+
+### 分数追踪
+
+- 基线（2026-04-09，清理前）：100 findings，432.8 分，2.38 score/file
+- 清理后：90 findings，358.1 分，1.96 score/file
+
+不要为了数字而数字。只修那些代表真实代码质量问题的模式。如果某个 “sloppy” 模式在工程上就是正确选择，那就接受该 finding。
 
 ## Community PR guardrails
 
@@ -279,6 +339,26 @@ fs.writeFileSync(path.join(dir, 'ship-SKILL.md'), full.slice(start, end > start 
 - 要在**前台**跑（`bun test ...`），不要后台挂 `&` 再配 `tee`
 - 不要 `pkill` 正在跑的 eval 进程然后重启，这会丢结果、还浪费钱
 - 一次干净完整的运行，胜过三次被杀掉重来的运行
+
+## Publishing native OpenClaw skills to ClawHub
+
+原生 OpenClaw skills 位于 `openclaw/skills/gstack-openclaw-*/SKILL.md`。这些是**手写的方法论型 skills**，不走生成流水线，并会发布到 ClawHub，让任何 OpenClaw 用户都能安装。
+
+**发布命令：** 使用 `clawhub publish`，**不是** `clawhub skill publish`：
+
+```bash
+clawhub publish openclaw/skills/gstack-openclaw-office-hours \
+  --slug gstack-openclaw-office-hours --name "gstack Office Hours" \
+  --version 1.0.0 --changelog "description of changes"
+```
+
+其余 skills 也按同样方式发布：`gstack-openclaw-ceo-review`、`gstack-openclaw-investigate`、`gstack-openclaw-retro`。每次更新都要 bump `--version`。
+
+**认证：** 运行 `clawhub login`（会打开浏览器走 GitHub 登录）。用 `clawhub whoami` 验证当前身份。
+
+**更新：** 仍然使用同一条 `clawhub publish` 命令，只是改成更高的 `--version` 并补上新的 `--changelog`。
+
+**验证：** 运行 `clawhub search gstack`，确认这些 skills 已经在线。
 
 ## Deploying to the active skill
 

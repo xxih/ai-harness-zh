@@ -7,6 +7,7 @@
   - `README.md` -> `README.zh-CN.md`
   - `docs/README.md` -> `docs/zh-CN/README.md`
   - `docs/USER-GUIDE.md` -> `docs/zh-CN/USER-GUIDE.md`
+  - `docs/skills/discovery-contract.md` -> `docs/skills/discovery-contract.md`
   - `docs/references/*.md` -> `docs/zh-CN/references/*.md`
   - `docs/COMMANDS.md` -> `docs/zh-CN/COMMANDS.md`
   - `docs/AGENTS.md` -> `docs/zh-CN/AGENTS.md`
@@ -30,6 +31,6 @@
 
 1. 先更新 `references/repos/get-shit-done` 到准备对照的 upstream 版本
 2. 检查当前覆盖范围内的源文件哈希是否变化
-3. 优先同步 `README.md`、`docs/README.md`、`docs/USER-GUIDE.md`、`docs/references/*.md`、`docs/COMMANDS.md` 与 `docs/AGENTS.md`
+3. 优先同步 `README.md`、`docs/README.md`、`docs/USER-GUIDE.md`、`docs/skills/discovery-contract.md`、`docs/references/*.md`、`docs/COMMANDS.md` 与 `docs/AGENTS.md`
 4. 若 upstream 新增中文版本，优先回收上游译稿；若未提供，再由本仓库补翻
 5. 同步完成后更新 `manifest.json` 中的 `head_commit` 与 `source_sha256`

@@ -33,7 +33,7 @@
     {
       "source": "README.md",
       "translation": "README.zh-CN.md",
-      "source_sha256": "0a020be85ae46d59841815fa8fad4848e4336e34f25a7daf41a7a31f029e2928"
+      "source_sha256": "1d4e6ae32763542024ed6113478c8e72b70b042626f20f9be2785d171be637d0"
     },
     {
       "source": "AGENTS.md",
@@ -43,7 +43,7 @@
     {
       "source": "CLAUDE.md",
       "translation": "CLAUDE.md",
-      "source_sha256": "76b50a3e75b59fb57b708c2efa04ed88796e61995eff6d17da759f909331e4c0"
+      "source_sha256": "8d25d727c8208ffbc5e1f59af1229040732d6d90571cf3d59bc659b7573aac1f"
     },
     {
       "source": "ARCHITECTURE.md",

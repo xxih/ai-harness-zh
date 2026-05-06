@@ -3,9 +3,9 @@
   "source": {
     "path": "references/repos/oh-my-opencode",
     "remote": "https://github.com/code-yeongyu/oh-my-opencode.git",
-    "branch": "main",
-    "head_commit": "5073efef485611eb5470a7efdf96354ec00f8fa3",
-    "notes": "后续日常巡检统一以当前仓库内的 references/repos/oh-my-opencode 作为唯一对照基线。"
+    "branch": "master",
+    "head_commit": "a5db86ee1593cdf6379db9400ddce5ee783c9f5d",
+    "notes": "后续日常巡检统一以当前仓库内的 references/repos/oh-my-opencode 作为唯一对照基线；当前本地审阅分支为 master，origin/HEAD 指向 dev。"
   },
   "scope": {
     "include": [

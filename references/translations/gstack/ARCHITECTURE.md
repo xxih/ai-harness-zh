@@ -176,7 +176,7 @@ console messages、network requests 和 dialog events 各自有自己的 buffer�
 
 `console`、`network`、`dialog` 这些命令读的是内存 buffer，不是磁盘。磁盘文件主要用于 post-mortem debugging。
 
-## SKILL.md template system
+## SKILL.md 模板系统
 
 ### 问题
 
@@ -198,7 +198,7 @@ SKILL.md               （提交入库，自动生成的段落）
 |-------------|------|----------|
 | `{{COMMAND_REFERENCE}}` | `commands.ts` | 按类别整理的命令表 |
 | `{{SNAPSHOT_FLAGS}}` | `snapshot.ts` | 带示例的 flag 参考 |
-| `{{PREAMBLE}}` | `gen-skill-docs.ts` | 启动块：update check、session tracking、contributor mode、AskUserQuestion 格式 |
+| `{{PREAMBLE}}` | `gen-skill-docs.ts` | 启动块：update check、session tracking、operational self-improvement、AskUserQuestion 格式 |
 | `{{BROWSE_SETUP}}` | `gen-skill-docs.ts` | 二进制发现与 setup 说明 |
 | `{{BASE_BRANCH_DETECT}}` | `gen-skill-docs.ts` | 面向 PR 的 skills 动态识别 base branch |
 | `{{QA_METHODOLOGY}}` | `gen-skill-docs.ts` | `/qa` 与 `/qa-only` 共用的 QA 方法块 |
@@ -211,13 +211,13 @@ SKILL.md               （提交入库，自动生成的段落）
 
 这个结构本身就能防漂移。如果命令存在于代码里，它就会出现在文档中；如果代码里不存在，它就不可能平白出现在文档中。
 
-### The preamble
+### preamble
 
 每个 skill 都会先跑一个 `{{PREAMBLE}}` 块，再进入 skill 自己的逻辑。这个 preamble 通过一条 bash 命令同时处理五件事：
 
 1. **Update check**，调用 `gstack-update-check`，告诉用户是否有可用升级
 2. **Session tracking**，touch `~/.gstack/sessions/$PPID`，并统计过去两小时内活跃的 sessions。若同时有 3+ 个 sessions，所有 skills 都会进入 “ELI16 mode”，每次提问都要重新锚定上下文，因为用户此时在多窗口切换。
-3. **Contributor mode**，从配置里读 `gstack_contributor`。若开启，当 gstack 自己行为异常时，agent 会把 field report 记到 `~/.gstack/contributor-logs/`。
+3. **Operational self-improvement**，每次 skill session 结束时，agent 都会回顾这次失败点，例如 CLI 报错、错误路径选择、项目特有怪癖，并把这些 operational learnings 记到项目级 JSONL 文件，供后续 session 复用。
 4. **AskUserQuestion format**，统一提问格式：先给 context，再给 question，再给 `RECOMMENDATION: Choose X because ___`，最后给字母选项。全 skill 统一。
 5. **Search Before Building**，在动手做基础设施或陌生模式前先搜索。三层知识：tried-and-true（Layer 1）、new-and-popular（Layer 2）、first-principles（Layer 3）。一旦 first-principles reasoning 证明 conventional wisdom 是错的，agent 会把这个时刻命名为 “eureka moment” 并记录下来。完整哲学见 `ETHOS.md`。
 
@@ -271,7 +271,7 @@ Playwright 原生错误会通过 `wrapError()` 重写：去掉内部堆栈噪音
 
 server 不会尝试自愈。只要 Chromium crash（`browser.on('disconnected')`），server 就立刻退出。下一条命令时，CLI 会检测到 server 已死，然后自动重启。相比对着一个半死不活的浏览器进程尝试重连，这种做法更简单，也更可靠。
 
-## E2E test infrastructure
+## E2E 测试基础设施
 
 ### Session runner（`test/helpers/session-runner.ts`）
 
@@ -285,7 +285,7 @@ E2E tests 通过完全独立的子进程拉起 `claude -p`，而不是走 Agent 
 
 `parseNDJSON()` 是纯函数，没有 I/O，也没有 side effects，因此可以单独测试。
 
-### Observability data flow
+### Observability 数据流
 
 ```text
   skill-e2e-*.test.ts
@@ -335,7 +335,7 @@ E2E tests 通过完全独立的子进程拉起 `claude -p`，而不是走 Agent 
 jq '.tests[] | select(.exit_reason == "timeout") | .last_tool_call' ~/.gstack-dev/evals/_partial-e2e.json
 ```
 
-### Eval persistence（`test/helpers/eval-store.ts`）
+### Eval 持久化（`test/helpers/eval-store.ts`）
 
 `EvalCollector` 会积累测试结果，并用两种方式落盘：
 
@@ -344,7 +344,7 @@ jq '.tests[] | select(.exit_reason == "timeout") | .last_tool_call' ~/.gstack-de
 
 `eval:compare` 用于比较两次 eval runs。`eval:summary` 会汇总 `~/.gstack-dev/evals/` 里所有 runs 的统计。
 
-### Test tiers
+### 测试分层
 
 | Tier | 内容 | 成本 | 速度 |
 |------|------|------|------|
@@ -354,7 +354,7 @@ jq '.tests[] | select(.exit_reason == "timeout") | .last_tool_call' ~/.gstack-de
 
 Tier 1 会在每次 `bun test` 时运行。Tier 2 和 3 由 `EVALS=1` 控制。思路仍然一样：95% 问题免费抓，只有 judgment calls 和 integration testing 才用 LLM。
 
-## 有意不做的事情
+## 有意不放进来的内容
 
 - **不做 WebSocket streaming。** HTTP request/response 更简单，可直接用 curl 调试，而且已经足够快。流式协议只会用复杂度换来边际收益。
 - **不做 MCP protocol。** MCP 每个请求都有 JSON schema 和协议框架开销，还要求持久连接。纯 HTTP + 纯文本输出更省 tokens，也更好调试。

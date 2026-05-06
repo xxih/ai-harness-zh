@@ -4,24 +4,25 @@
     "path": "references/repos/get-shit-done",
     "remote": "https://github.com/gsd-build/get-shit-done.git",
     "branch": "main",
-    "head_commit": "e6e33602c314ffbf62b9f72017aa0b868a6e94ff"
+    "head_commit": "8b94f0370dcf8873a12ef2e6831cc5a133ddef42"
   },
   "scope": {
     "include": [
       "README.zh-CN.md",
       "docs/zh-CN/README.md",
       "docs/zh-CN/USER-GUIDE.md",
+      "docs/skills/discovery-contract.md",
       "docs/zh-CN/COMMANDS.md",
       "docs/zh-CN/AGENTS.md",
       "docs/zh-CN/references/*.md"
     ],
-    "notes": "优先回收 upstream 已有的 README.zh-CN 与 docs/zh-CN 资料；`docs/zh-CN/COMMANDS.md` 与 `docs/zh-CN/AGENTS.md` 目前为本地手翻参考稿，尚未完全对齐最新 upstream 英文版。"
+    "notes": "优先回收 upstream 已有的 README.zh-CN 与 docs/zh-CN 资料；另补译 README 当前直接引用的 `docs/skills/discovery-contract.md`。`docs/zh-CN/COMMANDS.md` 与 `docs/zh-CN/AGENTS.md` 目前为本地手翻参考稿，尚未完全对齐最新 upstream 英文版。"
   },
   "translations": [
     {
       "source": "README.md",
       "translation": "README.zh-CN.md",
-      "source_sha256": "7654b014d727459082fdbf2b92821ae00dc1d74a3df5089f62def1060e1a95bf"
+      "source_sha256": "ed4f60708dde8535e5f0f0b7d83ac17dcdedce748fe98e1bc02f4058775691fe"
     },
     {
       "source": "docs/README.md",
@@ -32,6 +33,11 @@
       "source": "docs/USER-GUIDE.md",
       "translation": "docs/zh-CN/USER-GUIDE.md",
       "source_sha256": "a1f0dc2fb997c27a00b657b5db8fcc768cccd4fd929e80dec8c7078162c4eb45"
+    },
+    {
+      "source": "docs/skills/discovery-contract.md",
+      "translation": "docs/skills/discovery-contract.md",
+      "source_sha256": "0cc5ab8f78e5d0ff22eb2639f4935c829df8d3d8639062e48006193cca152ee7"
     },
     {
       "source": null,

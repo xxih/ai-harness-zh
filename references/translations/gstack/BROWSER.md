@@ -23,7 +23,7 @@
 
 所有 selector 参数都支持 CSS selectors、`snapshot` 之后得到的 `@e` refs，以及 `snapshot -C` 之后得到的 `@c` refs。总共 50+ 条命令，外加 cookie import。
 
-## How it works
+## 工作原理
 
 gstack 的浏览器是一个编译后的 CLI 二进制，通过 HTTP 和本地持久化 Chromium daemon 通信。CLI 是一个很薄的客户端，它只负责读取 state file、发送命令、把响应打印到 stdout。真正的工作由 server 通过 [Playwright](https://playwright.dev/) 完成。
 
@@ -98,7 +98,7 @@ browse/
 - `--annotate`（`-a`）：在每个 ref 的 bounding box 上临时插入 overlay div，截一张带 ref 标签的图，再把 overlay 清掉。可配合 `-o <path>` 指定输出路径。
 - `--cursor-interactive`（`-C`）：通过 `page.evaluate` 扫描那些不在 ARIA tree 里、但用户仍能点击的元素（例如 `cursor:pointer`、`onclick`、`tabindex>=0`）。这些元素会得到 `@c1`、`@c2`……这样的 refs，对应确定性的 `nth-child` CSS selectors。
 
-### Screenshot modes
+### 截图模式
 
 `screenshot` 命令支持四种模式：
 
@@ -113,11 +113,63 @@ browse/
 
 互斥规则：`--clip` + selector 不允许并用，`--viewport` + `--clip` 也不允许。未知 flags（例如 `--bogus`）会直接报错。
 
-### Authentication
+### 批处理端点
+
+`POST /batch` 可以在一次 HTTP 请求里发送多条命令。这能去掉逐条命令的往返延迟，对于远端 agent 特别关键，因为每次 HTTP 调用都可能要花 2-5 秒（例如 Render → ngrok → 本机）。
+
+```json
+POST /batch
+Authorization: Bearer <token>
+
+{
+  "commands": [
+    {"command": "text", "tabId": 1},
+    {"command": "text", "tabId": 2},
+    {"command": "snapshot", "args": ["-i"], "tabId": 3},
+    {"command": "click", "args": ["@e5"], "tabId": 4}
+  ]
+}
+```
+
+响应示例：
+
+```json
+{
+  "results": [
+    {"index": 0, "status": 200, "result": "...page text...", "command": "text", "tabId": 1},
+    {"index": 1, "status": 200, "result": "...page text...", "command": "text", "tabId": 2},
+    {"index": 2, "status": 200, "result": "...snapshot...", "command": "snapshot", "tabId": 3},
+    {"index": 3, "status": 403, "result": "{\"error\":\"Element not found\"}", "command": "click", "tabId": 4}
+  ],
+  "duration": 2340,
+  "total": 4,
+  "succeeded": 3,
+  "failed": 1
+}
+```
+
+**设计决策：**
+- 每条命令都会走 `handleCommandInternal`，也就是逐条经过完整的安全链路，包括 scope checks、domain validation、tab ownership 和 content wrapping。
+- 错误隔离按命令粒度处理，一条失败不会让整个 batch 直接中止。
+- 单个 batch 最多 50 条命令。
+- 不允许嵌套 batch。
+- 限流时按“一个 batch = 一次请求”计算，batch 内部的单条命令不再重复计数。
+- ref scoping 本来就是按 tab 隔离的，因此这里不需要额外改动。
+
+**典型用法**（agent 要爬 20 个页面）：
+
+```text
+# Step 1: Open 20 tabs（通过多次 newtab，或用 batch）
+# Step 2: 一次性读取 20 个页面
+POST /batch → [{"command": "text", "tabId": 5}, {"command": "text", "tabId": 6}, ...]
+# → 总耗时约 2-3 秒，而串行大约要 40-100 秒
+```
+
+### 鉴权
 
 每个 server session 都会生成一个随机 UUID，作为 bearer token，写进 state file（`.gstack/browse.json`）并 chmod 600。所有 HTTP 请求都必须带 `Authorization: Bearer <token>`。这能防止同机其他进程控制你的浏览器。
 
-### Console、network 和 dialog capture
+### Console、network 和 dialog 捕获
 
 server 会监听 Playwright 的 `page.on('console')`、`page.on('response')` 和 `page.on('dialog')` 事件。所有条目都会先进入 `O(1)` 的 circular buffers（每类最多 50,000 条），再通过 `Bun.write()` 异步刷盘：
 
@@ -127,7 +179,7 @@ server 会监听 Playwright 的 `page.on('console')`、`page.on('response')` 和
 
 `console`、`network`、`dialog` 命令读的是内存 buffer，不是磁盘文件。
 
-### Real browser mode（`connect`）
+### Real browser 模式（`connect`）
 
 和 headless Chromium 不同，`connect` 会拉起你真实可见的 Chrome，由 Playwright 控制。你能实时看到 Claude 在做什么。
 

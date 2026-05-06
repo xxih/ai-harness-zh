@@ -64,6 +64,8 @@ Design Review: N issues (X auto-fixable, Y need input, Z possible)
 - [file:line] 可能有问题，请用 /design-review 进一步验证
 ```
 
+可选：`test_stub`，即基于当前项目测试框架，为这个 finding 提供一段骨架测试代码。
+
 如果没发现问题：`Design Review: No issues found.`
 
 如果没有改动 frontend files：静默跳过，不输出。
