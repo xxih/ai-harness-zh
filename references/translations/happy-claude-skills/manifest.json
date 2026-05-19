@@ -4,11 +4,11 @@
     "path": "references/repos/happy-claude-skills",
     "remote": "https://github.com/iamzhihuix/happy-claude-skills.git",
     "branch": "main",
-    "head_commit": "a10594619987450e3ae426d55c1860eafe12500e"
+    "head_commit": "f49e7782a551759c9f9e0a4d4417ff053f0a86fd"
   },
   "scope": {
     "include": [
-      "README.md -> README.zh-CN.md",
+      "README.md",
       "skills/browser/SKILL.md",
       "skills/docx-format-replicator/SKILL.md",
       "skills/docx-format-replicator/references/content_data_schema.md",
@@ -16,13 +16,13 @@
       "skills/video-processor/SKILL.md",
       "skills/wechat-article-writer/SKILL.md"
     ],
-    "notes": "当前收录 happy-claude-skills 的仓库级 README、4 个核心 skill 文档，以及 docx-format-replicator 的两份 schema 参考文档。wechat-article-writer 源文件已是中文，按中文核心 prompt 资产镜像收录。"
+    "notes": "当前收录 happy-claude-skills 的仓库级 README、4 个核心 skill 文档，以及 docx-format-replicator 的两份 schema 参考文档。wechat-article-writer 源文件已是中文，按中文核心 prompt 资产镜像收录。scope.include 统一只列 source 侧路径，translation 映射见下方 translations。"
   },
   "translations": [
     {
       "source": "README.md",
       "translation": "README.zh-CN.md",
-      "source_sha256": "a37ce72a19b751e29767ac5e5dff6039ce59e04a08de7631b2ddcc7344e70ddb"
+      "source_sha256": "6224f2af967e4bcbe00d161a0820cba234847e544955ba33763173df442b1bf4"
     },
     {
       "source": "skills/browser/SKILL.md",

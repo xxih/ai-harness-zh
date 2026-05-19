@@ -1,0 +1,34 @@
+{
+  "repo": "openspec",
+  "source": {
+    "path": "references/repos/openspec",
+    "remote": "https://github.com/Fission-AI/OpenSpec.git",
+    "branch": "main",
+    "head_commit": "8498042fe8a738e8ad6facd94a5fc7f5025bf81d"
+  },
+  "scope": {
+    "include": [
+      "README.md",
+      "docs/commands.md",
+      "docs/workflows.md"
+    ],
+    "notes": "当前覆盖 OpenSpec 的仓库级 README，以及 docs/commands.md 与 docs/workflows.md 这两份高频入口文档；后续再按需要扩展到 docs/getting-started.md、docs/customization.md 或 AGENTS.md。scope.include 统一只列 source 侧路径，translation 映射见下方 translations。"
+  },
+  "translations": [
+    {
+      "source": "README.md",
+      "translation": "README.zh-CN.md",
+      "source_sha256": "ca627cb4fb7e4c339db7a1d01d3a1e1ea10e111c7520a80ec5e32bbc5236eca2"
+    },
+    {
+      "source": "docs/commands.md",
+      "translation": "docs/commands.md",
+      "source_sha256": "75eea5702df9d0eeb6c054feb167bb054fc99f17aa9d4e46014877fed5af8e5f"
+    },
+    {
+      "source": "docs/workflows.md",
+      "translation": "docs/workflows.md",
+      "source_sha256": "336165abba68261f632dbe876474441f7a61053e3b281d09d89ae698c962994a"
+    }
+  ]
+}

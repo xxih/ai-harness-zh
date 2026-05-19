@@ -1,0 +1,343 @@
+{
+  "repo": "mattpocock-skills",
+  "source": {
+    "path": "references/repos/mattpocock-skills",
+    "remote": "https://github.com/mattpocock/skills.git",
+    "branch": "main",
+    "head_commit": "bc32841b2e9782956c71430d0dfa8162d41c3e9e"
+  },
+  "scope": {
+    "include": [
+      "README.md",
+      "CLAUDE.md",
+      "CONTEXT.md",
+      "docs/adr/0001-explicit-setup-pointer-only-for-hard-dependencies.md",
+      "skills/engineering/README.md",
+      "skills/engineering/diagnose/SKILL.md",
+      "skills/engineering/diagnose/scripts/hitl-loop.template.sh",
+      "skills/engineering/grill-with-docs/SKILL.md",
+      "skills/engineering/grill-with-docs/CONTEXT-FORMAT.md",
+      "skills/engineering/grill-with-docs/ADR-FORMAT.md",
+      "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "skills/engineering/improve-codebase-architecture/LANGUAGE.md",
+      "skills/engineering/improve-codebase-architecture/DEEPENING.md",
+      "skills/engineering/improve-codebase-architecture/INTERFACE-DESIGN.md",
+      "skills/engineering/prototype/SKILL.md",
+      "skills/engineering/prototype/LOGIC.md",
+      "skills/engineering/prototype/UI.md",
+      "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
+      "skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
+      "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
+      "skills/engineering/setup-matt-pocock-skills/triage-labels.md",
+      "skills/engineering/setup-matt-pocock-skills/domain.md",
+      "skills/engineering/tdd/SKILL.md",
+      "skills/engineering/tdd/tests.md",
+      "skills/engineering/tdd/mocking.md",
+      "skills/engineering/tdd/refactoring.md",
+      "skills/engineering/tdd/deep-modules.md",
+      "skills/engineering/tdd/interface-design.md",
+      "skills/engineering/to-issues/SKILL.md",
+      "skills/engineering/to-prd/SKILL.md",
+      "skills/engineering/triage/SKILL.md",
+      "skills/engineering/triage/AGENT-BRIEF.md",
+      "skills/engineering/triage/OUT-OF-SCOPE.md",
+      "skills/engineering/zoom-out/SKILL.md",
+      "skills/productivity/README.md",
+      "skills/productivity/caveman/SKILL.md",
+      "skills/productivity/grill-me/SKILL.md",
+      "skills/productivity/handoff/SKILL.md",
+      "skills/productivity/write-a-skill/SKILL.md",
+      "skills/personal/README.md",
+      "skills/personal/edit-article/SKILL.md",
+      "skills/personal/obsidian-vault/SKILL.md",
+      "skills/misc/README.md",
+      "skills/misc/git-guardrails-claude-code/SKILL.md",
+      "skills/misc/git-guardrails-claude-code/scripts/block-dangerous-git.sh",
+      "skills/misc/migrate-to-shoehorn/SKILL.md",
+      "skills/misc/scaffold-exercises/SKILL.md",
+      "skills/misc/setup-pre-commit/SKILL.md",
+      "skills/in-progress/README.md",
+      "skills/in-progress/review/SKILL.md",
+      "skills/in-progress/writing-fragments/SKILL.md",
+      "skills/in-progress/writing-beats/SKILL.md",
+      "skills/in-progress/writing-shape/SKILL.md"
+    ],
+    "notes": "覆盖 mattpocock/skills 的顶层文档 + 唯一 ADR + 所有非 deprecated skill 桶(engineering / productivity / personal / misc / in-progress)+ diagnose 的 hitl-loop 脚本和 git-guardrails 的 block 脚本。跳过 LICENSE、.out-of-scope/、skills/deprecated/、.claude-plugin/plugin.json、scripts/link-skills.sh、scripts/list-skills.sh(管理脚本本身没翻,但翻译侧另有 scripts/README.md 说明用途,不在 source 列表里)。"
+  },
+  "translations": [
+    {
+      "source": "README.md",
+      "translation": "README.md",
+      "source_sha256": "65e8ce7af3e58b7e57d8f3e6bed05d9bd4e3b1d887be9291d1aa5e6338bf7c71",
+      "notes": "本地中文版是面向中文用户的导览索引,不是原 README 的逐句直译;链接、结构对齐原文。"
+    },
+    {
+      "source": "CLAUDE.md",
+      "translation": "CLAUDE.md",
+      "source_sha256": "165d0f31fe614ba25e30ffaa54a063a1376267ce0a9a82a47b5220ad6ecb247a"
+    },
+    {
+      "source": "CONTEXT.md",
+      "translation": "CONTEXT.md",
+      "source_sha256": "080e80ac557c226f17662bc58c9fc21004d9a829263f0b73abe6f75078bb69b3"
+    },
+    {
+      "source": "docs/adr/0001-explicit-setup-pointer-only-for-hard-dependencies.md",
+      "translation": "docs/adr/0001-explicit-setup-pointer-only-for-hard-dependencies.md",
+      "source_sha256": "830f7122eec635e2b6766cb56bbe36a0e75356295f06b4b004b37fde717dd68f"
+    },
+    {
+      "source": "skills/engineering/README.md",
+      "translation": "skills/engineering/README.md",
+      "source_sha256": "9cc775236a8a67ff5b93833108045e76d5ffe5bfedeabb82ecd108ff5091b341"
+    },
+    {
+      "source": "skills/engineering/diagnose/SKILL.md",
+      "translation": "skills/engineering/diagnose/SKILL.md",
+      "source_sha256": "28886402bbfa0470248086eab9106a103b964b76ae9496e63ff0c8a6761b6d13"
+    },
+    {
+      "source": "skills/engineering/diagnose/scripts/hitl-loop.template.sh",
+      "translation": "skills/engineering/diagnose/scripts/hitl-loop.template.sh",
+      "source_sha256": "b2932630950e5210075bcd6f850e5accf30c101c5367b29eac3a29b4dd8084c8",
+      "notes": "脚本逻辑不变,只翻译注释与 step / capture 提示语。"
+    },
+    {
+      "source": "skills/engineering/grill-with-docs/SKILL.md",
+      "translation": "skills/engineering/grill-with-docs/SKILL.md",
+      "source_sha256": "3e35025119ba03efe7983dfdec3c8b96918142e3978512f3c2bf66d428310c7e"
+    },
+    {
+      "source": "skills/engineering/grill-with-docs/CONTEXT-FORMAT.md",
+      "translation": "skills/engineering/grill-with-docs/CONTEXT-FORMAT.md",
+      "source_sha256": "8f6baaa3b1c91644bd7c600196b1aee781d5f525c7c345db8cdfbfb368329a05"
+    },
+    {
+      "source": "skills/engineering/grill-with-docs/ADR-FORMAT.md",
+      "translation": "skills/engineering/grill-with-docs/ADR-FORMAT.md",
+      "source_sha256": "f1f36cd3f8d3b6474ddd5855da4e233bfc4ae1a1c5024909ccf11871819a41b2"
+    },
+    {
+      "source": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "translation": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "source_sha256": "9e9b617b1c70d390e37dbfd1c031c11b3de850e2e3d01c4a2c2888bdb386a247"
+    },
+    {
+      "source": "skills/engineering/improve-codebase-architecture/LANGUAGE.md",
+      "translation": "skills/engineering/improve-codebase-architecture/LANGUAGE.md",
+      "source_sha256": "6feca2140439c54a774749e8367f18350899ff69c777144ed2248cd4407949fa"
+    },
+    {
+      "source": "skills/engineering/improve-codebase-architecture/DEEPENING.md",
+      "translation": "skills/engineering/improve-codebase-architecture/DEEPENING.md",
+      "source_sha256": "9577485f4fc32c0267639a9151bb41c8af0f8f6086e4bf8b84d5b236e30604e9"
+    },
+    {
+      "source": "skills/engineering/improve-codebase-architecture/INTERFACE-DESIGN.md",
+      "translation": "skills/engineering/improve-codebase-architecture/INTERFACE-DESIGN.md",
+      "source_sha256": "678c3e34f1339015053212b3316bf0b676c70aa251050a0613667d4e755fb35e"
+    },
+    {
+      "source": "skills/engineering/prototype/SKILL.md",
+      "translation": "skills/engineering/prototype/SKILL.md",
+      "source_sha256": "a653deb65afa2ee8f45c68f6ef4f593147171b386e994c8cccf89292d9ea9d75"
+    },
+    {
+      "source": "skills/engineering/prototype/LOGIC.md",
+      "translation": "skills/engineering/prototype/LOGIC.md",
+      "source_sha256": "da91dc92195c00d5dc33863b8c1a030998025a0f8583ebf2babd770825b7f70c"
+    },
+    {
+      "source": "skills/engineering/prototype/UI.md",
+      "translation": "skills/engineering/prototype/UI.md",
+      "source_sha256": "d76d565149ee50456c5ddc5e29c27fec8737637874fe5c37d970db085a200b27"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "translation": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "source_sha256": "c778d4e3d86ecc9125c357279a86780657b5db23110e1f7acf4f46d2441e7204"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
+      "translation": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
+      "source_sha256": "f0e138631d1fc8aedc9e05d25bc688b97679f81eae7a7c760dd35e0790568370"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
+      "translation": "skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
+      "source_sha256": "94c574647c4755f2a807742f5e78e7cef586c100266d54501d0e55445c1b1807"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
+      "translation": "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
+      "source_sha256": "9a052f4599525e581721ec24cb2ae3e0296b79053e39f684b540d34d3a4f6528"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/triage-labels.md",
+      "translation": "skills/engineering/setup-matt-pocock-skills/triage-labels.md",
+      "source_sha256": "4f53c9b40ce2651e3611aa090eaedbd6dbc9b71ef8c5f7e65eac0d8263190d0d"
+    },
+    {
+      "source": "skills/engineering/setup-matt-pocock-skills/domain.md",
+      "translation": "skills/engineering/setup-matt-pocock-skills/domain.md",
+      "source_sha256": "a8cc3d1c11c9cdea455f39c4090cf61ac273f2474dd6f229ab0c2b9b1deec759"
+    },
+    {
+      "source": "skills/engineering/tdd/SKILL.md",
+      "translation": "skills/engineering/tdd/SKILL.md",
+      "source_sha256": "af059705061156fd4845ddbb736fe92b564118ac5f03551e09ef9e8f6d970638"
+    },
+    {
+      "source": "skills/engineering/tdd/tests.md",
+      "translation": "skills/engineering/tdd/tests.md",
+      "source_sha256": "e12182f5c4c6a844b7c6ab4b8d2623b642aaaae5460fe58ed087efd4f3d5fb8a"
+    },
+    {
+      "source": "skills/engineering/tdd/mocking.md",
+      "translation": "skills/engineering/tdd/mocking.md",
+      "source_sha256": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef"
+    },
+    {
+      "source": "skills/engineering/tdd/refactoring.md",
+      "translation": "skills/engineering/tdd/refactoring.md",
+      "source_sha256": "54fced22dd1911b7094c3fe7979b7c1a40d40be307482c4adf7dc0588f27d6cc"
+    },
+    {
+      "source": "skills/engineering/tdd/deep-modules.md",
+      "translation": "skills/engineering/tdd/deep-modules.md",
+      "source_sha256": "f2123700bf953db1740625686c75bdd145efd486357c47c6818c869fee657a32"
+    },
+    {
+      "source": "skills/engineering/tdd/interface-design.md",
+      "translation": "skills/engineering/tdd/interface-design.md",
+      "source_sha256": "764c5ff0e3fa6b4ab7095eb65ccc7201e090baf19fa16051dfdb72c06d27417d"
+    },
+    {
+      "source": "skills/engineering/to-issues/SKILL.md",
+      "translation": "skills/engineering/to-issues/SKILL.md",
+      "source_sha256": "0e6a2973fa5bdf32570227c578f7e474d945dd9281615d31439664c3ef016fce"
+    },
+    {
+      "source": "skills/engineering/to-prd/SKILL.md",
+      "translation": "skills/engineering/to-prd/SKILL.md",
+      "source_sha256": "b60e3805e361e4eabc6f3df48d305299e0fde64cb24b6e95443c01de907a2e7d"
+    },
+    {
+      "source": "skills/engineering/triage/SKILL.md",
+      "translation": "skills/engineering/triage/SKILL.md",
+      "source_sha256": "b819f0285e4e5814ac6472d0217f07dc9f23d2fdae3ebb0dd31d98360d8ac029"
+    },
+    {
+      "source": "skills/engineering/triage/AGENT-BRIEF.md",
+      "translation": "skills/engineering/triage/AGENT-BRIEF.md",
+      "source_sha256": "1c71c747aa97d938f75ec7a4b8fe87451763b38a3ce6348acf2b222e5819b2e5"
+    },
+    {
+      "source": "skills/engineering/triage/OUT-OF-SCOPE.md",
+      "translation": "skills/engineering/triage/OUT-OF-SCOPE.md",
+      "source_sha256": "8ed8cf27833444060c81b3961a83c0e3d8e6cf2fcb2ddf6f8b07c6655cbb0d85"
+    },
+    {
+      "source": "skills/engineering/zoom-out/SKILL.md",
+      "translation": "skills/engineering/zoom-out/SKILL.md",
+      "source_sha256": "2a6894c7f9b1c9c55f451c625a834c4f377e217b623a85280e55db5fe9cacf48"
+    },
+    {
+      "source": "skills/productivity/README.md",
+      "translation": "skills/productivity/README.md",
+      "source_sha256": "abc31971ebc8aae5635887d1e7e260650277450b3090a9471f445e5e12d64cb1"
+    },
+    {
+      "source": "skills/productivity/caveman/SKILL.md",
+      "translation": "skills/productivity/caveman/SKILL.md",
+      "source_sha256": "b4bb6fe3bf3da222993ca0aee5e7c6f5368b182dd30ce1172e8f8e3280eb7052"
+    },
+    {
+      "source": "skills/productivity/grill-me/SKILL.md",
+      "translation": "skills/productivity/grill-me/SKILL.md",
+      "source_sha256": "74147eb6010a65957efef2b9e0f0b3ff935c1def7fc117697151b1d0f3610556"
+    },
+    {
+      "source": "skills/productivity/handoff/SKILL.md",
+      "translation": "skills/productivity/handoff/SKILL.md",
+      "source_sha256": "0629a10701805613a770ef2d140838c41f7717d977cd6b95566c02dab6895368"
+    },
+    {
+      "source": "skills/productivity/write-a-skill/SKILL.md",
+      "translation": "skills/productivity/write-a-skill/SKILL.md",
+      "source_sha256": "be8f20e66309258034b82a7db5040b03798aa40546f9d387662c2bd86be23123"
+    },
+    {
+      "source": "skills/personal/README.md",
+      "translation": "skills/personal/README.md",
+      "source_sha256": "a7180c8615877a90e1038fb674ef446d0ad8e280b473575a86ff9a41d81f6389"
+    },
+    {
+      "source": "skills/personal/edit-article/SKILL.md",
+      "translation": "skills/personal/edit-article/SKILL.md",
+      "source_sha256": "cc372fb25b552017765aa0dac1b108f77eaee4555d607041efc1ad5d8c995b4a"
+    },
+    {
+      "source": "skills/personal/obsidian-vault/SKILL.md",
+      "translation": "skills/personal/obsidian-vault/SKILL.md",
+      "source_sha256": "7bed1d552aa5e9345e493cd62cb13e65c5d829d153c349afdb2cb91c809fa6c4"
+    },
+    {
+      "source": "skills/misc/README.md",
+      "translation": "skills/misc/README.md",
+      "source_sha256": "ff857c680f2a8d2fc544e15a51ab1a202f94fe31cf8860370d6af9eda7134db7"
+    },
+    {
+      "source": "skills/misc/git-guardrails-claude-code/SKILL.md",
+      "translation": "skills/misc/git-guardrails-claude-code/SKILL.md",
+      "source_sha256": "03c4de7613c712aea336d64c467ea3ed14be2cbd52345925fe949c75c01c29f7"
+    },
+    {
+      "source": "skills/misc/git-guardrails-claude-code/scripts/block-dangerous-git.sh",
+      "translation": "skills/misc/git-guardrails-claude-code/scripts/block-dangerous-git.sh",
+      "source_sha256": "234922b83c0a1737ee7300806c21ac0f389b07aaeb65c2d71ccedafbc5e1ea4b",
+      "notes": "脚本逻辑不变,只在头部加了中文用途说明。"
+    },
+    {
+      "source": "skills/misc/migrate-to-shoehorn/SKILL.md",
+      "translation": "skills/misc/migrate-to-shoehorn/SKILL.md",
+      "source_sha256": "de4da4c11d924fac79c924b2ee3d2db4a5cb98386eb490a599119463d036ae72"
+    },
+    {
+      "source": "skills/misc/scaffold-exercises/SKILL.md",
+      "translation": "skills/misc/scaffold-exercises/SKILL.md",
+      "source_sha256": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9"
+    },
+    {
+      "source": "skills/misc/setup-pre-commit/SKILL.md",
+      "translation": "skills/misc/setup-pre-commit/SKILL.md",
+      "source_sha256": "872f4037cb7e6e0e340d4175c086550072959925dffc87b160d1a30dc9f63bbd"
+    },
+    {
+      "source": "skills/in-progress/README.md",
+      "translation": "skills/in-progress/README.md",
+      "source_sha256": "31e3f77a80d24219162a7de3c3707277c7759aa093d55396247708e2170653bb"
+    },
+    {
+      "source": "skills/in-progress/review/SKILL.md",
+      "translation": "skills/in-progress/review/SKILL.md",
+      "source_sha256": "5700f30d3f06706ee56c099adceec222fef26dbcf82817ff604962634e246b2e"
+    },
+    {
+      "source": "skills/in-progress/writing-fragments/SKILL.md",
+      "translation": "skills/in-progress/writing-fragments/SKILL.md",
+      "source_sha256": "4ffa34a701caff27da54b9e073fef48471f0ccafee009d404c22ae542d0e8dea"
+    },
+    {
+      "source": "skills/in-progress/writing-beats/SKILL.md",
+      "translation": "skills/in-progress/writing-beats/SKILL.md",
+      "source_sha256": "0843367d0a653bb17e61b3771d0ec08fa463663bc0ab6f3f421141b2687c4429"
+    },
+    {
+      "source": "skills/in-progress/writing-shape/SKILL.md",
+      "translation": "skills/in-progress/writing-shape/SKILL.md",
+      "source_sha256": "81a542b95fa865325835bf5ec7644a98e657c1e0f3374c56cb9f3b42b374660f"
+    }
+  ]
+}

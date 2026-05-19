@@ -4,17 +4,17 @@
     "path": "references/repos/byheaven-skills",
     "remote": "https://github.com/byheaven/byheaven-skills.git",
     "branch": "main",
-    "head_commit": "a4e1b724b6aa52856f2cbfd3648c7cb4b084b3da"
+    "head_commit": "5cd10d5160c6b095b468677a3df331970dffc20e"
   },
   "scope": {
     "include": [
-      "README.md -> README.zh-CN.md",
-      "plugins/newproject/README.md -> plugins/newproject/README.zh-CN.md",
+      "README.md",
+      "plugins/newproject/README.md",
       "plugins/newproject/skills/newproject/SKILL.md",
       "plugins/xhs-publisher/README.md",
       "plugins/xhs-publisher/skills/xhs-publisher/SKILL.md"
     ],
-    "notes": "当前只收录 byheaven-skills 的仓库级 README、newproject 核心说明与 SKILL，以及 xhs-publisher 已有中文 README 和 SKILL。"
+    "notes": "当前只收录 byheaven-skills 的仓库级 README、newproject 核心说明与 SKILL，以及 xhs-publisher 已有中文 README 和 SKILL。scope.include 统一只列 source 侧路径，translation 映射见下方 translations。"
   },
   "translations": [
     {

@@ -53,6 +53,50 @@
 - DOM 检查和数据提取
 - 截图用于文档
 
+### happy-image-gen
+通用 AI 图像生成 —— 一套 CLI 对接 **8 家供应商**：OpenAI DALL-E / gpt-image、Google Gemini / Imagen、Replicate（Flux / SDXL / 任意模型）、Stability AI、FAL、Ark Seedream、阿里百炼（qwen-image / wanx）、SiliconFlow（Kolors）。
+
+**适用场景：**
+- 草稿插画与首图
+- 带文字的海报（中文用 Ark Seedream，英文用 OpenAI gpt-image-1）
+- 基于参考图的编辑（OpenAI gpt-image / Google Gemini 多模态）
+- 一个 `--provider` 参数即可切换供应商
+
+### happy-video-gen
+通用 AI 视频生成 —— 一套 CLI 对接 **10 家供应商**：OpenAI Sora、Google Veo、Runway、Pika、Luma、FAL（Kling / Wan / 各类封装）、Ark Seedance、阿里百炼 Wanx、MiniMax 海螺、Vidu。统一处理 submit → poll → download 流程。
+
+**适用场景：**
+- text-to-video / image-to-video 短片（5–10 秒）
+- 同一 prompt 在多家供应商间 A/B
+- 用 FAL Kling Turbo 或 Ark Seedance Lite 出便宜草稿
+- 配语音的对话视频（Google Veo 3 或 OpenAI Sora 2）
+
+### happy-audio-gen
+通用 AI TTS / 语音生成 —— 一套 CLI 对接 **6 家供应商**：OpenAI TTS、ElevenLabs、阿里百炼（qwen-tts / qwen3-tts-vd，长中文文本自动分段）、MiniMax speech-02-hd、SiliconFlow CosyVoice、PlayHT 2.0。
+
+**适用场景：**
+- 脚本旁白 / 配音
+- 长篇中文文章 → 有声书（自动分句）
+- 多语言 TTS + 语音克隆（ElevenLabs、PlayHT）
+- 英文快速试听（OpenAI gpt-4o-mini-tts）
+
+### happy-dreamina
+通过官方 `dreamina` CLI 调用字节跳动即梦（Dreamina）的图像和视频生成。浏览器登录（无需 API key），覆盖 text2image / image2image / text2video / image2video，并通过 `list_task` 查询任务历史。
+
+**适用场景：**
+- 使用即梦独家的图像和短视频模型
+- 用浏览器 OAuth 登录，免去维护额外 API key
+- 通过 submit_id 续接异步任务
+
+### open-source-prep
+把私有项目准备好开源发布。扫描代码与 git 历史中的泄露 secret，根据项目上下文推荐 license，并生成开源所需的全部脚手架。
+
+**适用场景：**
+- 推送前 secret 扫描（GitHub / AWS / OpenAI / Anthropic / Slack / Stripe token、私钥、`.env` 文件）
+- 通过 3 题决策树选 license（默认 MIT；企业或专利密集项目用 Apache 2.0）
+- 自动生成 LICENSE、CONTRIBUTING.md、SECURITY.md，以及 README 免责声明
+- 审计 `.gitignore`、bundle identifier、`package.json` 中的商标 / 归属问题
+
 ## 安装方法
 
 ### 通用安装（推荐）
@@ -64,6 +108,7 @@
 npx skills add iamzhihuix/happy-claude-skills
 
 # 安装指定 skills
+npx skills add iamzhihuix/happy-claude-skills --skill happy-image-gen --skill happy-video-gen
 npx skills add iamzhihuix/happy-claude-skills --skill browser --skill 1password
 
 # 安装到指定 agent
@@ -80,6 +125,10 @@ npx skills add iamzhihuix/happy-claude-skills --all
 ```
 /plugin marketplace add iamzhihuix/happy-claude-skills
 /plugin install browser@happy-claude-skills
+/plugin install happy-image-gen@happy-claude-skills
+/plugin install happy-video-gen@happy-claude-skills
+/plugin install happy-audio-gen@happy-claude-skills
+/plugin install happy-dreamina@happy-claude-skills
 ```
 
 ### 本地开发
@@ -148,6 +197,14 @@ curl -fsSL https://bun.sh/install | bash
 npm install --prefix skills/browser
 ```
 
+### happy-image-gen / happy-video-gen / happy-audio-gen
+- Bun 1.1+（`curl -fsSL https://bun.sh/install | bash`，或 `npx -y bun` 即跑）
+- 各供应商 API key（导出为环境变量，或借 `1password` skill 引用）。完整清单见每个 skill 的 `references/providers.md`。
+
+### happy-dreamina
+- 字节 `dreamina` CLI：`curl -fsSL https://jimeng.jianying.com/cli | bash`
+- 一个即梦账号（`dreamina login` 会拉浏览器走 OAuth，不需要 API key）
+
 ## 项目结构
 
 ```
@@ -169,10 +226,14 @@ happy-claude-skills/
 │   ├── trends-bulletin/
 │   │   ├── SKILL.md             # Skill 定义
 │   │   └── scripts/             # TypeScript 脚本
-│   └── browser/
-│       ├── SKILL.md             # Skill 定义
-│       ├── package.json         # Node.js 依赖
-│       └── scripts/             # Node.js 脚本
+│   ├── browser/
+│   │   ├── SKILL.md             # Skill 定义
+│   │   ├── package.json         # Node.js 依赖
+│   │   └── scripts/             # Node.js 脚本
+│   ├── happy-image-gen/         # 对接 8 家供应商的图像 CLI（Bun）
+│   ├── happy-video-gen/         # 对接 10 家供应商的视频 CLI（Bun，异步）
+│   ├── happy-audio-gen/         # 对接 6 家供应商的 TTS CLI（Bun）
+│   └── happy-dreamina/          # 纯指令型 skill，包了一层 dreamina CLI
 ├── README.md
 └── LICENSE
 ```
