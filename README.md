@@ -123,6 +123,62 @@ python3 scripts/sync_codex_targets.py nanospec learning-evolution
 
 脚本会把 package source 侧的 `skills/`、`agents/`、`commands/`、`_AGENTS.md` 镜像到对应的 `packages/<package>/targets/codex/`，但不会覆盖 target 侧手写的运行时文件，例如 `README.md`、`.codex/`。
 
+## 个人 plugin 一键装（给 AI 用的 prompt）
+
+仓库内自带两个面向作者本人（`xxih`）的 plugin：
+
+- `plugins/xxih-kit/` —— 完整套（外网 / 终端主力）
+- `plugins/xxih-extra/` —— 公司团队 plugin 之上叠装的个人补丁
+- `.claude-plugin/marketplace.json` —— local marketplace，name 为 `xxih-plugins`
+
+想在新机器 / 新会话里装上时，**把下面整段 prompt 复制贴给当前 Claude 会话**，让它自己挑路径装好——无需用户手敲 `ln`、`/plugin marketplace add` 之类命令。
+
+````
+帮我把这个仓库（ai-harness-zh）里的两个个人 plugin 装到当前 Claude 环境。
+
+仓库已经有的资产：
+- plugins/xxih-kit/        完整套 plugin（外网 / 终端主力）
+- plugins/xxih-extra/      个人补丁 plugin（公司 plugin 之上叠装）
+- .claude-plugin/marketplace.json   local marketplace，name=xxih-plugins
+
+第一步：确定仓库根的绝对路径。
+- 如果当前 cwd 在这个仓库里，用 `git -C . rev-parse --show-toplevel` 取
+- 否则向用户要。下面 <REPO> 占位符就指这个绝对路径。
+
+第二步：判断当前 Claude 环境，A 或 B 选一条：
+
+A. 终端 Claude Code（/plugin 斜杠命令可用）
+   在会话里直接执行 3 条斜杠命令：
+     /plugin marketplace add <REPO>
+     /plugin install xxih-kit@xxih-plugins
+     /plugin install xxih-extra@xxih-plugins
+   验证：再输 /plugin，列表里 xxih-kit、xxih-extra 都 enabled。
+
+B. 桌面 Claude.app / Cowork / 其他 /plugin 报 "isn't available" 的环境
+   执行下面这段 bash，软链每个 skill 到 ~/.claude/skills/：
+     mkdir -p "$HOME/.claude/skills"
+     for dir in "<REPO>"/plugins/xxih-{kit,extra}/skills/*/; do
+       name=$(basename "$dir")
+       target="$HOME/.claude/skills/$name"
+       if [ -e "$target" ] && [ ! -L "$target" ]; then
+         echo "SKIP $name：目标已存在且不是软链，需要用户确认"
+         continue
+       fi
+       ln -sfn "$dir" "$target"
+       echo "linked $name"
+     done
+   验证：列出 ~/.claude/skills/ 应该看到 worktree-flow / grill-me / nanospec / quality-tdd / verification-before-completion / architecture-decision-records 这 6 个软链；当前会话或新会话的系统提示里这些 skill 已经可调用。
+   注意：桌面 app 不支持 commands/*，本路线只软链 skills/*；要用命令的话切回终端走 A 路线。
+
+第三步：装完后向用户报告：
+- 走了 A 还是 B
+- 实际装上哪几项
+- 验证用了什么命令、关键输出
+- 有没有 SKIP / 冲突 / 报错
+````
+
+> 这条 prompt 默认 AI 已经能在当前仓库 cwd 下读 `git -C . rev-parse --show-toplevel`；如果你是在另一台机器还没 clone 仓库，请先 clone 再贴给 AI。
+
 ## Reference 拉取
 
 日常更新 `references/repos/*` 时，优先使用仓库级脚本：
