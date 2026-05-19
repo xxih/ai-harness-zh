@@ -1,0 +1,9 @@
+{
+  "name": "xxih-extra",
+  "version": "0.1.0",
+  "description": "在公司团队统一 plugin 之上叠装的个人补全包。覆盖团队 plugin 没有、但 xxih 个人日常依赖的 skill。不上传公司渠道，仅个人安装。",
+  "author": {
+    "name": "xxih",
+    "email": "fynnxie@gmail.com"
+  }
+}
