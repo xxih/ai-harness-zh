@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "xxih-plugins",
+  "description": "xxih 个人的 local plugin marketplace。指向 ai-harness-zh 仓库下的 plugins/*——含完整套 xxih-kit 与补丁集 xxih-extra。",
+  "owner": {
+    "name": "xxih",
+    "email": "fynnxie@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "xxih-kit",
+      "description": "xxih 个人完整套 plugin。外网用不了公司内网 plugin 时的兜底完整版。",
+      "category": "personal",
+      "source": "./plugins/xxih-kit"
+    },
+    {
+      "name": "xxih-extra",
+      "description": "xxih 个人补全 plugin。装在公司团队 plugin 之上叠补缺口。",
+      "category": "personal",
+      "source": "./plugins/xxih-extra"
+    }
+  ]
+}
