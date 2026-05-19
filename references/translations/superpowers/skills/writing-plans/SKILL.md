@@ -13,7 +13,7 @@ description: 当你已经有 spec 或需求，并且要在动代码前把多步�
 
 **开始时要明确说明：**“我正在使用 writing-plans skill 来编写实现计划。”
 
-**上下文要求：**这个 skill 应该在专用 worktree 中运行（由 `brainstorming` skill 创建）。
+**上下文要求：**如果当前在隔离 worktree 中工作，这个 worktree 应在执行阶段通过 `superpowers:using-git-worktrees` skill 创建。
 
 **计划保存路径：**`docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md`
 - 如果用户明确指定了其他计划目录，以用户偏好为准。

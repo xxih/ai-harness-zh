@@ -8,14 +8,14 @@
   },
   "scope": {
     "include": [
-      "README.zh-CN.md",
+      "README.md",
       "SKILL.md",
       "WARP.md",
       "resources/skill-template.md",
       "resources/research-references.md",
       "examples/*/SKILL.md"
     ],
-    "notes": "当前覆盖 Claudeception 的主 README、主 SKILL、WARP 说明、研究说明、skill 模板与 3 个示例 skills。"
+    "notes": "当前覆盖 Claudeception 的主 README、主 SKILL、WARP 说明、研究说明、skill 模板与 3 个示例 skills。scope.include 统一只列 source 侧路径，translation 映射见下方 translations。"
   },
   "translations": [
     {

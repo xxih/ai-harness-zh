@@ -65,6 +65,6 @@ description: 当你已经有书面的实现计划，并且要在独立会话里�
 ## 集成关系
 
 **必需的工作流 skills：**
-- **`superpowers:using-git-worktrees`**：开始前必须先建立隔离工作区
+- **`superpowers:using-git-worktrees`**：确保存在隔离工作区（创建新的，或确认当前已隔离）
 - **`superpowers:writing-plans`**：负责生成本 skill 要执行的计划
 - **`superpowers:finishing-a-development-branch`**：全部任务完成后的开发收尾

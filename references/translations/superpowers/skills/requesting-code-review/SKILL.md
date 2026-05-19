@@ -5,7 +5,7 @@ description: 当你完成任务、实现重要功能，或准备合并前需要�
 
 # 请求代码评审
 
-派发 `superpowers:code-reviewer` subagent，在问题扩散前先把它们拦下来。reviewer 只拿到你精心构造的评审上下文，**绝不继承你的会话历史**。这样 reviewer 会聚焦在产物本身，而不是你的思路过程，同时也能保留你的上下文用于继续推进工作。
+派发代码评审 subagent，在问题扩散前先把它们拦下来。reviewer 只拿到你精心构造的评审上下文，**绝不继承你的会话历史**。这样 reviewer 会聚焦在产物本身，而不是你的思路过程，同时也能保留你的上下文用于继续推进工作。
 
 **核心原则：**尽早 review，经常 review。
 
@@ -29,16 +29,15 @@ BASE_SHA=$(git rev-parse HEAD~1)  # or origin/main
 HEAD_SHA=$(git rev-parse HEAD)
 ```
 
-**2. 派发 code-reviewer subagent：**
+**2. 派发代码评审 subagent：**
 
-使用 Task 工具，类型为 `superpowers:code-reviewer`，并填写 `code-reviewer.md` 模板。
+使用 Task 工具，类型为 `general-purpose`，并填写 `code-reviewer.md` 模板。
 
 **占位字段：**
-- `{WHAT_WAS_IMPLEMENTED}` - 你刚刚实现了什么
+- `{DESCRIPTION}` - 你刚刚实现内容的简短摘要
 - `{PLAN_OR_REQUIREMENTS}` - 它本来应该做到什么
 - `{BASE_SHA}` - 起始 commit
 - `{HEAD_SHA}` - 结束 commit
-- `{DESCRIPTION}` - 简短摘要
 
 **3. 处理反馈：**
 - 立即修复 Critical 问题
@@ -56,12 +55,11 @@ HEAD_SHA=$(git rev-parse HEAD)
 BASE_SHA=$(git log --oneline | grep "Task 1" | head -1 | awk '{print $1}')
 HEAD_SHA=$(git rev-parse HEAD)
 
-[派发 superpowers:code-reviewer subagent]
-  WHAT_WAS_IMPLEMENTED: conversation index 的校验与修复函数
+[派发代码评审 subagent]
+  DESCRIPTION: 新增 verifyIndex() 和 repairIndex()，覆盖 4 类问题
   PLAN_OR_REQUIREMENTS: docs/superpowers/plans/deployment-plan.md 中的 Task 2
   BASE_SHA: a7981ec
   HEAD_SHA: 3df7661
-  DESCRIPTION: 新增 verifyIndex() 和 repairIndex()，覆盖 4 类问题
 
 [subagent 返回]
   Strengths: 架构清晰，测试真实
@@ -82,7 +80,7 @@ HEAD_SHA=$(git rev-parse HEAD)
 - 修完再进入下一个任务
 
 **Executing Plans：**
-- 每一批（3 个任务）后 review 一次
+- 每个任务后，或在自然检查点时 review 一次
 - 拿到反馈，处理后继续
 
 **Ad-Hoc Development：**

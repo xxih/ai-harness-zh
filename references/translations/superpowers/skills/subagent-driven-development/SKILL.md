@@ -11,6 +11,8 @@ description: 当你已经有实现计划，并且要在当前会话里执行那�
 
 **核心原则：**每个任务一个全新 subagent + 两阶段评审（spec 后 quality）= 高质量、快迭代
 
+**持续执行：**不要在任务之间停下来向人类协作者反复确认。拿到计划后，应一口气执行完全部任务，除非出现你无法自行解决的 `BLOCKED`、真实阻碍推进的歧义，或所有任务已经完成。像“要不要继续？”这类确认和纯进度播报只会浪费对方时间；既然对方要求你执行计划，就直接执行。
+
 ## 何时使用
 
 ```dot
@@ -207,7 +209,7 @@ Code reviewer: Strengths: Good test coverage, clean. Issues: None. Approved.
 ## 集成关系
 
 **必需的 workflow skills：**
-- **superpowers:using-git-worktrees** - 开始前必须建立隔离工作区
+- **superpowers:using-git-worktrees** - 确保存在隔离工作区（创建新的，或确认当前已隔离）
 - **superpowers:writing-plans** - 生成要执行的计划
 - **superpowers:requesting-code-review** - 为 reviewer subagent 提供 review 模板
 - **superpowers:finishing-a-development-branch** - 所有任务完成后的开发收尾

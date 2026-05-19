@@ -123,6 +123,21 @@ python3 scripts/sync_codex_targets.py nanospec learning-evolution
 
 脚本会把 package source 侧的 `skills/`、`agents/`、`commands/`、`_AGENTS.md` 镜像到对应的 `packages/<package>/targets/codex/`，但不会覆盖 target 侧手写的运行时文件，例如 `README.md`、`.codex/`。
 
+## Reference 拉取
+
+日常更新 `references/repos/*` 时，优先使用仓库级脚本：
+
+```bash
+python3 scripts/fetch_reference_repos.py
+python3 scripts/fetch_reference_repos.py superpowers gstack
+```
+
+该脚本默认会：
+
+- 清掉当前 shell 注入的代理环境变量，避免本地 `127.0.0.1:*` 代理在自动化环境里不可达
+- 对 GitHub SSH remote 做“仅本次 fetch 生效”的 HTTPS fallback，不改写你本地的 `origin`
+- 统一执行 `git fetch origin --prune`
+
 ## 外部参考资料
 
 需要引入外部仓库时，统一放在 `references/repos/` 下；例如 `oh-my-opencode`、`everything-claude-code`、`superpowers`、`gstack`。

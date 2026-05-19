@@ -4,7 +4,7 @@
     "path": "references/repos/superpowers",
     "remote": "https://github.com/obra/superpowers.git",
     "branch": "main",
-    "head_commit": "917e5f53b16b115b70a3a355ed5f4993b9f8b73d"
+    "head_commit": "f2cbfbefebbfef77321e4c9abc9e949826bea9d7"
   },
   "scope": {
     "include": [
@@ -26,12 +26,12 @@
     {
       "source": "skills/executing-plans/SKILL.md",
       "translation": "skills/executing-plans/SKILL.md",
-      "source_sha256": "a711f83fb762e2ea0fa151f598893da9911a408895c91cc7a7e0770dd59a27b3"
+      "source_sha256": "e2102f11631433939f162d383d769f8257d859d6639e0e14969cda3ef0a95eca"
     },
     {
       "source": "skills/finishing-a-development-branch/SKILL.md",
       "translation": "skills/finishing-a-development-branch/SKILL.md",
-      "source_sha256": "dd2f82c6dc8582b621f9eb57fcb65f557f88eadf872727ac81d0840ae12c504e"
+      "source_sha256": "5c8d4b59aedb14c94e2f5d787a3265e858e8f53d4ceffe7ff1c15878a52b0e91"
     },
     {
       "source": "skills/receiving-code-review/SKILL.md",
@@ -41,12 +41,12 @@
     {
       "source": "skills/requesting-code-review/SKILL.md",
       "translation": "skills/requesting-code-review/SKILL.md",
-      "source_sha256": "a5ff68586ccf62d1803cedeb71d60fd96ec05591d29c8d123196117eefd34cd0"
+      "source_sha256": "5a3a44a3667800e2dc836829c6b92fada51e6dc58ac144ec05fe59f47d6bcd84"
     },
     {
       "source": "skills/subagent-driven-development/SKILL.md",
       "translation": "skills/subagent-driven-development/SKILL.md",
-      "source_sha256": "081ad3869e55c80bf8f890b4768a90c0e8057daf94b1b6fadebfc85ea5b8304a"
+      "source_sha256": "905a2b9be59b734dbe166525ad31dcaaf712a75926135adee1f554557aba5744"
     },
     {
       "source": "skills/systematic-debugging/SKILL.md",
@@ -61,7 +61,7 @@
     {
       "source": "skills/using-git-worktrees/SKILL.md",
       "translation": "skills/using-git-worktrees/SKILL.md",
-      "source_sha256": "de9dcde34840eee074047ec327d4ea6ca4954c5a73a6d874dc48f25fe46c9e7c"
+      "source_sha256": "085a45ee3de432bdb2768011591d9a882cb6c759e2317f379226451c5618fe8e"
     },
     {
       "source": "skills/using-superpowers/SKILL.md",
@@ -76,7 +76,7 @@
     {
       "source": "skills/writing-plans/SKILL.md",
       "translation": "skills/writing-plans/SKILL.md",
-      "source_sha256": "90056bad3d5f196fa7c9fec0ffe592e6d9c86bc983e406642a51d1a4198b7024"
+      "source_sha256": "4fd4627d2c02367879c0307d7249270bed633317ff9be82e926a6d57bf5d331b"
     },
     {
       "source": "skills/writing-skills/SKILL.md",

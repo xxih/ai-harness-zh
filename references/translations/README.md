@@ -29,16 +29,26 @@
   - `agency-agents`：`strategy/EXECUTIVE-BRIEF.md`、`strategy/QUICKSTART.md` 与若干 `integrations/*/README.md` 首批译稿
   - `alirezarezvani-claude-skills`：`README.zh-CN.md`、仓库级 `CLAUDE.md` / `GEMINI.md`、`orchestration/ORCHESTRATION.md` 与 8 个顶层 domain `SKILL.md`
   - `gstack`：`README.zh-CN.md`、根级核心文档、`docs/skills.md`、共享 `SKILL.md` / `SKILL.md.tmpl`、全部 skill 的 `SKILL.md` / `SKILL.md.tmpl`、`review/*.md`、`review/specialists/*.md`、`qa/references/*.md`、`qa/templates/*.md`、`cso/ACKNOWLEDGEMENTS.md`
+  - `openspec`：`README.zh-CN.md`、`docs/commands.md`、`docs/workflows.md`
 
 ## 同步流程
 
 每次准备继续维护某个参考仓库的中文翻译前：
 
 1. 先把 `references/repos/<repo>/` 更新到准备对照的 upstream 版本
+   - 推荐统一使用：`python3 scripts/fetch_reference_repos.py`
 2. 记录或确认最新 upstream commit
 3. 检查当前翻译覆盖范围内，哪些源文件发生了变化
+   - 推荐统一使用：`python3 scripts/audit_reference_translations.py`
 4. 如有变化，手动同步中文资产
 5. 同步完成后，把最新 upstream commit 和当前翻译范围写回 `manifest.json`
+
+常用命令：
+
+```bash
+python3 scripts/audit_reference_translations.py
+python3 scripts/audit_reference_translations.py --write-sha gstack
+```
 
 如果某批中文内容来自你本机其他工作副本，也在 repo 级 `README.md` 或 `manifest.json` 里标明导入来源，避免后续误判它是当前 `references/repos/` 副本直接产出的。
 

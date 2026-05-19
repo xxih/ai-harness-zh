@@ -17,17 +17,24 @@
       "ETHOS.md",
       "CONTRIBUTING.md",
       "docs/skills.md",
+      "docs/ADDING_A_HOST.md",
+      "docs/OPENCLAW.md",
+      "docs/REMOTE_BROWSER_ACCESS.md",
       "SKILL.md",
       "SKILL.md.tmpl",
       "*/SKILL.md",
       "*/SKILL.md.tmpl",
+      "openclaw/agents-gstack-section.md",
+      "openclaw/gstack-full-CLAUDE.md",
+      "openclaw/gstack-lite-CLAUDE.md",
+      "openclaw/gstack-plan-CLAUDE.md",
       "review/*.md",
       "review/specialists/*.md",
       "qa/references/*.md",
       "qa/templates/*.md",
       "cso/ACKNOWLEDGEMENTS.md"
     ],
-    "notes": "当前同步 gstack 根级核心文档、docs/skills.md、共享 SKILL.md / SKILL.md.tmpl、全部子目录 */SKILL.md / */SKILL.md.tmpl，以及 review/*.md、review/specialists/*.md、qa/references/*.md、qa/templates/*.md 与 cso/ACKNOWLEDGEMENTS.md 的中文参考翻译；子 skill 文档采用结构化译要方式，模板文件采用中文模板译要方式，聚焦职责、阶段、gate 与生成链路。"
+    "notes": "当前同步 gstack 根级核心文档、docs/skills.md、docs/ADDING_A_HOST.md、docs/OPENCLAW.md、docs/REMOTE_BROWSER_ACCESS.md、共享 SKILL.md / SKILL.md.tmpl、全部子目录 */SKILL.md / */SKILL.md.tmpl、openclaw/ 目录下的 4 份 orchestrator prompt 资产，以及 review/*.md、review/specialists/*.md、qa/references/*.md、qa/templates/*.md 与 cso/ACKNOWLEDGEMENTS.md 的中文参考翻译；子 skill 文档采用结构化译要方式，模板文件采用中文模板译要方式，聚焦职责、阶段、gate 与生成链路。"
   },
   "translations": [
     {
@@ -68,17 +75,32 @@
     {
       "source": "CONTRIBUTING.md",
       "translation": "CONTRIBUTING.md",
-      "source_sha256": "ccb5f17c4401c6b9a541dadf2c3df403eb1943b9af2049dbdee0304a649458d8"
+      "source_sha256": "f6920ddebea181244fcfbfecf324da4e973ebebee214b97766432bf1625a552d"
     },
     {
       "source": "docs/skills.md",
       "translation": "docs/skills.md",
-      "source_sha256": "fc694162c9600398eecfcd5ab9ae968216bd6b457599904eaca69109d00cb653"
+      "source_sha256": "8ae92880ad2a8f79e85b26429b22daf59ed418c327cded9877fae51716f00a76"
+    },
+    {
+      "source": "docs/ADDING_A_HOST.md",
+      "translation": "docs/ADDING_A_HOST.md",
+      "source_sha256": "be3670a134d6fda5da4a0c53b8b629a320617fe93e2b5ce1e925e694aa617438"
+    },
+    {
+      "source": "docs/OPENCLAW.md",
+      "translation": "docs/OPENCLAW.md",
+      "source_sha256": "03a52138134d12201c6ae86a1862a193bb25297f16e1131ec76d09c46a14989b"
+    },
+    {
+      "source": "docs/REMOTE_BROWSER_ACCESS.md",
+      "translation": "docs/REMOTE_BROWSER_ACCESS.md",
+      "source_sha256": "6f34cf24afb18d1d89c6f318efe2791c0569e95f1b6110cbc4731c293a493568"
     },
     {
       "source": "SKILL.md",
       "translation": "SKILL.md",
-      "source_sha256": "70c5c734e7fc3fd05b719196a0881c0a771bd549d4319608b26f2b9fa1e17c6f"
+      "source_sha256": "9e0e7f8cd9c222ee301d1cadee5fa4f49289a252bcb003949952c5c77cefd85c"
     },
     {
       "source": "SKILL.md.tmpl",
@@ -88,27 +110,27 @@
     {
       "source": "autoplan/SKILL.md",
       "translation": "autoplan/SKILL.md",
-      "source_sha256": "8df618cbccf29ef25689b9420ad2b06bff25e9ab4421b9a82ed8d0703904d51a"
+      "source_sha256": "35fa949b42afdfc9e3ecbae393bca2254ad8cf790aaff96d75d5f748a665d31a"
     },
     {
       "source": "autoplan/SKILL.md.tmpl",
       "translation": "autoplan/SKILL.md.tmpl",
-      "source_sha256": "3d527fcfd8db08d60c1ae7f16254afcc4122678ba6fc6a4f0bfe42dfd458f74c"
+      "source_sha256": "2be7b2a7f6626f0c68527fde23655ed20ac57734381861741eb094ddef990b39"
     },
     {
       "source": "benchmark/SKILL.md",
       "translation": "benchmark/SKILL.md",
-      "source_sha256": "64cbcfb55f2bd2011d1db2c5256b84a8c10989b4346f03fc7fa1deae9a5ab023"
+      "source_sha256": "22621ec7c4694858ebc11a602d6b58d0407587929fa74d26b3e18d5552455e19"
     },
     {
       "source": "benchmark/SKILL.md.tmpl",
       "translation": "benchmark/SKILL.md.tmpl",
-      "source_sha256": "0ebf6b7c34d77cc027034f29a4517a7bc183368b374531cdd91f6091ec2c3998"
+      "source_sha256": "2a92608f0fdacb26f8ed0a3306534616831a5ef312a5db2114a5faee9be936d0"
     },
     {
       "source": "browse/SKILL.md",
       "translation": "browse/SKILL.md",
-      "source_sha256": "4ee033b2c8fad142c02c1de5ca33b82ac83f4dd2bbebbf31651bb1eccc5b40c1"
+      "source_sha256": "fda12c551263382b1b80c15164aea2f7757d8b072f79e51f9f3904df80935b60"
     },
     {
       "source": "browse/SKILL.md.tmpl",
@@ -118,7 +140,7 @@
     {
       "source": "canary/SKILL.md",
       "translation": "canary/SKILL.md",
-      "source_sha256": "2caf89780d07d1e9b655bca64125e83834e10911ea8662a90e8b4f95f08249a7"
+      "source_sha256": "1230214fc6fc7862b55a87f65aaad100bd574ddf8efeef57c70db712757713b0"
     },
     {
       "source": "canary/SKILL.md.tmpl",
@@ -148,22 +170,42 @@
     {
       "source": "codex/SKILL.md",
       "translation": "codex/SKILL.md",
-      "source_sha256": "35e8301209baed0d2817a530792bf7836b0a0583ce93690f29d539ffc4ce8607"
+      "source_sha256": "e073d67cb00a26cf7fe15ef898d38d5df88c7d1e44a07ce8f42759b5d3a9c531"
     },
     {
       "source": "codex/SKILL.md.tmpl",
       "translation": "codex/SKILL.md.tmpl",
-      "source_sha256": "eb64e63593b974b425e7930f0b1df7a73b87a9569f1584454c23b87ae66fe319"
+      "source_sha256": "f787b93a2f35a8c7ce5e77e8cb1a6d316ad2030c16c2262c02838992cf48576d"
     },
     {
       "source": "connect-chrome/SKILL.md",
       "translation": "connect-chrome/SKILL.md",
-      "source_sha256": "0c9437069bdf4791161b658a0d4c228e7128c645df26e214eb07b7ba7f283399"
+      "source_sha256": "1e3de4f68b63f9913374ed491adbe1c80e6c471a00d2199f691896ce800d0166"
     },
     {
       "source": "connect-chrome/SKILL.md.tmpl",
       "translation": "connect-chrome/SKILL.md.tmpl",
-      "source_sha256": "918912b5cb6da8c45c07293f46c8f61a59335fde489f8852cea5fc87bcf815c3"
+      "source_sha256": "ff6816f835eb1906ab638bf3223d2485d2a787d41cb298020d199eac2bd5df9a"
+    },
+    {
+      "source": "openclaw/agents-gstack-section.md",
+      "translation": "openclaw/agents-gstack-section.md",
+      "source_sha256": "7462c403c88551d7a3ee75e59163a70d6f2d948b0de9368e641915acc7bebdc7"
+    },
+    {
+      "source": "openclaw/gstack-full-CLAUDE.md",
+      "translation": "openclaw/gstack-full-CLAUDE.md",
+      "source_sha256": "b04bfe888e71ffd03b6ba3c8e0a811e950336a3945c60106260201c48e103e3e"
+    },
+    {
+      "source": "openclaw/gstack-lite-CLAUDE.md",
+      "translation": "openclaw/gstack-lite-CLAUDE.md",
+      "source_sha256": "bbbe53ee900d2e5188f4dcd8c0bf74c87a9195b60c440d0ff9beda83e84edfeb"
+    },
+    {
+      "source": "openclaw/gstack-plan-CLAUDE.md",
+      "translation": "openclaw/gstack-plan-CLAUDE.md",
+      "source_sha256": "5782227b98ddfc1fcd118fa4a8a8380ca50b4c455c5f6878b83c5084463d8feb"
     },
     {
       "source": "contrib/add-host/SKILL.md.tmpl",
@@ -173,12 +215,12 @@
     {
       "source": "cso/SKILL.md",
       "translation": "cso/SKILL.md",
-      "source_sha256": "9626ddcf0b17888e02747170c2f403beff27e5cf88304ddd9dfc625dad900771"
+      "source_sha256": "81410fe378ff7ff4895e09f82cfd777b9cfac04e0fee0b84125be60265ba280f"
     },
     {
       "source": "cso/SKILL.md.tmpl",
       "translation": "cso/SKILL.md.tmpl",
-      "source_sha256": "0fe6657072b9cb2786d9f0b97f5532afbb77bac811481b592efe433f09a969c4"
+      "source_sha256": "2546303ef986a5890938d5546c145fc57c9e3cb462624926ed1139fbb4824022"
     },
     {
       "source": "devex-review/SKILL.md",
@@ -193,37 +235,37 @@
     {
       "source": "design-consultation/SKILL.md",
       "translation": "design-consultation/SKILL.md",
-      "source_sha256": "b00855ef9240fbcb377e22551510b693a11cfe74b3294ee93bea11c80f959210"
+      "source_sha256": "cdad6e8c0ead8f749fe17a081a6743c8bed45b2109d078dcb9da8461f2dbe05f"
     },
     {
       "source": "design-consultation/SKILL.md.tmpl",
       "translation": "design-consultation/SKILL.md.tmpl",
-      "source_sha256": "0547542f7298e2d3731d01d10ff2eae53f92596a92bb21200ed810bd1cc0ac9e"
+      "source_sha256": "d7b09ba9a5d01d94d52240d30dcd21d26f15ffa6256eee743af8edcc6d088453"
     },
     {
       "source": "design-html/SKILL.md",
       "translation": "design-html/SKILL.md",
-      "source_sha256": "1007bca08149580d099ea77fd4f2a6c6486bfab1e7908da60b4c47583e2385e7"
+      "source_sha256": "3f889cf3d97cb56bba200b02ae0df33896c3e555f01f16d3982741e0595e8f86"
     },
     {
       "source": "design-html/SKILL.md.tmpl",
       "translation": "design-html/SKILL.md.tmpl",
-      "source_sha256": "8d95b00ef3cfc6384d801e2d8496b3830f6f48213799f67a745e5655b7c13e27"
+      "source_sha256": "cde53f66c9b25b9a11955e898f1edc31aa49a6aa95c8a11d5f0ed998260dcd8e"
     },
     {
       "source": "design-review/SKILL.md",
       "translation": "design-review/SKILL.md",
-      "source_sha256": "969a2497df324de82eef5a58c5d6627a329ab458af8fbd74b0b8ef747e0a9ea5"
+      "source_sha256": "5d37d9eb2b90a93e896771b32b4e38a399d06d061a6bb885cd06e83615df5c22"
     },
     {
       "source": "design-review/SKILL.md.tmpl",
       "translation": "design-review/SKILL.md.tmpl",
-      "source_sha256": "5386d458111d7642576ce9211d048eab02bf87c2fabd1cf280ad9b38f1713d4c"
+      "source_sha256": "c65309253f637e71897bdb2bedd42cf6e8abab03aaab097ec1f37a0d18581bbe"
     },
     {
       "source": "design-shotgun/SKILL.md",
       "translation": "design-shotgun/SKILL.md",
-      "source_sha256": "0791abaa8f2638729751d6ef32e42adac50b7be84bb739566d1d39d026b8dc21"
+      "source_sha256": "e6e26cc31d52b88dd060794df13ed07d09c907dfe685b8df7780c2df40f3cb86"
     },
     {
       "source": "design-shotgun/SKILL.md.tmpl",
@@ -233,12 +275,12 @@
     {
       "source": "document-release/SKILL.md",
       "translation": "document-release/SKILL.md",
-      "source_sha256": "08c26c418bfa0dc95e24473597eaf72092a76270c2c5d72a87f4843536c2a2e1"
+      "source_sha256": "039f1b3c5fa008de942cb18e4f5b3f8d08d593240e3cc96848baf9fece2e374c"
     },
     {
       "source": "document-release/SKILL.md.tmpl",
       "translation": "document-release/SKILL.md.tmpl",
-      "source_sha256": "70f55fdbaddbad23d6151f33bfc3f0d13ff4358063251b423b243b7a85b5a1b1"
+      "source_sha256": "23838e851fdf1bdd6deadc6e238395a6ef802ed31420b31e1e0d9d3426b3a2f4"
     },
     {
       "source": "freeze/SKILL.md",
@@ -253,12 +295,12 @@
     {
       "source": "gstack-upgrade/SKILL.md",
       "translation": "gstack-upgrade/SKILL.md",
-      "source_sha256": "64585a0504b9ef9ef0a7a5228fb8612f79c743909409ad4d434308fb2f846e22"
+      "source_sha256": "0d76ba2dad4da8f61347a68ca0cf0a142a1879f8299c09c8ebcaf6a9ed1fdc2b"
     },
     {
       "source": "gstack-upgrade/SKILL.md.tmpl",
       "translation": "gstack-upgrade/SKILL.md.tmpl",
-      "source_sha256": "eb95880243738145bbbf881cafc2d41be28b0ccca3992c59d3968707f6ab84fd"
+      "source_sha256": "d5a039aee1f21b799839e2443ce62aea6d3214918fc9dadcb956a3a0706f12e2"
     },
     {
       "source": "guard/SKILL.md",
@@ -283,7 +325,7 @@
     {
       "source": "investigate/SKILL.md",
       "translation": "investigate/SKILL.md",
-      "source_sha256": "58ad1b0537fbefb570facd6630043c88dc7adb1b977e73cc2d0d3b000e1e3c9b"
+      "source_sha256": "154d0c6787cc9327f8090d66565272e144643b88c8fb8f5bd185471991dbd48d"
     },
     {
       "source": "investigate/SKILL.md.tmpl",
@@ -293,7 +335,7 @@
     {
       "source": "land-and-deploy/SKILL.md",
       "translation": "land-and-deploy/SKILL.md",
-      "source_sha256": "397c6d545046eef9be2e97ca8b84576cb791fc73a9be88326287452cb2e415a7"
+      "source_sha256": "7231613ef72dd61bee4eaf9932b91f870a280617ccecb9c84faf0d21fd0209c9"
     },
     {
       "source": "land-and-deploy/SKILL.md.tmpl",
@@ -303,7 +345,7 @@
     {
       "source": "learn/SKILL.md",
       "translation": "learn/SKILL.md",
-      "source_sha256": "094ef0a9ec3a185f57d6cb31125084a2f6ae258b38ce7556605a889a798721a2"
+      "source_sha256": "24aaa5eedb87a3c4c0a3863d1babe0790738ba04cfb8371199cedef96b67bf7b"
     },
     {
       "source": "learn/SKILL.md.tmpl",
@@ -313,12 +355,12 @@
     {
       "source": "office-hours/SKILL.md",
       "translation": "office-hours/SKILL.md",
-      "source_sha256": "1101136b65a68345c4057afb63f4a424fc80aff29698e72bd50c40025b3da2b3"
+      "source_sha256": "c71912bb8162e938131d58c909ad7bbdf93ae47fc4f5ea421ceff8fb1ae38c8e"
     },
     {
       "source": "office-hours/SKILL.md.tmpl",
       "translation": "office-hours/SKILL.md.tmpl",
-      "source_sha256": "26901d29792af7e93f568d002aea88e0b5bafcc1c143bc6bae17728231bfa9a7"
+      "source_sha256": "b60d0a4e824ca69a52a95a4fc29e4737fe6a17fc63748d5eb9db5666c062530f"
     },
     {
       "source": "open-gstack-browser/SKILL.md",
@@ -363,22 +405,22 @@
     {
       "source": "plan-ceo-review/SKILL.md",
       "translation": "plan-ceo-review/SKILL.md",
-      "source_sha256": "e4bc67f63b21a38aa55cecbe1269f19d0930136667059e7b7c18d0b15dc8263d"
+      "source_sha256": "e1a06f64ba6c07658c04c9154f10bd33819b0269826d531056e9e5898110d114"
     },
     {
       "source": "plan-ceo-review/SKILL.md.tmpl",
       "translation": "plan-ceo-review/SKILL.md.tmpl",
-      "source_sha256": "82dd29897e60e0bbff52987f953879c1d365685bb255d0d135da84acad38cc9b"
+      "source_sha256": "02f12db79230738883679728c34a965d1295328b1a772cfb697d7a18c347264b"
     },
     {
       "source": "plan-design-review/SKILL.md",
       "translation": "plan-design-review/SKILL.md",
-      "source_sha256": "15ad22868cfab24362f25934a023cc6479b1f3547e8f4107fc573a605fa88123"
+      "source_sha256": "09ee4e0f92eb5f9109d2909140e9dfa882f22c12cafb81bbdcf09cd02584a9d0"
     },
     {
       "source": "plan-design-review/SKILL.md.tmpl",
       "translation": "plan-design-review/SKILL.md.tmpl",
-      "source_sha256": "01d664febc950482ba51d7f4c6a0dfe777093c9914943d07cd1bf53b9eb9aae1"
+      "source_sha256": "1b508984a347e8089dc5f1bfce9ce0e100876b60651f97c3f97877b81419454a"
     },
     {
       "source": "plan-devex-review/SKILL.md",
@@ -393,57 +435,57 @@
     {
       "source": "plan-eng-review/SKILL.md",
       "translation": "plan-eng-review/SKILL.md",
-      "source_sha256": "6ea27c1fd6a315f29cc67e80f4ffccc98e754eacd89795e2f6915608df382660"
+      "source_sha256": "5714ba18f6a590f6e894935b69fe7f9503947344a583e845d82c0662d93980f4"
     },
     {
       "source": "plan-eng-review/SKILL.md.tmpl",
       "translation": "plan-eng-review/SKILL.md.tmpl",
-      "source_sha256": "64e5cf5701c27999a40683257f5500dc89a183c1d021237fe682318e84106849"
+      "source_sha256": "e56a033fb03f4d6845da0cb8eef177d22fc4b4a12440d0053dd240d5925433a3"
     },
     {
       "source": "qa-only/SKILL.md",
       "translation": "qa-only/SKILL.md",
-      "source_sha256": "82f49e584568d95711da63892ac75a067f0ba4499dfd28b323ca8455ed9f5f8b"
+      "source_sha256": "7c0a4d5e9c056f7b4b8c291e681955dda4f9553a3fb92e9d4955ed4342494609"
     },
     {
       "source": "qa-only/SKILL.md.tmpl",
       "translation": "qa-only/SKILL.md.tmpl",
-      "source_sha256": "38eb8b4fe423676d9ad76f1f807744ebc707d485402213cde5f27cc0d4f030d3"
+      "source_sha256": "d818aec4eb3600671a659d68d6889d4316ee6cbdc13bc29b733d9886f2da9a09"
     },
     {
       "source": "qa/SKILL.md",
       "translation": "qa/SKILL.md",
-      "source_sha256": "3fa5d4f7852fbb7a5b25f1522d71b8c0e8ea9c95ace96d7f8cf653a78326f58b"
+      "source_sha256": "cd22a5be870eddceb24fe399462c3678db43d8444e40f262e6f296e251466b11"
     },
     {
       "source": "qa/SKILL.md.tmpl",
       "translation": "qa/SKILL.md.tmpl",
-      "source_sha256": "1c0a65d612da2e1dec185f3407310c48fae2aaea56264edfa79312b911c69915"
+      "source_sha256": "bef4800b582bfffaf76f08b24c13ce9d1598b9e269ec2f062c56caeeedbeb3e8"
     },
     {
       "source": "retro/SKILL.md",
       "translation": "retro/SKILL.md",
-      "source_sha256": "013c77b0c8e10a1cd00c4eeb6246a013bac06f2cc1a8544ad827a4d70d57c3e4"
+      "source_sha256": "2fd0bfe51d441202a9561dbcc907540495b65748c23a721fa9500d4715266c9c"
     },
     {
       "source": "retro/SKILL.md.tmpl",
       "translation": "retro/SKILL.md.tmpl",
-      "source_sha256": "e71c79f6ce8ce5e36a0a1fcd76993e0eb0a7022b701afa6ae3f141e388cc168b"
+      "source_sha256": "53fee26640932547ce56ca666f6dd12df7de75ea5cec06a8b71dfef2196d1b65"
     },
     {
       "source": "review/SKILL.md",
       "translation": "review/SKILL.md",
-      "source_sha256": "aebb43c3747b7d6bd014b4fa0a036963bedcaeb8436817fd5e4da450f2acd234"
+      "source_sha256": "93b250d0d509f2d167ba7ec75a5464ca0d27c7bf350c9c876667e56158097df4"
     },
     {
       "source": "review/SKILL.md.tmpl",
       "translation": "review/SKILL.md.tmpl",
-      "source_sha256": "96d58a6047b5fe493def97e73a71291f2f4bd1e89eba8ce45579403cb9979904"
+      "source_sha256": "fba2871327cbc4c800c4be2192a56a49e2c3d372a777dadc0bdee30004b8b4be"
     },
     {
       "source": "setup-browser-cookies/SKILL.md",
       "translation": "setup-browser-cookies/SKILL.md",
-      "source_sha256": "359b309a18cd5f20b4c222715e401d76f30cdff842ea38a958a2e476a010ede1"
+      "source_sha256": "697060e07e92ff6cfa93c52f675b48a1e08c8e65be80665ec2363661aa853277"
     },
     {
       "source": "setup-browser-cookies/SKILL.md.tmpl",
@@ -453,7 +495,7 @@
     {
       "source": "setup-deploy/SKILL.md",
       "translation": "setup-deploy/SKILL.md",
-      "source_sha256": "720623bb21cab16539921186433cd560dd636504bd2405768cdf5a5b53072f1c"
+      "source_sha256": "cb959f7b551deec7176ab7826d2ba47e827cb2fab1e2856aeac36a30ee1f026f"
     },
     {
       "source": "setup-deploy/SKILL.md.tmpl",
@@ -463,12 +505,12 @@
     {
       "source": "ship/SKILL.md",
       "translation": "ship/SKILL.md",
-      "source_sha256": "d250c30f8ee4c050f2e84ae4aa943237883072da96e49c8c8dfee9114a2022da"
+      "source_sha256": "7762d659144fb39c03422d72117b1c1afe2e23ffb0941a39bd6fbf722138198f"
     },
     {
       "source": "ship/SKILL.md.tmpl",
       "translation": "ship/SKILL.md.tmpl",
-      "source_sha256": "ba39f6411502f88db871db474143b0bd00f7130a40ccf59c44d679b48523346b"
+      "source_sha256": "b5ca446a298301c555115cb74cf0c43794edbd5fd0977abd3842d4d85a8dc36e"
     },
     {
       "source": "unfreeze/SKILL.md",
@@ -513,37 +555,37 @@
     {
       "source": "review/specialists/api-contract.md",
       "translation": "review/specialists/api-contract.md",
-      "source_sha256": "b3e64948ee411dc78c970706d97989262aee15e041ee012aea4235494e3be7ef"
+      "source_sha256": "263d23ac119dd601d315c191dbdbd503d47c00264c9c0ca81959559ca11d4e95"
     },
     {
       "source": "review/specialists/data-migration.md",
       "translation": "review/specialists/data-migration.md",
-      "source_sha256": "17fc618cd1cf1967a098fe626b334c7cb2bf18fdc60de524fdc2150f055d7bef"
+      "source_sha256": "b6fd9eb229002ea598f8fe9ff53b1cd8821e3bd37a7aa7b07b5526556c71ebca"
     },
     {
       "source": "review/specialists/maintainability.md",
       "translation": "review/specialists/maintainability.md",
-      "source_sha256": "c284db56002a5ad8e5b8fab86a69165bf735a5098e178dd175ca513544984595"
+      "source_sha256": "7d945a69e0763fd1be26ffdff65f1088cab555d80630ed4ad44313e5e6623036"
     },
     {
       "source": "review/specialists/performance.md",
       "translation": "review/specialists/performance.md",
-      "source_sha256": "1ae68c5703d6a96206273cf296e675da2e960f2d0c0c630023d9d58dcb8095e5"
+      "source_sha256": "545c294ae53638b4c8524e8cde08246a4ce3b5c287ec7c44e27f5556a3b0e8cc"
     },
     {
       "source": "review/specialists/red-team.md",
       "translation": "review/specialists/red-team.md",
-      "source_sha256": "0c4cae42190a888699bdfff16eafc954461e60f2091500fcb9e454106f036c3e"
+      "source_sha256": "9ea05149f5b13d6a19ecec26285142d09d259cf80a515af828abdd1f43320427"
     },
     {
       "source": "review/specialists/security.md",
       "translation": "review/specialists/security.md",
-      "source_sha256": "8a7c86dfffbf802c950e76587e0718a6dc6de5e1f1ac44e482c1000181881e62"
+      "source_sha256": "d0dc1cf0f1c7450507cfc663a67624cbcd5d4cfd0258a3bfeb51dba6f09c7df2"
     },
     {
       "source": "review/specialists/testing.md",
       "translation": "review/specialists/testing.md",
-      "source_sha256": "e99644102682785565d335356090b75f65d86132430bc3c7835830963ec2013f"
+      "source_sha256": "3fd6dc5d802fd112f75934c4c168c3f03e25275b70e1e403eb670cbf7447e4e7"
     },
     {
       "source": "cso/ACKNOWLEDGEMENTS.md",

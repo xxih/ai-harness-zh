@@ -13,10 +13,17 @@
   - `ETHOS.md`
   - `CONTRIBUTING.md`
   - `docs/skills.md`
+  - `docs/ADDING_A_HOST.md`
+  - `docs/OPENCLAW.md`
+  - `docs/REMOTE_BROWSER_ACCESS.md`
   - `SKILL.md`
   - `*/SKILL.md`
   - `SKILL.md.tmpl`
   - `*/SKILL.md.tmpl`
+  - `openclaw/agents-gstack-section.md`
+  - `openclaw/gstack-full-CLAUDE.md`
+  - `openclaw/gstack-lite-CLAUDE.md`
+  - `openclaw/gstack-plan-CLAUDE.md`
   - `review/*.md`
   - `review/specialists/*.md`
   - `qa/references/*.md`
@@ -38,7 +45,7 @@
 - 强体验导向，把真实浏览器、设计评审、安全审计、第二模型复核都放进同一套操作面
 - 明确兼容 Claude Code、Codex、Gemini CLI、Cursor 与 Factory Droid 等多种 host
 
-当前这一版已经覆盖根级主文档、`docs/skills.md`、根级 `SKILL.md` / `SKILL.md.tmpl`、全部子目录 `*/SKILL.md` / `*/SKILL.md.tmpl`，以及 `review/*.md`、`review/specialists/*.md`、`qa/references/*.md`、`qa/templates/*.md`、`cso/ACKNOWLEDGEMENTS.md` 这批 skill 支撑资产。其中：
+当前这一版已经覆盖根级主文档、`docs/skills.md`、host onboarding / OpenClaw / remote browser 三份补充文档、根级 `SKILL.md` / `SKILL.md.tmpl`、全部子目录 `*/SKILL.md` / `*/SKILL.md.tmpl`、`openclaw/` 目录下 4 份 orchestrator prompt 资产，以及 `review/*.md`、`review/specialists/*.md`、`qa/references/*.md`、`qa/templates/*.md`、`cso/ACKNOWLEDGEMENTS.md` 这批 skill 支撑资产。其中：
 
 - 根级 `SKILL.md` 重点翻译 gstack 的共享 preamble、全局约束与默认浏览器入口
 - 子目录 `*/SKILL.md` 采用“结构化中文译要”方式，保留命令名、路径和协议关键字，重点翻译 skill 的职责、阶段、gate 与交付要求
