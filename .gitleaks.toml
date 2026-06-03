@@ -1,0 +1,18 @@
+# gitleaks 配置:默认规则 + 排除第三方 vendored 内容与示例占位。
+# 本仓是公开仓,护栏重点是「别把真凭据写进自有内容(plugins/ 等)再 push 出去」。
+[extend]
+useDefault = true
+
+[allowlist]
+description = "第三方 vendored 翻译/参考内容与 worktree 工作目录,非本仓自有凭据;命中多为示例占位"
+paths = [
+  '''references/.*''',
+  '''\.claude/.*''',
+]
+regexes = [
+  '''sk_live_abc123''',
+  '''sk-1234567890abcdef''',
+  '''ghp_1234567890abcdef''',
+  '''abc123def456''',
+  '''123e4567-e89b-12d3-a456-426614174000''',
+]

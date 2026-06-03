@@ -1,0 +1,12 @@
+#!/bin/sh
+# 拦截误把真 secret 提交进这个公开仓。第三方 references/ 与示例占位已在 .gitleaks.toml allowlist。
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "⚠ gitleaks 未安装(brew install gitleaks),跳过 secret 扫描。" >&2
+  exit 0
+fi
+if ! gitleaks protect --staged --no-banner 2>/tmp/gitleaks-precommit-ah.log; then
+  echo "✋ gitleaks 在暂存区检测到疑似真实 secret,提交已拦截(公开仓!):" >&2
+  tail -20 /tmp/gitleaks-precommit-ah.log >&2
+  echo "确认是误报 → 加进 .gitleaks.toml 的 allowlist 再提交。" >&2
+  exit 1
+fi
